@@ -1,8 +1,5 @@
 <h1><?= $this->translate('business_products_pictures_headline') ?></h1>
-<input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" />
-<div id="progress">
-    <div class="bar" style="width: 0%; height:18px; background: green"></div>
-</div>
+<input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
 <table class="table" id="bilder">
 <?php foreach($this->product->getPictures() as $pic): ?>
     <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174px_sqr/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
@@ -35,7 +32,11 @@
         $('#fileupload').fileupload({
             dataType: 'json',
             formData: {id: <?= $this->escape($this->product->id) ?>},
+            send: function(e, data){
+		$('#please_wait').show();
+            },
             done: function (e, data) {
+		$('#please_wait').hide();
                 if(data){
                     $('#bilder').append(data.result.data);
                 }
