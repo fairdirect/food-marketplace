@@ -260,7 +260,9 @@ class Model_Shop extends Model_ModelAbstract
         $query .= ' ORDER BY random() LIMIT 1';
 
         $result = $db->fetchAll($query);
-        return new self($result[0]);
+        if($result){
+            return new self($result[0]);
+        }
     }
 
     public function getShopType(){
