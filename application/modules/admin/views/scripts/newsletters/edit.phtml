@@ -1,0 +1,50 @@
+<h1>Newsletter hinzufügen / editieren</h1>
+<?= $this->form; ?>
+<h1>Newsletter versenden</h1>
+<?= $this->sendForm; ?>
+
+<script type="text/javascript">
+    $('#recipients').change(function() {
+        if($('#recipients').val() == 'SINGLE_ADDRESS'){
+            $('#testmail').show();
+        }
+        else{
+            $('#testmail').hide();
+        }
+    });
+
+    $('#send_button').click(function() {
+        sendMail();
+    });
+
+    function sendMail(){
+        if(!$('#recipients').val()){
+            alert('Bitte Empfänger auswählen.');
+            return;
+        }
+
+        $('#send_button').unbind('click');
+        $('#send_button').removeClass('btn-success').addClass('btn-info').text('Wird versandt. Bitte warten.');
+        $.ajax({
+            url: '/admin/newsletters/send/',
+            type: 'POST',
+            dataType: "json",
+            data: {
+                id: $('#id').val(),
+                recipients: $('#recipients').val(),
+                testmail: $('#testmail').val()
+            },
+            success: function(ret){
+                if(ret.suc){
+                    alert("Versand abgeschlossen.\nErfolgreich versandt: " + ret.sentSuc + "\nNicht versandt: " + ret.sentFail);     
+                }
+                else{
+                    alert('Fehler: ' + ret.message);
+                }
+                $('#send_button').removeClass('btn-info').addClass('btn-success').text('Testmail versenden');
+                $('#send_button').click(function() { sendMail(); });
+            }
+        });
+    }
+
+</script>

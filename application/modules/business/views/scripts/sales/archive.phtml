@@ -1,0 +1,60 @@
+<h1 style="margin-bottom:5px;"><?= $this->translate('business_orders_archive_headline') ?></h1>
+<table class="table" id="ordersTable">
+    <thead>
+    <tr><th><?= $this->translate('business_orders_order_date') ?></th><th><?= $this->translate('business_orders_sent_date') ?></th><th><?= $this->translate('business_orders_ordernumber') ?></th><th><?= $this->translate('business_orders_price_products') ?></th><th><?= $this->translate('business_orders_price_delivery') ?></th><th><?= $this->translate('business_orders_price_total') ?></th><th><?= $this->translate('business_orders_products') ?></th></tr>
+    </thead>
+    <tbody>
+<?php
+    foreach($this->completeOrders as $order):
+        $orderProducts = $order->getProducts();
+        $products = array();
+        $total = 0;
+        foreach($orderProducts as $key => $item){
+            $product = Model_Product::find($item['product_id']);
+            $products[] = $product;
+            $orderProducts[$key]['productname'] = $product->name;
+            $total += $item['value'] * $item['quantity'];
+        }
+?>
+        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= date('d.m.Y', strtotime($order->send_date)) ?></td><td><?= $this->escape($order->id) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $item['contents'] ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td></tr>
+
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#ordersTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+</script>

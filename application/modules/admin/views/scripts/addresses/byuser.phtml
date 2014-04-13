@@ -1,0 +1,58 @@
+<h1 style="margin-bottom:5px;">Adressen für Benutzer <?= ($this->user->username) ? $this->escape($this->user->username) : $this->escape($this->user->email) ?></h1>
+<a href="/admin/addresses/edit/user_id/<?= $this->escape($this->user->id) ?>/">Neue Adresse anlegen</a>
+<table class="table" id="addressTable">
+    <thead>
+    <tr><th>ID</th><th>Anrede</th><th>Firma</th><th>Vorname</th><th>Nachname</th><th>Straße</th><th>Hausnummer</th><th>PLZ</th><th>Stadt</th><th>Default Lieferung?</th><th>Default Rechnung?</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php
+    foreach($this->addresses as $address):
+?>
+        <tr><td><?= $this->escape($address->id) ?></td><td><?= $this->escape($address->gender) ?></td><td><?= $this->escape($address->company) ?></td><td><?= $this->escape($address->firstname) ?></td><td><?= $this->escape($address->name) ?></td><td><?= $this->escape($address->street) ?></td><td><?= $this->escape($address->house) ?></td><td><?= $this->escape($address->zip) ?></td><td><?= $this->escape($address->city) ?></td><td><?= ($address->id == $this->user->main_delivery_address_id) ? 'ja' : 'nein' ?></td><td><?= ($address->id == $this->user->main_billing_address_id) ? 'ja' : 'nein' ?></td><td><a href="/admin/addresses/edit/id/<?= $this->escape($address->id) ?>/">Editieren</a><?php if($address->id != $this->user->main_delivery_address_id): ?><br /><a href="/admin/users/setdefaultdelivery/id/<?= $this->escape($this->user->id) ?>/addressid/<?= $this->escape($address->id) ?>/">Als Standard Lieferadresse setzen</a><?php endif; ?><?php if($address->id != $this->user->main_billing_address_id): ?><br /><a href="/admin/users/setdefaultbilling/id/<?= $this->escape($this->user->id) ?>/addressid/<?= $this->escape($address->id) ?>/">Als Standard Rechnungsaddresse setzen</a><?php endif; ?></td></tr>
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#addressTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null, 
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+           
+</script>
+

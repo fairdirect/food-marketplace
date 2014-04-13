@@ -1,0 +1,53 @@
+<h1 style="margin-bottom:5px;">Shops</h1>
+<a href="/admin/shops/edit/">Neuen Shop anlegen</a>
+<h2>Shops</h2>
+<table class="table" id="shopTable">
+    <thead>
+    <tr><th>ID</th><th>Username</th><th>Shopname</th><th>URL</th><th>Provision</th><th>Steuernummer</th><th>Steuer-ID</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#shopTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "bFilter": false,
+            "bSort": false,
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "/admin/shops/ajaxgetshops/",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+           
+</script>

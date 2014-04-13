@@ -1,0 +1,46 @@
+<h1 style="margin-bottom:5px;">System-Emails:</h1>
+<table class="table" id="emailTable">
+    <thead>
+    <tr><th>Name</th><th>Betreff</th><th>Variablen</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php foreach($this->emails as $email): ?>
+        <tr><td><?= $this->escape($email->name) ?></td><td><?= $this->escape($email->subject) ?></td><td><?= $this->escape($email->vars) ?></td><td><a href="/admin/emails/edit/name/<?= $this->escape($email->name) ?>">Editieren</a></td></tr>
+<?php
+endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#emailTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+           
+</script>

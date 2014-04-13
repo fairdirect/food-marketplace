@@ -1,0 +1,47 @@
+<h1 style="margin-bottom:5px;">Produkt-Bewertungen</h1>
+<table class="table" id="ratingTable">
+    <thead>
+    <tr><th>Bewertung</th><th>Text</th><th>Produkt</th><th>Benutzer</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php foreach($this->ratings as $rating): ?>
+        <tr><td><?= $this->escape($rating->rating) ?></td><td><?= $this->escape($rating->comment) ?></td><td><a href="/admin/products/edit/id/<?= $this->escape($rating->getProduct()->id) ?>/"><?= $this->escape($rating->getProduct()->name) ?></a></td><td><a href="/admin/users/edit/id/<?= $this->escape($rating->getUser()->id) ?>/"><?= $this->escape($rating->getUser()->email) ?></a><td><a href="/admin/contenttypes/edit/id/<?= $this->escape($type->id) ?>">Editieren</a></td><?php if($rating->status == 'new'): ?><a href="/admin/productratings/approve/id/<?= $this->escape($rating->id) ?>/">freischalten</a>&nbsp;<?php endif; ?><a href="/admin/productratings/id/<?= $this->escape($rating->id) ?>/">löschen</a></td></tr>
+<?php
+endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#unitTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+           
+</script>

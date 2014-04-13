@@ -1,0 +1,92 @@
+<h1 style="margin-bottom:5px;">Rechnungen</h1>
+<?php
+$months = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
+?>
+<form action="/admin/sales/invoiceactions">
+    <p>Monat wählen:</p>
+        <select name="month" id="month">
+    <?php for($i = 0; $i < 12; $i++): ?>
+            <option value="<?= $i + 1 ?>"><?= $months[$i] ?></option>
+    <?php endfor; ?>
+        </select>
+        <select name="year" id="year">
+    <?php for($i = $this->minYear; $i <= $this->maxYear; $i++): ?>
+            <option value="<?= $i ?>"><?= $i ?></option>
+    <?php endfor; ?>
+        </select>
+        <button type="button" style="margin-bottom:9px;" onclick="getInvoiceData()">OK</button>
+
+    <table class="table" id="ordersTable">
+        <thead>
+            <tr><th>Auswahl</th><th>Rechnungsnummer</th><th>Shop</th><th>E-Mail</th><th>Provision</th><th>Umsatz</th><th>Datei</th><th>Zuletzt versendet</th></tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div id="download" style="display:none;">
+        <input type="submit" value="Alle Rechnungen markieren" onclick="$('.send_check').attr('checked', true); return false;" />
+        <input type="submit" name="send" value="Markierte Rechnungen versenden" />
+        <input type="submit" name="download" value="Markierte Rechnungen herunterladen" />
+    </div>
+
+</form>
+
+<script type="text/javascript">
+    function initTable() {
+        $('#ordersTable').dataTable({
+            "bDestroy": true,
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    }
+
+    function getInvoiceData(){
+        var month = $('#month').val();
+        var year = $('#year').val();
+        $.ajax({
+            url: '/admin/sales/invoices/',
+            data: {
+                month: month,
+                year: year
+            },
+            type: 'POST',
+            success: function(data){
+                $('#ordersTable').dataTable().fnDestroy();
+                $('#ordersTable > tbody').empty().html(data); 
+                initTable();
+                $('#download').show();
+                //$('#download').empty().html('<a href="/admin/sales/downloadcsv/month/' + month + '/year/' + year + '/">CSV herunterladen</a><br /><a href="/admin/sales/createInvoices/month/' + month + '/year/' + year + '/">Rechnungen erstellen</a>');
+            } 
+        });
+        
+    }
+ 
+</script>

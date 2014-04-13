@@ -1,0 +1,66 @@
+<h1 style="margin-bottom:5px;">Produkte</h1>
+<a href="/admin/products/edit/">Neues Produkt anlegen</a>
+<h2>Produkte</h2>
+<table class="table" id="productTable">
+    <thead>
+    <tr><th>ID</th><th>Shopname</th><th>Name</th><th>Aktiv</th><th>Vorrat</th><th>Erstellung</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<?php /* 
+<form>
+    <label for="filterActivated">Zeige nur:</label>
+    <select id="filterActivated">
+        <option></option>
+        <option value="ja">Aktiviert</option>
+        <option value="nein">Nicht aktiviert</option>
+    </select>
+</form>
+*/ ?>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var productTable = $('#productTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "bFilter": false,
+            "bSort": false,
+            "bProcessing": true,
+            "bServerSide": true,
+            "sAjaxSource": "/admin/products/ajaxgetproducts/",
+
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+
+        $('#filterActivated').change(function(){
+            productTable.fnFilter($(this).val(), 3);
+        });
+    });
+           
+</script>

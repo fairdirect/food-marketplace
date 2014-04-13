@@ -1,0 +1,72 @@
+<h1 style="margin-bottom:5px;">Übersicht Bestellungen</h1>
+<h3>Offene Bestellungen:</h3>
+<table class="table" id="ordersTable">
+    <thead>
+    <tr><th>Bestellt am</th><th>Bestellnummer</th><th>Shop</th><th>Preis Produkte</th><th>Versandkosten</th><th>Gesamtpreis</th><th>Produkte</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+<?php
+    foreach($this->orders as $order):
+        switch($order->status){
+            case 'in_process':
+                $status = 'in Bearbeitung';
+                break;
+            case 'complete':
+                $status = 'versendet';
+                break;
+            default:
+                $status = '';
+                break;
+        }
+        $orderProducts = $order->getProducts();
+        $products = array();
+        $total = 0;
+        foreach($orderProducts as $key => $item){
+            $product = Model_Product::find($item['product_id']);
+            $products[] = $product;
+            $orderProducts[$key]['productname'] = $product->name;
+            $total += $item['value'] * $item['quantity'];
+        }
+?>
+        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= $this->escape($order->id) ?></td><td><?= $this->escape($order->shop_id) ?> (<?= $this->escape(Model_Shop::find($order->shop_id)->name) ?>)</td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><?= $this->escape($status) ?></td></tr>
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#ordersTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+</script>

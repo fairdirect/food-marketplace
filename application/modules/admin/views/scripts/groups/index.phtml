@@ -1,0 +1,81 @@
+<h1 style="margin-bottom:5px;">Gruppen</h1>
+<a href="/admin/groups/edit/">Neue Gruppe anlegen</a>
+<h2>Lebensmittel</h2>
+<table class="table" id="groceryTable">
+    <thead>
+    <tr><th>Name</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php foreach($this->groceryGroups as $gr): ?>
+    <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
+<?php endforeach; ?>
+    </tbody>
+</table>
+<h2>Drogerie</h2>
+<table class="table" id="drugstoreTable">
+    <thead>
+        <tr><th>Name</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php foreach($this->drugstoreGroups as $gr): ?>
+    <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
+<?php endforeach; ?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#groceryTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null, 
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+
+   $('#drugstoreTable').dataTable({
+        "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+        "sPaginationType": "bootstrap",
+        "aoColumns": [
+            null,
+            { "bSortable": false } 
+        ],
+        "oLanguage": {
+            "sProcessing": "Bitte warten...",
+            "sLengthMenu": "_MENU_ Einträge anzeigen",
+            "sZeroRecords": "Keine Einträge vorhanden.",
+            "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+            "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+            "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+            "sInfoPostFix": "",
+            "sSearch": "Suchen",
+            "sUrl": "",
+            "oPaginate": {
+                "sFirst":    "Erster",
+                "sPrevious": "Zurück",
+                "sNext":     "Nächster",
+                "sLast":     "Letzter"
+            }
+        }
+    });
+           
+</script>

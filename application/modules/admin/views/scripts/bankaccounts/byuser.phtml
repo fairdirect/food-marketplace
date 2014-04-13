@@ -1,0 +1,49 @@
+<h1 style="margin-bottom:5px;">Bankverbindungen für Benutzer <?= ($this->user->username) ? $this->escape($this->user->username) : $this->escape($this->user->email) ?></h1>
+<a href="/admin/bankaccounts/edit/user_id/<?= $this->escape($this->user->id) ?>/">Neue Bankverbindung anlegen</a>
+<table class="table" id="bankAccountTable">
+    <thead>
+    <tr><th>ID</th><th>Kontonummer</th><th>BLZ</th><th>Bank-Name</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php
+    foreach($this->bankaccounts as $account):
+?>
+        <tr><td><?= $this->escape($account->id) ?></td><td><?= $this->escape($account->account_nr) ?></td><td><?= $this->escape($account->bank_id) ?></td><td><?= $this->escape($account->bank_name) ?></td><td><a href="/admin/bankaccounts/edit/id/<?= $this->escape($account->id) ?>/">editieren</a></td></tr>
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#bankAccountTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });  
+</script>

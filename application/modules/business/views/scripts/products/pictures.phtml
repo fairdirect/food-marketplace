@@ -1,0 +1,49 @@
+<h1><?= $this->translate('business_products_pictures_headline') ?></h1>
+<input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" />
+<div id="progress">
+    <div class="bar" style="width: 0%; height:18px; background: green"></div>
+</div>
+<table class="table" id="bilder">
+<?php foreach($this->product->getPictures() as $pic): ?>
+    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174px_sqr/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
+<?php endforeach; ?>
+</table>
+<button class="btn" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>
+
+<script src="/js/libs/jquery.iframe-transport.js"></script>
+<script src="/js/libs/jquery.fileupload.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#delete_pictures').click(function(){
+            $('.check_delete_pic').filter(':checked').each(function(){
+                var pic = $(this);
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/business/products/deletepicture/",
+                    data: { id: pic.val() }
+                }).done(function( res ) {
+                    if(res.suc){
+                        pic.parent().parent().remove();
+                    }
+                });
+            });
+        });
+    });
+
+    $(function () {
+        $('#fileupload').fileupload({
+            dataType: 'json',
+            formData: {id: <?= $this->escape($this->product->id) ?>},
+            done: function (e, data) {
+                if(data){
+                    $('#bilder').append(data.result.data);
+                }
+                else{
+                    alert('Upload nicht erfolgreich');
+                }
+            }
+        });
+    });    
+
+</script>

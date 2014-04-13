@@ -1,0 +1,47 @@
+<h1 style="margin-bottom:5px;">Newsletter</h1>
+<a href="/admin/newsletters/edit/">Neuen Newsletter anlegen</a>
+<table class="table" id="newsletterTable">
+    <thead>
+    <tr><th>Betreff</th><th>Typ</th><th>Erstellt</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php foreach($this->newsletters as $newsletter): ?>
+        <tr><td><?= $this->escape($newsletter->subject) ?></td><td><?= $this->escape($newsletter->type) ?></td><td><?= $this->escape($newsletter->created) ?></td><td><a href="/admin/newsletters/edit/id/<?= $this->escape($newsletter->id) ?>">Editieren / senden</a></td></tr>
+<?php
+endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#newsletterTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+           
+</script>

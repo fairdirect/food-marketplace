@@ -1,0 +1,52 @@
+<style>
+    label{
+        display:inline;
+    }
+
+    label input{
+        display:inline;
+        float:left;
+
+    }
+
+    input[type="checkbox"]{
+        margin:2px;
+    }
+
+</style>
+<h1><?= $this->translate('business_product_edit_headline') ?></h1>
+<?= $this->form; ?>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        if($('#unlimited_stock').attr('checked')){
+            $('#stock').attr('disabled', 'disabled');
+        }
+    });
+    $('#type').live('change', function(){ 
+        $.ajax({ 
+            url: '/ajax/getgroups/type/' + $('#type').val(), 
+            datatype: 'html', 
+            success: function(data){ 
+                $('#group_id').empty().html(data); 
+            } 
+        }); 
+    });
+    $('#group_id').live('change', function(){
+        $.ajax({
+            url: '/ajax/getcategories/group/' + $('#group_id').val(),
+            datatype: 'html',
+            success: function(data){
+                $('#category_id').empty().html(data);
+            }
+        });
+    });
+    $('#unlimited_stock').live('click', function(){
+        if($('#unlimited_stock').attr('checked')){
+            $('#stock').attr('disabled', 'disabled');
+        }
+        else{
+            $('#stock').removeAttr('disabled');
+        }
+    });
+</script>

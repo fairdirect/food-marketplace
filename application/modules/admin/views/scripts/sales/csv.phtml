@@ -1,0 +1,89 @@
+<h1 style="margin-bottom:5px;">CSV Export</h1>
+<?php
+$months = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
+?>
+<p>Monat wählen:</p>
+    <select name="month" id="month">
+<?php for($i = 0; $i < 12; $i++): ?>
+        <option value="<?= $i + 1 ?>"><?= $months[$i] ?></option>
+<?php endfor; ?>
+    </select>
+    <select name="year" id="year">
+<?php for($i = $this->minYear; $i <= $this->maxYear; $i++): ?>
+        <option value="<?= $i ?>"><?= $i ?></option>
+<?php endfor; ?>
+    </select>
+    <button style="margin-bottom:9px;" onclick="getCsvData()">OK</button>
+
+<table class="table" id="ordersTable">
+    <thead>
+        <tr><th>Shop-ID</th><th>Firma</th><th>Kontaktperson</th><th>Bestellungen</th><th>Umsatz</th><th>Versand</th><th>Summe</th><th>Provision netto</th><th>MwSt 19%</th><th>Provision Brutto</th><th>Auszahlung</th></tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<div id="download"></div>
+
+<script type="text/javascript">
+    function initTable() {
+        $('#ordersTable').dataTable({
+            "bDestroy": true,
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    }
+
+    function getCsvData(){
+        var month = $('#month').val();
+        var year = $('#year').val();
+        $.ajax({
+            url: '/admin/sales/csv/',
+            data: {
+                month: month,
+                year: year
+            },
+            dataType: 'json',
+            type: 'POST',
+            success: function(data){
+                var invoiceMsg = (data.can_create_invoice) ? '<a href="/admin/sales/createInvoices/month/' + month + '/year/' + year + '/">Rechnungen erstellen</a>' : 'Rechnungen bereits erstellt.';
+                $('#ordersTable').dataTable().fnDestroy();
+                $('#ordersTable > tbody').empty().html(data.data); 
+                initTable();
+                $('#download').empty().html('<a href="/admin/sales/downloadcsv/month/' + month + '/year/' + year + '/">CSV herunterladen</a><br />' + invoiceMsg);             
+            } 
+        });
+        
+    }
+ 
+</script>

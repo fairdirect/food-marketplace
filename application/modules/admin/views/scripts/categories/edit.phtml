@@ -1,0 +1,15 @@
+<h1>Kategorie hinzufügen / editieren</h1>
+<?= $this->form; ?>
+
+<script type="text/javascript">
+
+    $('#type').live('change', function(){ 
+        $.ajax({ 
+            url: '/ajax/getgroups/type/' + $('#type').val(), 
+            datatype: 'html', 
+            success: function(data){ 
+                $('#product_group_id').empty().html(data); 
+            } 
+        }); 
+    });
+</script>

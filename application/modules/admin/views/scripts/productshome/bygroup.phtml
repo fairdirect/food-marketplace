@@ -1,0 +1,55 @@
+<h1>Produkte für Gruppe <?= $this->escape($this->homegroup->name) ?></h1>
+<h2>Produkt hinzufügen</h2>
+<form method="post" action="/admin/productshome/addproduct">
+    <input type="hidden" name="group_id" value="<?= $this->escape($this->homegroup->id) ?>" />
+    <label for="product_id">Produkt:</label>
+    <input type="text" id="product_id" name="product_id">
+    <input type="submit" value="Hinzufügen" />
+</form>
+<table class="table" id="productTable">
+    <thead>
+        <tr><th>ID</th><th>Name</th><th>Aktionen</th></tr>
+    </thead>
+    <tbody>
+<?php
+    foreach($this->products as $product):
+?>
+        <tr><td><?= $this->escape($product->id) ?></td><td><?= $this->escape($product->name) ?></td><td><a href="/admin/productshome/deleteproduct/product_id/<?= $this->escape($product->id) ?>/group_id/<?= $this->escape($this->homegroup->id) ?>"/>Löschen</a></td></tr>
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#productTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+           
+</script>
+

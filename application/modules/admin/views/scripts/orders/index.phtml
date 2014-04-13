@@ -1,0 +1,65 @@
+<h1 style="margin-bottom:5px;">Offene Bestellungen</h1>
+<table class="table" id="ordersTable">
+    <thead>
+    <tr><th>Bestellt am</th><th>Bestellnummer</th><th>Preis Produkte</th><th>Versandkosten</th><th>Gesamtpreis</th><th>Produkte</th><th></th></tr>
+    </thead>
+    <tbody>
+<?php
+    foreach($this->orderedCarts as $cart):
+        $cartProducts = $cart->getProducts();
+        $products = array();
+        $total = 0;
+        foreach($cartProducts as &$item){
+            $product = Model_Product::find($item['product_id']);
+            $price = Model_ProductPrice::find($item['product_price_id']);
+            $products[] = $product;
+            $item['productname'] = $product->name;
+            $item['price_quantity'] = $price->quantity;
+            $item['unit_type'] = ($price->quantity > 1) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
+            $item['contents'] = $price->contents;
+            $item['content_type'] = $price->getContentType()->name;
+            $total += $price->value * $item['quantity'];
+        }
+?>
+        <tr><td><?= date('d.m.Y', strtotime($cart->created)) ?></td><td><?= $this->escape($cart->id) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?= number_format($total + $cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?php foreach($cartProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><a href="/admin/orders/setPaid/id/<?= $this->escape($cart->id) ?>/">als bezahlt markieren</a><br /><a href="/admin/orders/delete/id/<?= $this->escape($cart->id) ?>/">löschen</a></td></tr>
+<?php
+    endforeach;
+?>
+    </tbody>
+</table>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#ordersTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
+            }
+        });
+    });
+</script>

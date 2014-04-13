@@ -1,0 +1,46 @@
+<h1>Bilder hochladen / löschen</h1>
+<input id="fileupload" type="file" name="file" data-url="/admin/products/pictures/" multiple>
+<table class="table" id="bilder">
+<?php foreach($this->product->getPictures() as $pic): ?>
+    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174px_sqr/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
+<?php endforeach; ?>
+</table>
+<button class="btn" id="delete_pictures">markierte löschen</button>
+
+<script src="/js/libs/jquery.iframe-transport.js"></script>
+<script src="/js/libs/jquery.fileupload.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#delete_pictures').click(function(){
+            $('.check_delete_pic').filter(':checked').each(function(){
+                var pic = $(this);
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/admin/products/deletepicture/",
+                    data: { id: pic.val() }
+                }).done(function( res ) {
+                    if(res.suc){
+                        pic.parent().parent().remove();
+                    }
+                });
+            });
+        });
+    });
+
+    $(function () {
+        $('#fileupload').fileupload({
+            dataType: 'json',
+            formData: {id: <?= $this->escape($this->product->id) ?>},
+            done: function (e, data) {
+                if(data){
+                    $('#bilder').append(data.result.data);
+                }
+                else{
+                    alert('Upload nicht erfolgreich');
+                }
+            }
+        });
+    });    
+
+</script>
