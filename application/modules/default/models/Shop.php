@@ -255,7 +255,7 @@ class Model_Shop extends Model_ModelAbstract
         }
         $query .= ' GROUP BY s.id';
         if(!is_null($minProductCount)){
-            $query .= ' HAVING COUNT(p.id) > ' . $db->quote($minProductCount);
+            $query .= ' HAVING COUNT(p.id) >= ' . $db->quote($minProductCount);
         }
         $query .= ' ORDER BY random() LIMIT 1';
 
