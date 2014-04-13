@@ -46,7 +46,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $formTranslator = new Zend_Translate(
             array(
                 'adapter' => 'array',
-                'content' => '/var/www/epelia/resources/languages',
+                'content' => APPLICATION_PATH . '/../resources/languages',
                 'locale'  => 'de',
                 'scan' => Zend_Translate::LOCALE_DIRECTORY
             )
