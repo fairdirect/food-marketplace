@@ -9,6 +9,168 @@ SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
 
+SET search_path = public, pg_catalog;
+
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_main_delivery_adress_fkey;
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_main_billing_adress_fkey;
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_last_delivery_adress_fkey;
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_last_billing_adress_fkey;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_user_id_fkey;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_procedure_picture_fkey;
+ALTER TABLE ONLY public.epelia_shops_pictures DROP CONSTRAINT epelia_shops_pictures_shop_id_fkey;
+ALTER TABLE ONLY public.epelia_shops_pictures DROP CONSTRAINT epelia_shops_pictures_picture_id_fkey;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_logo_id_fkey;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_history_picture_fkey;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_country_fkey;
+ALTER TABLE ONLY public.epelia_shopping_carts DROP CONSTRAINT epelia_shopping_carts_user_id_fkey;
+ALTER TABLE ONLY public.epelia_shopping_carts DROP CONSTRAINT epelia_shopping_carts_delivery_addr_fkey;
+ALTER TABLE ONLY public.epelia_shopping_carts DROP CONSTRAINT epelia_shopping_carts_billing_addr_fkey;
+ALTER TABLE ONLY public.epelia_shipping_costs DROP CONSTRAINT epelia_shipping_costs_shop_id_fkey;
+ALTER TABLE ONLY public.epelia_shipping_costs DROP CONSTRAINT epelia_shipping_costs_country_id_fkey;
+ALTER TABLE ONLY public.epelia_products_product_attributes DROP CONSTRAINT epelia_products_product_attributes_product_id_fkey;
+ALTER TABLE ONLY public.epelia_products_product_attributes DROP CONSTRAINT epelia_products_product_attributes_product_attribute_id_fkey;
+ALTER TABLE ONLY public.epelia_products_pictures DROP CONSTRAINT epelia_products_pictures_product_id_fkey;
+ALTER TABLE ONLY public.epelia_products_pictures DROP CONSTRAINT epelia_products_pictures_picture_id_fkey;
+ALTER TABLE ONLY public.epelia_products_orders DROP CONSTRAINT epelia_products_orders_product_id_fkey;
+ALTER TABLE ONLY public.epelia_products_orders DROP CONSTRAINT epelia_products_orders_order_id_fkey;
+ALTER TABLE ONLY public.epelia_products_home_groups_products DROP CONSTRAINT epelia_products_home_groups_products_product_id_fkey;
+ALTER TABLE ONLY public.epelia_products_home_groups_products DROP CONSTRAINT epelia_products_home_groups_products_group_id_fkey;
+ALTER TABLE ONLY public.epelia_products DROP CONSTRAINT epelia_products_category_id_fkey;
+ALTER TABLE ONLY public.epelia_products_shopping_carts DROP CONSTRAINT epelia_product_shopping_cart_shopping_cart_id_fkey;
+ALTER TABLE ONLY public.epelia_products_shopping_carts DROP CONSTRAINT epelia_product_shopping_cart_product_price_id_fkey;
+ALTER TABLE ONLY public.epelia_products_shopping_carts DROP CONSTRAINT epelia_product_shopping_cart_product_id_fkey;
+ALTER TABLE ONLY public.epelia_product_ratings DROP CONSTRAINT epelia_product_ratings_user_id_fkey;
+ALTER TABLE ONLY public.epelia_product_ratings DROP CONSTRAINT epelia_product_ratings_product_id_fkey;
+ALTER TABLE ONLY public.epelia_product_prices DROP CONSTRAINT epelia_product_prices_unit_type_fkey;
+ALTER TABLE ONLY public.epelia_product_prices DROP CONSTRAINT epelia_product_prices_product_id_fkey;
+ALTER TABLE ONLY public.epelia_product_prices DROP CONSTRAINT epelia_product_prices_content_type_fkey;
+ALTER TABLE ONLY public.epelia_product_categories DROP CONSTRAINT epelia_product_categories_product_group_id_fkey;
+ALTER TABLE ONLY public.epelia_orders DROP CONSTRAINT epelia_orders_user_id_fkey;
+ALTER TABLE ONLY public.epelia_orders DROP CONSTRAINT epelia_orders_shop_id_fkey;
+ALTER TABLE ONLY public.epelia_orders DROP CONSTRAINT epelia_orders_delivery_addr_fkey;
+ALTER TABLE ONLY public.epelia_orders DROP CONSTRAINT epelia_orders_billing_addr_fkey;
+ALTER TABLE ONLY public.epelia_newsletters_log DROP CONSTRAINT epelia_newsletters_log_newsletter_id_fkey;
+ALTER TABLE ONLY public.epelia_invoices DROP CONSTRAINT epelia_invoices_shop_id_fkey;
+ALTER TABLE ONLY public.epelia_bank_accounts DROP CONSTRAINT epelia_bank_accounts_user_id_fkey;
+ALTER TABLE ONLY public.epelia_addresses DROP CONSTRAINT epelia_adresses_related_to_fkey;
+ALTER TABLE ONLY public.epelia_addresses DROP CONSTRAINT epelia_addresses_country_fkey;
+DROP INDEX public.geodb_locations_plz_country_idx;
+DROP INDEX public.geodb_locations_lon_idx;
+DROP INDEX public.geodb_locations_lat_idx;
+DROP INDEX public.epelia_products_name_description_ingredients_tags_idx;
+ALTER TABLE ONLY public.geodb_locations DROP CONSTRAINT geodb_locations_pkey;
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_username_key;
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_pkey;
+ALTER TABLE ONLY public.epelia_users DROP CONSTRAINT epelia_users_email_key;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_url_key;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_taxident_key;
+ALTER TABLE ONLY public.epelia_shops DROP CONSTRAINT epelia_shops_pkey;
+ALTER TABLE ONLY public.epelia_shopping_carts DROP CONSTRAINT epelia_shopping_carts_pkey;
+ALTER TABLE ONLY public.epelia_shipping_costs DROP CONSTRAINT epelia_shipping_costs_pkey;
+ALTER TABLE ONLY public.epelia_products DROP CONSTRAINT epelia_products_pkey;
+ALTER TABLE ONLY public.epelia_products_home_groups DROP CONSTRAINT epelia_products_home_groups_pkey;
+ALTER TABLE ONLY public.epelia_product_ratings DROP CONSTRAINT epelia_product_ratings_pkey;
+ALTER TABLE ONLY public.epelia_product_prices DROP CONSTRAINT epelia_product_prices_pkey;
+ALTER TABLE ONLY public.epelia_product_price_units DROP CONSTRAINT epelia_product_price_units_pkey;
+ALTER TABLE ONLY public.epelia_product_price_content_types DROP CONSTRAINT epelia_product_price_content_types_pkey;
+ALTER TABLE ONLY public.epelia_product_groups DROP CONSTRAINT epelia_product_groups_pkey;
+ALTER TABLE ONLY public.epelia_product_categories DROP CONSTRAINT epelia_product_categories_pkey;
+ALTER TABLE ONLY public.epelia_product_attributes DROP CONSTRAINT epelia_product_attributes_pkey;
+ALTER TABLE ONLY public.epelia_pictures DROP CONSTRAINT epelia_pictures_pkey;
+ALTER TABLE ONLY public.epelia_pictures DROP CONSTRAINT epelia_pictures_filename_key;
+ALTER TABLE ONLY public.epelia_orders DROP CONSTRAINT epelia_orders_pkey;
+ALTER TABLE ONLY public.epelia_orders DROP CONSTRAINT epelia_orders_order_number_key;
+ALTER TABLE ONLY public.epelia_newsletters DROP CONSTRAINT epelia_newsletters_pkey;
+ALTER TABLE ONLY public.epelia_newsletters_log DROP CONSTRAINT epelia_newsletters_log_pkey;
+ALTER TABLE ONLY public.epelia_invoices DROP CONSTRAINT epelia_invoices_pkey;
+ALTER TABLE ONLY public.epelia_emails DROP CONSTRAINT epelia_emails_pkey;
+ALTER TABLE ONLY public.epelia_countries DROP CONSTRAINT epelia_countries_pkey;
+ALTER TABLE ONLY public.epelia_bank_accounts DROP CONSTRAINT epelia_bank_accounts_pkey;
+ALTER TABLE ONLY public.epelia_addresses DROP CONSTRAINT epelia_adresses_pkey;
+ALTER TABLE public.epelia_users ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_shops ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_shopping_carts ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_products_home_groups ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_products ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_ratings ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_prices ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_price_units ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_price_content_types ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_groups ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_categories ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_product_attributes ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_pictures ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_orders ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_newsletters_log ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_newsletters ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_invoices ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_bank_accounts ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.epelia_addresses ALTER COLUMN id DROP DEFAULT;
+DROP TABLE public.geodb_locations;
+DROP SEQUENCE public.epelia_users_id_seq;
+DROP TABLE public.epelia_users;
+DROP TABLE public.epelia_shops_pictures;
+DROP SEQUENCE public.epelia_shops_id_seq;
+DROP TABLE public.epelia_shops;
+DROP SEQUENCE public.epelia_shopping_carts_id_seq;
+DROP TABLE public.epelia_shopping_carts;
+DROP TABLE public.epelia_shipping_costs;
+DROP TABLE public.epelia_products_shopping_carts;
+DROP TABLE public.epelia_products_product_attributes;
+DROP TABLE public.epelia_products_pictures;
+DROP TABLE public.epelia_products_orders;
+DROP SEQUENCE public.epelia_products_id_seq;
+DROP TABLE public.epelia_products_home_groups_products;
+DROP SEQUENCE public.epelia_products_home_groups_id_seq;
+DROP TABLE public.epelia_products_home_groups;
+DROP TABLE public.epelia_products;
+DROP SEQUENCE public.epelia_product_ratings_id_seq;
+DROP TABLE public.epelia_product_ratings;
+DROP SEQUENCE public.epelia_product_prices_id_seq;
+DROP TABLE public.epelia_product_prices;
+DROP SEQUENCE public.epelia_product_price_units_id_seq;
+DROP TABLE public.epelia_product_price_units;
+DROP SEQUENCE public.epelia_product_price_content_types_id_seq;
+DROP TABLE public.epelia_product_price_content_types;
+DROP SEQUENCE public.epelia_product_groups_id_seq;
+DROP TABLE public.epelia_product_groups;
+DROP SEQUENCE public.epelia_product_categories_id_seq;
+DROP TABLE public.epelia_product_categories;
+DROP SEQUENCE public.epelia_product_attributes_id_seq;
+DROP TABLE public.epelia_product_attributes;
+DROP SEQUENCE public.epelia_pictures_id_seq;
+DROP TABLE public.epelia_pictures;
+DROP SEQUENCE public.epelia_orders_id_seq;
+DROP TABLE public.epelia_orders;
+DROP SEQUENCE public.epelia_order_number_seq;
+DROP SEQUENCE public.epelia_newsletters_log_id_seq;
+DROP TABLE public.epelia_newsletters_log;
+DROP SEQUENCE public.epelia_newsletters_id_seq;
+DROP TABLE public.epelia_newsletters;
+DROP SEQUENCE public.epelia_invoices_id_seq;
+DROP TABLE public.epelia_invoices;
+DROP TABLE public.epelia_emails;
+DROP TABLE public.epelia_countries;
+DROP SEQUENCE public.epelia_bank_accounts_id_seq;
+DROP TABLE public.epelia_bank_accounts;
+DROP SEQUENCE public.epelia_addresses_id_seq;
+DROP TABLE public.epelia_addresses;
+DROP TYPE public.epelia_users_type;
+DROP TYPE public.epelia_users_status;
+DROP TYPE public.epelia_shops_type;
+DROP TYPE public.epelia_shops_status;
+DROP TYPE public.epelia_shopping_carts_status;
+DROP TYPE public.epelia_shopping_carts_payment_type;
+DROP TYPE public.epelia_product_ratings_status;
+DROP TYPE public.epelia_product_attributes_type;
+DROP TYPE public.epelia_pictures_type;
+DROP TYPE public.epelia_orders_status;
+DROP TYPE public.epelia_newsletters_type;
+DROP TYPE public.epelia_adresses_gender;
+DROP TYPE public.company_type;
+DROP TYPE public.category_type;
+
+
 --
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
@@ -35,7 +197,7 @@ CREATE TYPE category_type AS ENUM (
 );
 
 
-ALTER TYPE public.category_type OWNER TO epelia;
+ALTER TYPE public.category_type OWNER TO epelia_testing;
 
 --
 -- Name: company_type; Type: TYPE; Schema: public; Owner: epelia
@@ -59,7 +221,7 @@ CREATE TYPE company_type AS ENUM (
 );
 
 
-ALTER TYPE public.company_type OWNER TO epelia;
+ALTER TYPE public.company_type OWNER TO epelia_testing;
 
 --
 -- Name: epelia_adresses_gender; Type: TYPE; Schema: public; Owner: epelia
@@ -71,7 +233,7 @@ CREATE TYPE epelia_adresses_gender AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_adresses_gender OWNER TO epelia;
+ALTER TYPE public.epelia_adresses_gender OWNER TO epelia_testing;
 
 --
 -- Name: epelia_newsletters_type; Type: TYPE; Schema: public; Owner: postgres
@@ -96,7 +258,7 @@ CREATE TYPE epelia_orders_status AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_orders_status OWNER TO epelia;
+ALTER TYPE public.epelia_orders_status OWNER TO epelia_testing;
 
 --
 -- Name: epelia_pictures_type; Type: TYPE; Schema: public; Owner: epelia
@@ -108,7 +270,7 @@ CREATE TYPE epelia_pictures_type AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_pictures_type OWNER TO epelia;
+ALTER TYPE public.epelia_pictures_type OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_attributes_type; Type: TYPE; Schema: public; Owner: postgres
@@ -135,7 +297,7 @@ CREATE TYPE epelia_product_ratings_status AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_product_ratings_status OWNER TO epelia;
+ALTER TYPE public.epelia_product_ratings_status OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shopping_carts_payment_type; Type: TYPE; Schema: public; Owner: postgres
@@ -160,7 +322,7 @@ CREATE TYPE epelia_shopping_carts_status AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_shopping_carts_status OWNER TO epelia;
+ALTER TYPE public.epelia_shopping_carts_status OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shops_status; Type: TYPE; Schema: public; Owner: postgres
@@ -185,7 +347,7 @@ CREATE TYPE epelia_shops_type AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_shops_type OWNER TO epelia;
+ALTER TYPE public.epelia_shops_type OWNER TO epelia_testing;
 
 --
 -- Name: epelia_users_status; Type: TYPE; Schema: public; Owner: epelia
@@ -197,7 +359,7 @@ CREATE TYPE epelia_users_status AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_users_status OWNER TO epelia;
+ALTER TYPE public.epelia_users_status OWNER TO epelia_testing;
 
 --
 -- Name: epelia_users_type; Type: TYPE; Schema: public; Owner: epelia
@@ -209,7 +371,7 @@ CREATE TYPE epelia_users_type AS ENUM (
 );
 
 
-ALTER TYPE public.epelia_users_type OWNER TO epelia;
+ALTER TYPE public.epelia_users_type OWNER TO epelia_testing;
 
 SET default_tablespace = '';
 
@@ -235,7 +397,7 @@ CREATE TABLE epelia_addresses (
 );
 
 
-ALTER TABLE public.epelia_addresses OWNER TO epelia;
+ALTER TABLE public.epelia_addresses OWNER TO epelia_testing;
 
 --
 -- Name: epelia_addresses_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -249,7 +411,7 @@ CREATE SEQUENCE epelia_addresses_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_addresses_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_addresses_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_addresses_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -272,7 +434,7 @@ CREATE TABLE epelia_bank_accounts (
 );
 
 
-ALTER TABLE public.epelia_bank_accounts OWNER TO epelia;
+ALTER TABLE public.epelia_bank_accounts OWNER TO epelia_testing;
 
 --
 -- Name: epelia_bank_accounts_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -286,7 +448,7 @@ CREATE SEQUENCE epelia_bank_accounts_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_bank_accounts_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_bank_accounts_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_bank_accounts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -306,7 +468,7 @@ CREATE TABLE epelia_countries (
 );
 
 
-ALTER TABLE public.epelia_countries OWNER TO epelia;
+ALTER TABLE public.epelia_countries OWNER TO epelia_testing;
 
 --
 -- Name: epelia_emails; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -320,7 +482,7 @@ CREATE TABLE epelia_emails (
 );
 
 
-ALTER TABLE public.epelia_emails OWNER TO epelia;
+ALTER TABLE public.epelia_emails OWNER TO epelia_testing;
 
 --
 -- Name: epelia_invoices; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -339,7 +501,7 @@ CREATE TABLE epelia_invoices (
 );
 
 
-ALTER TABLE public.epelia_invoices OWNER TO epelia;
+ALTER TABLE public.epelia_invoices OWNER TO epelia_testing;
 
 --
 -- Name: epelia_invoices_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -353,7 +515,7 @@ CREATE SEQUENCE epelia_invoices_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_invoices_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_invoices_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_invoices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -376,7 +538,7 @@ CREATE TABLE epelia_newsletters (
 );
 
 
-ALTER TABLE public.epelia_newsletters OWNER TO epelia;
+ALTER TABLE public.epelia_newsletters OWNER TO epelia_testing;
 
 --
 -- Name: epelia_newsletters_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -390,7 +552,7 @@ CREATE SEQUENCE epelia_newsletters_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_newsletters_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_newsletters_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_newsletters_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -412,7 +574,7 @@ CREATE TABLE epelia_newsletters_log (
 );
 
 
-ALTER TABLE public.epelia_newsletters_log OWNER TO epelia;
+ALTER TABLE public.epelia_newsletters_log OWNER TO epelia_testing;
 
 --
 -- Name: epelia_newsletters_log_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -426,7 +588,7 @@ CREATE SEQUENCE epelia_newsletters_log_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_newsletters_log_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_newsletters_log_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_newsletters_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -447,7 +609,7 @@ CREATE SEQUENCE epelia_order_number_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_order_number_seq OWNER TO epelia;
+ALTER TABLE public.epelia_order_number_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_orders; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -467,7 +629,7 @@ CREATE TABLE epelia_orders (
 );
 
 
-ALTER TABLE public.epelia_orders OWNER TO epelia;
+ALTER TABLE public.epelia_orders OWNER TO epelia_testing;
 
 --
 -- Name: epelia_orders_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -481,7 +643,7 @@ CREATE SEQUENCE epelia_orders_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_orders_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_orders_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_orders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -500,7 +662,7 @@ CREATE TABLE epelia_pictures (
 );
 
 
-ALTER TABLE public.epelia_pictures OWNER TO epelia;
+ALTER TABLE public.epelia_pictures OWNER TO epelia_testing;
 
 --
 -- Name: epelia_pictures_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -514,7 +676,7 @@ CREATE SEQUENCE epelia_pictures_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_pictures_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_pictures_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_pictures_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -534,7 +696,7 @@ CREATE TABLE epelia_product_attributes (
 );
 
 
-ALTER TABLE public.epelia_product_attributes OWNER TO epelia;
+ALTER TABLE public.epelia_product_attributes OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_attributes_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -548,7 +710,7 @@ CREATE SEQUENCE epelia_product_attributes_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_attributes_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_attributes_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_attributes_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -569,7 +731,7 @@ CREATE TABLE epelia_product_categories (
 );
 
 
-ALTER TABLE public.epelia_product_categories OWNER TO epelia;
+ALTER TABLE public.epelia_product_categories OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_categories_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -583,7 +745,7 @@ CREATE SEQUENCE epelia_product_categories_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_categories_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_categories_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_categories_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -604,7 +766,7 @@ CREATE TABLE epelia_product_groups (
 );
 
 
-ALTER TABLE public.epelia_product_groups OWNER TO epelia;
+ALTER TABLE public.epelia_product_groups OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -618,7 +780,7 @@ CREATE SEQUENCE epelia_product_groups_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_groups_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_groups_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -638,7 +800,7 @@ CREATE TABLE epelia_product_price_content_types (
 );
 
 
-ALTER TABLE public.epelia_product_price_content_types OWNER TO epelia;
+ALTER TABLE public.epelia_product_price_content_types OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_price_content_types_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -652,7 +814,7 @@ CREATE SEQUENCE epelia_product_price_content_types_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_price_content_types_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_price_content_types_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_price_content_types_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -672,7 +834,7 @@ CREATE TABLE epelia_product_price_units (
 );
 
 
-ALTER TABLE public.epelia_product_price_units OWNER TO epelia;
+ALTER TABLE public.epelia_product_price_units OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_price_units_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -686,7 +848,7 @@ CREATE SEQUENCE epelia_product_price_units_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_price_units_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_price_units_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_price_units_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -713,7 +875,7 @@ CREATE TABLE epelia_product_prices (
 );
 
 
-ALTER TABLE public.epelia_product_prices OWNER TO epelia;
+ALTER TABLE public.epelia_product_prices OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_prices_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -727,7 +889,7 @@ CREATE SEQUENCE epelia_product_prices_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_prices_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_prices_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_prices_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -751,7 +913,7 @@ CREATE TABLE epelia_product_ratings (
 );
 
 
-ALTER TABLE public.epelia_product_ratings OWNER TO epelia;
+ALTER TABLE public.epelia_product_ratings OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_ratings_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -765,7 +927,7 @@ CREATE SEQUENCE epelia_product_ratings_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_product_ratings_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_product_ratings_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_product_ratings_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -797,7 +959,7 @@ CREATE TABLE epelia_products (
 );
 
 
-ALTER TABLE public.epelia_products OWNER TO epelia;
+ALTER TABLE public.epelia_products OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_home_groups; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -809,7 +971,7 @@ CREATE TABLE epelia_products_home_groups (
 );
 
 
-ALTER TABLE public.epelia_products_home_groups OWNER TO epelia;
+ALTER TABLE public.epelia_products_home_groups OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_home_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -823,7 +985,7 @@ CREATE SEQUENCE epelia_products_home_groups_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_products_home_groups_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_products_home_groups_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_home_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -842,7 +1004,7 @@ CREATE TABLE epelia_products_home_groups_products (
 );
 
 
-ALTER TABLE public.epelia_products_home_groups_products OWNER TO epelia;
+ALTER TABLE public.epelia_products_home_groups_products OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -856,7 +1018,7 @@ CREATE SEQUENCE epelia_products_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_products_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_products_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -881,7 +1043,7 @@ CREATE TABLE epelia_products_orders (
 );
 
 
-ALTER TABLE public.epelia_products_orders OWNER TO epelia;
+ALTER TABLE public.epelia_products_orders OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_pictures; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -893,7 +1055,7 @@ CREATE TABLE epelia_products_pictures (
 );
 
 
-ALTER TABLE public.epelia_products_pictures OWNER TO epelia;
+ALTER TABLE public.epelia_products_pictures OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_product_attributes; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -905,7 +1067,7 @@ CREATE TABLE epelia_products_product_attributes (
 );
 
 
-ALTER TABLE public.epelia_products_product_attributes OWNER TO epelia;
+ALTER TABLE public.epelia_products_product_attributes OWNER TO epelia_testing;
 
 --
 -- Name: epelia_products_shopping_carts; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -920,7 +1082,7 @@ CREATE TABLE epelia_products_shopping_carts (
 );
 
 
-ALTER TABLE public.epelia_products_shopping_carts OWNER TO epelia;
+ALTER TABLE public.epelia_products_shopping_carts OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shipping_costs; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -934,7 +1096,7 @@ CREATE TABLE epelia_shipping_costs (
 );
 
 
-ALTER TABLE public.epelia_shipping_costs OWNER TO epelia;
+ALTER TABLE public.epelia_shipping_costs OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shopping_carts; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -952,7 +1114,7 @@ CREATE TABLE epelia_shopping_carts (
 );
 
 
-ALTER TABLE public.epelia_shopping_carts OWNER TO epelia;
+ALTER TABLE public.epelia_shopping_carts OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shopping_carts_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -966,7 +1128,7 @@ CREATE SEQUENCE epelia_shopping_carts_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_shopping_carts_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_shopping_carts_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shopping_carts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -1023,7 +1185,7 @@ CREATE TABLE epelia_shops (
 );
 
 
-ALTER TABLE public.epelia_shops OWNER TO epelia;
+ALTER TABLE public.epelia_shops OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shops_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -1037,7 +1199,7 @@ CREATE SEQUENCE epelia_shops_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_shops_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_shops_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_shops_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -1056,7 +1218,7 @@ CREATE TABLE epelia_shops_pictures (
 );
 
 
-ALTER TABLE public.epelia_shops_pictures OWNER TO epelia;
+ALTER TABLE public.epelia_shops_pictures OWNER TO epelia_testing;
 
 --
 -- Name: epelia_users; Type: TABLE; Schema: public; Owner: epelia; Tablespace: 
@@ -1087,7 +1249,7 @@ CREATE TABLE epelia_users (
 );
 
 
-ALTER TABLE public.epelia_users OWNER TO epelia;
+ALTER TABLE public.epelia_users OWNER TO epelia_testing;
 
 --
 -- Name: epelia_users_id_seq; Type: SEQUENCE; Schema: public; Owner: epelia
@@ -1101,7 +1263,7 @@ CREATE SEQUENCE epelia_users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.epelia_users_id_seq OWNER TO epelia;
+ALTER TABLE public.epelia_users_id_seq OWNER TO epelia_testing;
 
 --
 -- Name: epelia_users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: epelia
@@ -1124,7 +1286,7 @@ CREATE TABLE geodb_locations (
 );
 
 
-ALTER TABLE public.geodb_locations OWNER TO epelia;
+ALTER TABLE public.geodb_locations OWNER TO epelia_testing;
 
 --
 -- Name: id; Type: DEFAULT; Schema: public; Owner: epelia
@@ -23788,8 +23950,8 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 
 REVOKE ALL ON TABLE epelia_newsletters FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_newsletters FROM epelia;
-GRANT ALL ON TABLE epelia_newsletters TO epelia;
+REVOKE ALL ON TABLE epelia_newsletters FROM epelia_testing;
+GRANT ALL ON TABLE epelia_newsletters TO epelia_testing;
 GRANT ALL ON TABLE epelia_newsletters TO postgres;
 
 
@@ -23798,8 +23960,8 @@ GRANT ALL ON TABLE epelia_newsletters TO postgres;
 --
 
 REVOKE ALL ON SEQUENCE epelia_newsletters_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE epelia_newsletters_id_seq FROM epelia;
-GRANT ALL ON SEQUENCE epelia_newsletters_id_seq TO epelia;
+REVOKE ALL ON SEQUENCE epelia_newsletters_id_seq FROM epelia_testing;
+GRANT ALL ON SEQUENCE epelia_newsletters_id_seq TO epelia_testing;
 GRANT ALL ON SEQUENCE epelia_newsletters_id_seq TO postgres;
 
 
@@ -23808,8 +23970,8 @@ GRANT ALL ON SEQUENCE epelia_newsletters_id_seq TO postgres;
 --
 
 REVOKE ALL ON TABLE epelia_newsletters_log FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_newsletters_log FROM epelia;
-GRANT ALL ON TABLE epelia_newsletters_log TO epelia;
+REVOKE ALL ON TABLE epelia_newsletters_log FROM epelia_testing;
+GRANT ALL ON TABLE epelia_newsletters_log TO epelia_testing;
 GRANT ALL ON TABLE epelia_newsletters_log TO postgres;
 
 
@@ -23818,8 +23980,8 @@ GRANT ALL ON TABLE epelia_newsletters_log TO postgres;
 --
 
 REVOKE ALL ON SEQUENCE epelia_newsletters_log_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE epelia_newsletters_log_id_seq FROM epelia;
-GRANT ALL ON SEQUENCE epelia_newsletters_log_id_seq TO epelia;
+REVOKE ALL ON SEQUENCE epelia_newsletters_log_id_seq FROM epelia_testing;
+GRANT ALL ON SEQUENCE epelia_newsletters_log_id_seq TO epelia_testing;
 GRANT ALL ON SEQUENCE epelia_newsletters_log_id_seq TO postgres;
 
 
@@ -23828,8 +23990,8 @@ GRANT ALL ON SEQUENCE epelia_newsletters_log_id_seq TO postgres;
 --
 
 REVOKE ALL ON TABLE epelia_pictures FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_pictures FROM epelia;
-GRANT ALL ON TABLE epelia_pictures TO epelia;
+REVOKE ALL ON TABLE epelia_pictures FROM epelia_testing;
+GRANT ALL ON TABLE epelia_pictures TO epelia_testing;
 
 
 --
@@ -23837,8 +23999,8 @@ GRANT ALL ON TABLE epelia_pictures TO epelia;
 --
 
 REVOKE ALL ON TABLE epelia_product_groups FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_product_groups FROM epelia;
-GRANT ALL ON TABLE epelia_product_groups TO epelia;
+REVOKE ALL ON TABLE epelia_product_groups FROM epelia_testing;
+GRANT ALL ON TABLE epelia_product_groups TO epelia_testing;
 GRANT ALL ON TABLE epelia_product_groups TO postgres;
 
 
@@ -23847,8 +24009,8 @@ GRANT ALL ON TABLE epelia_product_groups TO postgres;
 --
 
 REVOKE ALL ON SEQUENCE epelia_product_groups_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE epelia_product_groups_id_seq FROM epelia;
-GRANT ALL ON SEQUENCE epelia_product_groups_id_seq TO epelia;
+REVOKE ALL ON SEQUENCE epelia_product_groups_id_seq FROM epelia_testing;
+GRANT ALL ON SEQUENCE epelia_product_groups_id_seq TO epelia_testing;
 GRANT ALL ON SEQUENCE epelia_product_groups_id_seq TO postgres;
 
 
@@ -23857,8 +24019,8 @@ GRANT ALL ON SEQUENCE epelia_product_groups_id_seq TO postgres;
 --
 
 REVOKE ALL ON TABLE epelia_product_price_content_types FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_product_price_content_types FROM epelia;
-GRANT ALL ON TABLE epelia_product_price_content_types TO epelia;
+REVOKE ALL ON TABLE epelia_product_price_content_types FROM epelia_testing;
+GRANT ALL ON TABLE epelia_product_price_content_types TO epelia_testing;
 GRANT ALL ON TABLE epelia_product_price_content_types TO postgres;
 
 
@@ -23867,8 +24029,8 @@ GRANT ALL ON TABLE epelia_product_price_content_types TO postgres;
 --
 
 REVOKE ALL ON SEQUENCE epelia_product_price_content_types_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE epelia_product_price_content_types_id_seq FROM epelia;
-GRANT ALL ON SEQUENCE epelia_product_price_content_types_id_seq TO epelia;
+REVOKE ALL ON SEQUENCE epelia_product_price_content_types_id_seq FROM epelia_testing;
+GRANT ALL ON SEQUENCE epelia_product_price_content_types_id_seq TO epelia_testing;
 GRANT ALL ON SEQUENCE epelia_product_price_content_types_id_seq TO postgres;
 
 
@@ -23877,8 +24039,8 @@ GRANT ALL ON SEQUENCE epelia_product_price_content_types_id_seq TO postgres;
 --
 
 REVOKE ALL ON TABLE epelia_product_price_units FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_product_price_units FROM epelia;
-GRANT ALL ON TABLE epelia_product_price_units TO epelia;
+REVOKE ALL ON TABLE epelia_product_price_units FROM epelia_testing;
+GRANT ALL ON TABLE epelia_product_price_units TO epelia_testing;
 GRANT ALL ON TABLE epelia_product_price_units TO postgres;
 
 
@@ -23887,8 +24049,8 @@ GRANT ALL ON TABLE epelia_product_price_units TO postgres;
 --
 
 REVOKE ALL ON SEQUENCE epelia_product_price_units_id_seq FROM PUBLIC;
-REVOKE ALL ON SEQUENCE epelia_product_price_units_id_seq FROM epelia;
-GRANT ALL ON SEQUENCE epelia_product_price_units_id_seq TO epelia;
+REVOKE ALL ON SEQUENCE epelia_product_price_units_id_seq FROM epelia_testing;
+GRANT ALL ON SEQUENCE epelia_product_price_units_id_seq TO epelia_testing;
 GRANT ALL ON SEQUENCE epelia_product_price_units_id_seq TO postgres;
 
 
@@ -23897,8 +24059,8 @@ GRANT ALL ON SEQUENCE epelia_product_price_units_id_seq TO postgres;
 --
 
 REVOKE ALL ON TABLE epelia_products_pictures FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_products_pictures FROM epelia;
-GRANT ALL ON TABLE epelia_products_pictures TO epelia;
+REVOKE ALL ON TABLE epelia_products_pictures FROM epelia_testing;
+GRANT ALL ON TABLE epelia_products_pictures TO epelia_testing;
 GRANT ALL ON TABLE epelia_products_pictures TO postgres;
 
 
@@ -23907,8 +24069,8 @@ GRANT ALL ON TABLE epelia_products_pictures TO postgres;
 --
 
 REVOKE ALL ON TABLE epelia_shops_pictures FROM PUBLIC;
-REVOKE ALL ON TABLE epelia_shops_pictures FROM epelia;
-GRANT ALL ON TABLE epelia_shops_pictures TO epelia;
+REVOKE ALL ON TABLE epelia_shops_pictures FROM epelia_testing;
+GRANT ALL ON TABLE epelia_shops_pictures TO epelia_testing;
 GRANT ALL ON TABLE epelia_shops_pictures TO postgres;
 
 
