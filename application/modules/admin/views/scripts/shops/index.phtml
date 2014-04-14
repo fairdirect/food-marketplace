@@ -3,7 +3,7 @@
 <h2>Shops</h2>
 <table class="table" id="shopTable">
     <thead>
-    <tr><th>ID</th><th>Username</th><th>Shopname</th><th>URL</th><th>Provision</th><th>Steuernummer</th><th>Steuer-ID</th><th>Aktionen</th></tr>
+    <tr><th>ID</th><th>E-Mail</th><th>Shopname</th><th>URL</th><th>Provision</th><th>Steuernummer</th><th>Steuer-ID</th><th>Aktionen</th></tr>
     </thead>
     <tbody>
 
@@ -15,7 +15,7 @@
         $('#shopTable').dataTable({
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
-            "bFilter": false,
+            "bFilter": true,
             "bSort": false,
             "bProcessing": true,
             "bServerSide": true,
@@ -38,7 +38,7 @@
                 "sInfoEmpty": "0 bis 0 von 0 Einträgen",
                 "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
                 "sInfoPostFix": "",
-                "sSearch": "Suchen",
+                "sSearch": "Suchen (ID, E-Mail, Shop-Name, Adresse, Steuer-Nummer/-ID",
                 "sUrl": "",
                 "oPaginate": {
                     "sFirst":    "Erster",

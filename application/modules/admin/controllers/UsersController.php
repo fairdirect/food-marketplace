@@ -14,11 +14,11 @@ class Admin_UsersController extends Zend_Controller_Action
     }
 
     public function ajaxgetusersAction(){
-        $users = Model_User::getAll($this->getRequest()->getParam('iDisplayLength'), $this->getRequest()->getParam('iDisplayStart'));
+        $users = Model_User::getAll($this->getRequest()->getParam('iDisplayLength'), $this->getRequest()->getParam('iDisplayStart'), $this->getRequest()->getParam('sSearch'));
         $ret = array(
             'sEcho' => $this->getRequest()->getParam('sEcho') + 1,
             'iTotalRecords' => Model_User::getCount(),
-            'iTotalDisplayRecords' => Model_User::getCount(),
+            'iTotalDisplayRecords' => count($users),
             'aaData' => array()
         );
 
@@ -50,12 +50,12 @@ class Admin_UsersController extends Zend_Controller_Action
                 htmlspecialchars($user->id),
                 htmlspecialchars($user->email),
                 htmlspecialchars($type),
-                ($user->getMainDeliveryAddress()) ? htmlspecialchars($user->getMainDeliveryAddress()->toFormatedString()) : '',
+                ($user->getMainBillingAddress()) ? $user->getMainBillingAddress()->toFormatedString() : '',
                 ($user->is_wholesale) ? 'ja' : 'nein',
                 htmlspecialchars($status),
                 ($user->registered) ? date('d.m.Y', strtotime($user->registered)) : '-',
                 ($user->last_login) ? date('d.m.Y', strtotime($user->last_login)) : '-',
-                '<a href="/admin/users/edit/id/' . htmlspecialchars($user->id) . '/">Editieren</a>&nbsp;<a href="/admin/users/password/id/' . htmlspecialchars($user->id) . '">Passwort setzen</a>&nbsp;<a href="/admin/addresses/byuser/id/' . htmlspecialchars($user->id) . '/">Adressen</a>&nbsp;<a href="/admin/bankaccounts/byuser/id/' . htmlspecialchars($user->id) . '/">Konten</a>'
+                '<a href="/admin/users/edit/id/' . htmlspecialchars($user->id) . '/">Editieren</a><br /><a href="/admin/users/password/id/' . htmlspecialchars($user->id) . '">Passwort setzen</a><br /><a href="/admin/addresses/byuser/id/' . htmlspecialchars($user->id) . '/">Adressen</a><br /><a href="/admin/bankaccounts/byuser/id/' . htmlspecialchars($user->id) . '/">Konten</a><br /><a href="/admin/users/loginas/id/' . htmlspecialchars($user->id) . '/">Einloggen</a>'
             );
         }
         exit(json_encode($ret));
@@ -76,7 +76,7 @@ class Admin_UsersController extends Zend_Controller_Action
                     $user = new Model_User($request->getPost());
                 }
                 $user->save();
-                $this->_helper->redirector('index');
+                $this->_redirect('index');
             }
         }
         else{
@@ -125,7 +125,7 @@ class Admin_UsersController extends Zend_Controller_Action
                     else{
                         $user->password = md5($request->getPost('password1') . '_epelia_' . $user->salt);
                         $user->save();
-                        $this->_helper->redirector('index');
+                        $this->_redirect('index');
                     }
                 }
             }
@@ -163,7 +163,24 @@ class Admin_UsersController extends Zend_Controller_Action
         $id = $this->getRequest()->getParam('id');
         $user = Model_User::find($id);
         $user->delete();
-        $this->_helper->redirector('index');
+        $this->_redirect('index');
+    }
+
+    public function loginasAction(){
+        $id = $this->getRequest()->getParam('id');
+        if(!$id){
+            $this->_redirect('/admin/users/');
+        }
+        $user = Model_User::find($id);
+        if($user){
+            Zend_Session::namespaceUnset('Default');
+            $auth = Zend_Auth::getInstance();
+            $auth->getStorage()->write($user);
+            $this->_redirect('/');
+        }
+        else{
+            $this->_redirect('/admin/users/');
+        }
     }
 
 }

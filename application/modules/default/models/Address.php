@@ -19,7 +19,12 @@ class Model_Address extends Model_ModelAbstract
     private $_country = null;
 
     public function toFormatedString(){
-        return $this->company . '<br />' . $this->gender . ' ' . $this->firstname . ' ' . $this->name . '<br />' . $this->street . ' ' . $this->house . '<br />' . $this->zip . ' ' . $this->city . '<br />' . $this->getCountry()->name;
+        $ret = '';
+        if($this->company){
+            $ret .= $this->company . '<br />';
+        }
+        $ret .= $this->gender . ' ' . $this->firstname . ' ' . $this->name . '<br />' . $this->street . ' ' . $this->house . '<br />' . $this->zip . ' ' . $this->city . '<br />' . $this->getCountry()->name;
+        return $ret;
     }
 
     public function toMailFormatedString(){

@@ -144,20 +144,28 @@ class Model_User extends Model_ModelAbstract
         $table->delete($where);
     }
 
-    public static function getAll($limit = null, $offset = null){
-        $table = self::getDbTable();
-        $select = $table->select();
+    public static function getAll($limit = null, $offset = null, $search = ''){
+        $db = self::getDbTable()->getAdapter();
         $ret = array();
-
-        $select->order('id DESC');
-        $select->limit($limit, $offset);
         
-        $result = $table->fetchAll($select);
-        if (is_null($result)) {
-            return array();
+        $query = 'SELECT u.* FROM epelia_users u LEFT JOIN epelia_addresses a ON a.id = u.main_billing_address_id';
+        
+        if($search){
+            $search = '%' . $search . '%';
+            $query .= ' WHERE u.email ILIKE ' . $db->quote($search) . ' OR u.id = ' . $db->quote(str_replace('%', '', intVal($search))) . ' OR a.firstname ILIKE ' . $db->quote($search) . ' OR a.name ILIKE ' .$db->quote($search) . ' OR a.street ILIKE ' . $db->quote($search) . ' OR a.zip ILIKE ' .$db->quote($search) . ' OR a.city ILIKE ' . $db->quote($search);
         }
-        foreach($result as $r){
-            $ret[] = new self($r);
+        if($limit && !$offset){
+            $query .= ' LIMIT ' . $db->quote($limit);
+        }
+        if($limit && $offset){
+            $query .= ' LIMIT ' . $db->quote($limit) . ',' . $db->quote($offset);
+        }
+
+        $result = $db->fetchAll($query);
+        if($result){
+            foreach($result as $r){
+                $ret[] =  new self($r);
+            }
         }
         return $ret;
     }

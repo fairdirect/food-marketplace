@@ -14,11 +14,11 @@ class Admin_ShopsController extends Zend_Controller_Action
     }
 
     public function ajaxgetshopsAction(){
-        $shops = Model_Shop::getAll($this->getRequest()->getParam('iDisplayLength'), $this->getRequest()->getParam('iDisplayStart'));
+        $shops = Model_Shop::getAll($this->getRequest()->getParam('iDisplayLength'), $this->getRequest()->getParam('iDisplayStart'), $this->getRequest()->getParam('sSearch'));
         $ret = array(
             'sEcho' => $this->getRequest()->getParam('sEcho') + 1,
             'iTotalRecords' => Model_Shop::getCount(),
-            'iTotalDisplayRecords' => Model_Shop::getCount(),
+            'iTotalDisplayRecords' => count($shops),
             'aaData' => array()
         );
         foreach($shops as $shop){
