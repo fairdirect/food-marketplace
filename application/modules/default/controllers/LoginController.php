@@ -122,6 +122,11 @@ class LoginController extends Zend_Controller_Action
             else{
                 $user->status = 'accepted';
                 $user->save();
+                $user->last_login = date('Y-m-d', time());
+                $user->save();
+                $auth = Zend_Auth::getInstance();
+                $auth->getStorage()->write($user);
+
                 $this->_helper->_redirector('confirmsuccess');
             }
         }

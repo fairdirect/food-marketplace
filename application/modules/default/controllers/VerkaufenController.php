@@ -9,7 +9,7 @@ class VerkaufenController extends Zend_Controller_Action
         $request = $this->getRequest();
         $form = new Form_RegisterSeller();
 
-        if($request->getPost('Anmelden')){
+        if($request->getPost('Registrieren')){
             if($form->isValid($request->getPost())){
                 $exists = Model_User::findByEmail($request->getParam('email', true));
                 if($exists){
@@ -43,8 +43,6 @@ class VerkaufenController extends Zend_Controller_Action
                         try{
                             $shop->save();
                         } catch(Exception $e){
-                            echo $e->getMessage();
-                            exit();
                             $this->_helper->_redirector('failure');
                         }
                         try{
