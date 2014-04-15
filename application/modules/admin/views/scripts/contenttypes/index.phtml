@@ -2,11 +2,11 @@
 <a href="/admin/contenttypes/edit/">Neuen Typ anlegen</a>
 <table class="table" id="unitTable">
     <thead>
-    <tr><th>Name</th><th>Aktionen</th></tr>
+    <tr><th>Name</th><th>Grundeinheit</th><th>Faktor</th><th>Aktionen</th></tr>
     </thead>
     <tbody>
 <?php foreach($this->types as $type): ?>
-        <tr><td><?= $this->escape($type->name) ?></td><td><a href="/admin/contenttypes/edit/id/<?= $this->escape($type->id) ?>">Editieren</a></td></tr>
+        <tr><td><?= $this->escape($type->name) ?></td><td><?= $this->escape($type->base_unit) ?></td><td><?= $this->escape($type->base_factor) ?></td><td><a href="/admin/contenttypes/edit/id/<?= $this->escape($type->id) ?>">Editieren</a></td></tr>
 <?php
 endforeach;
 ?>
@@ -19,6 +19,8 @@ endforeach;
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "aoColumns": [
+                null,
+                null, 
                 null,
                 { "bSortable": false } 
             ],
