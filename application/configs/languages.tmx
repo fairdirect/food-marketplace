@@ -4136,6 +4136,38 @@
                 <seg></seg>
             </tuv>
         </tu>
-
+        <tu tuid='myepelia_orders_waiting'>
+            <tuv xml:lang="de">
+                <seg>Warten auf Zahlungseingang</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>       
+        <tu tuid='myepelia_orders_in_process'>
+            <tuv xml:lang="de">
+                <seg>In Bearbeitung</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid='myepelia_orders_complete'>
+            <tuv xml:lang="de">
+                <seg>Versendet</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
