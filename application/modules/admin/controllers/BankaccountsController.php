@@ -12,7 +12,7 @@ class Admin_BankaccountsController extends Zend_Controller_Action{
 
     public function byuserAction(){
         $user = Model_User::find($this->getRequest()->getParam('id'));
-        $this->view->headTitle("Bankverbindungen für Benutzer " . ($user->username) ? $user->username : $user->email);
+        $this->view->headTitle("Bankverbindungen für Benutzer " . $user->email);
         $this->view->user = $user;
         $this->view->bankaccounts = $user->getBankAccounts();
     }

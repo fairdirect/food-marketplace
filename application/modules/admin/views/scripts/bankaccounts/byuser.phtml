@@ -1,4 +1,4 @@
-<h1 style="margin-bottom:5px;">Bankverbindungen für Benutzer <?= ($this->user->username) ? $this->escape($this->user->username) : $this->escape($this->user->email) ?></h1>
+<h1 style="margin-bottom:5px;">Bankverbindungen für Benutzer <?= $this->escape($this->user->email) ?></h1>
 <a href="/admin/bankaccounts/edit/user_id/<?= $this->escape($this->user->id) ?>/">Neue Bankverbindung anlegen</a>
 <table class="table" id="bankAccountTable">
     <thead>

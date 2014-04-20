@@ -10,11 +10,6 @@ class Admin_Form_Users extends Zend_Form
 
         $id = new Zend_Form_Element_Hidden('id');
 
-        $username = new Zend_Form_Element_Text('username');
-        $username->addFilters(array('StripTags', 'StripNewlines'))
-            ->setLabel('Username')
-            ->setAttrib('class', 'span2');
-
         $email = new Zend_Form_Element_Text('email');
         $email->addFilters(array('StripTags', 'StripNewlines'))
             ->setRequired(true)
@@ -46,6 +41,10 @@ class Admin_Form_Users extends Zend_Form
         $is_wholesale->setAttrib('class', 'span2')
             ->setLabel('Großhändler?');
 
+        $newsletter = new Zend_Form_Element_Checkbox('newsletter');
+        $newsletter->setAttrib('class', 'span2')
+            ->setLabel('Newsletter?');
+
         $options = array('' => '', 'new' => 'Neu', 'accepted' => 'Bestätigt');
         $status = new Zend_Form_Element_Select('status');
         $status->addMultiOptions($options)
@@ -55,6 +54,6 @@ class Admin_Form_Users extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('Speichern');
 
-        $this->addElements(array($id, $username, $email, $type, $main_delivery_address, $main_billing_address, $is_admin, $is_wholesale, $status, $submit));
+        $this->addElements(array($id, $email, $type, $main_delivery_address, $main_billing_address, $is_admin, $is_wholesale, $newsletter, $status, $submit));
     }
 }

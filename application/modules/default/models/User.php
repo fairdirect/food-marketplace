@@ -4,7 +4,6 @@ class Model_User extends Model_ModelAbstract
 {
     public $id;
     public $phpbb_id = 0;
-    public $username;
     public $email;
     public $password = '';
     public $salt = '';
@@ -101,8 +100,8 @@ class Model_User extends Model_ModelAbstract
         return Model_ShoppingCart::findByUser($this->id, $status);
     }
 
-    public function getOrders(){
-        return Model_Order::findByUser($this->id);
+    public function getOrders($status = null){
+        return Model_Order::findByUser($this->id, $status);
     }
 
     public function getProductRatings(){

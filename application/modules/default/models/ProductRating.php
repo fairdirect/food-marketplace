@@ -95,7 +95,7 @@ class Model_ProductRating extends Model_ModelAbstract
 
     public function getProduct(){
         if(is_null($this->_product)){
-            $this->_user = Model_Product::find($this->product_id);
+            $this->_product = Model_Product::find($this->product_id);
         }
         return $this->_product;
     }

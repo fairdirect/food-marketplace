@@ -132,7 +132,7 @@ class LoginController extends Zend_Controller_Action
         }
     }
 
-    private function _authenticate($username, $password){
+    private function _authenticate($email, $password){
         $dbAdapter = Model_User::getDbTable()->getAdapter();
         $adapter = new Zend_Auth_Adapter_DbTable($dbAdapter);
 
@@ -141,7 +141,7 @@ class LoginController extends Zend_Controller_Action
         $adapter->setCredentialColumn('password');
         $adapter->setCredentialTreatment("MD5(? || '_epelia_' || salt)");
         
-        $adapter->setIdentity($username);
+        $adapter->setIdentity($email);
         $adapter->setCredential($password);
         $adapter->getDbSelect()->where("status = 'accepted'");
 
@@ -156,11 +156,11 @@ class LoginController extends Zend_Controller_Action
             return true;
         }
         else{
-            return $this->_oldAuth($username, $password); // Login failed, trying old password
+            return $this->_oldAuth($email, $password); // Login failed, trying old password
         }
     }
 
-    private function _oldAuth($username, $password){
+    private function _oldAuth($email, $password){
         $dbAdapter = Model_User::getDbTable()->getAdapter();
         $adapter = new Zend_Auth_Adapter_DbTable($dbAdapter);
 
@@ -169,7 +169,7 @@ class LoginController extends Zend_Controller_Action
         $adapter->setCredentialColumn('old_password_hash');
         $adapter->setCredentialTreatment("MD5(?)");
         
-        $adapter->setIdentity($username);
+        $adapter->setIdentity($email);
         $adapter->setCredential($password);
         $adapter->getDbSelect()->where("status = 'accepted'");
 

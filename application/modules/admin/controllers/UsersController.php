@@ -76,7 +76,7 @@ class Admin_UsersController extends Zend_Controller_Action
                     $user = new Model_User($request->getPost());
                 }
                 $user->save();
-                $this->_redirect('index');
+                $this->_redirect('/admin/users/');
             }
         }
         else{

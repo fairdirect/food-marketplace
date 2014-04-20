@@ -22,7 +22,8 @@ class MeinepeliaController extends Zend_Controller_Action
         $this->view->headTitle('Meine Bestellungen | Epelia');
         $this->view->user = $this->user;
         $this->view->orderedCarts = $this->user->getShoppingCarts('ordered');
-        $this->view->orders = $this->user->getOrders();
+        $this->view->openOrders = $this->user->getOrders('in_process');
+        $this->view->completeOrders = $this->user->getOrders('complete');
     }
 
     public function addressesAction(){
@@ -123,11 +124,11 @@ class MeinepeliaController extends Zend_Controller_Action
                 $ratedProductIds[] = $rating->product_id;
             }
         }
-        $orders = $this->user->getOrders();
+        $orders = $this->user->getOrders('complete');
         foreach($orders as $order){
             $items = $order->getProducts();
             foreach($items as $item){
-                if(!in_array($item->product_id, $ratedProductIds)){
+                if(!in_array($item['product_id'], $ratedProductIds)){
                     $unratedProducts[] = $item;
                 }
             }
@@ -148,12 +149,12 @@ class MeinepeliaController extends Zend_Controller_Action
                 $ratedProductIds[] = $rating->product_id;
             }
         }
-        $orders = $this->user->getOrders();
+        $orders = $this->user->getOrders('complete');
         foreach($orders as $order){
             $items = $order->getProducts();
             foreach($items as $item){
-                if(!in_array($item->product_id, $ratedProductIds)){
-                    $unratedProductIds[] = $item->product_id;
+                if(!in_array($item['product_id'], $ratedProductIds)){
+                    $unratedProductIds[] = $item['product_id'];
                 }
             }
         }
@@ -167,7 +168,7 @@ class MeinepeliaController extends Zend_Controller_Action
 
         if($this->getRequest()->getParam('Speichern')){
             if($form->isValid($this->getRequest()->getPost())){
-                $rating = new Model_ProductRating($form->getValues());
+                $rating = new Model_ProductRating(array_merge($form->getValues(), array('product_id' => $form->getValue('productid'), 'user_id' => $this->user->id)));
                 if($rating->rating < 1 || $rating->rating > 5){ // double check
                     exit('Wert muss zwischen 1 und 5 liegen');
                 }

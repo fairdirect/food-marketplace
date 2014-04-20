@@ -80,7 +80,7 @@ class Admin_NewslettersController extends Zend_Controller_Action
                 }
                 break;
             case 'SINGLE_ADDRESS':
-                $recUsers[] = new Model_User(array('username' => 'aTestUsername', 'email' => $request->getParam('testmail')));
+                $recUsers[] = new Model_User(array('firstname' => 'testVorname', 'name' => 'testNachname', 'email' => $request->getParam('testmail')));
                 break;
             case 'ALL':
                 $users = Model_User::getAll();
@@ -104,7 +104,7 @@ class Admin_NewslettersController extends Zend_Controller_Action
             $replace = array();
 
             $mail = new Zend_Mail('UTF-8');
-            $content = str_replace(array('#USERNAME#'), array($user->username), $newsletter->content);
+            $content = str_replace(array('#firstname#', '#lastname#'), array($user->firstname, $user->name), $newsletter->content);
             if($newsletter->type != 'text') $mail->setBodyHtml($content);
             if($newsletter->type != 'html') $mail->setBodyText(strip_tags($content));
             $mail->setFrom('mail@epelia.com', 'Epelia');

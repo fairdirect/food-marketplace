@@ -2,7 +2,7 @@
 <h3>Abgeschlossene Bestellungen:</h3>
 <table class="table" id="ordersTable">
     <thead>
-    <tr><th>Bestellt am</th><th>Versendet am</th><th>Bestellnummer</th><th>Shop</th><th>Preis Produkte</th><th>Versandkosten</th><th>Gesamtpreis</th><th>Produkte</th><th>Status</th></tr>
+    <tr><th>Bestellt am</th><th>Versendet am</th><th>Bestellnummer</th><th>Shop</th><th>Preis Produkte</th><th>Versandkosten</th><th>Gesamtpreis</th><th>Produkte</th><th>Lieferadresse</th><th>Rechnungsadresse</th><th>Status</th></tr>
     </thead>
     <tbody>
 <?php
@@ -28,7 +28,7 @@
             $total += $item['value'] * $item['quantity'];
         }
 ?>
-        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= date('d.m.Y', strtotime($order->send_date)) ?></td><td><?= $this->escape($order->id) ?></td><td><?= $this->escape($order->shop_id) ?> (<?= $this->escape(Model_Shop::find($order->shop_id)->name) ?>)</td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><?= $this->escape($status) ?></td></tr>
+        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= date('d.m.Y', strtotime($order->send_date)) ?></td><td><?= $this->escape($order->id) ?></td><td><?= $this->escape($order->shop_id) ?> (<?= $this->escape(Model_Shop::find($order->shop_id)->name) ?>)</td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><?= $order->getDeliveryAddress()->toFormatedString() ?></td><td><?= $order->getBillingAddress()->toFormatedString() ?></td><td><?= $this->escape($status) ?></td></tr>
 <?php
     endforeach;
 ?>
@@ -41,6 +41,8 @@
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "aoColumns": [
+                null,
+                null,
                 null,
                 null,
                 null,

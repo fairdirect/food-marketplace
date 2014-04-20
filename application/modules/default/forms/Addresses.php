@@ -55,7 +55,7 @@ class Form_Addresses extends Zend_Form
         $city = new Zend_Form_Element_Text('city');
         $city->addFilters(array('StripTags', 'StripNewlines'))
             ->setRequired(true)
-            ->setLabel($this->getTranslator()->translate('misc_zip'))
+            ->setLabel($this->getTranslator()->translate('misc_city'))
             ->setAttrib('class', 'span2');
 
         $options = array('' => '');

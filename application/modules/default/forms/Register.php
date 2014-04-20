@@ -76,7 +76,7 @@ class Form_Register extends Zend_Form
         $password1 = new Zend_Form_Element_Password('password1');
         $password1->addFilters(array('StripTags', 'StripNewlines'))
             ->setRequired(true)
-            ->setLabel($this->getTranslator()->translate('password'))
+            ->setLabel($this->getTranslator()->translate('misc_password'))
             ->setAttrib('class', 'span2');
 
         $password2 = new Zend_Form_Element_Password('password2');

@@ -1,7 +1,7 @@
 <h1 style="margin-bottom:5px;"><?= $this->translate('business_orders_open_headline') ?></h1>
 <table class="table" id="ordersTable">
     <thead>
-    <tr><th><?= $this->translate('business_orders_order_date') ?></th><th><?= $this->translate('business_orders_ordernumber') ?></th><th><?= $this->translate('business_orders_price_products') ?></th><th><?= $this->translate('business_orders_price_delivery') ?></th><th><?= $this->translate('business_orders_price_delivery') ?></th><th><?= $this->translate('business_orders_price_total') ?></th><th><?= $this->translate('misc_actions') ?>
+    <tr><th><?= $this->translate('business_orders_order_date') ?></th><th><?= $this->translate('business_orders_ordernumber') ?></th><th><?= $this->translate('business_orders_price_products') ?></th><th><?= $this->translate('business_orders_price_delivery') ?></th><th><?= $this->translate('business_orders_price_total') ?></th><th><?= $this->translate('business_orders_products') ?></th><th><?= $this->translate('shoppingcart_addresses_delivery') ?></th><th><?= $this->translate('misc_actions') ?>
     </th></tr>
 
     </thead>
@@ -18,7 +18,7 @@
             $total += $item['value'] * $item['quantity'];
         }
 ?>
-        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= $this->escape($order->id) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><a href="/business/sales/setsend/id/<?= $this->escape($order->id) ?>/"><?= $this->translate('business_orders_mark_sent') ?></a></td></tr>
+        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= $this->escape($order->id) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><?= $order->getDeliveryAddress()->toFormatedString() ?></td><td><a href="/business/sales/setsend/id/<?= $this->escape($order->id) ?>/"><?= $this->translate('business_orders_mark_sent') ?></a></td></tr>
 
 <?php
     endforeach;
@@ -32,6 +32,7 @@
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "aoColumns": [
+                null,
                 null,
                 null,
                 null,

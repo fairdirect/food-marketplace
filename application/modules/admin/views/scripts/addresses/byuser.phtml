@@ -1,4 +1,4 @@
-<h1 style="margin-bottom:5px;">Adressen für Benutzer <?= ($this->user->username) ? $this->escape($this->user->username) : $this->escape($this->user->email) ?></h1>
+<h1 style="margin-bottom:5px;">Adressen für Benutzer <?= $this->escape($this->user->email) ?></h1>
 <a href="/admin/addresses/edit/user_id/<?= $this->escape($this->user->id) ?>/">Neue Adresse anlegen</a>
 <table class="table" id="addressTable">
     <thead>
