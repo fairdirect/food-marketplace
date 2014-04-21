@@ -36,7 +36,7 @@ class VerkaufenController extends Zend_Controller_Action
                             'name' => $request->getPost('shopname'),
                             'url' => $request->getPost('website'),
                             'company' => $request->getPost('company'),
-                            'representative' => $request->getPost('firstname') . ' ' . $request->getPost('name'),
+                            'representative' => $request->getPost('gender') . ' ' . $request->getPost('firstname') . ' ' . $request->getPost('name'),
                             'phone' => $request->getPost('phone'),
                             'country' => $request->getPost('country')
                         ));
@@ -46,18 +46,19 @@ class VerkaufenController extends Zend_Controller_Action
                             $this->_helper->_redirector('failure');
                         }
                         try{
-                            $registerMail = Model_Email::find('register');
+                            $registerMail = Model_Email::find('registerShop');
                             $mail = new Zend_Mail('UTF-8');
-                            $content = str_replace('#registerLink#', 'http://' . $_SERVER['HTTP_HOST'] . '/login/confirm/id/' . $user->id . '/code/' . md5($user->email . '_epelia_' . $user->salt) . '/', $registerMail->content);
+                            $content = str_replace(array('#salutation#', '#lastname#', '#registerLink#'), array($request->getPost('gender'), $request->getPost('name'), 'http://' . $request->getHttpHost() . '/login/confirm/id/' . $user->id . '/code/' . md5($user->email . '_epelia_' . $user->salt) . '/'), $registerMail->content);
                             $mail->setBodyText(strip_tags($content));
                             $mail->setFrom('mail@epelia.com', 'Epelia');
                             $mail->addTo($user->email);
                             $mail->setSubject($registerMail->subject);
+                            $at = $mail->createAttachment(file_get_contents(APPLICATION_PATH . '/files/agb.pdf'));
+                            $at->filename = 'agb.pdf';
                             $mail->send();
                         } catch(Exception $e){
                             $this->_helper->_redirector('failure');
                         }
-
 
                         $mail = new Zend_Mail('UTF-8');
                         $mail->setFrom('mail@epelia.com', 'Epelia');
@@ -71,7 +72,9 @@ class VerkaufenController extends Zend_Controller_Action
                             "Telefon: " . $request->getPost('phone') . "\n" . 
                             "E-Mail: " . $request->getPost('email') . "\n" . 
                             "Land: " . $request->getPost('country') . "\n" . 
-                            "Webseite: " . $request->getPost('website')
+                            "Webseite: " . $request->getPost('website') . "\n\n" . 
+                            "User editieren: http://" . $request->getHttpHost() . "/admin/users/edit/id/" . $user->id . "/\n". 
+                            "Shop editieren: http://" . $request->getHttpHost() . "/admin/shops/edit/id/" . $shop->id . "/"
                         );
                         $mail->send();
                         $this->_helper->_redirector('success');

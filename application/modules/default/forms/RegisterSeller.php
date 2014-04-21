@@ -18,7 +18,13 @@ class Form_RegisterSeller extends Zend_Form
             ->setRequired(true)
             ->setLabel($this->getTranslator()->translate('misc_shopname'))
             ->setAttrib('class', 'span2');
-        
+  
+        $options = array('Herr' => 'Herr', 'Frau' => 'Frau');
+        $gender = new Zend_Form_Element_Select('gender');
+        $gender->addMultiOptions($options)
+            ->setRequired(true)
+            ->setLabel($this->getTranslator()->translate('misc_salutation'));
+
         $firstname = new Zend_Form_Element_Text('firstname');
         $firstname->addFilters(array('StripTags', 'StripNewlines'))
             ->setRequired(true)
@@ -73,6 +79,6 @@ class Form_RegisterSeller extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit($this->getTranslator()->translate('login_register_register'));
 
-        $this->addElements(array($shopname, $company, $firstname, $name, $phone, $email, $country, $website, $password1, $password2, $submit));
+        $this->addElements(array($shopname, $company, $gender, $firstname, $name, $phone, $email, $country, $website, $password1, $password2, $submit));
     }
 }
