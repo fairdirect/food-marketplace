@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+﻿<?xml version="1.0" ?>
 <!DOCTYPE tmx SYSTEM "tmx14.dtd">
 <tmx version="1.4">
     <header segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" ></header>
@@ -8,7 +8,7 @@
                 <seg>* Alle Preise inkl. MwSt. und zuzüglich Versandkosten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>* Tutti i pressi includono IVA e spese di spedizione aggiuntive</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -19,7 +19,7 @@
                 <seg>Wir haben festgestellt, dass in Ihrem Browser JavaScript deaktiviert ist.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Abbiamo rilevato che JavaScript non è attivo sul vostro browser</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -30,7 +30,7 @@
                 <seg>Sie müssen JavaScript in Ihrem Browser aktivieren, um den vollen Funktionsumfang dieser Website nutzen zu können.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dovete attivare JavaScript sul vostro browser per poter utilizzare pienamante le funzionalità di questo sito web</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -41,7 +41,7 @@
                 <seg>Warenkorb</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Cestino</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -52,7 +52,7 @@
                 <seg>Zur Kasse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Procedi all'acquisto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -60,10 +60,10 @@
         </tu>
         <tu tuid='misc_business'>
             <tuv xml:lang="de">
-                <seg>Mein Shop</seg>
+                <seg>Business</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Business</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -74,7 +74,7 @@
                 <seg>Admin</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Admin</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -85,7 +85,7 @@
                 <seg>Hilfe</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Aiuto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -96,7 +96,7 @@
                 <seg>Über Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -107,7 +107,7 @@
                 <seg>Logout</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Disconnetti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -118,7 +118,7 @@
                 <seg>Login</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Accedi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -129,7 +129,7 @@
                 <seg>Telefonisch bestellen: 0180 EINKAUF </seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordinare telefonicamente: 0180 EINKAUF</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -140,7 +140,7 @@
                 <seg>(9 ct/min aus dem Festnetz der Dt. Telekom,</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>(9 cent/min su rete fissa Telecom tedesca</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -151,7 +151,7 @@
                 <seg>evtl. abweichend aus Mobilnetzen)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>tariffa eventualmente diversa su rete mobile)</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -162,7 +162,7 @@
                 <seg>Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Beni alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -173,7 +173,7 @@
                 <seg>Drogerie</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Beni per la casa e per la persona</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -184,7 +184,7 @@
                 <seg>Forum</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Forum</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -195,7 +195,7 @@
                 <seg>Verkaufen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Vendere</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -206,7 +206,7 @@
                 <seg>Großhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -217,7 +217,7 @@
                 <seg>Mein Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il mio account Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -228,7 +228,7 @@
                 <seg>Großhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -239,7 +239,7 @@
                 <seg>Meine Bestellungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>I miei ordini</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -250,7 +250,7 @@
                 <seg>Meine Adressen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>I miei indirizzi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -262,7 +262,7 @@
                 <seg>Meine Produkt-Bewertungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Le mie valutazioni sui prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -273,7 +273,7 @@
                 <seg>Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Categorie</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -284,7 +284,7 @@
                 <seg>Alle Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutte le categorie</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -295,7 +295,7 @@
                 <seg>BIO Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti BIO</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -306,7 +306,7 @@
                 <seg>Allergie Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti alimentari per intolleranti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -317,7 +317,7 @@
                 <seg>Discount Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -328,7 +328,7 @@
                 <seg>Suchen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Cerca</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -339,7 +339,7 @@
                 <seg>Ansehen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Mostra</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -350,7 +350,7 @@
                 <seg>Anrede</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Formula di saluto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -361,7 +361,7 @@
                 <seg>Firma</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Azienda</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -372,7 +372,7 @@
                 <seg>Vorname</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nome</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -383,7 +383,7 @@
                 <seg>Nachname</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Cognome</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -394,7 +394,7 @@
                 <seg>Straße</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>via</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -405,7 +405,7 @@
                 <seg>Hausnummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Numero</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -416,7 +416,7 @@
                 <seg>PLZ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>CAP</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -427,7 +427,7 @@
                 <seg>Stadt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>città</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -438,7 +438,7 @@
                 <seg>Speichern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Salva</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -449,7 +449,7 @@
                 <seg>E-Mail</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>E-mail</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -460,7 +460,7 @@
                 <seg>Passwort</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Password</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -471,7 +471,7 @@
                 <seg>Kommentar</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Commento</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -482,7 +482,7 @@
                 <seg>Passwort wiederholen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Conferma password</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -493,7 +493,7 @@
                 <seg>Land</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Paese</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -504,7 +504,7 @@
                 <seg>Shop-Name</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nome del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -515,7 +515,7 @@
                 <seg>Telefon</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Telefono</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -526,7 +526,7 @@
                 <seg>Fax</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Fax</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -537,7 +537,7 @@
                 <seg>Webseite</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sito web</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -548,7 +548,7 @@
                 <seg>Ansprechpartner</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Persona di riferimento</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -559,7 +559,7 @@
                 <seg>Gewerbebescheinigung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Licenza di commercio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -570,7 +570,7 @@
                 <seg>Ja</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sì</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -581,7 +581,7 @@
                 <seg>Nein</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>No</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -592,7 +592,7 @@
                 <seg>unbegrenzt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>illimitato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -603,7 +603,7 @@
                 <seg>Bilder</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Immagini</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -614,7 +614,7 @@
                 <seg>Typ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tipo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -626,7 +626,7 @@
                 <seg>Gruppe</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Gruppo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -637,7 +637,7 @@
                 <seg>Kategorie</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Categoria</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -648,7 +648,7 @@
                 <seg>Beschreibung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Descrizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -659,7 +659,7 @@
                 <seg>Allgemein</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Generale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -670,7 +670,7 @@
                 <seg>zzgl. Versandkosten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -681,7 +681,7 @@
                 <seg>in den Warenkorb</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nel cestino</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -692,7 +692,7 @@
                 <seg>Produktinformationen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Informazioni sul prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -703,7 +703,7 @@
                 <seg>Bestellgröße:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dimensioni del prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -714,7 +714,7 @@
                 <seg>weitere Produkte ansehen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Vedi altri prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -725,7 +725,7 @@
                 <seg>Inhaltsstoffe</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ingredienti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -736,7 +736,7 @@
                 <seg>Stichworte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Parole chiave</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -747,7 +747,7 @@
                 <seg>Bestellgrößen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dimensioni del prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -758,7 +758,7 @@
                 <seg>kaufen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Acquista</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -769,7 +769,7 @@
                 <seg>Versandkosten von</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione di</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -780,7 +780,7 @@
                 <seg>Artikel werden versendet aus:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotto spedito da</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -791,7 +791,7 @@
                 <seg>Lieferung nach:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Consegna a</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -802,7 +802,7 @@
                 <seg>Kosten:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Costi di spedizione:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -813,7 +813,7 @@
                 <seg>Versandkostenfrei ab:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione gratuite a partire da:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -824,7 +824,7 @@
                 <seg>Epelia Garantie</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Garanzia Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -835,7 +835,7 @@
                 <seg>Bester Preis, da alle Produkte direkt vom Hersteller</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Miglior prezzo, perché tutti i prodotti sono venduti direttamente dal produttore</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -846,7 +846,7 @@
                 <seg>Kein Zwischenlager, frischer geht's nicht</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nessun magazzino intermedio, prodotti più freschi che mai</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -857,7 +857,7 @@
                 <seg>Kostenloser Service, 0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Servizio gratuito, 0180 EINKAUF (9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -868,7 +868,7 @@
                 <seg>Keine Ergebnisse gefunden</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nessun risultato trovato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -876,10 +876,10 @@
         </tu>
         <tu tuid='search_results'>
             <tuv xml:lang="de">
-                <seg>Ergebnisse für </seg>
+                <seg>Ergebnisse für</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Risultati per</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -890,7 +890,7 @@
                 <seg>Editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Modifica</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -901,7 +901,7 @@
                 <seg>Löschen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Elimina</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -912,7 +912,7 @@
                 <seg>Bestellung überprüfen und bestätigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Controlla e conferma l'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -923,7 +923,7 @@
                 <seg>Artikel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Articolo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -934,7 +934,7 @@
                 <seg>Anzahl</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Quantità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -945,7 +945,7 @@
                 <seg>Einzelpreis</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo singolo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -956,7 +956,7 @@
                 <seg>Verfügbarkeit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Disponibilità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -967,7 +967,7 @@
                 <seg>Gesamtpreis</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo totale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -978,7 +978,7 @@
                 <seg>Verkäufer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Venditore</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -989,7 +989,7 @@
                 <seg>Summe</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Totale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1000,7 +1000,7 @@
                 <seg>Zwischensumme</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Subtotale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1011,7 +1011,7 @@
                 <seg>Versand</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Consegna</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1022,7 +1022,7 @@
                 <seg>Gesamtsumme</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Totale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1033,7 +1033,7 @@
                 <seg>7,0% MwSt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>7,0% IVA</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1044,7 +1044,7 @@
                 <seg>19,0% MwSt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>19,0% IVA</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1055,7 +1055,7 @@
                 <seg>Kostenpflichtig bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Procedi all'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1066,7 +1066,7 @@
                 <seg>Zahlungsart</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Metodo di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1077,7 +1077,7 @@
                 <seg>ändern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>modifica</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1088,7 +1088,7 @@
                 <seg>Artikel entfernen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Rimuovi articolo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1099,7 +1099,7 @@
                 <seg>aus dem Warenkorb entfernen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Rimuovi dal cestino</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1110,7 +1110,7 @@
                 <seg>sofort verfügbar</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>attualmente disponibile</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1121,7 +1121,7 @@
                 <seg>Einkauf fortsetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Continua a fare shopping</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1132,7 +1132,7 @@
                 <seg>Vielen Dank für Ihren Einkauf</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per aver acquistato con noi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1143,7 +1143,7 @@
                 <seg>Ihre Bestellung ist eingegangen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il suo ordine è andato a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1154,7 +1154,7 @@
                 <seg>Ihre Bestellung wurde bearbeitet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il suo ordine è stato accettato.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1165,7 +1165,7 @@
                 <seg>Bitte überweisen Sie den Gesamtbetrag an:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La preghiamo di versare l'importo su:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1176,7 +1176,7 @@
                 <seg>Inhaber: Epelia Warenhandel Gattinger</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Intestatario: Epelia Warehandel Gattinger</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1187,7 +1187,7 @@
                 <seg>Konto: 4647483</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Conto: 4647483</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1198,7 +1198,7 @@
                 <seg>Bank: Volksbank Heuchelheim</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Banca: Volksbank Heuchelheim</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1209,7 +1209,7 @@
                 <seg>Bankleitzahl: 51361021</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Codice di identificazione della banca: 51361021</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1220,7 +1220,7 @@
                 <seg>Verwendungszweck: </seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Causale:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1231,7 +1231,7 @@
                 <seg>Für Überweisungen aus dem Ausland:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Per bonifico dall'estero:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1242,7 +1242,7 @@
                 <seg>Standard Lieferadresse?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indirizzo di consegna standard?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1253,7 +1253,7 @@
                 <seg>Standard Rechnungsadresse?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indirizzo di fatturazione standard?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1264,7 +1264,7 @@
                 <seg>Aktionen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Promozioni</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1275,7 +1275,7 @@
                 <seg>Adresse hinzufügen / editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Inserisci/modifica indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1286,7 +1286,7 @@
                 <seg>Angelegte Adressen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indirizzo inserito</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1298,7 +1298,7 @@
                 <seg>Neue Adresse anlegen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Inserisci nuovo indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1309,7 +1309,7 @@
                 <seg>Als Standard Lieferadresse setzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Imposta come indirizzo di consegna standard</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1321,7 +1321,7 @@
                 <seg>Als Standard Rechnungsadresse setzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Imposta come indirizzo di fatturazione standard</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1332,7 +1332,7 @@
                 <seg>Übersicht Bestellungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Riepilogo ordini</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1343,7 +1343,7 @@
                 <seg>Offene Bestellungen:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordini attivi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1354,7 +1354,7 @@
                 <seg>Abgeschlossene Bestellungen:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordini completati</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1365,7 +1365,7 @@
                 <seg>Bestellt am</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordinato il</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1376,7 +1376,7 @@
                 <seg>Bestellnummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Numero ordine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1387,7 +1387,7 @@
                 <seg>Preis Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo dei prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1398,7 +1398,7 @@
                 <seg>Versandkosten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1409,7 +1409,7 @@
                 <seg>Gesamtpreis</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo totale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1420,7 +1420,7 @@
                 <seg>Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1431,7 +1431,7 @@
                 <seg>Status</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Stato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1442,7 +1442,7 @@
                 <seg>Offene Produktbewertungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Valutazioni dei prodotti attive</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1453,7 +1453,7 @@
                 <seg>Abgegebene Produktbewertungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Valutazioni dei prodotti effettuate</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1464,7 +1464,7 @@
                 <seg>Product</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1475,7 +1475,7 @@
                 <seg>gekauft am</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>acquistato il</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1486,7 +1486,7 @@
                 <seg>Bewertung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Valutazione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1497,7 +1497,7 @@
                 <seg>Text</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Testo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1508,7 +1508,7 @@
                 <seg>Abgegeben am</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Valutato il</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1519,7 +1519,7 @@
                 <seg>Zurück</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indietro</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1530,7 +1530,7 @@
                 <seg>Weiter</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Avanti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1541,7 +1541,7 @@
                 <seg>aktuelle Seite</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Pagina attuale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1552,7 +1552,7 @@
                 <seg>Seite</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Pagina</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1563,7 +1563,7 @@
                 <seg>Es ist ein Fehler aufgetreten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Si è verificato un errore</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1574,7 +1574,7 @@
                 <seg>Leider ist bei Ihrer Anmeldung ein Fehler aufgetreten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Siamo spiacenti. Si è verificato un errore nel corso della registrazione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1585,7 +1585,7 @@
                 <seg>Lebensmittel und Drogerie-Artikel mit Epelia verkaufen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Vendere prodotti alimentari e beni per la casa e per la persona su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1596,7 +1596,7 @@
                 <seg>Eigener Webshop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il tuo negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1607,7 +1607,7 @@
                 <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Produzentenprofil. Machen Sie es wie schon 150 Produzenten vor Ihnen!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore. Segui l'esempio di altri 150 produttori!</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1618,7 +1618,7 @@
                 <seg>Umsätze und Sichtbarkeit steigern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Aumenta il giro d'affari e la visibilità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1629,7 +1629,7 @@
                 <seg>Optimierte Prozesse und die starke Marke von Epelia sorgen bei Ihnen für mehr Umsatz und mehr Kunden. Gute Suchmaschinenpositionen und eine aktive Käufer Community bringt Sie mit Ihren Produkten ins Gespräch. Sie erhalten mehr Aufmerksamkeit und mehr Reichweite im Internet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>I processi ottimizzati e il marchio Epelia vi procureranno un aumento delle vendite e un maggior numero di clienti. Un buon sistema di ricerca e una community di acquirenti contribuiscono a mettere in luce la vostra attività. Tutto ciò vi procurerà attenzione e un più ampio campo d'azione su internet.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1640,7 +1640,7 @@
                 <seg>Faire und günstige Konditionen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Condizioni oneste e vantaggiose</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1651,7 +1651,7 @@
                 <seg>Nur 4% Verkaufsprovision. Keine Fixkosten. Keine Einrichtungsgebühr. Keine Vertragsbindung. Keine versteckten Kosten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Solo il 4% di commissioni sulle vendite. Nessun costo fisso. Nessun costo di apertura. Nessun accordo contrattuale. Nessun costo nascosto.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1662,7 +1662,7 @@
                 <seg>Sichere Zahlungsabwicklung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Pagamento sicuro</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1673,7 +1673,7 @@
                 <seg>Für alle Bestellungen wickelt Epelia die Bezahlung ab und sorgt dafür, dass das Geld bei Ihnen ankommt. Wir bieten den Epelia Kunden mehrere Zahlungsarten an.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Per tutti gli ordini Epelia si occupa del pagamento e fa sì che il denaro arrivi a voi. Offriamo ai clienti Epelia diversi metodi di pagamento.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1684,7 +1684,7 @@
                 <seg>Erstellen Sie Ihren Epelia Shop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Allestite il vostro negozio Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1695,7 +1695,7 @@
                 <seg>Jetzt registrieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Registrati adesso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1706,7 +1706,7 @@
                 <seg>Oder rufen Sie uns an: 0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>O telefonaci al: 0180 EINKAUF (01803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1717,7 +1717,7 @@
                 <seg>Informationen über Epelia anfordern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Richiedere informazioni su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1728,7 +1728,7 @@
                 <seg>Sie interessieren sich für eine Teilnahme an unserem einzigartigen Markplatz für Lebensmittel? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sei interessato a diventare parte della nostra piattaforma commerciale? Iscriviti ora!</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1739,7 +1739,7 @@
                 <seg>Vielen Dank für Ihre Anmeldung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per esserti registrato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1750,7 +1750,7 @@
                 <seg>Vielen Dank für Ihre Anmeldung.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per esserti registrato.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1761,7 +1761,7 @@
                 <seg>Drogerie- und Lebensmittelgroßhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Commercio all'ingrosso di beni alimentari e prodotti per la casa e per la persona</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1772,7 +1772,7 @@
                 <seg>Der Epelia-Großhandel ist die ideale und professionelle Möglichkeit für Gastronomie, Wiederverkäufer oder Produzenten größere Mengen Lebensmittel und Drogeriewaren zu ordern.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il commercio all'ingrosso Epelia è l'opportunità ideale e professionale per il reparto gastronomico, rivenditori o produttori su ampia scala di ordinare beni alimentari e prodotti per la casa e per la persona.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1783,7 +1783,7 @@
                 <seg>Nach einer kostenlosen Registrierung können Sie hier direkt, einfach und zum besten Preis bei vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten bestellen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dopo la registrazione gratuita potrete ordinare direttamente dai produttori, al miglior prezzo e in tutta facilità.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1794,7 +1794,7 @@
                 <seg>Das Sortiment reicht von guten Standardprodukten, regionalen Spezialitäten über exotische Köstlichkeiten bis hin zu biologisch erzeugten Produkten. Viele Anbieter stellen sich und ihre Arbeitsweise, ihren Betrieb oder spezielle Herstellungsarten in ihren einenen Shop`s vor, so wissen Sie ganz genau, woher z.b. Ihr Fleisch kommt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>L'assortimento varia da ottimi prodotti standard, specialità regionali, delizie esotiche, fino ad arrivare ai prodotti biologici. Moltissimi offerenti presentano il proprio modo di lavorare, la propria azienda o speciali metodi di produzione sulla pagina del proprio negozio, in modo che sappiate precisamente, ad esempio, da dove viene la carne che mangiate. </seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1805,7 +1805,7 @@
                 <seg>Alle hier angebotenen Waren haben, wie überall auf Epelia, einen Herstellernachweis, wir mögen keine "produziert für" Waren.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutti i prodotti messi in vendita qui, come su tutta la piattaforma Epelia, hanno una documentazione relativa alla produzione. Non amiamo la merce "prodotta per".</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1816,7 +1816,7 @@
                 <seg>Der Epelia Lebensmittel - Großhandel und Drogerie - Großhandel steht für frisch und direkt bei vielen einkaufen!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La piattaforma di commercio all'ingrosso di beni alimentari e prodotti per la persona e per la casa Epelia offre prodotti freschi e acquistabili direttamente dal produttore!</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1827,7 +1827,7 @@
                 <seg>Bitte melden Sie sich an</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sei pregato di registrarti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1838,7 +1838,7 @@
                 <seg>um den Großhandelsbereich nutzen zu können oder sich für diesen zu registrieren.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>per poter utilizzare il settore del commercio all'ingrosso o per registrarsi in tale ambito.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1849,7 +1849,7 @@
                 <seg>Alle Großhandels-Produkte anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Mostra tutti i prodotti all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1860,7 +1860,7 @@
                 <seg>Anmeldung für den Großhandels-Bereich</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Registrazione per il settore del commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1871,7 +1871,7 @@
                 <seg>Für den Einkauf von Großhandels-Artikels müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Per l'acquisto di prodotti all'ingrosso è necessario avere un account. Riempite il seguente modulo e inviateci una licenza di esercizio sia con il modulo che via fax al numero 06426-967338</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1882,7 +1882,7 @@
                 <seg>Alle Großhandels-Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutte le categorie del commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1893,7 +1893,7 @@
                 <seg>Vielen Dank für Ihre Anmeldung für den Großhandels-Bereich</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per la registrazione nel settore del commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1904,7 +1904,7 @@
                 <seg>Vielen Dank für Ihre Anmeldung. Ihre Anmeldung wird geprüft.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per la registrazione. La tua registrazione sarà verificata.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1915,7 +1915,7 @@
                 <seg>Bestätigung fehlgeschlagen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Conferma fallita</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1926,7 +1926,7 @@
                 <seg>Die Bestätigung ist fehlgeschlagen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La conferma non è andata a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1938,7 +1938,7 @@
                 <seg>nur Bio-Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>solo prodotti Bio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1949,7 +1949,7 @@
                 <seg>nur Dicount-Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Solo prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1960,7 +1960,7 @@
                 <seg>Allegie Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Alimenti per allergici</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1971,7 +1971,7 @@
                 <seg>Epelia unterstützt Sie bei Lebensmittelallergien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Epelia vi aiuta nelle allergie alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1982,7 +1982,7 @@
                 <seg>Allergenfreie Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Alimenti per intolleranti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -1993,7 +1993,7 @@
                 <seg>Lebensmittelallergien sind für knapp 5% der deutschen Bevölkerung der Grund für eine Änderung der Essgewohnheiten. Aber auch die Lebensmittelunverträglichekeiten oder Lebensmittelintoleranzen können zu einer veränderten Ernährungsform führen. Ob vegetarisch, eifrei, ohne Milch oder nussfrei, finden Sie aus vielen allergenfreien Lebensmitteln das Produkt für Ihre Gesundheit. Viele Menschen verfolgen eine spezielle Ernährungsform oder leiden unter einer Lebensmittelunverträglichkeit. Es gibt viele Gründe Lebensmittel die wir essen, genau unter die Lupe zu nehmen. Über unsere Ernährungs- und Allergiesuche haben Sie die Möglichkeit genau die Lebensmittel zu finden, die Sie suchen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Le allergie alimentari sono il motivo del cambiamento delle abitudini alimentari del 5% della popolazione tedesca.Ma anche le intolleranze alimentari possono portare ad un cambiamento nell'alimentazione.Se vegetariano, senza uova, senza lattosio o senza noci, troverete, nel nostro vasto assortimento di prodotti per allergici, quello che fa per voi. Molte persone hanno abitudini alimentari specifiche o soffrono di intolleranze alimentari. </seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2004,7 +2004,7 @@
                 <seg>Zusatzstofffreie Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Alimenti privi di additivi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2015,7 +2015,7 @@
                 <seg>Immer mehr Verbrauerinnen und Verbraucher sind ratlos mit dem Umgang mit der Vielzahl eingesetzter Zusatzstoffe in unseren Lebensmitteln oder reagieren allergisch auf einzelne oder mehrere Zusatzstoffe. Bestimmte Zusatzstoffe können Kinder hyperaktiv machen, Kopfschmerzen oder Krankheiten auslösen. Viele Zusatzstoffe sind zudem nur durch Kürzel gekennzeichnet und  machen eine schnelle Übersicht schier unmöglich. Hier finden Sie Lebensmittel, die bewusst ohne diese auskommen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sempre più consumatori hanno perplessità riguardo ai molteplici additivi che si trovano negli alimenti, o sono allergici ad alcuni o a più additivi. Determitati additivi possono rendere i bambini iperattivi, causare mal di testa o malattie. Molti additivi sono riportati solo con sigle, e rendono quasi impossibile una rapida visione d'insieme. Qui troverete prodotti che sono consapevolmente privi di additivi.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2026,7 +2026,7 @@
                 <seg>Bio Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti Bio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2037,7 +2037,7 @@
                 <seg>Auf Epelia finden Sie biologisch erzeugte Lebensmittel, die Sie direkt beim Bio Bauern bestellen können. Alle unsere Bio Produzenten möchten für Sie unbelastete, gesunde und schmackhafte Lebensmittel erzeugen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Su Epelia trovate prodotti biologici, che potrete ordinare direttamente dagli agricoltori Bio. Tutti i nostri produttori Bio vogliono produrre per voi alimenti sani e gustosi.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2048,7 +2048,7 @@
                 <seg>alle Bio Produkte anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Mostra tutti i prodotti Bio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2059,7 +2059,7 @@
                 <seg>Was sind Biolebensmittel?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Cosa sono i prodotti alimentari biologici?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2070,7 +2070,7 @@
                 <seg>Um die Anforderungen der Bio-Zertifizierung zu erfüllen, arbeiten Bio-Erzeuger im Einklang mit der Natur:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Per avere i requisiti necessari ad ottenere la certificazione Bio, i produttori lavorano in armonia con la natura:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2081,7 +2081,7 @@
                 <seg>Sie verzichten auf Pflanzenschutz mit chemisch-synthetischen Mitteln</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Rinunciano alla cura delle piante con prodotti chimici e sintetici</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2092,7 +2092,7 @@
                 <seg>Sie verwenden keinerlei lösliche mineralische Düngemittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Non utilizzano concimi minerali solubili</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2103,7 +2103,7 @@
                 <seg>Sie pflegen die Bodenfruchtbarkeit durch Humuswirtschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Curano la diminuzione della fertilità del terreno con l'utilizzo di humus</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2114,7 +2114,7 @@
                 <seg>Sie verwenden keine chemisch-sythetischen Wachstumsregulatoren oder Hormone</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Non utilizzano regolatori della crescita chimici o sintetici o ormoni</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2125,7 +2125,7 @@
                 <seg>Sie setzen sich für artgerechte Tierhaltung ein</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Si impegnano nella protezione degli animali</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2136,7 +2136,7 @@
                 <seg>Sie verzichten soweit es geht auf Antibiotika</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Rinunciano all'uso di antibiotici</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2147,7 +2147,7 @@
                 <seg>Sie folgen einer abwechslungsreichen Fruchtfolge im Sinne der Nachhaltigkeit unserer Erde</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Seguono una coltura diversificata per permettere una migliore sostenibilità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2158,7 +2158,7 @@
                 <seg>Die biologische Landwirtschaft und Verarbeiter von biologischen Lebensmitteln schonen die natürlichen Ressourcen und haben in vielen Bereichen positive Auswirkunegn auf die Umwelt. Treten Sie in Kontakt mit unseren Bio-Produzenten und entdecken Sie den Geschmack von Bio Käse, Bio Fleisch und vielen anderen Bio Lebensmitteln.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>L'agricoltura biologica e le società di trasformazione di prodotti alimentari biologici hanno cura delle risorse naturali e hanno, in moltissimi campi, effetti positivi sull'ambiente. Entrate in contatto con i nostri produttori BIO e scoprite il gusto di formaggio, carne e moltissimi altri alimenti biologici</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2169,7 +2169,7 @@
                 <seg>Alle Bio-Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutte le categorie BIO</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2180,7 +2180,7 @@
                 <seg>Alle Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutte le categorie</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2191,7 +2191,7 @@
                 <seg>Discount Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2202,7 +2202,7 @@
                 <seg>Hier finden Sie Artikel, welche zu discountähnlichen Preisen angeboten werden. Alle Produkte sind mit Herstellerangabe, also keine "produziert für" Artikel und stammen direkt von Herstellern, Produzenten, Erzeuger oder Händler, welche diese vermarkten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Qui trovate articoli che vengono messi in vendita a prezzi scontati. Tutti i prodotti sono con indicazioni dei produttori, quindi nessun articolo "prodotto per", e vengono direttamente da costruttori, produttori, ditte produttrici o commercianti, che commercializzano tali prodotti.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2213,7 +2213,7 @@
                 <seg>Alle Discount-Produkte anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Mostra tutti i prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2224,7 +2224,7 @@
                 <seg>Alle Discount-Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutte le categorie discount</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2235,7 +2235,7 @@
                 <seg>Shopvorstellung:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Presentazione del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2246,7 +2246,7 @@
                 <seg>Besuchen Sie unseren Shop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Visitate il nostro negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2257,7 +2257,7 @@
                 <seg>Lebensmittel Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Categorie beni alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2268,7 +2268,7 @@
                 <seg>Drogerie Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Categoria beni per la casa e la persona</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2279,7 +2279,7 @@
                 <seg>Über Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2290,7 +2290,7 @@
                 <seg>Bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordinare</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2301,7 +2301,7 @@
                 <seg>Zahlungsmöglichkeiten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Possibilità di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2312,7 +2312,7 @@
                 <seg>Versand und Lieferung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spedizione e consegna</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2323,7 +2323,7 @@
                 <seg>Kontakt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Contatti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2334,7 +2334,7 @@
                 <seg>Gesetzliche Informationen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Informazioni legali</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2345,7 +2345,7 @@
                 <seg>Nutzungsbedingungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Condizioni di utilizzo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2356,7 +2356,7 @@
                 <seg>AGB</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Condizioni generali</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2367,7 +2367,7 @@
                 <seg>Datenschutz</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Protezione dati</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2378,7 +2378,7 @@
                 <seg>Impressum</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Colophon</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2389,7 +2389,7 @@
                 <seg>Für Verkäufer - Verkaufen mit Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Per i venditori - Vendere su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2400,7 +2400,7 @@
                 <seg>Großhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2411,7 +2411,7 @@
                 <seg>Umkreissuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ricerca per raggio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2423,7 +2423,7 @@
                 <seg>PLZ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>CAP</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2434,7 +2434,7 @@
                 <seg>Land</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Paese</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2445,7 +2445,7 @@
                 <seg>Deutschland</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Germania</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2456,7 +2456,7 @@
                 <seg>Österreich</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Austria</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2467,7 +2467,7 @@
                 <seg>Schweiz</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Svizzera</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2478,7 +2478,7 @@
                 <seg>Entfernung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Distanza</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2489,7 +2489,7 @@
                 <seg>Alle Felder müssen ausgefüllt sein.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutti i campi devono essere riempiti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2500,7 +2500,7 @@
                 <seg>Shops im Umkreis von</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Negozi nel raggio di</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2511,7 +2511,7 @@
                 <seg>km von</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>km da</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2522,7 +2522,7 @@
                 <seg>Produkt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2533,7 +2533,7 @@
                 <seg>Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2544,7 +2544,7 @@
                 <seg>Bei epelia seit </seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Su Epelia da</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2555,7 +2555,7 @@
                 <seg>mehr über uns</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Maggiori informazioni su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2566,7 +2566,7 @@
                 <seg>In unserem Shop gibt es</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nel nostro negozio trovate</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2577,7 +2577,7 @@
                 <seg>Über uns</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2588,7 +2588,7 @@
                 <seg>Unsere Philosophie</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La nostra filosofia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2599,7 +2599,7 @@
                 <seg>Abreitsweise</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Modo di lavorare</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2610,7 +2610,7 @@
                 <seg>Gründungsgeschichte von</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Storia di</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2621,7 +2621,7 @@
                 <seg>Versandkosten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2632,7 +2632,7 @@
                 <seg>Bestätigung fehlgeschlagen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Problemi nella conferma</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2643,7 +2643,7 @@
                 <seg>Die Bestätigung ist fehlgeschlagen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La conferma non è andata a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2654,7 +2654,7 @@
                 <seg>Bitte prüfen Sie, ob Sie den Link aus der Bestätigungs-E-Mail vollständig kopiert haben.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Controlla di aver copiato il link completo presente nella e-mail di conferma</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2665,7 +2665,7 @@
                 <seg>Vielen Dank für Ihre Bestätigung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per la conferma</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2676,7 +2676,7 @@
                 <seg>Vielen Dank für Ihre Bestätigung.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per la conferma</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2687,7 +2687,7 @@
                 <seg>Sie können Sich jetzt in Ihr Benutzerkonto einloggen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Puoi ora accedere al tuo account.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2698,7 +2698,7 @@
                 <seg>Ich habe die <link><![CDATA[<a href="/hilfe/agb/" target="_blank">Allgemeinen Geschäftsbedingungen</a>]]></link> und <link><![CDATA[<a href="/hilfe/datenschutz/" target="_blank">Datenschutzrichtlinien</a>]]></link> gelesen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg> Ho letto le <link><![CDATA[<a href="/hilfe/agb/" target="_blank">condizioni generali di contratto</a>]]></link> e <link><![CDATA[<a href="/hilfe/datenschutz/" target="_blank">le direttive sulla protezione dei dati</a>]]></link></seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2709,7 +2709,7 @@
                 <seg>Epelia Newsletter abonnieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Abbonarsi alla newsletter Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2720,7 +2720,7 @@
                 <seg>Registrieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Registrarsi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2731,7 +2731,7 @@
                 <seg>Registrierung fehlgeschlagen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Registrazione fallita</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2742,7 +2742,7 @@
                 <seg>Die Registrierung ist fehlgeschlagen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La registrazione non è andata a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2753,7 +2753,7 @@
                 <seg>Ich habe ein Kundenkonto bei Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ho un account cliente su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2764,7 +2764,7 @@
                 <seg>Schnelle Lieferzeiten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Rapidi tempi di consegna</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2775,7 +2775,7 @@
                 <seg>Käuferschutz</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tutela consumatori</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2786,7 +2786,7 @@
                 <seg>Kostenloser Service</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Servizio gratuito</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2797,7 +2797,7 @@
                 <seg>0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>0180 EINKAUF (01803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2808,7 +2808,7 @@
                 <seg>Datenschutz</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Protezione dati</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2819,7 +2819,7 @@
                 <seg>Lieferung vom Hersteller</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spedizione dal produttore</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2830,7 +2830,7 @@
                 <seg>Sichere Zahlung mit SSL-Verschlüsselung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Pagamento sicuro con codificazione SSL</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2841,7 +2841,7 @@
                 <seg>Ich bin Neukunde</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sono un nuovo cliente</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2852,7 +2852,7 @@
                 <seg>Haben Sie Fragen zu Ihrer Bestellung?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Domande in merito all'ordine?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2863,7 +2863,7 @@
                 <seg>Unser Service Team hilft Ihnen gerne weiter. Freundlich und kompetent.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il nostro team, cordiale e competente, vi aiuterà volentieri.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2874,7 +2874,7 @@
                 <seg>Rufen Sie uns an unter: </seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Chiamaci al:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2885,7 +2885,7 @@
                 <seg>Erstellen Sie hier ein neues Verkäuferkonto.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Creare un nuovo account venditore</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2896,7 +2896,7 @@
                 <seg>Vielen Dank für Ihre Anmeldung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per la registrazione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2907,7 +2907,7 @@
                 <seg>Vielen Dank für Ihre Anmeldung.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Grazie per la registrazione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2918,7 +2918,7 @@
                 <seg>Es wurde Ihnen eine E-Mail mit einem Bestätigungs-Link an die angegebene Addresse zugesendet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Abbiamo inviato una e-mail con un link di conferma all'indirizzo inserito</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2929,7 +2929,7 @@
                 <seg>Adresse wählen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scegliere indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2940,7 +2940,7 @@
                 <seg>Folgende Produkte können leider nicht in das ausgewählte Land geliefert werden:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spiacente, i seguenti prodotti non possono essere spediti nel paese selezionato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2951,7 +2951,7 @@
                 <seg>Lieferadresse:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indirizzo di spedizione:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2962,7 +2962,7 @@
                 <seg>Rechnungsadresse:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indirizzo di fatturazione:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2973,7 +2973,7 @@
                 <seg>Bitte Adresse auswählen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scegliere l'indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2984,7 +2984,7 @@
                 <seg>Als Lieferadresse auswählen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scegliere l'indirizzo di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -2995,7 +2995,7 @@
                 <seg>Als Rechnungsadresse auswählen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scegliere l'indirizzo di fatturazione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3006,7 +3006,7 @@
                 <seg>Bitte wählen Sie Ihre Zahlungsart</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scegliere il metodo di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3017,7 +3017,7 @@
                 <seg>Sofortüberweisung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Bonifico immediato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3028,7 +3028,7 @@
                 <seg>Kreditkarte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Carta di credito</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3039,7 +3039,7 @@
                 <seg>Vorkasse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Pagamento anticipato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3050,7 +3050,7 @@
                 <seg>Bitte überweisen Sie den Gesamtbetrag vorab auf unser Konto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Procedere anzitutto al versamento del totale sul nostro conto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3061,7 +3061,7 @@
                 <seg>Nach Zahlungseingang wird Ihre Ware an Sie versendet</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dopo il processo di pagamento i prodotti saranno inviati direttamente a casa vostra</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3072,7 +3072,7 @@
                 <seg>Einzelheiten zu unserer Bankverbindung erhalten Sie nach der Bestellung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dopo l'ordine riceverà i dettagli riguardo alle nostre coordinate bancarie</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3083,7 +3083,7 @@
                 <seg>Weiter zur Bestätigung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Continua</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3094,7 +3094,7 @@
                 <seg>Willkommen!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Benvenuto!</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3105,7 +3105,7 @@
                 <seg>Produkt hinzufügen / editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Aggiungi/modifica prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3116,7 +3116,7 @@
                 <seg>Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3127,7 +3127,7 @@
                 <seg>Name</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nome</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3138,7 +3138,7 @@
                 <seg>Aktiv?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Attivo?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3149,7 +3149,7 @@
                 <seg>Vorrat</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scorta</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3160,7 +3160,7 @@
                 <seg>Erstellung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Creazione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3171,7 +3171,7 @@
                 <seg>Neues Produkt anlegen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Aggiungi nuovo prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3182,7 +3182,7 @@
                 <seg>Bilder hochladen / löschen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Carica/elimina immagini</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3193,7 +3193,7 @@
                 <seg>markierte löschen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>elimina selezionate</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3204,7 +3204,7 @@
                 <seg>Abgeschlossene Bestellungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordini terminati</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3215,7 +3215,7 @@
                 <seg>Bestellt am</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordinato il</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3226,7 +3226,7 @@
                 <seg>Versendet am</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Inviato il</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3237,7 +3237,7 @@
                 <seg>Bestellnummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Numero d'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3248,7 +3248,7 @@
                 <seg>Preis Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo dei prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3259,7 +3259,7 @@
                 <seg>Versandkosten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3271,7 +3271,7 @@
                 <seg>Gesamtpreis</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo totale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3282,7 +3282,7 @@
                 <seg>Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3293,7 +3293,7 @@
                 <seg>Offene Bestellungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ordini attivi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3304,7 +3304,7 @@
                 <seg>Als versendet markieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Segna come inviato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3315,7 +3315,7 @@
                 <seg>Versandkosten ändern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Modifica le spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3326,7 +3326,7 @@
                 <seg>Es ist nur möglich in Länder zu versenden, wenn Versandkosten für dieses Land angegeben sind. Für kostenlosen Versand "0" eintragen. Das Feld "Kostenfrei ab" ist optional.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>È possibile effettuare spedizioni solo nei Paesi di cui sono indicate le spese di spedizione. Per la spedizione gratuita inserire "0". Il campo "Spedizione gratuita a partire da" è opzionale.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3337,7 +3337,7 @@
                 <seg>Shopdaten editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Modifica i dati del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3348,7 +3348,7 @@
                 <seg>Bilder hochladen / löschen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Carica immagini</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3359,7 +3359,7 @@
                 <seg>Vorrat nicht begrenzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Scorte illimitate</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3370,7 +3370,7 @@
                 <seg>Zutaten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ingredienti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3381,7 +3381,7 @@
                 <seg>Dieses Produkt kann folgende Spuren enthalten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Questo prodotto può contenere tracce di</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3392,7 +3392,7 @@
                 <seg>Bio-Produkt?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti Bio?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3403,7 +3403,7 @@
                 <seg>Discount-Produkt?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prodotti discount?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3414,7 +3414,7 @@
                 <seg>Zusätze</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Additivi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3425,7 +3425,7 @@
                 <seg>Allergene</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Allergeni</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3436,7 +3436,7 @@
                 <seg>Anlässe</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Eventi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3447,7 +3447,7 @@
                 <seg>Geschmack</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Gusto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3459,7 +3459,7 @@
                 <seg>Veränderungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Modifiche</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3470,7 +3470,7 @@
                 <seg>Einheit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Unità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3481,7 +3481,7 @@
                 <seg>Verpackung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Confezione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3492,7 +3492,7 @@
                 <seg>Inhalt pro Einheit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Contenuto per unità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3503,7 +3503,7 @@
                 <seg>Menge</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Quantità</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3514,7 +3514,7 @@
                 <seg>Preis normal</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo normale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3525,7 +3525,7 @@
                 <seg>Preis Großhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Prezzo all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3536,7 +3536,7 @@
                 <seg>Kosten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Costi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3547,7 +3547,7 @@
                 <seg>Kostenfrei ab</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spese di spedizione gratuite a partire da</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3558,7 +3558,7 @@
                 <seg>Shopname</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nome del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3569,7 +3569,7 @@
                 <seg>URL</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>URL</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3580,7 +3580,7 @@
                 <seg>Shop-Infos</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Info sul negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3591,7 +3591,7 @@
                 <seg>AG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>S.p.A.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3602,7 +3602,7 @@
                 <seg>e.G. (eingetragene Gesellschaft)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Società registrata</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3613,7 +3613,7 @@
                 <seg>e.K. (eingetragener Kaufmann)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Commerciante registrato</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3624,7 +3624,7 @@
                 <seg>Einzelunternehmen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Singola impresa</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3635,7 +3635,7 @@
                 <seg>GbR</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Società semplice</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3646,7 +3646,7 @@
                 <seg>GmbH</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>S.r.l.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3657,7 +3657,7 @@
                 <seg>GmbH und Co. KG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>S.r.l. & Co. S.a.s.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3668,7 +3668,7 @@
                 <seg>KG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>S.a.s</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3679,7 +3679,7 @@
                 <seg>Ltd.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ltd.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3690,7 +3690,7 @@
                 <seg>Ltd. und Co. KG.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Ltd. und Co. S.a.s.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3701,7 +3701,7 @@
                 <seg>OHG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>S.n.c.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3712,7 +3712,7 @@
                 <seg>PartG.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Partiti politici</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3723,7 +3723,7 @@
                 <seg>e.V.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Associazione registrata</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3734,7 +3734,7 @@
                 <seg>andere</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>altro</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3745,7 +3745,7 @@
                 <seg>Firmenart</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tipo di azienda</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3756,7 +3756,7 @@
                 <seg>Firmenadresse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Indirizzo dell'azienda</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3767,7 +3767,7 @@
                 <seg>Steuernummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Codice fiscale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3778,7 +3778,7 @@
                 <seg>Steuer-ID</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Codice fiscale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3789,7 +3789,7 @@
                 <seg>Umsatzsteuer befreit?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Esonero dall'IVA?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3800,7 +3800,7 @@
                 <seg>Handelsregister-Nr.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Registro di commercio-Nr.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3811,7 +3811,7 @@
                 <seg>Registergericht</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Tribunale commerciale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3822,7 +3822,7 @@
                 <seg>Firmensitz</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Sede dell'azienda</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3833,7 +3833,7 @@
                 <seg>Vertretungsberechtigte(r)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Rappresentante/i</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3844,7 +3844,7 @@
                 <seg>Öko-Kontrollstelle</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Punto di controllo ecologico</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3855,7 +3855,7 @@
                 <seg>Öko-Kontrollnummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg><Numero di controllo ecologico</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3866,7 +3866,7 @@
                 <seg>Firmendaten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Dati dell'azienda</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3877,7 +3877,7 @@
                 <seg>Kontoinhaber</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Intestatario del conto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3888,7 +3888,7 @@
                 <seg>Kontonummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Numero di conto</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3899,7 +3899,7 @@
                 <seg>BLZ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>CAB</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3910,7 +3910,7 @@
                 <seg>Bankname</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nome della banca</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3921,7 +3921,7 @@
                 <seg>SWIFT</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>SWIFT</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3932,7 +3932,7 @@
                 <seg>IBAN</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>IBAN</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3943,7 +3943,7 @@
                 <seg>Bankverbindung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Coordinate bancarie</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3954,7 +3954,7 @@
                 <seg>Beschreibung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Descrizione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3965,7 +3965,7 @@
                 <seg>Gründungsgeschichte</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Storia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3976,7 +3976,7 @@
                 <seg>Philosophie</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Filosofia</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3987,7 +3987,7 @@
                 <seg>Arbeitsweise</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Modo di lavorare</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3998,7 +3998,7 @@
                 <seg>Zusätzliche Infos</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Informazioni aggiuntive</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4009,7 +4009,7 @@
                 <seg>Informationen für Kunden</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Informazioni per i clienti</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4169,5 +4169,7 @@
                 <seg></seg>
             </tuv>
         </tu>
+
     </body>
 </tmx>
+
