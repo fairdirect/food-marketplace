@@ -3657,7 +3657,7 @@
                 <seg>GmbH und Co. KG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>S.r.l. & Co. S.a.s.</seg>
+                <seg>S.r.l. <![CDATA[&]]> Co. S.a.s.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -3855,7 +3855,7 @@
                 <seg>Öko-Kontrollnummer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg><Numero di controllo ecologico</seg>
+                <seg>Numero di controllo ecologico</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4169,7 +4169,17 @@
                 <seg></seg>
             </tuv>
         </tu>
-
+        <tu tuid='misc_woma'>
+            <tuv xml:lang="de">
+                <seg>Wochenmarkt</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 

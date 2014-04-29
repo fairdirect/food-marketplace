@@ -24,6 +24,12 @@ class Admin_Form_Shops extends Business_Form_Shops
             ->setAttrib('class', 'span2')
             ->setOrder(41);
 
+        $womaOptions = array('');
+        $womas = Model_Woma::getAll();
+        foreach($womas as $w){
+            $womaOptions[$w->id] = $w->name;
+        }
+
         $this->addElements(array($id, $user_id, $provision));
     }
 }

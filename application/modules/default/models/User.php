@@ -22,9 +22,13 @@ class Model_User extends Model_ModelAbstract
     public $newsletter = false;
     public $password_reset_token = '';
 
+    public $woma_id = null;
+
     private $_addresses = null;
 
     private $_shop = null;
+
+    private $_Woma = null;
 
     private $_main_delivery_address = null;
     private $_main_billing_address = null;
@@ -94,6 +98,16 @@ class Model_User extends Model_ModelAbstract
             $this->_shop = Model_Shop::findByUser($this->id);
         }
         return $this->_shop;
+    }
+
+    public function getWoma(){
+        if($this->type != 'agent'){
+            return false;
+        }
+        if(is_null($this->_woma)){
+            $this->_woma = Model_Woma::find($this->woma_id);
+        }
+        return $this->_woma;
     }
 
     public function getShoppingCarts($status){

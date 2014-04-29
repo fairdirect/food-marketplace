@@ -24,10 +24,8 @@ class Admin_WomasController extends Zend_Controller_Action
         foreach($womas as $woma){
             $ret['aaData'][] = array(
                 htmlspecialchars($woma->id),
-                '<a href="/admin/users/edit/id/' . htmlspecialchars($woma->getUser()->id) . '/">' . htmlspecialchars($woma->getUser()->email) . '</a>',
                 htmlspecialchars($woma->name),
                 htmlspecialchars($woma->url),
-                htmlspecialchars($woma->provision),
                 htmlspecialchars($woma->taxnumber),
                 htmlspecialchars($woma->salestax_id),
                 '<a href="/admin/womas/edit/id/' . htmlspecialchars($woma->id) . '/">Editieren</a>'
@@ -46,37 +44,9 @@ class Admin_WomasController extends Zend_Controller_Action
                 $woma = new Model_Woma($request->getPost());
                 try{
                     $woma->save();
-
-                    if($request->getPost('imagesDelete')){
-                        foreach($request->getPost('imagesDelete') as $imgId){
-                            $img = Marktplatz_Model_ProductImage::getImage($imgId);
-                            $img->delete();
-                        }
-                    }
-                    if($request->getPost('imagesOld')){
-                        foreach($request->getPost('imagesOld') as $imgId){
-                            $product->_productImages[] = Marktplatz_Model_ProductImage::getImage($imgId);
-                        }
-                    }
-                    if($request->getPost('imagesNew')){
-                        foreach($request->getPost('imagesNew') as $filename){
-                            $product->_productImages[] = new Marktplatz_Model_ProductImage(array(
-                                'crdate' => time(),
-                                'name' => $product->name,
-                                'image' => $filename,
-                                'productid' => $product->uid
-                            ));
-                        }
-                    }
-
                     $this->_helper->redirector('index');
                 } catch(Exception $e){
-                    if($e->getCode() == 23503){
-                        $this->view->error = 'Nutzer mit ID ' . $woma->user_id . ' nicht gefunden.';
-                    }
-                    else{
-                        $this->view->error = $e->getMessage();
-                    }
+                    $this->view->error = $e->getMessage();
                 }
             }
         }

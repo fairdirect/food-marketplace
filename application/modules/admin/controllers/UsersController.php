@@ -30,6 +30,9 @@ class Admin_UsersController extends Zend_Controller_Action
                 case 'shop':
                     $type = 'Shop';
                     break;
+                case 'agent':
+                    $type = 'Agent';
+                    break;
                 default:
                     $type = '';
                     break;

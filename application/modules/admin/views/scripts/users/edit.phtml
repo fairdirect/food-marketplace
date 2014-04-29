@@ -1,2 +1,23 @@
 <h1>User hinzufügen / editieren</h1>
 <?= $this->form; ?>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        if($('#type').val() != 'agent'){
+            $('#woma_id-label').hide();
+            $('#woma_id-element').hide();
+            $('#woma_id').val(0);
+        }
+    });
+    $('#type').live('change', function(){ 
+        if($('#type').val() != 'agent'){
+            $('#woma_id-label').hide();
+            $('#woma_id-element').hide();
+            $('#woma_id').val(0);
+        }
+        else{
+            $('#woma_id-label').show();
+            $('#woma_id-element').show();
+        }                             
+    });
+</script>

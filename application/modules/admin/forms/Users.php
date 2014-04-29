@@ -16,12 +16,24 @@ class Admin_Form_Users extends Zend_Form
             ->setLabel('E-Mail')
             ->setAttrib('class', 'span2');
 
-        $options = array('' => '', 'customer' => 'Kunde', 'shop' => 'Shop');
+        $options = array('' => '', 'customer' => 'Kunde', 'shop' => 'Shop', 'agent' => 'Agent');
         $type = new Zend_Form_Element_Select('type');
         $type->addMultiOptions($options)
             ->setRequired(true)
             ->setAttrib('class', 'span2')
             ->setLabel('Typ');
+
+        $womaOptions = array('');
+        $womas = Model_Woma::getAll();
+        foreach($womas as $w){
+            $womaOptions[$w->id] = $w->name;
+        }
+
+        $woma_id = new Zend_Form_Element_Select('woma_id');
+        $woma_id->setAttrib('class', 'span2')
+            ->setLabel('Wochenmarkt')
+            ->setRegisterInArrayValidator(false)
+            ->addMultiOptions($womaOptions);
 
         $main_delivery_address = new Zend_Form_Element_Select('main_delivery_address_id');
         $main_delivery_address->setAttrib('class', 'span2')
@@ -54,6 +66,6 @@ class Admin_Form_Users extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('Speichern');
 
-        $this->addElements(array($id, $email, $type, $main_delivery_address, $main_billing_address, $is_admin, $is_wholesale, $newsletter, $status, $submit));
+        $this->addElements(array($id, $email, $type, $woma_id, $main_delivery_address, $main_billing_address, $is_admin, $is_wholesale, $newsletter, $status, $submit));
     }
 }
