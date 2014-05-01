@@ -78,6 +78,9 @@ class Admin_UsersController extends Zend_Controller_Action
                 else{
                     $user = new Model_User($request->getPost());
                 }
+                if($user->type != 'agent'){ // need to do this for woma_id constraint
+                    $user->woma_id = null;
+                }
                 $user->save();
                 $this->_redirect('/admin/users/');
             }
