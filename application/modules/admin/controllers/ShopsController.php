@@ -44,9 +44,10 @@ class Admin_ShopsController extends Zend_Controller_Action
         if($request->getParam('Speichern')){
             if($form->isValid($request->getPost())){
                 $shop = new Model_Shop($request->getPost());
+                $shop->setWomaIds($request->getParam('woma_ids'));
                 try{
                     $shop->save();
-
+                    $shop->insertWomas();
                     if($request->getPost('imagesDelete')){
                         foreach($request->getPost('imagesDelete') as $imgId){
                             $img = Marktplatz_Model_ProductImage::getImage($imgId);
@@ -84,7 +85,7 @@ class Admin_ShopsController extends Zend_Controller_Action
             if($id){
                $shop = Model_Shop::find($id);
                 if($shop){
-                    $form->populate($shop->toArray());
+                    $form->populate(array_merge($shop->toArray(), array('woma_ids' => $shop->getWomaIds())));
                 }
             }
         }

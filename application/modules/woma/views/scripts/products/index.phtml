@@ -1,15 +1,15 @@
 <h1 style="margin-bottom:5px;"><?= $this->translate('business_products_headline') ?></h1>
-<a href="/business/products/edit/"><?= $this->translate('business_products_new') ?></a>
+<a href="/woma/products/edit/"><?= $this->translate('business_products_new') ?></a>
 <h2><?= $this->translate('business_products_headline') ?></h2>
 <table class="table" id="productTable">
     <thead>
-        <tr><th><?= $this->translate('business_products_name') ?></th><th><?= $this->translate('business_products_active') ?></th><th><?= $this->translate('business_products_amount') ?></th><th><?= $this->translate('business_products_creation') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
+        <tr><th><?= $this->translate('business_products_name') ?></th><th><?= $this->translate('business_shop_name') ?></th><th><?= $this->translate('business_products_active') ?></th><th><?= $this->translate('business_products_amount') ?></th><th><?= $this->translate('business_products_creation') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
     </thead>
     <tbody>
 <?php
 foreach($this->products as $product):
 ?>
-        <tr><td><?= $this->escape($product->name) ?></td><td><?= ($product->active) ? $this->translate('misc_yes') : $this->translate('misc_no') ?></td><td><?= (is_null($product->stock)) ? $this->translate('misc_unlimited') : $this->escape($product->stock) ?></td><td><?= date('d.m.Y' , strtotime($product->created)) ?></td><td><a href="/business/products/edit/id/<?= $this->escape($product->id) ?>"><?= $this->translate('misc_edit') ?></a>&nbsp;<a href="/business/products/pictures/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_pictures') ?></a>&nbsp;<a href="/business/products/delete/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_delete') ?></a></td></tr>
+        <tr><td><?= $this->escape($product->name) ?></td><td><?= $this->escape($product->getShop()->name) ?></td><td><?= ($product->active) ? $this->translate('misc_yes') : $this->translate('misc_no') ?></td><td><?= (is_null($product->stock)) ? $this->translate('misc_unlimited') : $this->escape($product->stock) ?></td><td><?= date('d.m.Y' , strtotime($product->created)) ?></td><td><a href="/woma/products/edit/id/<?= $this->escape($product->id) ?>"><?= $this->translate('misc_edit') ?></a>&nbsp;<a href="/woma/products/pictures/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_pictures') ?></a>&nbsp;<a href="/woma/products/delete/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_delete') ?></a></td></tr>
 <?php
 endforeach;
 ?>
@@ -22,6 +22,7 @@ endforeach;
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "aoColumns": [
+                null,
                 null,
                 null,
                 null,

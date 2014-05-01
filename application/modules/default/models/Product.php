@@ -366,6 +366,48 @@ class Model_Product extends Model_ModelAbstract
         return $ret;
     }
 
+    public static function findByWoma($womaID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+        $ret = array();
+   
+        $select->where('shop_id IN (SELECT shop_id FROM epelia_womas_shops WHERE woma_id = ?)', $womaID);
+
+        if($onlyBio){
+            $select->where('is_bio = ?', 'true');
+        }
+        if($onlyDiscount){
+            $select->where('is_discount = ?', 'true');
+        }
+        if($onlyWholesale){
+            $select->join('epelia_product_prices', $table->getTableName() . '.id = epelia_product_prices.product_id', array());
+            $select->where('epelia_product_prices.is_wholesale', 'true');
+            $select->group($table->getTableName() . '.id');
+        }
+
+        if($onlyActivated){
+            $select->where($table->getTableName() . '.active = ?', true);
+        }
+
+        if(!$all){
+            $select->where($table->getTableName() . '.deleted != ?', true);
+        }
+
+        $select->order($table->getTableName() . '.name DESC');
+        $select->limit($limit, $offset);
+
+        $result = $select->query()->fetchAll();
+
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
+
 
     public static function findBySearchString($search, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
         $table = self::getDbTable();

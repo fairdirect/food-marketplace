@@ -1,20 +1,16 @@
 <?php
 
-class Business_ShopController extends Zend_Controller_Action{
+class Woma_WomaController extends Zend_Controller_Action{
 
     public function init(){
 
         $this->user = Model_User::find(Zend_Auth::getInstance()->getIdentity()->id);
     }
 
-    public function termsAction(){
-
-    }
-
     public function indexAction(){
         Model_User::refreshAuth(); // make sure our data is up to date
 
-        $form = new Business_Form_Shops();
+        $form = new Woma_Form_Womas();
         $request = $this->getRequest();
 
         if($request->getParam('Speichern')){
@@ -25,45 +21,45 @@ class Business_ShopController extends Zend_Controller_Action{
                 exit('Forbidden!'); // prevent user from writing forbidden fields
             }
             if($form->isValid($request->getPost())){
-                $shop = $this->user->getShop();
-                if(!$shop){
-                    $shop = new Model_Shop();
+                $woma = $this->user->getWoma();
+                if(!$woma){
+                    $woma = new Model_Woma();
                 }
-                $shop->init(array_merge(array('user_id' => $this->user->id), $request->getPost()));
+                $woma->init(array_merge(array('user_id' => $this->user->id), $request->getPost()));
                 try{
-                    $shop->save();
-                    $this->_redirect('/business/');
+                    $woma->save();
+                    $this->_redirect('/woma/');
                 } catch(Exception $e){
                 }
             }
         }
         else{
-            $shop = $this->user->getShop();
-            if($shop){
-                $form->populate($shop->toArray());
+            $woma = $this->user->getWoma();
+            if($woma){
+                $form->populate($woma->toArray());
             }
         }
         $this->view->form = $form;
     }
 
     public function picturesAction(){
-        $shop = $this->user->getShop();
-        if(!$shop){
+        $woma = $this->user->getWoma();
+        if(!$woma){
             $this->_helper->redirector('index');
         }
 
-        $this->view->shop = $shop;
+        $this->view->woma = $woma;
         if($_FILES){
             $type = $this->getRequest()->getParam('type');
             switch($type){
                 case 'logo':
-                    $shopField = 'logo_id';
+                    $womaField = 'logo_id';
                     break;
                 case 'history':
-                    $shopField = 'history_picture_id';
+                    $womaField = 'history_picture_id';
                     break;
                 case 'procedure':
-                    $shopField = 'procedure_picture_id';
+                    $womaField = 'procedure_picture_id';
                     break;
                 default:
                     exit('Type not supported');
@@ -71,8 +67,8 @@ class Business_ShopController extends Zend_Controller_Action{
             }
         
             $extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-            $filename = $type . '_' . $shop->id;
-            $filepath = $_SERVER['DOCUMENT_ROOT'] . Zend_Registry::get('config')->pictureupload->path . Zend_Registry::get('config')->shoppictures->dir . '/';
+            $filename = $type . '_' . $woma->id;
+            $filepath = $_SERVER['DOCUMENT_ROOT'] . Zend_Registry::get('config')->pictureupload->path . Zend_Registry::get('config')->womapictures->dir . '/';
 
             $counter = 0;
             while(file_exists($filepath . $filename . '.' . $extension)){
@@ -90,13 +86,13 @@ class Business_ShopController extends Zend_Controller_Action{
                 
                 $picture = new Model_Picture(array('filename' => $filename));
                 $picture->save();
-                $shop->$shopField = $picture->id;
-                $shop->save();
+                $woma->$womaField = $picture->id;
+                $woma->save();
             } catch(Exception $e){
                 exit($e->getMessage());
             }
 
-            $ret = '<img style="width:140px;" src="/img/shops/' . $filename . '" alt="" />';
+            $ret = '<img style="width:140px;" src="/img/womas/' . $filename . '" alt="" />';
             exit(json_encode(array('data' => $ret)));
         }
     }
@@ -105,23 +101,23 @@ class Business_ShopController extends Zend_Controller_Action{
         $type = $this->getRequest()->getPost('type');
         switch($type){
             case 'logoPicture':
-                $shopField = 'logo_id';
+                $womaField = 'logo_id';
                 break;
             case 'history':
-                $shopField = 'history_picture_id';
+                $womaField = 'history_picture_id';
                 break;
             case 'procedure':
-                $shopField = 'procedure_picture_id';
+                $womaField = 'procedure_picture_id';
                 break;
             default:
                 exit(json_encode(array('suc' => false, 'msg' => 'Type not supported')));
                 break;
         }
-        if(!$this->user->getShop()->$shopField){
+        if(!$this->user->getWoma()->$womaField){
             exit(json_encode(array('suc' => false, 'msg' => 'Picture not found')));
         }
         
-        $picture = Model_Picture::find($this->user->getShop()->$shopField);
+        $picture = Model_Picture::find($this->user->getWoma()->$womaField);
         if(!$picture){
             exit(json_encode(array('suc' => false, 'msg' => 'Picture not found')));
         }

@@ -1,6 +1,6 @@
 <?php
 
-class Business_ShippingCostsController extends Zend_Controller_Action{
+class Woma_ShippingCostsController extends Zend_Controller_Action{
 
     public function init(){
 
@@ -10,16 +10,16 @@ class Business_ShippingCostsController extends Zend_Controller_Action{
     public function indexAction(){
         Model_User::refreshAuth(); // make sure our data is up to date
 
-        $form = new Business_Form_ShippingCosts();
+        $form = new Woma_Form_WomaShippingCosts();
         $request = $this->getRequest();
 
         if($request->getParam('Speichern')){
             if($form->isValid($request->getPost())){
-                $shop = $this->user->getShop();
-                Model_ShippingCost::deleteForShop($shop->id);
+                $woma = $this->user->getWoma();
+                Model_WomaShippingCost::deleteForWoma($woma->id);
                 $countries = Model_Country::getAll();
                 foreach($countries as $country){
-                    $shippingCost = new Model_ShippingCost(array('shop_id' => $shop->id, 'country_id' => $country->id));
+                    $shippingCost = new Model_WomaShippingCost(array('woma_id' => $woma->id, 'country_id' => $country->id));
                     $shippingCost->value = str_replace(',', '.', $this->getRequest()->getPost('value_' . $country->id));
                     if(!$shippingCost->value){
                         continue;
@@ -29,15 +29,14 @@ class Business_ShippingCostsController extends Zend_Controller_Action{
                     }
                     try{
                         $shippingCost->save();
-                        $this->_redirect('/business/');
+                        $this->_redirect('/woma/');
                     } catch(Exception $e){
-
                     }
                 }
             }
         }
         else{
-            $shippingCosts = $this->user->getShop()->getShippingCosts();
+            $shippingCosts = $this->user->getWoma()->getShippingCosts();
             $formArray = array();
             foreach($shippingCosts as $shippingCost){
                 $formArray['value_' . $shippingCost->country_id] = $shippingCost->value;

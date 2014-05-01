@@ -48,6 +48,10 @@ class Model_Shop extends Model_ModelAbstract
 
     private $shop_type;
 
+    private $_woma_ids = array(); // must be private for save()
+
+    private $_womas = null;
+
     private $_user = null;
     private $_products = null;
     private $_categories = null;
@@ -300,5 +304,44 @@ class Model_Shop extends Model_ModelAbstract
                 break;
         }
     }
+
+    public function setWomaIds($womaIds){
+        $this->_woma_ids = $womaIds;
+    }
+
+    public function getWomaIds(){
+        if(!$this->_woma_ids){
+            $result = self::getDbTable()->getAdapter()->fetchAll('SELECT woma_id FROM epelia_womas_shops WHERE shop_id = ?', $this->id);
+
+            if (is_null($result)) {
+                return array();
+            }
+            foreach($result as $r){
+                $this->_woma_ids[] = $r['woma_id'];
+            }
+        }
+        return $this->_woma_ids;
+    }
+
+    public function insertWomas(){
+        if(!$this->id){ // this should not happen, but in case we dont have an id we need one
+            $this->save();
+        }
+        $query = self::getDbTable()->getAdapter()->query('DELETE FROM epelia_womas_shops WHERE shop_id = ?', array($this->id));
+        foreach($this->_woma_ids as $womaID){
+            $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_womas_shops(woma_id, shop_id) VALUES(?,?)', array($womaID, $this->id));
+        }
+    }
+
+    public function getWomas(){
+        if(is_null($this->_womas)){
+            $this->_womas = array();
+            foreach($this->_woma_ids as $womaID){
+                $this->_womas[] = Model_Woma::find($womaID);
+            }
+        }
+        return $this->_womas;
+    }
+
 
 }

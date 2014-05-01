@@ -129,14 +129,70 @@ class Model_Woma extends Model_ModelAbstract
         }
     }
 
+    public function getShopIds(){
+        if(!$this->_shop_ids){
+            $result = self::getDbTable()->getAdapter()->fetchAll('SELECT shop_id FROM epelia_womas_shops WHERE woma_id = ?', $this->id);
+
+            if (is_null($result)) {
+                return array();
+            }
+            foreach($result as $r){
+                $this->_shop_ids[] = $r['shop_id'];
+            }
+        }
+        return $this->_shop_ids;
+    }
+
     public function getShops(){
         if(is_null($this->_shops)){
             $this->_shops = array();
-            foreach($this->_shop_ids as $shopID){
+            foreach($this->getShopIds() as $shopID){
                 $this->_shops[] = Model_Shop::find($shopID);
             }
         }
         return $this->_shops;
+    }
+
+    public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+        if(is_null($this->_products)){
+            $this->_products = Model_Product::findByWoma($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+        }
+        return $this->_products;
+    }
+
+    public function getLogo(){
+        if(is_null($this->_logo) && !is_null($this->logo_id)){
+            $this->_logo = Model_Picture::find($this->logo_id);
+        }
+        return $this->_logo;
+    }
+
+    public function getHistoryPicture(){
+        if(is_null($this->_history_picture) && !is_null($this->history_picture_id)){
+            $this->_history_picture = Model_Picture::find($this->history_picture_id);
+        }
+        return $this->_history_picture;
+    }
+
+    public function getProcedurePicture(){
+        if(is_null($this->_procedure_picture) && !is_null($this->procedure_picture_id)){
+            $this->_procedure_picture = Model_Picture::find($this->procedure_picture_id);
+        }
+        return $this->_procedure_picture;
+    }
+
+    public function getCountry(){
+        if(is_null($this->_country)){
+            $this->_country = Model_Country::find($this->country);
+        }
+        return $this->_country;
+    }
+
+    public function getShippingCosts(){
+        if(is_null($this->_shippingCosts)){
+            $this->_shippingCosts = Model_WomaShippingCost::findByWoma($this->id);
+        }
+        return $this->_shippingCosts;
     }
 
     

@@ -1,6 +1,6 @@
 <?php
 
-class Business_ProductsController extends Zend_Controller_Action
+class Woma_ProductsController extends Zend_Controller_Action
 {
 
     public function init(){
@@ -11,11 +11,19 @@ class Business_ProductsController extends Zend_Controller_Action
     public function indexAction()
     {
         $this->view->headTitle("Produkt-Verwaltung");          
-        $this->view->products = $this->user->getShop()->getProducts(null, null, false, false, false, false);
+        $this->view->products = $this->user->getWoma()->getProducts(null, null, false, false, false, false);
     }
 
     public function editAction(){
-        $form = new Business_Form_Products();
+        $form = new Woma_Form_Products();
+
+        $woma = $this->user->getWoma();
+        $shop_options = array();
+        foreach($woma->getShops() as $shop){
+            $shop_options[$shop->id] = $shop->name;
+        }
+        $form->getElement('shop_id')->addMultiOptions($shop_options);
+
         $request = $this->getRequest();
 
         $attributeTypes = array('additive' => 'Zusätze', 'allergen' => 'Allergene', 'event' => 'Anlässe', 'flavor' => 'Geschmack', 'manipulation' => 'Veränderungen');
@@ -23,17 +31,17 @@ class Business_ProductsController extends Zend_Controller_Action
         $id = $request->getParam('id');
         if($id){ // editing
             $product = Model_Product::find($id);
-            if($product->getShop()->user_id != $this->user->id){
+            if(!in_array($product->getShop()->id, $this->user->getWoma()->getShopIds())){
                 exit('Forbidden!'); // prevent user from writing products not owned by them
             }
         }
         else{ // new product
-            $product = new Model_Product(array('shop_id' => $this->user->getShop()->id));
+            $product = new Model_Product(array());
         }
 
         if($request->getParam('Speichern')){
-            if(array_key_exists('shop_id', $request->getPost())){
-                exit('Forbidden!'); // prevent user from writing forbidden fields
+            if(!in_array($request->getPost('shop_id'), $this->user->getWoma()->getShopIds())){
+                exit('Forbidden!'); // prevent user from writing products not owned by them
             }
 
             if($form->isValid($request->getPost())){
@@ -138,7 +146,7 @@ class Business_ProductsController extends Zend_Controller_Action
         if(!$product){
             $this->_helper->redirector('index');
         }
-        if($product->getShop()->user_id != $this->user->id){
+        if(!in_array($product->getShop()->id, $this->user->getWoma()->getShopIds())){
             exit('Forbidden!'); // prevent user from writing products not owned by them
         }
 
@@ -190,7 +198,7 @@ class Business_ProductsController extends Zend_Controller_Action
         }
         $products = $picture->getAssociatedProducts();
         foreach($products as $product){
-            if($product->getShop()->user_id == $this->user->id){ // make sure the picture belongs to the user
+            if(in_array($product->getShop()->id, $this->user->getWoma()->getShopIds())){ // make sure the picture belongs to the user
                 $picture->delete();
                 break;
             }
@@ -201,7 +209,7 @@ class Business_ProductsController extends Zend_Controller_Action
     public function deleteAction(){
         $id = $this->getRequest()->getParam('id');
         $product = Model_Product::find($id);
-        if($product->getShop()->user_id != $this->user->id){
+        if(!in_array($product->getShop()->id, $this->user->getWoma()->getShopIds())){
             exit('Forbidden!'); // prevent user from writing products not owned by them
         }
         $product->delete();

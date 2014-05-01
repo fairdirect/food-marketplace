@@ -4180,6 +4180,40 @@
                 <seg></seg>
             </tuv>
         </tu>
+        <tu tuid='woma_woma_headline'>
+            <tuv xml:lang="de">
+                <seg>Wochenmarkt editieren</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid='woma_woma_name'>
+            <tuv xml:lang="de">
+                <seg>Wochenmarkt-Name</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid='woma_woma_images_headline'>
+            <tuv xml:lang="de">
+                <seg>Bilder hochladen / löschen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Carica immagini</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+
     </body>
 </tmx>
 

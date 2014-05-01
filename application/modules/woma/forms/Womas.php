@@ -11,7 +11,7 @@ class Woma_Form_Womas extends Zend_Form
         $name = new Zend_Form_Element_Text('name');
         $name->addFilters(array('StripTags', 'StripNewlines'))
             ->setRequired(true)
-            ->setLabel($this->getTranslator()->translate('business_shop_name'))
+            ->setLabel($this->getTranslator()->translate('woma_woma_name'))
             ->setAttrib('class', 'span2')
             ->setOrder(30);
 

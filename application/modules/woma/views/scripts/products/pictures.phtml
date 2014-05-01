@@ -1,5 +1,5 @@
 <h1><?= $this->translate('business_products_pictures_headline') ?></h1>
-<input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
+<input id="fileupload" type="file" name="file" data-url="/woma/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
 <table class="table" id="bilder">
 <?php foreach($this->product->getPictures() as $pic): ?>
     <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174px_sqr/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
@@ -17,7 +17,7 @@
                 $.ajax({
                     type: "POST",
                     dataType: "json",
-                    url: "/business/products/deletepicture/",
+                    url: "/woma/products/deletepicture/",
                     data: { id: pic.val() }
                 }).done(function( res ) {
                     if(res.suc){

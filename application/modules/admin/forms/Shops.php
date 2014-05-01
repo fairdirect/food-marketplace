@@ -24,12 +24,18 @@ class Admin_Form_Shops extends Business_Form_Shops
             ->setAttrib('class', 'span2')
             ->setOrder(41);
 
-        $womaOptions = array('');
+        $womaOptions = array();
         $womas = Model_Woma::getAll();
         foreach($womas as $w){
             $womaOptions[$w->id] = $w->name;
         }
 
-        $this->addElements(array($id, $user_id, $provision));
+        $woma_ids = new Zend_Form_Element_Multiselect('woma_ids');
+        $woma_ids->setAttrib('class', 'span2')
+            ->setLabel('Wochenmärkte (Mehrfachauswahl mit Strg)')
+            ->setRegisterInArrayValidator(false)
+            ->addMultiOptions($womaOptions);
+
+        $this->addElements(array($id, $woma_ids, $user_id, $provision));
     }
 }

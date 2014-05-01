@@ -1,8 +1,8 @@
-<h1><?= $this->translate('business_shop_images_headline') ?></h1>
+<h1><?= $this->translate('woma_woma_images_headline') ?></h1>
 <table class="table" id="bilder">
-    <tr><td>Logo</td><td id="logoPicture"><?php if($this->shop->getLogo()): ?><img style="width:120px;" src="/img/shops/<?= $this->escape($this->shop->getLogo()->filename) ?>" alt=""><?php else: ?><input id="logoPictureupload" type="file" name="file" data-url="/business/shop/pictures/" /><?php endif; ?></td><td><button id="deleteLogo" class="btn btn-danger" onclick="deleteShopPicture('logoPicture');"><?= $this->translate('misc_delete') ?></button></td></tr>
-    <tr><td>Geschichte</td><td id="history"><?php if($this->shop->getHistoryPicture()): ?><img style="width:120px;" src="/img/shops/<?= $this->escape($this->shop->getHistoryPicture()->filename) ?>" alt=""><?php else: ?><input id="historyupload" type="file" name="file" data-url="/business/shop/pictures/" /><?php endif; ?></td><td><button id="deleteHistory" class="btn btn-danger" onclick="deleteShopPicture('history');"><?= $this->translate('misc_delete') ?></button></td></tr>
-    <tr><td>Herstellung</td><td id="procedure"><?php if($this->shop->getProcedurePicture()): ?><img style="width:120px;" src="/img/shops/<?= $this->escape($this->shop->getProcedurePicture()->filename) ?>" alt=""><?php else: ?><input id="procedureupload" type="file" name="file" data-url="/business/shop/pictures/" /><?php endif; ?></td><td><button id="deleteProcedure" class="btn btn-danger" onclick="deleteShopPicture('procedure');"><?= $this->translate('misc_delete') ?></button></td></tr>
+    <tr><td>Logo</td><td id="logoPicture"><?php if($this->woma->getLogo()): ?><img style="width:120px;" src="/img/womas/<?= $this->escape($this->woma->getLogo()->filename) ?>" alt=""><?php else: ?><input id="logoPictureupload" type="file" name="file" data-url="/woma/woma/pictures/" /><?php endif; ?></td><td><button id="deleteLogo" class="btn btn-danger" onclick="deleteShopPicture('logoPicture');"><?= $this->translate('misc_delete') ?></button></td></tr>
+    <tr><td>Geschichte</td><td id="history"><?php if($this->woma->getHistoryPicture()): ?><img style="width:120px;" src="/img/womas/<?= $this->escape($this->woma->getHistoryPicture()->filename) ?>" alt=""><?php else: ?><input id="historyupload" type="file" name="file" data-url="/woma/woma/pictures/" /><?php endif; ?></td><td><button id="deleteHistory" class="btn btn-danger" onclick="deleteShopPicture('history');"><?= $this->translate('misc_delete') ?></button></td></tr>
+    <tr><td>Herstellung</td><td id="procedure"><?php if($this->woma->getProcedurePicture()): ?><img style="width:120px;" src="/img/womas/<?= $this->escape($this->woma->getProcedurePicture()->filename) ?>" alt=""><?php else: ?><input id="procedureupload" type="file" name="file" data-url="/woma/woma/pictures/" /><?php endif; ?></td><td><button id="deleteProcedure" class="btn btn-danger" onclick="deleteShopPicture('procedure');"><?= $this->translate('misc_delete') ?></button></td></tr>
 </table>
 
 <script src="/js/libs/jquery.iframe-transport.js"></script>
@@ -16,11 +16,11 @@
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "/business/shop/deletepicture/",
+            url: "/woma/woma/deletepicture/",
             data: { type : type }
         }).done(function ( res ) {
             if(res.suc){
-                $('#' + type).html('<input id="' + type + 'upload" type="file" name="file" data-url="/business/shop/pictures/" />');
+                $('#' + type).html('<input id="' + type + 'upload" type="file" name="file" data-url="/woma/woma/pictures/" />');
                 initUpload();
             }
 

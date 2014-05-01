@@ -1,0 +1,1 @@
+CREATE TABLE epelia_womas_shipping_costs(woma_id INTEGER NOT NULL REFERENCES epelia_womas(id) ON DELETE CASCADE, country_id TEXT NOT NULL REFERENCES epelia_countries(id), value NUMERIC(4,2) NOT NULL, free_from NUMERIC DEFAULT NULL, PRIMARY KEY (woma_id, country_id))

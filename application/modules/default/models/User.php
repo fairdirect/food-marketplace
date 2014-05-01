@@ -28,7 +28,7 @@ class Model_User extends Model_ModelAbstract
 
     private $_shop = null;
 
-    private $_Woma = null;
+    private $_woma = null;
 
     private $_main_delivery_address = null;
     private $_main_billing_address = null;
