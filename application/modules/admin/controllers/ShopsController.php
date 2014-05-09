@@ -18,7 +18,7 @@ class Admin_ShopsController extends Zend_Controller_Action
         $ret = array(
             'sEcho' => $this->getRequest()->getParam('sEcho') + 1,
             'iTotalRecords' => Model_Shop::getCount(),
-            'iTotalDisplayRecords' => count($shops),
+            'iTotalDisplayRecords' => Model_Shop::getCount($this->getRequest()->getParam('sSearch')),
             'aaData' => array()
         );
         foreach($shops as $shop){

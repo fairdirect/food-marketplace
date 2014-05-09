@@ -171,7 +171,7 @@ class Model_User extends Model_ModelAbstract
             $query .= ' LIMIT ' . $db->quote($limit);
         }
         if($limit && $offset){
-            $query .= ' LIMIT ' . $db->quote($limit) . ',' . $db->quote($offset);
+            $query .= ' LIMIT ' . $db->quote($limit) . ' OFFSET ' . $db->quote($offset);
         }
 
         $result = $db->fetchAll($query);
@@ -183,12 +183,19 @@ class Model_User extends Model_ModelAbstract
         return $ret;
     }
 
-    public static function getCount(){
-        $select = self::getDbTable()->select();
-        $select->from(self::getDbTable(), array('count(*) as amount'));
-        $rows = self::getDbTable()->fetchAll($select);
-        return($rows[0]->amount);       
+    public static function getCount($search = ''){
+        $db = self::getDbTable()->getAdapter();
+        
+        $query = 'SELECT COUNT(u.id) AS amount FROM epelia_users u LEFT JOIN epelia_addresses a ON a.id = u.main_billing_address_id';
+        
+        if($search){
+            $search = '%' . $search . '%';
+            $query .= ' WHERE u.email ILIKE ' . $db->quote($search) . ' OR u.id = ' . $db->quote(str_replace('%', '', intVal($search))) . ' OR a.firstname ILIKE ' . $db->quote($search) . ' OR a.name ILIKE ' .$db->quote($search) . ' OR a.street ILIKE ' . $db->quote($search) . ' OR a.zip ILIKE ' .$db->quote($search) . ' OR a.city ILIKE ' . $db->quote($search);
+        }
+        $result = $db->fetchAll($query);
+        return $result[0]['amount'];
     }
+
 
     public static function getCustomers($limit = null, $offset = null){
         $table = self::getDbTable();

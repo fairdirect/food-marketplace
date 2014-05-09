@@ -18,7 +18,7 @@ class Admin_UsersController extends Zend_Controller_Action
         $ret = array(
             'sEcho' => $this->getRequest()->getParam('sEcho') + 1,
             'iTotalRecords' => Model_User::getCount(),
-            'iTotalDisplayRecords' => count($users),
+            'iTotalDisplayRecords' => Model_User::getCount($this->getRequest()->getParam('sSearch')),
             'aaData' => array()
         );
 
