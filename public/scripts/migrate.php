@@ -65,9 +65,9 @@ $category_query = $postgres->prepare(
         ) RETURNING id");
 $user_query = $postgres->prepare( 
     "INSERT INTO epelia_users(
-            phpbb_id, email, password, salt, birthday, type, is_admin, is_wholesale, status, registered, last_login, deleted, username, old_password_hash)
+            phpbb_id, email, password, salt, birthday, type, is_admin, is_wholesale, status, registered, last_login, deleted, old_password_hash)
         VALUES(
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
         ) RETURNING id");
 $bank_account_query = $postgres->prepare( 
     "INSERT INTO epelia_bank_accounts(
@@ -152,12 +152,21 @@ $countries = array(
     array('AT', 'Österreich', '043'),
     array('CH', 'Schweiz', '041'),
     array('BE', 'Belgien', '032'),
+    array('IT', 'Italien', '039'),
     array('DK', 'Dänemark', '045'),
     array('FR', 'Frankreich', '033'),
     array('LI', 'Litauen', '0370'),
+    array('LV', 'Lettland', '0371'),
+    array('EE', 'Estland', '0372'),
     array('LU', 'Luxemburg', '0352'),
     array('NL', 'Niederlande', '031'),
     array('PL', 'Polen', '048'),
+    array('SE', 'Schweden', '046'),
+    array('FI', 'Finnland', '0358'),
+    array('NO', 'Norwegen', '047'),
+    array('RU', 'Russland', '007'),
+    array('RO', 'Romänien', '040'),
+    array('GR', 'Griechenland', '030'),
     array('US', 'USA', '001')
 );
 foreach($countries as $c){
@@ -349,8 +358,8 @@ while($user = $user_res->fetch_object()){
     try{
         $ret = $user_query->execute(array(
             0, //phpbb_id
-            'asdf' . $user->user_id,
-//            $user->email, // email
+//            'asdf' . $user->user_id,
+            $user->email, // email
             '', //password 
             '', //salt
             null, //date('Y-m-d', strtotime($user->birthday)), //birthday
@@ -361,7 +370,6 @@ while($user = $user_res->fetch_object()){
             null, //date('Y-m-d', strtotime($user->registered)),  // registered
             null, //date('Y-m-d', strtotime($user->last_online)), // last_login
             'f', // deleted
-            null, // username
             $user->password // old_password_hash
         ));
         if($user_query->errorCode() == '00000'){
@@ -557,12 +565,12 @@ while($user = $user_res->fetch_object()){
                             }
                         }
 
-                        $product_res = $mysql->query("SELECT p.*, n.name AS name, pca.category_id AS old_cat_id, d.is_bio, d.is_discount, d.ingredients, d.description, d.active AS active, d.available FROM tbl_products p JOIN tbl_shop_product_attach a on a.shop_id = '" . $mysql->real_escape_string($shop->shop_id) . "' LEFT JOIN tbl_product_names n ON p.product_id = n.product_id AND n.language_code = 'de' LEFT JOIN tbl_product_category_attach pca ON p.product_id = pca.product_id LEFT JOIN tbl_product_details d ON p.product_id = d.product_id  WHERE p.product_id = a.product_id AND a.product_id <> 0 AND a.shop_id <> 0 AND p.default_name <> 'temp' AND p.active = '1' AND a.active = '1' GROUP BY a.product_id");
+                        $product_res = $mysql->query("SELECT p.*, n.name AS name, d.shopproduct_name AS realname, pca.category_id AS old_cat_id, d.is_bio, d.is_discount, d.ingredients, d.description, d.active AS active, d.available FROM tbl_products p JOIN tbl_shop_product_attach a on a.shop_id = '" . $mysql->real_escape_string($shop->shop_id) . "' LEFT JOIN tbl_product_names n ON p.product_id = n.product_id AND n.language_code = 'de' LEFT JOIN tbl_product_category_attach pca ON p.product_id = pca.product_id LEFT JOIN tbl_product_details d ON p.product_id = d.product_id  WHERE p.product_id = a.product_id AND a.product_id <> 0 AND a.shop_id <> 0 GROUP BY a.product_id");
                         while($product = $product_res->fetch_object()){
                             try{
                                 $ret = $product_query->execute(array(
                                     $shop_id, // shop_id
-                                    ($product->name) ? $product->name : $product->default_name, // name
+                                    ($product->realname) ? $product->realname : $product->name, // name
                                     $product->description, // description
                                     $product->num_views, // num_views
                                     ($product->active) ? 't' : 'f', // active
