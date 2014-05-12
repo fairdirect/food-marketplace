@@ -270,7 +270,7 @@ class Model_Product extends Model_ModelAbstract
             $select->where($table->getTableName() . '.deleted != ?', true);
         }
 
-        $select->order($table->getTableName() . '.name DESC');
+        $select->order($table->getTableName() . '.name ASC');
         $select->limit($limit, $offset);
 
         $result = $select->query()->fetchAll();
@@ -312,7 +312,7 @@ class Model_Product extends Model_ModelAbstract
             $select->where($table->getTableName() . '.deleted != ?', true);
         }
 
-        $select->order($table->getTableName() . '.name DESC');
+        $select->order($table->getTableName() . '.name ASC');
         $select->limit($limit, $offset);
 
         $result = $select->query()->fetchAll();
@@ -352,7 +352,7 @@ class Model_Product extends Model_ModelAbstract
             $select->where($table->getTableName() . '.deleted != ?', true);
         }
 
-        $select->order($table->getTableName() . '.name DESC');
+        $select->order($table->getTableName() . '.name ASC');
         $select->limit($limit, $offset);
 
         $result = $select->query()->fetchAll();
@@ -393,7 +393,7 @@ class Model_Product extends Model_ModelAbstract
             $select->where($table->getTableName() . '.deleted != ?', true);
         }
 
-        $select->order($table->getTableName() . '.name DESC');
+        $select->order($table->getTableName() . '.name ASC');
         $select->limit($limit, $offset);
 
         $result = $select->query()->fetchAll();
@@ -433,7 +433,7 @@ class Model_Product extends Model_ModelAbstract
             $select->where($table->getTableName() . '.deleted != ?', true);
         }
 
-        $select->order('name DESC');
+        $select->order('name ASC');
         $select->limit($limit, $offset);
         
         $result = $table->fetchAll($select);
