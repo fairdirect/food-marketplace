@@ -155,7 +155,7 @@ $countries = array(
     array('IT', 'Italien', '039'),
     array('DK', 'Dänemark', '045'),
     array('FR', 'Frankreich', '033'),
-    array('LI', 'Litauen', '0370'),
+    array('LT', 'Litauen', '0370'),
     array('LV', 'Lettland', '0371'),
     array('EE', 'Estland', '0372'),
     array('LU', 'Luxemburg', '0352'),
@@ -167,6 +167,12 @@ $countries = array(
     array('RU', 'Russland', '007'),
     array('RO', 'Romänien', '040'),
     array('GR', 'Griechenland', '030'),
+    array('GB', 'Vereinigtes Königreich', '044'),
+    array('ES', 'Spanien', '034'),
+    array('SK', 'Slovakei', '0421'),
+    array('LI', 'Liechtenstein', '0423'),
+    array('CZ', 'Tschechien', '0420'),
+    array('BG', 'Bulgarien', '0359'),
     array('US', 'USA', '001')
 );
 foreach($countries as $c){
@@ -283,8 +289,8 @@ while($group = $group_res->fetch_object()){
             $groupCount++;
             $group_id = $group_query->fetchObject()->id;
             $groupMapping[$group->group_id] = $group_id;
-            echo 'Neue Gruppe: ' . $group_id . ': ' . $group->name . ' (alte ID: ' . $group->group_id . ")\n";
-            ob_flush();
+  //          echo 'Neue Gruppe: ' . $group_id . ': ' . $group->name . ' (alte ID: ' . $group->group_id . ")\n";
+  //          ob_flush();
             $cat_res = $mysql->query("SELECT c.*, n.name, n.search_description FROM tbl_product_categories c JOIN tbl_product_category_names n ON c.category_id = n.category_id JOIN tbl_product_group_category_attach a ON a.category_id = c.category_id AND a.group_id = '" . $mysql->real_escape_string($group->group_id) . "' WHERE n.language_code = 'de'");
             while($category = $cat_res->fetch_object()){
                 try{
@@ -297,8 +303,8 @@ while($group = $group_res->fetch_object()){
                         $categoryCount++;
                         $category_id = $category_query->fetchObject()->id;
                         $catMapping[$category->category_id] = $category_id;
-                        echo 'Neue Kategorie: ' . $category_id . ': ' . $category->name . ' (alte ID: ' . $category->category_id . ")\n";
-                        ob_flush();
+    //                    echo 'Neue Kategorie: ' . $category_id . ': ' . $category->name . ' (alte ID: ' . $category->category_id . ")\n";
+    //                    ob_flush();
                     }
                     else{
                         $err = $category_query->errorInfo();
@@ -336,8 +342,8 @@ while($attribute = $attribute_res->fetch_object()){
             $attributeCount++;
             $attribute_id = $attributes_query->fetchObject()->id;
             $attributeMapping[$attribute->attribute_id] = $attribute_id;
-            echo 'Neues Attribut: ' . $attribute_id . ': ' . $attribute->name . ' (alte ID: ' . $attribute->attribute_id . ")\n";
-            ob_flush();
+//            echo 'Neues Attribut: ' . $attribute_id . ': ' . $attribute->name . ' (alte ID: ' . $attribute->attribute_id . ")\n";
+//            ob_flush();
         }
         else{
             $err = $attributes_query->errorInfo();
@@ -376,8 +382,8 @@ while($user = $user_res->fetch_object()){
             $userCount++;
             $user_id = $user_query->fetchObject()->id;
             $userMapping[$user->user_id] = $user_id;
-            echo 'Neuer User: ' . $user_id . ': ' . $user->email . ' (alte ID: ' . $user->user_id . ")\n";
-            ob_flush();
+//            echo 'Neuer User: ' . $user_id . ': ' . $user->email . ' (alte ID: ' . $user->user_id . ")\n";
+//            ob_flush();
 
             $bank_account_res = $mysql->query("SELECT * FROM tbl_user_payment WHERE user_id = '" . $mysql->real_escape_string($user->user_id) . "' AND kontonr <> ''");
             while($bank_account = $bank_account_res->fetch_object()){
@@ -391,8 +397,8 @@ while($user = $user_res->fetch_object()){
                     ));
                     if($bank_account_query->errorCode() == '00000'){
                         $bankAccountCount++;
-                        echo 'Bankverbindung für User ' . $user_id . " eingetragen\n";
-                        ob_flush();
+//                        echo 'Bankverbindung für User ' . $user_id . " eingetragen\n";
+//                        ob_flush();
                     }
                     else{
                         $err = $bank_account_query->errorInfo();
@@ -421,12 +427,12 @@ while($user = $user_res->fetch_object()){
                         $address->street_nr, // house
                         $address->zip, // zip
                         $address->city, // city
-                        $address->country_sn // country
+                        ($address->country_sn) ? $address->country_sn : 'DE' // country
                     ));
                     if($address_query->errorCode() == '00000'){
                         $addressesCount++;
-                        echo 'Adresse für User ' . $user_id . " eingetragen\n";
-                        ob_flush();
+//                        echo 'Adresse für User ' . $user_id . " eingetragen\n";
+//                        ob_flush();
                     }
                     else{
                         $err = $address_query->errorInfo();
@@ -503,7 +509,7 @@ while($user = $user_res->fetch_object()){
                         ($address) ? $address->street_nr : null , // house
                         ($address) ? $address->zip : null, // zip
                         ($address) ? $address->city : null, // city
-                        ($address) ? $address->country_sn : 'DE', // country
+                        ($address && $address->country_sn) ? $address->country_sn : 'DE', // country
                         ($address) ? ($address->phone_code . '/' . $address->phone) : null, // phone
                         ($address) ? ($address->fax_code . '/' . $address->fax) : null, // fax
                         ($company->ustg19) ? 't' : 'f', // small_business
@@ -531,8 +537,8 @@ while($user = $user_res->fetch_object()){
                     if($shop_query->errorCode() == '00000'){
                         $shopCount++;
                         $shop_id = $shop_query->fetchObject()->id;
-                        echo 'Neuer Shop: ' . $shop_id . ': ' . $shop->name . ' (alte ID: ' . $shop->shop_id . ")\n";
-                        ob_flush();
+//                        echo 'Neuer Shop: ' . $shop_id . ': ' . $shop->name . ' (alte ID: ' . $shop->shop_id . ")\n";
+//                        ob_flush();
 
                         if(!$address){
                             echo "\033[33mKeine Shop-Addresse!\033[0m\n";
@@ -550,8 +556,8 @@ while($user = $user_res->fetch_object()){
                                 ));
                                 if($shipping_query->errorCode() == '00000'){
                                     $shippingCount++;
-                                    echo 'Versandkosten für Shop ' . $shop_id . ' für Land ' . strtoupper($shipping->country_sn) . " eingetragen\n";
-                                    ob_flush();
+//                                    echo 'Versandkosten für Shop ' . $shop_id . ' für Land ' . strtoupper($shipping->country_sn) . " eingetragen\n";
+//                                    ob_flush();
                                 }
                                 else{
                                     $err = $shipping_query->errorInfo();
@@ -586,7 +592,7 @@ while($user = $user_res->fetch_object()){
                                     $productCount++;
                                     $product_id = $product_query->fetchObject()->id;
                                     $productMapping[$product->product_id] = $product_id;
-                                    echo 'Neues Produkt: ' . $product_id . ': ' . $product->default_name . ' (alte ID: ' . $product->product_id . ")\n";
+//                                    echo 'Neues Produkt: ' . $product_id . ': ' . $product->default_name . ' (alte ID: ' . $product->product_id . ")\n";
                                     if(!isset($catMapping[$product->old_cat_id])){
                                         echo "\033[33mKeine Kategorie!\033[0m\n";
                                         $productWithoutCategoryCount++;
@@ -602,8 +608,8 @@ while($user = $user_res->fetch_object()){
                                             ));
                                             if($attributes_product_query->errorCode() == '00000'){
                                                 $attributesProductCount++;
-                                                echo 'Attribut für Produkt ' . $product_id . " eingetragen\n";
-                                                ob_flush();
+//                                                echo 'Attribut für Produkt ' . $product_id . " eingetragen\n";
+//                                                ob_flush();
                                             }
                                             else{
                                                 $err = $attribues_product_query->errorInfo();
@@ -617,7 +623,7 @@ while($user = $user_res->fetch_object()){
                                         }
                                     }
 
-                                    $products_pictures_res = $mysql->query("SELECT f.filename FROM tbl_files f JOIN tbl_pictures p ON f.file_id = p.picture_id WHERE f.type = 'image' AND p.kisju_type = 'picture' AND type_id = '" . $mysql->real_escape_string($product->product_id) . "'");
+                                    $products_pictures_res = $mysql->query("SELECT f.filename FROM tbl_files f JOIN tbl_pictures p ON f.file_id = p.picture_id WHERE p.kisju_type = 'picture' AND type_id = '" . $mysql->real_escape_string($product->product_id) . "'");
                                     while($picture = $products_pictures_res->fetch_object()){
                                             try{
                                                 $pic_ret = $picture_query->execute(array(
@@ -661,8 +667,8 @@ while($user = $user_res->fetch_object()){
                                             ));
                                             if($price_query->errorCode() == '00000'){
                                                 $priceCount++;
-                                                echo 'Preis für Produkt ' . $product_id . " eingetragen\n";
-                                                ob_flush();
+//                                                echo 'Preis für Produkt ' . $product_id . " eingetragen\n";
+//                                                ob_flush();
                                             }
                                             else{
                                                 $err = $price_query->errorInfo();
@@ -728,8 +734,8 @@ while($rating = $product_rating_res->fetch_object()){
             ));
             if($product_ratings_query->errorCode() == '00000'){
                 $productRatingCount++;
-                echo 'Rating für Produkt ' . $productMapping[$rating->product_id] . " eingetragen\n";
-                ob_flush();
+//                echo 'Rating für Produkt ' . $productMapping[$rating->product_id] . " eingetragen\n";
+//                ob_flush();
             }
         } catch(Exception $e){
             echo $e->getMessage();
