@@ -169,15 +169,15 @@ class Woma_ProductsController extends Zend_Controller_Action
                 $img->readImage($_FILES['file']['tmp_name']);
                 $img->writeImage($filepath . 'original/' . $filename);
                 $img->thumbnailImage(380, null);
-                $img->writeImage($filepath . '380px_w/' . $filename);
+                $img->writeImage($filepath . '380w/' . $filename);
                 $img->thumbnailImage(380, 380, true);
-                $img->writeImage($filepath . '380px_sqr/' . $filename);
+                $img->writeImage($filepath . '380x285/' . $filename);
                 $img->thumbnailImage(174, 174, true);
-                $img->writeImage($filepath . '174px_sqr/' . $filename);
+                $img->writeImage($filepath . '174x136/' . $filename);
                 $img->thumbnailImage(90, 90, true);
-                $img->writeImage($filepath . '90px_sqr/' . $filename);
+                $img->writeImage($filepath . '90x68/' . $filename);
                 $img->thumbnailImage(36, 36, true);
-                $img->writeImage($filepath . '36px_sqr/' . $filename);
+                $img->writeImage($filepath . '36x27/' . $filename);
                 
                 $picture = new Model_Picture(array('filename' => $filename));
                 $picture->save();
@@ -186,7 +186,7 @@ class Woma_ProductsController extends Zend_Controller_Action
                 exit($e->getMessage());
             }
 
-            $ret = '<tr><td><input type="checkbox" name="imagesDelete[]" value="" /></td><td><img style="width:120px;" src="/img/products/174px_sqr/' . $filename . '" alt=""></td></tr>';
+            $ret = '<tr><td><input type="checkbox" name="imagesDelete[]" value="" /></td><td><img style="width:120px;" src="/img/products/174x136/' . $filename . '" alt=""></td></tr>';
             exit(json_encode(array('data' => $ret)));
         }
     }

@@ -17,6 +17,7 @@ class Model_Product extends Model_ModelAbstract
     public $tags;
     public $traces;
     public $ingredients;
+    public $main_picture_id;
 
     private $_shop = null;
     private $_attributes = null;
@@ -81,7 +82,11 @@ class Model_Product extends Model_ModelAbstract
     public function getDefaultPicture(){
         $pics = $this->getPictures();
         if($pics){
-            return $pics[0];
+            foreach($pics as $pic){
+                if($pic->id == $this->main_picture_id){
+                    return $pic;
+                }
+            }
         }
         return false;
     }

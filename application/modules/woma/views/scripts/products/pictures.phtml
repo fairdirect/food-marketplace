@@ -2,7 +2,7 @@
 <input id="fileupload" type="file" name="file" data-url="/woma/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
 <table class="table" id="bilder">
 <?php foreach($this->product->getPictures() as $pic): ?>
-    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174px_sqr/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
+    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174x136/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
 <?php endforeach; ?>
 </table>
 <button class="btn" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>

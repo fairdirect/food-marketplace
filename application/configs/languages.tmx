@@ -4213,7 +4213,16 @@
                 <seg></seg>
             </tuv>
         </tu>     
-
+        <tu tuid='product_not_available'>
+            <tuv xml:lang="de">
+                <seg>Produkt ist derzeit nicht verfügbar.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>       
     </body>
 </tmx>
-
