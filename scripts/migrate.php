@@ -143,6 +143,7 @@ $product_ratings_query = $postgres->prepare(
 
 $main_pic_query = $postgres->prepare("UPDATE epelia_products SET main_picture_id = ? WHERE id = ?");
     
+$dup_pic_query = $postgres->prepare("SELECT id FROM epelia_pictures WHERE filename = ?");
 
 $groupCount = $categoryCount = $attributeCount = $attributesProductCount = $userCount = $shopCount = $productCount = $priceCount = $shippingCount = $bankAccountCount = $addressesCount = $logoCount = $productPictureCount = $productRatingCount = 0; // successcounter
 $productWithoutCategoryCount = $shopWithoutAddressCount = 0; // warningcounter
@@ -495,6 +496,13 @@ while($user = $user_res->fetch_object()){
                             $logo_id = $picture_query->fetchObject()->id;
                             $logoCount++;
                         }
+                        else{
+                            if($picture_query->errorCode() == '23505'){ // pic ported before for whatever reason
+                                $dup_pic_query->execute(array($logo->filename)); // get new pic id
+                                $logo_id = $dup_pic_query->fetchColumn(); // set logo
+                            }
+                        }
+                            
                     }
                     catch(Exception $e){
                         echo $e->getMessage();
