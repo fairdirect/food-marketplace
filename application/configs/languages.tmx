@@ -60,7 +60,7 @@
         </tu>
         <tu tuid='misc_business'>
             <tuv xml:lang="de">
-                <seg>Business</seg>
+                <seg>Mein Shop</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Business</seg>
@@ -4224,5 +4224,60 @@
                 <seg></seg>
             </tuv>
         </tu>       
+        <tu tuid='index_about_1'>
+            <tuv xml:lang="de">
+                <seg>Hier verkaufen Produzenten und Direktimporteure Lebensmittel und Drogerie-Artikel direkt an Sie. </seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>       
+        <tu tuid='index_about_2'>
+            <tuv xml:lang="de">
+                <seg>+ in 150 Shops einkaufen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='index_about_3'>
+            <tuv xml:lang="de">
+                <seg>+ ein Warenkorb und eine Kasse</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='index_about_4'>
+            <tuv xml:lang="de">
+                <seg>+ direkte Lieferung frisch zu Ihnen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='misc_more'>
+            <tuv xml:lang="de">
+                <seg>mehr</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
     </body>
 </tmx>
