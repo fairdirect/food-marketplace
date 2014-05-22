@@ -165,8 +165,10 @@ class Model_User extends Model_ModelAbstract
         
         if($search){
             $search = '%' . $search . '%';
-            $query .= ' WHERE u.email ILIKE ' . $db->quote($search) . ' OR u.id = ' . $db->quote(str_replace('%', '', intVal($search))) . ' OR a.firstname ILIKE ' . $db->quote($search) . ' OR a.name ILIKE ' .$db->quote($search) . ' OR a.street ILIKE ' . $db->quote($search) . ' OR a.zip ILIKE ' .$db->quote($search) . ' OR a.city ILIKE ' . $db->quote($search);
+            $query .= ' WHERE u.email ILIKE ' . $db->quote($search) . ' OR u.id = ' . $db->quote(intVal(str_replace('%', '', $search))) . ' OR a.firstname ILIKE ' . $db->quote($search) . ' OR a.name ILIKE ' .$db->quote($search) . ' OR a.street ILIKE ' . $db->quote($search) . ' OR a.zip ILIKE ' .$db->quote($search) . ' OR a.city ILIKE ' . $db->quote($search);
         }
+        $query .= ' ORDER BY id DESC';
+
         if($limit && !$offset){
             $query .= ' LIMIT ' . $db->quote($limit);
         }

@@ -133,10 +133,11 @@ class Model_Product extends Model_ModelAbstract
         return $prices[0];
     }
 
-    public static function getCount($onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all){
+    public static function getCount($onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $search = ''){
         $table = self::getDbTable();
-        $select = $table->getAdapter()->select();
-        $select->from($table->getTableName(), array('count(*) as amount'));
+        $db = $table->getAdapter();
+        $select = $db->select();
+        $select->from(array('p' => $table->getTableName()), array('count(*) as amount'));
 
         if($onlyBio){
             $select->where('is_bio = ?', 'true');
@@ -145,17 +146,24 @@ class Model_Product extends Model_ModelAbstract
             $select->where('is_discount = ?', 'true');
         }
         if($onlyWholesale){
-            $select->join('epelia_product_prices', $table->getTableName() . '.id = epelia_product_prices.product_id', array());
+            $select->join('epelia_product_prices', 'p.id = epelia_product_prices.product_id', array());
             $select->where('epelia_product_prices.is_wholesale', 'true');
-            $select->group($table->getTableName() . '.id');
+            $select->group('p.id');
         }
 
         if($onlyActivated){
-            $select->where($table->getTableName() . '.active = ?', true);
+            $select->where('p.active = ?', true);
         }
 
         if(!$all){
-            $select->where($table->getTableName() . '.deleted != ?', true);
+            $select->where('p.deleted != ?', true);
+        }
+
+        if($search){
+            $search = '%' . $search . '%';
+            $select->join(array('s' => 'epelia_shops'), 'p.shop_id = s.id', array(''));
+            $select->join(array('u' => 'epelia_users'), 's.user_id = u.id', array(''));
+            $select->where('p.id = ' . $db->quote(intVal(str_replace('%', '', $search))) . ' OR p.name ILIKE ' . $db->quote($search) . ' OR s.name ILIKE ' . $db->quote($search) . ' OR u.email ILIKE ' . $db->quote($search));
         }
 
         $rows = self::getDbTable()->getAdapter()->fetchAll($select);
@@ -163,9 +171,10 @@ class Model_Product extends Model_ModelAbstract
     }
 
 
-    public static function getAll($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+    public static function getAll($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $search = ''){
         $table = self::getDbTable();
-        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+        $db = $table->getAdapter();
+        $select = $db->select()->from(array('p' => $table->getTableName()), '*'); 
         $ret = array();
    
         if($onlyBio){
@@ -175,20 +184,27 @@ class Model_Product extends Model_ModelAbstract
             $select->where('is_discount = ?', 'true');
         }
         if($onlyWholesale){
-            $select->join('epelia_product_prices', $table->getTableName() . '.id = epelia_product_prices.product_id', array());
+            $select->join('epelia_product_prices', 'p.id = epelia_product_prices.product_id', array());
             $select->where('epelia_product_prices.is_wholesale', 'true');
-            $select->group($table->getTableName() . '.id');
+            $select->group('p.id');
         }
 
         if($onlyActivated){
-            $select->where($table->getTableName() . '.active = ?', true);
+            $select->where('p.active = ?', true);
         }
 
         if(!$all){
-            $select->where($table->getTableName() . '.deleted != ?', true);
+            $select->where('p.deleted != ?', true);
         }
 
-        $select->order($table->getTableName() . '.id DESC');
+        if($search){
+            $search = '%' . $search . '%';
+            $select->join(array('s' => 'epelia_shops'), 'p.shop_id = s.id', array(''));
+            $select->join(array('u' => 'epelia_users'), 's.user_id = u.id', array(''));
+            $select->where('p.id = ' . $db->quote(intVal(str_replace('%', '', $search))) . ' OR p.name ILIKE ' . $db->quote($search) . ' OR s.name ILIKE ' . $db->quote($search) . ' OR u.email ILIKE ' . $db->quote($search));
+        }
+
+        $select->order('p.id DESC');
         $select->limit($limit, $offset);
 
         $result = $select->query()->fetchAll();

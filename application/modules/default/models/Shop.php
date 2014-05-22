@@ -86,14 +86,19 @@ class Model_Shop extends Model_ModelAbstract
         
         if($search){
             $search = '%' . $search . '%';
-            $query .= ' WHERE u.email ILIKE ' . $db->quote($search) . ' OR s.id = ' . $db->quote(str_replace('%', '', intVal($search))) . ' OR s.name ILIKE ' . $db->quote($search) . ' OR s.company ILIKE ' . $db->quote($search) . ' OR s.street ILIKE ' . $db->quote($search) . ' OR s.zip ILIKE ' .$db->quote($search) . ' OR s.city ILIKE ' . $db->quote($search) . ' OR s.taxnumber ILIKE ' . $db->quote($search) . ' OR s.salestax_id ILIKE ' . $db->quote($search);
+            $query .= ' WHERE u.email ILIKE ' . $db->quote($search) . ' OR s.id = ' . $db->quote(intVal(str_replace('%', '', $search))) . ' OR s.name ILIKE ' . $db->quote($search) . ' OR s.company ILIKE ' . $db->quote($search) . ' OR s.street ILIKE ' . $db->quote($search) . ' OR s.zip ILIKE ' .$db->quote($search) . ' OR s.city ILIKE ' . $db->quote($search) . ' OR s.taxnumber ILIKE ' . $db->quote($search) . ' OR s.salestax_id ILIKE ' . $db->quote($search);
         }
+
+        $query .= ' ORDER BY id DESC';
+
         if($limit && !$offset){
             $query .= ' LIMIT ' . $db->quote($limit);
         }
         if($limit && $offset){
             $query .= ' LIMIT ' . $db->quote($limit) . ' OFFSET ' . $db->quote($offset);
         }
+
+
 
         $result = $db->fetchAll($query);
         if($result){

@@ -11,11 +11,11 @@ class Admin_ProductsController extends Zend_Controller_Action
     }
 
     public function ajaxgetproductsAction(){
-        $products = Model_Product::getAll($this->getRequest()->getParam('iDisplayLength'), $this->getRequest()->getParam('iDisplayStart'), false, false, false, false, false);
+        $products = Model_Product::getAll($this->getRequest()->getParam('iDisplayLength'), $this->getRequest()->getParam('iDisplayStart'), false, false, false, false, false, $this->getRequest()->getParam('sSearch'));
         $ret = array(
             'sEcho' => $this->getRequest()->getParam('sEcho') + 1,
             'iTotalRecords' => Model_Product::getCount(false, false, false, false, false),
-            'iTotalDisplayRecords' => Model_Product::getCount(false, false, false, false, false),
+            'iTotalDisplayRecords' => Model_Product::getCount(false, false, false, false, false, $this->getRequest()->getParam('sSearch')),
             'aaData' => array()
         );
 
