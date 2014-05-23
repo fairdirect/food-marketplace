@@ -4279,5 +4279,16 @@
                 <seg></seg>
             </tuv>
         </tu>     
+        <tu tuid='admin_shop_featured_home'>
+            <tuv xml:lang="de">
+                <seg>Auf der Startseite bewerben?</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
     </body>
 </tmx>

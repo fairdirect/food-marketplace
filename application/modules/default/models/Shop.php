@@ -310,6 +310,16 @@ class Model_Shop extends Model_ModelAbstract
         return $this->_featured_products_home;
     }   
 
+    public function setFeaturedProductsHome($productIds){
+        if(!$this->id){ // this should not happen, but in case we dont have an id we need one
+            $this->save();
+        }
+        $query = self::getDbTable()->getAdapter()->query('DELETE FROM epelia_shops_featured_products_home WHERE shop_id = ?', array($this->id));
+        foreach($productIds as $productID){
+            $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_shops_featured_products_home(product_id, shop_id) VALUES(?,?)', array($productID, $this->id));
+        }
+    }
+
     public function getShopType(){
         switch($this->shop_type){
             case 'manufacturer':

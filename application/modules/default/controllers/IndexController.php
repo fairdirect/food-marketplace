@@ -6,7 +6,7 @@ class IndexController extends Zend_Controller_Action
     {
         $this->view->headTitle("Lebensmittel online bestellen | Epelia");
 
-        $shop = Model_Shop::getRandomShopWithProducts(2);
+        $shop = Model_Shop::getRandomFeaturedHomeShop();
         $homeGroups = Model_Homegroup::findAll();
         $this->view->randomShop = $shop;
         $this->view->homegroups = $homeGroups;

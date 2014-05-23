@@ -43,6 +43,6 @@ class Admin_Form_Shops extends Business_Form_Shops
             ->setRegisterInArrayValidator(false)
             ->addMultiOptions($womaOptions);
 
-        $this->addElements(array($id, $woma_ids, $user_id, $provision));
+        $this->addElements(array($id, $woma_ids, $user_id, $provision, $featured_home));
     }
 }

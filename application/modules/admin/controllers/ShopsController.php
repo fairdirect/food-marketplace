@@ -69,6 +69,9 @@ class Admin_ShopsController extends Zend_Controller_Action
                             ));
                         }
                     }
+                    if($request->getPost('featured_home_products')){
+                        $shop->setFeaturedProductsHome($request->getPost('featured_home_products'));
+                    }
 
                     $this->_helper->redirector('index');
                 } catch(Exception $e){
@@ -90,6 +93,7 @@ class Admin_ShopsController extends Zend_Controller_Action
             }
         }
         $this->view->form = $form;
+        $this->view->shopID = $id;
     }
 
     public function deleteAction(){
@@ -99,5 +103,23 @@ class Admin_ShopsController extends Zend_Controller_Action
         $this->_helper->redirector('index');
     }
 
-}
+    public function ajaxgetfeaturedhomeAction(){
+        $id = $this->getRequest()->getParam('id');
+        $shop = Model_Shop::find($id);
+        $ret = '<ul>';
+        
+        $featuredProductsIds = array();
+        foreach($shop->getFeaturedProductsHome() as $fe){
+            $featuredProductsIds[] = $fe->id;
+        }
 
+        foreach($shop->getProducts() as $pr){
+            $ret .= '<li><input type="checkbox" id="featured_home_product_' . $pr->id . '" value="' . $pr->id . '" name="featured_home_products[]"' . ((in_array($pr->id, $featuredProductsIds)) ? ' checked="checked"' : '') . ' /><label for="featured_home_product_' . $pr->id . '">' . $pr->name . '</label></li>';
+        }
+
+        $ret .= '</ul>';
+        exit($ret);
+
+    }        
+
+}
