@@ -4290,5 +4290,16 @@
                 <seg></seg>
             </tuv>
         </tu>     
+        <tu tuid='product_to_shop'>
+            <tuv xml:lang="de">
+                <seg>Zum Shop</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
     </body>
 </tmx>
