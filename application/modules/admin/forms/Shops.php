@@ -24,6 +24,13 @@ class Admin_Form_Shops extends Business_Form_Shops
             ->setAttrib('class', 'span2')
             ->setOrder(41);
 
+        $featured_home = new Zend_Form_Element_Checkbox('featured_home');
+        $featured_home
+            ->setAttrib('class', 'span2')
+            ->setLabel($this->getTranslator()->translate('admin_shop_featured_home'))
+            ->setCheckedValue('t')
+            ->setUnCheckedValue('f');
+
         $womaOptions = array();
         $womas = Model_Woma::getAll();
         foreach($womas as $w){

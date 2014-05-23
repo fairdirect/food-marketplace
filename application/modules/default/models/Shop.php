@@ -46,6 +46,8 @@ class Model_Shop extends Model_ModelAbstract
 
     public $created;
 
+    public $featured_home = false;
+
     private $shop_type;
 
     private $_woma_ids = array(); // must be private for save()
@@ -63,6 +65,8 @@ class Model_Shop extends Model_ModelAbstract
     private $_shippingCosts = null;
 
     private $_country;
+
+    private $_featured_products_home = null;
 
     public function __construct($data = array())
     {
@@ -289,6 +293,22 @@ class Model_Shop extends Model_ModelAbstract
             return new self($result[0]);
         }
     }
+
+    public static function getRandomFeaturedHomeShop(){
+        $db = self::getDbTable()->getAdapter();       
+        $query = 'SELECT s.* FROM epelia_shops s WHERE featured_home ORDER BY random() LIMIT 1';
+        $result = $db->fetchAll($query);
+        if($result){
+            return new self($result[0]);
+        }
+    }
+
+    public function getFeaturedProductsHome(){
+        if(is_null($this->_featured_products_home)){
+            $this->_featured_products_home = Model_Product::findFeaturedHomeByShop($this->id);
+        }
+        return $this->_featured_products_home;
+    }   
 
     public function getShopType(){
         switch($this->shop_type){

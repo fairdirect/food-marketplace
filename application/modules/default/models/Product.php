@@ -387,6 +387,27 @@ class Model_Product extends Model_ModelAbstract
         return $ret;
     }
 
+    public static function findFeaturedHomeByShop($shopID){
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*');
+        $ret = array();
+   
+        $select->where('id IN (SELECT product_id FROM epelia_shops_featured_products_home WHERE shop_id = ?)', array($shopID));
+
+        $select->order($table->getTableName() . '.name ASC');
+
+        $result = $select->query()->fetchAll();
+
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
+
     public static function findByWoma($womaID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
