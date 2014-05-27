@@ -24,8 +24,8 @@ class VerkaufenController extends Zend_Controller_Action
                             'email' => $request->getPost('email'),
                             'type' => 'shop'
                         ));
-                        $user->salt = md5(uniqid('', true));
-                        $user->password = md5($request->getPost('password1') . '_epelia_' . $user->salt);
+                        $user->salt = hash('sha256', uniqid('', true));
+                        $user->password = hash('sha256', $request->getPost('password1') . '_epelia_' . $user->salt);
                         try{
                             $user->save();
                         } catch(Exception $e){
@@ -48,7 +48,7 @@ class VerkaufenController extends Zend_Controller_Action
                         try{
                             $registerMail = Model_Email::find('registerShop');
                             $mail = new Zend_Mail('UTF-8');
-                            $content = str_replace(array('#salutation#', '#lastname#', '#registerLink#'), array($request->getPost('gender'), $request->getPost('name'), 'http://' . $request->getHttpHost() . '/login/confirm/id/' . $user->id . '/code/' . md5($user->email . '_epelia_' . $user->salt) . '/'), $registerMail->content);
+                            $content = str_replace(array('#salutation#', '#lastname#', '#registerLink#'), array($request->getPost('gender'), $request->getPost('name'), 'http://' . $request->getHttpHost() . '/login/confirm/id/' . $user->id . '/code/' . hash('sha256', $user->email . '_epelia_' . $user->salt) . '/'), $registerMail->content);
                             $mail->setBodyText(strip_tags($content));
                             $mail->setFrom('mail@epelia.com', 'Epelia');
                             $mail->addTo($user->email);

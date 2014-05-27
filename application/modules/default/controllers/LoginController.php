@@ -53,8 +53,8 @@ class LoginController extends Zend_Controller_Action
                         }
                         else{
                             $user = new Model_User($request->getPost());
-                            $user->salt = md5(uniqid('', true));
-                            $user->password = md5($request->getPost('password1') . '_epelia_' . $user->salt);
+                            $user->salt = hash('sha256', uniqid('', true));
+                            $user->password = hash('sha256', $request->getPost('password1') . '_epelia_' . $user->salt);
                             $user->registered = date('Y-m-d', time());
                             try{
                                 $user->save();
@@ -81,7 +81,7 @@ class LoginController extends Zend_Controller_Action
                             try{
                                 $registerMail = Model_Email::find('register');
                                 $mail = new Zend_Mail('UTF-8');
-                                $content = str_replace('#registerLink#', 'http://' . $_SERVER['HTTP_HOST'] . '/login/confirm/id/' . $user->id . '/code/' . md5($user->email . '_epelia_' . $user->salt) . '/', $registerMail->content);
+                                $content = str_replace('#registerLink#', 'http://' . $_SERVER['HTTP_HOST'] . '/login/confirm/id/' . $user->id . '/code/' . hash('sha256', $user->email . '_epelia_' . $user->salt) . '/', $registerMail->content);
                                 $mail->setBodyText(strip_tags($content));
                                 $mail->setFrom('mail@epelia.com', 'Epelia');
                                 $mail->addTo($user->email);
@@ -116,7 +116,7 @@ class LoginController extends Zend_Controller_Action
             $this->_helper->_redirector('confirmfailure');
         }
         else{
-            if(md5($user->email . '_epelia_' . $user->salt) != $this->getRequest()->getParam('code') || $user->status != 'new'){
+            if(hash('sha256', $user->email . '_epelia_' . $user->salt) != $this->getRequest()->getParam('code') || $user->status != 'new'){
                 $this->_helper->_redirector('confirmfailure');
             }
             else{
@@ -139,7 +139,7 @@ class LoginController extends Zend_Controller_Action
         $adapter->setTableName(Model_User::getDbTable()->getTableName());
         $adapter->setIdentityColumn('email');
         $adapter->setCredentialColumn('password');
-        $adapter->setCredentialTreatment("MD5(? || '_epelia_' || salt)");
+        $adapter->setCredentialTreatment("ENCODE(DIGEST(? || '_epelia_' || salt, 'sha256'), 'hex')");
         
         $adapter->setIdentity($email);
         $adapter->setCredential($password);
@@ -180,9 +180,9 @@ class LoginController extends Zend_Controller_Action
             $user = new Model_User((array) $adapter->getResultRowObject());
             $user->last_login = date('Y-m-d', time());
 
-            // updateing to new auth
-            $user->salt = md5(uniqid('', true));
-            $user->password = md5($password . '_epelia_' . $user->salt);
+            // updating to new auth
+            $user->salt = hash('sha256', uniqid('', true));
+            $user->password = hash('sha256', $password . '_epelia_' . $user->salt);
             $user->old_password_hash = '';
 
             $user->save();
@@ -219,7 +219,7 @@ class LoginController extends Zend_Controller_Action
         if(!$user){
             return;
         }
-        $user->password_reset_token = md5($user->email . '_epelia_' . time());
+        $user->password_reset_token = hash('sha256', $user->email . '_epelia_' . time());
         $user->save();
         try{
             $resetMail = Model_Email::find('resetPassword');
@@ -251,7 +251,7 @@ class LoginController extends Zend_Controller_Action
                         $this->view->registerError = 'Die angegebenen Passwörter stimmen nicht überein.';
                     }
                     else{
-                        $user->password = md5($this->getRequest()->getPost('password1') . '_epelia_' . $user->salt);
+                        $user->password = hash('256', $this->getRequest()->getPost('password1') . '_epelia_' . $user->salt);
                         $user->password_reset_token = '';
                         $user->save();
                         $this->_helper->_redirector('resetsuccess');

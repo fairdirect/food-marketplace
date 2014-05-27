@@ -129,7 +129,7 @@ class Admin_UsersController extends Zend_Controller_Action
                         $this->view->error = 'Die angegebenen Passwörter stimmen nicht überein.';
                     }
                     else{
-                        $user->password = md5($request->getPost('password1') . '_epelia_' . $user->salt);
+                        $user->password = hash('sha256', $request->getPost('password1') . '_epelia_' . $user->salt);
                         $user->save();
                         $this->_redirect('index');
                     }
