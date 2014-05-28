@@ -13,7 +13,7 @@ class ProductsController extends Zend_Controller_Action
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
         $product = Model_Product::find($this->getRequest()->getParam('id'));
-        if(!$product){
+        if(!$product || $product->deleted || !$product->active){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
         $this->view->headTitle($product->name . ' | Epelia');

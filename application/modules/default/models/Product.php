@@ -457,10 +457,7 @@ class Model_Product extends Model_ModelAbstract
         $select = $table->select();
         $ret = array();
 
-        $select->where('name ILIKE ?', '%' . $search . '%');
-        $select->orWhere('description ILIKE ?', '%' . $search . '%');
-        $select->orWhere('ingredients ILIKE ?', '%' . $search . '%');
-        $select->orWhere('tags ILIKE ?', '%' . $search . '%');
+        $select->where('(name ILIKE ? OR description ILIKE ? OR ingredients ILIKE ? OR tags ILIKE ?)', '%' . $search . '%');
         if($onlyBio){
             $select->where('is_bio = ?', 'true');
         }
