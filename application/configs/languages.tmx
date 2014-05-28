@@ -4301,5 +4301,16 @@
                 <seg></seg>
             </tuv>
         </tu>     
+        <tu tuid='misc_salestax'>
+            <tuv xml:lang="de">
+                <seg>Umsatzsteuer</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
     </body>
 </tmx>

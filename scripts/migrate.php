@@ -87,9 +87,9 @@ $shipping_query = $postgres->prepare(
         )");
 $product_query = $postgres->prepare(
     "INSERT INTO epelia_products(
-            shop_id, name, description, num_views, active, stock, category_id, ingredients, traces, is_bio, is_discount, tags)
+            shop_id, name, description, num_views, active, stock, category_id, ingredients, traces, is_bio, is_discount, tags, tax)
         VALUES(
-            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
+            ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?
         ) RETURNING id");
 
 $address_query = $postgres->prepare(
@@ -586,7 +586,7 @@ while($user = $user_res->fetch_object()){
                             }
                         }
 
-                        $product_res = $mysql->query("SELECT p.*, n.name AS name, d.shopproduct_name AS realname, d.main_pic_id AS main_pic_id, pca.category_id AS old_cat_id, d.is_bio, d.is_discount, d.ingredients, d.description, d.active AS active, d.available FROM tbl_products p JOIN tbl_shop_product_attach a on a.shop_id = '" . $mysql->real_escape_string($shop->shop_id) . "' LEFT JOIN tbl_product_names n ON p.product_id = n.product_id AND n.language_code = 'de' LEFT JOIN tbl_product_category_attach pca ON p.product_id = pca.product_id LEFT JOIN tbl_product_details d ON p.product_id = d.product_id  WHERE p.active = '1' AND p.product_id = a.product_id AND a.product_id <> 0 AND a.shop_id <> 0 GROUP BY a.product_id");
+                        $product_res = $mysql->query("SELECT p.*, n.name AS name, d.shopproduct_name AS realname, d.main_pic_id AS main_pic_id, d.vat AS tax, pca.category_id AS old_cat_id, d.is_bio, d.is_discount, d.ingredients, d.description, d.active AS active, d.available FROM tbl_products p JOIN tbl_shop_product_attach a on a.shop_id = '" . $mysql->real_escape_string($shop->shop_id) . "' LEFT JOIN tbl_product_names n ON p.product_id = n.product_id AND n.language_code = 'de' LEFT JOIN tbl_product_category_attach pca ON p.product_id = pca.product_id LEFT JOIN tbl_product_details d ON p.product_id = d.product_id  WHERE p.active = '1' AND p.product_id = a.product_id AND a.product_id <> 0 AND a.shop_id <> 0 GROUP BY a.product_id");
                         while($product = $product_res->fetch_object()){
                             try{
                                 $ret = $product_query->execute(array(
@@ -601,7 +601,8 @@ while($user = $user_res->fetch_object()){
                                     null, // traces
                                     $product->is_bio, // is_bio
                                     $product->is_discount, // is_discount
-                                    null // tags
+                                    null, // tags
+                                    ((int) $product->tax == 19) ? 19 : ((int) $product->tax == 7) ? 7 : 0
                                 ));
                                 if($product_query->errorCode() == '00000'){
                                     $productCount++;

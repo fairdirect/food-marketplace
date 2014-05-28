@@ -18,6 +18,7 @@ class Model_Product extends Model_ModelAbstract
     public $traces;
     public $ingredients;
     public $main_picture_id;
+    public $tax;
 
     private $_shop = null;
     private $_attributes = null;

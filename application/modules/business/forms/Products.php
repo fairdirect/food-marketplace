@@ -81,7 +81,12 @@ class Business_Form_Products extends Zend_Form
             ->setAttrib('class', 'span2')
             ->setLabel($this->getTranslator()->translate('business_products_discount'));
 
-        $this->addDisplayGroup(array($name, $description, $unlimitedStock, $stock, $ingredients, $traces, $tags, $is_bio, $is_discount), 'product_data', array('legend' => $this->getTranslator()->translate('misc_general')));
+        $tax = new Zend_Form_Element_Select('tax');
+        $tax->addMultiOptions(array('19' => '19 %', '7' => '7 %', '0 %'))
+            ->setAttrib('class', 'span2')
+            ->setLabel($this->getTranslator()->translate('misc_salestax'));
+ 
+        $this->addDisplayGroup(array($name, $description, $unlimitedStock, $stock, $ingredients, $traces, $tags, $is_bio, $is_discount, $tax), 'product_data', array('legend' => $this->getTranslator()->translate('misc_general')));
 
         $attributeTypes = array('additive' => $this->getTranslator()->translate('business_products_additives'), 'allergen' => $this->getTranslator()->translate('business_products_allergenes'), 'event' => $this->getTranslator()->translate('business_products_events'), 'flavor' => $this->getTranslator()->translate('business_products_flavor'), 'manipulation' => $this->getTranslator()->translate('business_products_manipulations'));
         foreach($attributeTypes as $aName => $aLabel){
@@ -98,8 +103,7 @@ class Business_Form_Products extends Zend_Form
                     $this->addDisplayGroup(array($aElem), $aLabel, array('legend' => $aLabel));
                 }
             }
-        }
-       
+        }     
 
         $unitOptions = array();
         $all_price_units = Model_Unit::getAll();

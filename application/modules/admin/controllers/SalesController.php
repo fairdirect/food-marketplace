@@ -42,7 +42,7 @@ class Admin_SalesController extends Zend_Controller_Action
                 $orderContent .= '<tr><td>' . $shop->id . '</td><td>' . $shop->company . '</td><td>' . $shop->representative . '</td><td>';
                 $orders = $shop->getOrdersByDate($month, $year);
                 foreach($orders as $order){
-                    $orderContent .= $order->id . '<br />';
+                    $orderContent .= $order->order_number . '<br />';
                 }
                 $salesData = $shop->getSalesData($month, $year);
                 $orderContent .= '</td><td>' . number_format($salesData['total'], 2, ',', '') . ' EUR</td><td>' . number_format($salesData['shipping'], 2, ',', '') . ' EUR</td><td>' . number_format($salesData['total'] + $salesData['shipping'], 2, ',', '') . ' EUR</td><td>' . number_format($salesData['provision_netto'], 2, ',', '') . ' EUR<br />(' . number_format($shop->provision, 2, ',', '') . ' %)</td><td>' . number_format($salesData['provision_mwst'], 2, ',', '') . ' EUR</td><td>' . number_format($salesData['provision_brutto'], 2, ',', '') . ' EUR</td><td>' . number_format($salesData['payout'], 2, ',', '') . ' EUR</td></tr>';
@@ -82,7 +82,7 @@ class Admin_SalesController extends Zend_Controller_Action
                 $orders = $shop->getOrdersByDate($month, $year);
                 $orderIds = array();
                 foreach($orders as $order){
-                    $orderIds[] = $order->id;
+                    $orderIds[] = $order->order_number;
                 }
                 $orderContent .= '"' . implode(' / ', $orderIds) . '",';
                 $salesData = $shop->getSalesData($month, $year);
@@ -131,7 +131,7 @@ class Admin_SalesController extends Zend_Controller_Action
                 $orders = $shop->getOrdersByDate($month, $year);
                 $orderIds = array();
                 foreach($orders as $order){
-                    $orderIds[] = $order->id;
+                    $orderIds[] = $order->order_number;
                 }
                 $salesData = $shop->getSalesData($month, $year);
                 
@@ -212,8 +212,6 @@ class Admin_SalesController extends Zend_Controller_Action
                 $invoice->last_sent_email = $invoice->getShop()->getUser()->email;
                 $invoice->save();
 
-//                EmailManager::send_systemmail('invoice_mail', $invoice->email, array(array('month', $ar_month[$invoice->month]), array('year', $invoice->year)), 'de', array(array('file_content' => file_get_contents(INVOICE_PATH . $invoice->file), 'file_name' => $invoice->file)));
-  //              InvoiceManager::mark_sent($invoice->invoice_id);
             }
             $this->_redirect('/admin/sales/invoices/');
         }

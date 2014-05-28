@@ -42,10 +42,16 @@ class Model_ShoppingCart extends Model_ModelAbstract
     /**
      * structure: 
      *      product_id
+     *      product_name
      *      shopping_cart_id
-     *      product_price_id
      *      quantity
      *      added
+     *      tax
+     *      value
+     *      unit_type
+     *      content_type
+     *      contents
+     *      price_quantity
      */
     public function getProducts(){
         if($this->id){
@@ -70,9 +76,14 @@ class Model_ShoppingCart extends Model_ModelAbstract
      *          'orderedProducts' => array(
      *              product_id
      *              shopping_cart_id
-     *              product_price_id
      *              quantity
      *              added
+     *              tax
+     *              value
+     *              unit_type
+     *              content_type
+     *              contents
+     *              price_quantity
      *           )
      * )
      */          
@@ -101,8 +112,12 @@ class Model_ShoppingCart extends Model_ModelAbstract
                 $shippingCosts = $shop->getShippingCosts();
                 $val = 0.00;
                 foreach($shop->orderedProducts as $pr){
-                    $price = Model_ProductPrice::find($pr['product_price_id']);
-                    $val += $pr['quantity'] * $price->value;
+                    if(isset($pr['value'])){
+                        $val += $pr['quantity'] * $pr['value'];
+                    }
+                    else{
+                        $val += $pr['quantity'] * Model_ProductPrice::find($pr['product_price_id'])->value;
+                    }
                 }
                 foreach($shippingCosts as $shippingCost){
                     if($shippingCost->country_id == $deliveryAddress->country && ($val < $shippingCost->free_from || !$shippingCost->free_from)){
@@ -124,8 +139,12 @@ class Model_ShoppingCart extends Model_ModelAbstract
                     $shippingCosts = $shop->getShippingCosts();
                     $val = 0.00;
                     foreach($shop->orderedProducts as $pr){
-                        $price = Model_ProductPrice::find($pr['product_price_id']);
-                        $val += $pr['quantity'] * $price->value;
+                        if(isset($pr['value'])){
+                            $val += $pr['quantity'] * $pr['value'];
+                        }
+                        else{
+                            $val += $pr['quantity'] * Model_ProductPrice::find($pr['product_price_id'])->value;
+                        }
                     }
                     foreach($shippingCosts as $shippingCost){
                         if($shippingCost->country_id == $deliveryAddress->country && ($val < $shippingCost->free_from || !$shippingCost->free_from)){
@@ -143,8 +162,7 @@ class Model_ShoppingCart extends Model_ModelAbstract
         $total = 0;
         foreach($cartProducts as $item){
             $product = Model_Product::find($item['product_id']);
-            $price = Model_ProductPrice::find($item['product_price_id']);
-            $total += $price->value * $item['quantity'];
+            $total += $item['value'] * $item['quantity'];
         }
         return $total;
     }
@@ -259,6 +277,55 @@ class Model_ShoppingCart extends Model_ModelAbstract
         }
     }
 
+
+    public function getValueforTaxes(){
+        $taxValues = array(0 => 0, 7 => 0, 19 => 0); // 0, 7, 19
+        foreach($this->getProducts() as $item){
+            if(isset($item['tax'])){
+                switch($item['tax']){
+                    case 0:
+                        $taxValues[0] += ($item['value'] * $item['quantity']);
+                        break;
+                    case 7:
+                        $taxValues[7] += ($item['value'] * $item['quantity']);
+                        break;
+                    case 19:
+                        $taxValues[19] += ($item['value'] * $item['quantity']);
+                        break;
+                }
+            }
+            else{
+                $product = Model_Product::find($item['product_id']);
+                $price = Model_ProductPrice::find($item['product_price_id']);
+                switch($product->tax){
+                    case 0:
+                        $taxValues[0] += ($price->value * $item['quantity']);
+                        break;
+                    case 7:
+                        $taxValues[7] += ($price->value * $item['quantity']);
+                        break;
+                    case 19:
+                        $taxValues[19] += ($price->value * $item['quantity']);
+                        break;
+                }
+            }
+
+        }        
+        return $taxValues;
+    }
+
+    public function getShippingTax(){
+        $taxValues = $this->getValueForTaxes();
+        if($taxValues[0] >= $taxValues[7] && $taxValues[0] >= $taxValues[19]){
+            return 0;
+        }
+        if($taxValues[7] >= $taxValues[0] && $taxValues[7] >= $taxValues[19]){
+            return 7;
+        }
+        return 19;
+    }
+
+
     /*
      * returns array of failed items if not successfull, empty array if successfull
      */
@@ -268,11 +335,16 @@ class Model_ShoppingCart extends Model_ModelAbstract
         $failedItems = array();
        
         self::getDbTable()->getAdapter()->beginTransaction();
-        foreach($this->_items as $item){ // cannot use $this->getProducts() here, for this fetched from database
+        foreach($this->_items as $item){ 
             // using transactions and >= 0 constraint for stock, ensuring stock cant drop below 0
             try{
+                $product = Model_Product::find($item['product_id']);
+                $price = Model_ProductPrice::find($item['product_price_id']);
+                $unit_type = ($quantity) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
+                $content_type = $price->getContentType()->name;
+
                 $query = self::getDbTable()->getAdapter()->query('UPDATE epelia_products SET stock = (stock - 1) WHERE id = ? AND stock IS NOT NULL', array($item['product_id'])); // do not decrease if stock is null => unlimited stock
-                $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_shopping_carts(product_id, shopping_cart_id, product_price_id, quantity) VALUES(?, ?, ?, ?)', array($item['product_id'], $this->id, $item['product_price_id'], $item['quantity']));
+                $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_shopping_carts(product_id, product_name, shopping_cart_id, quantity, tax, value, unit_type, content_type, contents, price_quantity) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', array($product->id, $product->name, $this->id, $item['quantity'], $product->tax, $price->value, $unit_type, $content_type, $price->contents, $price->quantity));
            } catch(Exception $e){
             exit($e->getMessage());
                $failedItems[] = $item;

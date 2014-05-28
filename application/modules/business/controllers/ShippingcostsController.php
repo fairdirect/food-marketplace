@@ -29,11 +29,10 @@ class Business_ShippingCostsController extends Zend_Controller_Action{
                     }
                     try{
                         $shippingCost->save();
-                        $this->_redirect('/business/');
                     } catch(Exception $e){
-
                     }
                 }
+                $this->_redirect('/business/shippingcosts');
             }
         }
         else{

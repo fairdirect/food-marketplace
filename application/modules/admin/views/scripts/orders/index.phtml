@@ -7,21 +7,9 @@
 <?php
     foreach($this->orderedCarts as $cart):
         $cartProducts = $cart->getProducts();
-        $products = array();
-        $total = 0;
-        foreach($cartProducts as &$item){
-            $product = Model_Product::find($item['product_id']);
-            $price = Model_ProductPrice::find($item['product_price_id']);
-            $products[] = $product;
-            $item['productname'] = $product->name;
-            $item['price_quantity'] = $price->quantity;
-            $item['unit_type'] = ($price->quantity > 1) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
-            $item['contents'] = $price->contents;
-            $item['content_type'] = $price->getContentType()->name;
-            $total += $price->value * $item['quantity'];
-        }
+
 ?>
-        <tr><td><?= date('d.m.Y', strtotime($cart->created)) ?></td><td><?= $this->escape($cart->id) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?= number_format($total + $cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?php foreach($cartProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><a href="/admin/orders/setPaid/id/<?= $this->escape($cart->id) ?>/">als bezahlt markieren</a><br /><a href="/admin/orders/delete/id/<?= $this->escape($cart->id) ?>/">löschen</a></td></tr>
+        <tr><td><?= date('d.m.Y', strtotime($cart->created)) ?></td><td><?= $this->escape($cart->id) ?></td><td><?= number_format($cart->getPrice(), 2, ',', '') ?> EUR</td><td><?= number_format($cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?= number_format($cart->getPriceTotal(), 2, ',', '') ?> EUR</td><td><?php foreach($cartProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['product_name']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><a href="/admin/orders/setPaid/id/<?= $this->escape($cart->id) ?>/">als bezahlt markieren</a><br /><a href="/admin/orders/delete/id/<?= $this->escape($cart->id) ?>/">löschen</a></td></tr>
 <?php
     endforeach;
 ?>

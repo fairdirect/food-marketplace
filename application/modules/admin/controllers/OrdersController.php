@@ -21,14 +21,9 @@ class Admin_OrdersController extends Zend_Controller_Action
                 $order->save();
 
                 $orderContent = '';
-                foreach($shop->orderedProducts as $pr){
-                    $product = Model_Product::find($pr['product_id']);
-                    $price = Model_ProductPrice::find($pr['product_price_id']);
-                    $unit_type = ($pr['quantity'] > 1) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
-                    $content_type = $price->getContentType()->name;
-
-                    $order->addProduct($pr['product_id'], $price->value, $pr['quantity'], $unit_type, $content_type, $price->contents, $price->quantity);
-                    $orderContent .= $pr['quantity'] . " x " . $product->name . " (" . $price->quantity . " " . (($price->quantity == 1) ? $price->getUnitType()->singular : $price->getUnitType()->plural) . " a " . $price->contents . " " . $price->getContentType()->name . ")\n\n";
+                foreach($shop->orderedProducts as $pr){                    
+                    $order->addProduct($pr['product_id'], $pr['product_name'], $pr['value'], $pr['quantity'], $pr['unit_type'], $pr['content_type'], $pr['contents'], $pr['price_quantity'], $pr['tax']);
+                    $orderContent .= $pr['quantity'] . " x " . $pr['product_name'] . " (" . $pr['price_quantity'] . " " . $pr['unit_type'] . " a " . $pr['contents'] . " " . $pr['content_type'] . ")\n\n";
                 }            
                 $order->insertProducts();
                 $order->status = 'in_process';

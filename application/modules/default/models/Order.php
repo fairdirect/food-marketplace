@@ -61,6 +61,7 @@ class Model_Order extends Model_ModelAbstract
     /**
      * structure: 
      *      product_id
+     *      product_name
      *      value
      *      quantity
      *      unit_type
@@ -68,6 +69,7 @@ class Model_Order extends Model_ModelAbstract
      *      contents
      *      price_quantity
      *      added
+     *      tax
      */
     public function getProducts(){
         if(is_null($this->_items)){
@@ -182,15 +184,17 @@ class Model_Order extends Model_ModelAbstract
         $table->delete($where); // by ON CASCADE datasets in epelia_products_orders are removed 
     }
 
-    public function addProduct($productID, $value, $quantity, $unit_type, $content_type, $contents, $price_quantity){
+    public function addProduct($productID, $productName, $value, $quantity, $unit_type, $content_type, $contents, $price_quantity, $tax){
         $this->_items[] = array(
             'product_id' => $productID,
+            'product_name' => $productName,
             'value' => $value,
             'quantity' => $quantity, 
             'unit_type' => $unit_type,
             'content_type' => $content_type,
             'contents' => $contents,
-            'price_quantity' => $price_quantity
+            'price_quantity' => $price_quantity,
+            'tax' => $tax
         );
     }
 
@@ -200,16 +204,70 @@ class Model_Order extends Model_ModelAbstract
         }
         $query = self::getDbTable()->getAdapter()->query('DELETE FROM epelia_products_orders WHERE order_id = ?', array($this->id));
         foreach($this->getProducts() as $item){
-            $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_orders(product_id, order_id, value, quantity, unit_type, content_type, contents, price_quantity) VALUES(?, ?, ?, ?, ?, ?, ?, ?)', array($item['product_id'], $this->id, $item['value'], $item['quantity'], $item['unit_type'], $item['content_type'], $item['contents'], $item['price_quantity']));
+            $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_orders(product_id, product_name, order_id, value, quantity, unit_type, content_type, contents, price_quantity, tax) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', array($item['product_id'], $item['product_name'], $this->id, $item['value'], $item['quantity'], $item['unit_type'], $item['content_type'], $item['contents'], $item['price_quantity'], $item['tax']));
         }
     }
 
     public function getPriceTotal(){
         $total = 0;
         foreach($this->getProducts() as $pr){
-            $total += $pr['value'] * $pr['price_quantity'];
+            $total += $pr['value'] * $pr['quantity'];
         }
         return $total + $this->shipping;
+    }
+
+    public function getValueforTaxes(){
+        $taxValues = array(0 => 0, 7 => 0, 19 => 0); // 0, 7, 19
+        foreach($this->getProducts() as $item){
+            switch($item['tax']){
+                case 0:
+                    $taxValues[0] += ($item['value'] * $item['quantity']);
+                    break;
+                case 7:
+                    $taxValues[7] += ($item['value'] * $item['quantity']);
+                    break;
+                case 19:
+                    $taxValues[19] += ($item['value'] * $item['quantity']);
+                    break;
+            }
+
+        }        
+        return $taxValues;
+    }
+
+    public function getTaxes(){
+        $taxValues = array(0 => 0, 7 => 0, 19 => 0); // 0, 7, 19
+        foreach($this->getProducts() as $item){
+            switch($item['tax']){
+                case 7:
+                    $taxValues[7] += ($item['value'] * $item['quantity'] * 0.07);
+                    break;
+                case 19:
+                    $taxValues[19] += ($item['value'] * $item['quantity'] * 0.19);
+                    break;
+            }
+
+        }
+        switch($this->getShippingTax()){
+            case 7:
+                $taxValues[7] += ($this->shipping * 0.07);
+                break;
+            case 19:
+                $taxValues[19] += ($this->shipping * 0.19);
+                break;
+        }
+        return $taxValues;
+    }
+
+    public function getShippingTax(){
+        $taxValues = $this->getValueForTaxes();
+        if($taxValues[0] >= $taxValues[7] && $taxValues[0] >= $taxValues[19]){
+            return 0;
+        }
+        if($taxValues[7] >= $taxValues[0] && $taxValues[7] >= $taxValues[19]){
+            return 7;
+        }
+        return 19;
     }
 
 }

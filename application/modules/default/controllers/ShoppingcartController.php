@@ -31,6 +31,9 @@ class ShoppingcartController extends Zend_Controller_Action
         $this->view->cart = Model_ShoppingCart::getRunningShoppingCart();
         $this->view->products = $products;
         $this->view->total = $total;
+        $this->view->shippingCosts = Model_ShoppingCart::getRunningShoppingCart()->getShippingCosts();
+        $this->view->taxValues = Model_ShoppingCart::getRunningShoppingCart()->getValueForTaxes();
+        $this->view->shippingTax = Model_ShoppingCart::getRunningShoppingCart()->getShippingTax();
     }
 
     public function addressesAction(){
@@ -212,6 +215,8 @@ class ShoppingcartController extends Zend_Controller_Action
         $this->view->products = $products;
         $this->view->shippingCosts = Model_ShoppingCart::getRunningShoppingCart()->getShippingCosts();
         $this->view->total = $total;
+        $this->view->taxValues = Model_ShoppingCart::getRunningShoppingCart()->getValueForTaxes();
+        $this->view->shippingTax = Model_ShoppingCart::getRunningShoppingCart()->getShippingTax();
     }
 
     public function concludeAction(){
@@ -240,11 +245,9 @@ class ShoppingcartController extends Zend_Controller_Action
         $mail = new Zend_Mail('UTF-8');
         $orderContent = '';
         foreach($cart->getProducts() as $pr){
-            $product = Model_Product::find($pr['product_id']);
-            $price = Model_ProductPrice::find($pr['product_price_id']);
-            $unit_type = ($pr['quantity'] > 1) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
-            $content_type = $price->getContentType()->name;
-            $orderContent .= $pr['quantity'] . " x " . $product->name . " (" . $price->quantity . " " . (($price->quantity == 1) ? $price->getUnitType()->singular : $price->getUnitType()->plural) . " a " . $price->contents . " " . $price->getContentType()->name . ")\n\n";
+            $unit_type = $pr['unit_type'];
+            $content_type = $pr['content_type'];
+            $orderContent .= $pr['quantity'] . " x " . $pr['product_name'] . " (" . $pr['quantity'] . " " . $pr['unit_type'] . " a " . $pr['contents'] . " " . $pr['content_type'] . ")\n\n";
         }            
 
         $content = str_replace(
@@ -394,17 +397,12 @@ class ShoppingcartController extends Zend_Controller_Action
         }
 
         $cartProducts = $cart->getProducts();
-        $products = array();
         $total = 0;
         foreach($cartProducts as $item){
-            $product = Model_Product::find($item['product_id']);
-            $price = Model_ProductPrice::find($item['product_price_id']);
-            $products[$product->shop_id][] = array('product' => $product, 'product_price' => $price, 'quantity' => $item['quantity']);
-            $total += $price->value * $item['quantity'];
+            $total += $item['value'] * $item['quantity'];
         }
         $total += $cart->getShippingCosts();
         $this->view->cart = $cart;
-        $this->view->products = $products;
         $this->view->total = $total;
         switch($cart->payment_type){
             case 'prepayment':
