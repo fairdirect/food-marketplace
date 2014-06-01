@@ -149,6 +149,8 @@ $groupCount = $categoryCount = $attributeCount = $attributesProductCount = $user
 $productWithoutCategoryCount = $shopWithoutAddressCount = 0; // warningcounter
 $groupErrorCount = $categoryErrorCount = $attributeErrorCount = $attributesProductErrorCount = $userErrorCount = $shopErrorCount = $productErrorCount = $priceErrorCount = $shippingErrorCount = $bankAccountErrorCount = $addressesErrorCount = 0; // errorCounter
 
+$redirects = '';
+
 $countries = array(
     array('DE', 'Deutschland', '049'),
     array('AT', 'Österreich', '043'),
@@ -555,6 +557,7 @@ while($user = $user_res->fetch_object()){
 //                        echo 'Neuer Shop: ' . $shop_id . ': ' . $shop->name . ' (alte ID: ' . $shop->shop_id . ")\n";
 //                        ob_flush();
 
+                        $redirects .= 'Redirect 301 /' . $shop->url . ' ' . '/shops/' . $shop_id . "/\n";
                         if(!$address){
                             echo "\033[33mKeine Shop-Addresse!\033[0m\n";
                             $shopWithoutAddressCount++;
@@ -796,3 +799,4 @@ if($attributesProductErrorCount) echo "\033[31m Fehlerhafte zugewiesene Attribut
 if($priceCount) echo "\033[32m Zugewiesene Preise: " . $priceCount . "\033[0m\n";
 if($priceErrorCount) echo "\033[31m Fehlerhafte zugewiesene Preise: " . $priceErrorCount . "\033[0m\n";
 echo "-----------------------------------------------\n";
+echo $redirects . "\n";
