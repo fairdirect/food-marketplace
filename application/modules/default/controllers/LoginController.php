@@ -251,7 +251,7 @@ class LoginController extends Zend_Controller_Action
                         $this->view->registerError = 'Die angegebenen Passwörter stimmen nicht überein.';
                     }
                     else{
-                        $user->password = hash('256', $this->getRequest()->getPost('password1') . '_epelia_' . $user->salt);
+                        $user->password = hash('sha256', $this->getRequest()->getPost('password1') . '_epelia_' . $user->salt);
                         $user->password_reset_token = '';
                         $user->save();
                         $this->_helper->_redirector('resetsuccess');
