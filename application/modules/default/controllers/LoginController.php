@@ -126,6 +126,8 @@ class LoginController extends Zend_Controller_Action
                 $user->save();
                 $auth = Zend_Auth::getInstance();
                 $auth->getStorage()->write($user);
+                $session = new Zend_Session_Namespace('Default');
+                $session->shoppingCart->user_id = Zend_Auth::getInstance()->getIdentity()->id;
 
                 $this->_helper->_redirector('confirmsuccess');
             }
