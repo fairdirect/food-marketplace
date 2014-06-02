@@ -2596,7 +2596,7 @@
         </tu>
         <tu tuid='shops_procedure'>
             <tuv xml:lang="de">
-                <seg>Abreitsweise</seg>
+                <seg>Arbeitsweise</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Modo di lavorare</seg>
