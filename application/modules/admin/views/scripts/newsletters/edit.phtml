@@ -2,16 +2,44 @@
 <?= $this->form; ?>
 <?php if($this->newsletter): ?>
 <h1>Newsletter versenden</h1>
+<div id="foundRecipients"></div>
 <?= $this->sendForm; ?>
+<div id="sendCounter"></div>
 <?php endif; ?>
 
 <script type="text/javascript">
+    var recievedRecipients = null;
+
     $('#recipients').change(function() {
-        if($('#recipients').val() == 'SINGLE_ADDRESS'){
-            $('#testmail').show();
+        if(!$('#recipients').val()){
+            $('#testmail').hide();
+            $('#foundRecipients').html('');
         }
         else{
-            $('#testmail').hide();
+            if($('#recipients').val() == 'SINGLE_ADDRESS'){
+                $('#testmail').show();
+                $('#foundRecipients').html('');
+            }
+            else{
+                $('#testmail').hide();
+                $('#foundRecipients').html('<img src="/images/business/pic_loading.gif" />');
+                $.ajax({
+                    url: '/admin/newsletters/ajaxgetrecipients',
+                    type: 'POST',
+                    dataType: "json",
+                    data: {
+                        recipients: $('#recipients').val()
+                    },
+                    success: function(ret){
+                        if(!ret.suc){
+                            alert('Fehler: ' + ret.message);
+                        }
+                        $('#foundRecipients').html('' + ret.payload.length + ' Empfänger');
+                        recievedRecipients = ret.payload;
+                    }
+                });
+
+            }
         }
     });
 
@@ -20,33 +48,48 @@
     });
 
     function sendMail(){
+        var send = 0;
+        var sendFail = 0;
         if(!$('#recipients').val()){
             alert('Bitte Empfänger auswählen.');
             return;
         }
+        if($('#recipients').val() == 'SINGLE_ADDRESS'){
+            recievedRecipients = [{email : $('#testmail').val()}];
+        }
 
         $('#send_button').unbind('click');
         $('#send_button').removeClass('btn-success').addClass('btn-info').text('Wird versandt. Bitte warten.');
-        $.ajax({
-            url: '/admin/newsletters/send/',
-            type: 'POST',
-            dataType: "json",
-            data: {
-                id: $('#id').val(),
-                recipients: $('#recipients').val(),
-                testmail: $('#testmail').val()
-            },
-            success: function(ret){
-                if(ret.suc){
-                    alert("Versand abgeschlossen.\nErfolgreich versandt: " + ret.sentSuc + "\nNicht versandt: " + ret.sentFail);     
+        $.each(recievedRecipients, function(index, recipient){
+            console.log(recipient);
+            $.ajax({
+                async: false,
+                url: '/admin/newsletters/send/',
+                type: 'POST',
+                dataType: "json",
+                data: {
+                    id : <?= $this->newsletter->id ?>,
+                    recipient: recipient.email
+                },
+                success: function(ret){
+                    if(ret.suc){
+                        if(ret.sendSuc){
+                            send++;
+                        }
+                        else{
+                            sendFail++;
+                        }
+                        $('#sendCounter').html(send + ' versendet<br />' + sendFail + ' fehlerhaft');
+                    }
+                    else{                       
+                        alert('Fehler: ' + ret.message);
+                        return false;
+                    }
                 }
-                else{
-                    alert('Fehler: ' + ret.message);
-                }
-                $('#send_button').removeClass('btn-info').addClass('btn-success').text('Testmail versenden');
-                $('#send_button').click(function() { sendMail(); });
-            }
+            });
         });
+        $('#send_button').removeClass('btn-info').addClass('btn-success').text('Testmail versenden');
+        $('#send_button').click(function() { sendMail(); });
     }
 
 </script>

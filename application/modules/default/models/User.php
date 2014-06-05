@@ -217,4 +217,24 @@ class Model_User extends Model_ModelAbstract
         }
         return $ret;
     }
+
+    public static function getCustomersWithNewsletter($limit = null, $offset = null){
+        $table = self::getDbTable();
+        $select = $table->select();
+        $ret = array();
+
+        $select->where('type = ?', 'customer');
+        $select->where('newsletter = ?', 't');
+        $select->order('id DESC');
+        $select->limit($limit, $offset);
+        
+        $result = $table->fetchAll($select);
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
 }

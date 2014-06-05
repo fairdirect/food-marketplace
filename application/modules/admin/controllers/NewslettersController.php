@@ -42,42 +42,39 @@ class Admin_NewslettersController extends Zend_Controller_Action
         $this->view->sendForm = $sendForm;
     }
 
-    public function sendAction(){
-        $request = $this->getRequest();
-        $id = $request->getParam('id');
-        if(!$id){
-            exit(json_encode(array('suc' => false, 'message' => 'ID is missing')));
-        }
-        $recipients = $request->getParam('recipients');
+    public function ajaxgetrecipientsAction(){
+        $recipients = $this->getRequest()->getParam('recipients');
         if(!$recipients){
             exit(json_encode(array('suc' => false, 'message' => 'Recipients are missing')));
         }
         if(!$recipients == 'SINGLE_ADDRESS' && !$request->getParam('testmail')){
             exit(json_encode(array('suc' => false, 'message' => 'Testmail is missing')));
         }
-        $newsletter = Model_Newsletter::find($id);
-        if(!$newsletter){
-            exit(json_encode(array('suc' => false, 'message' => 'Newsletter not found')));
-        }
-        
+
         $recUsers = array();
         switch($recipients){
-            case 'ACTIVATED_SHOPS':
-                $shops = Model_Shop::getActivated();
-                foreach($shops as $shop){
-                    $recUsers = $shop->getUser();
-                }
-                break;
             case 'ALL_SHOPS':
                 $shops = Model_Shop::getAll();
                 foreach($shops as $shop){
-                    $recUsers[] = $shop->getUser();
+                    if($shop->getUser() && $shop->getUser()->email){
+                        $recUsers[] = $shop->getUser();
+                    }
                 }
                 break;
             case 'ALL_CUSTOMERS':
                 $users = Model_User::getCustomers();
                 foreach($users as $user){
-                    $recUsers[] = $user;
+                    if($user->email){
+                       $recUsers[] = $user;
+                   }
+                }
+                break;
+            case 'ALL_CUSTOMERS_NEWSLETTER':
+                $users = Model_User::getCustomersWithNewsletter();
+                foreach($users as $user){
+                    if($user->email){
+                        $recUsers[] = $user;
+                    }
                 }
                 break;
             case 'SINGLE_ADDRESS':
@@ -86,46 +83,58 @@ class Admin_NewslettersController extends Zend_Controller_Action
             case 'ALL':
                 $users = Model_User::getAll();
                 foreach($users as $user){
-                    $recUsers[] = $user;
+                    if($user->email){
+                        $recUsers[] = $user;
+                    }
                 }
                 break;
             default:
                 exit(json_encode(array('suc' => false, 'message' => 'Invalid recipients')));
                 break;
         }
+        exit(json_encode(array('suc' => true, 'payload' => $recUsers)));
+    }
 
-        $suc = $fail = 0;
 
-        if(empty($recUsers)){
-            exit(json_encode(array('suc' => false, 'sentSuc' => $suc, 'sentFail' => $fail, 'message' => 'Keine passenden Empfänger gefunden')));
+    public function sendAction(){
+        $request = $this->getRequest();
+        $id = $request->getParam('id');
+        if(!$id){
+            exit(json_encode(array('suc' => false, 'message' => 'ID is missing')));
         }
-
-        foreach($recUsers as $user){
-            $success = false;
-            $replace = array();
-
-            $mail = new Zend_Mail('UTF-8');
-            $address = $user->getMainBillingAddress();
-            $anrede = '';
-            if($address){
-                $anrede = $address->gender . ' ' . $address->name;
-            }
-            $content = str_replace(array('#ANREDE#'), array($anrede), $newsletter->content);
-            if($newsletter->type != 'text') $mail->setBodyHtml($content);
-            if($newsletter->type != 'html') $mail->setBodyText(strip_tags($content));
-            $mail->setFrom('mail@epelia.com', 'Epelia');
-            $mail->addTo($user->email);
-            $mail->setSubject($newsletter->subject);
-            try{
-                $mail->send();
-                $suc++;
-                $success = true;
-            } catch(Exception $e){
-                $fail++;
-            }
-            $newsletter->writeLog($user->email, $success);
+        $newsletter = Model_Newsletter::find($id);
+        if(!$newsletter){
+            exit(json_encode(array('suc' => false, 'message' => 'Newsletter not found')));
         }
-        exit(json_encode(array('suc' => true, 'sentSuc' => $suc, 'sentFail' => $fail, 'message' => '')));
+        
+        $success = false;
+        $replace = array();
+
+        $mail = new Zend_Mail('UTF-8');
+        $user = Model_User::findByEmail($request->getParam('recipient'));
+        if(!$user){
+            exit(json_encode(array('suc' => false, 'message' => 'User mit Mail ' . $request->getParam('recipient') . ' nicht gefunden.')));
+        }
+        $address = $user->getMainBillingAddress();
+        $anrede = '';
+        if($address){
+            $anrede = $address->gender . ' ' . $address->name;
+        }
+        $content = str_replace(array('#ANREDE#'), array($anrede), $newsletter->content);
+        if($newsletter->type != 'text') $mail->setBodyHtml($content);
+        if($newsletter->type != 'html') $mail->setBodyText(strip_tags($content));
+        $mail->setFrom('mail@epelia.com', 'Epelia');
+        $mail->addTo($user->email);
+        $mail->setSubject($newsletter->subject);
+        try{
+            $mail->send();
+            $sendSuc = true;
+        } catch(Exception $e){
+            $sendSuc = false;
+        }
+        $newsletter->writeLog($user->email, $success);
+
+        exit(json_encode(array('suc' => true, 'sendSuc' => $sendSuc)));
     }
 
     public function deleteAction(){

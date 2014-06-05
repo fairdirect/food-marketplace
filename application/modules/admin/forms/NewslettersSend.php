@@ -21,11 +21,9 @@ class Admin_Form_NewslettersSend extends Zend_Form
         $testmail->setAttribs(array('style' => 'display:none'))
             ->setValue('test@epelia.com');
 
-        $abort = new Zend_Form_Element_Button('Abbrechen');
-        $abort->setAttribs(array('class' => 'btn btn-danger', 'id' => 'abort'));
         $send = new Zend_Form_Element_Button('Versenden');
         $send->setAttribs(array('class' => 'btn btn-success', 'id' => 'send_button'));
 
-        $this->addElements(array($id, $recipients, $testmail, $abort, $send));
+        $this->addElements(array($id, $recipients, $testmail, $send));
     }
 }
