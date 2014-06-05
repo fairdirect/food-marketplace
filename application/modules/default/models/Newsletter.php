@@ -3,7 +3,7 @@
 class Model_Newsletter extends Model_ModelAbstract
 {
     public static $recipients = array('ALL' => 'Alle', 'ACTIVATED_SHOPS' => 'Aktivierte Shops', 'ALL_SHOPS' => 'Alle Shops', 'ALL_CUSTOMERS' => 'Alle Kunden', 'SINGLE_ADDRESS' => 'Einzelne Adresse');
-    public static $vars = array('#USERNAME#');
+    public static $vars = array('#ANREDE#');
 
     public $id;
     public $subject;

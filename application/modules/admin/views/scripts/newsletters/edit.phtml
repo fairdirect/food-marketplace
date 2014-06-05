@@ -1,7 +1,9 @@
 <h1>Newsletter hinzufügen / editieren</h1>
 <?= $this->form; ?>
+<?php if($this->newsletter): ?>
 <h1>Newsletter versenden</h1>
 <?= $this->sendForm; ?>
+<?php endif; ?>
 
 <script type="text/javascript">
     $('#recipients').change(function() {
