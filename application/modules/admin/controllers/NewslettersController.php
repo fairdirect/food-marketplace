@@ -121,11 +121,12 @@ class Admin_NewslettersController extends Zend_Controller_Action
             $anrede = $address->gender . ' ' . $address->name;
         }
         $content = str_replace(array('#ANREDE#'), array($anrede), $newsletter->content);
+        $subject = str_replace(array('#ANREDE#'), array($anrede), $newsletter->subject);
         if($newsletter->type != 'text') $mail->setBodyHtml($content);
         if($newsletter->type != 'html') $mail->setBodyText(strip_tags($content));
         $mail->setFrom('mail@epelia.com', 'Epelia');
         $mail->addTo($user->email);
-        $mail->setSubject($newsletter->subject);
+        $mail->setSubject($subject);
         try{
             $mail->send();
             $sendSuc = true;
