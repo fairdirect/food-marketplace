@@ -131,7 +131,10 @@ class Model_Product extends Model_ModelAbstract
 
     public function getFirstWholesalePrice(){
         $prices = $this->getWholesalePrices();
-        return $prices[0];
+        if($prices){
+            return $prices[0];
+        }
+        return false;
     }
 
     public static function getCount($onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $search = ''){
