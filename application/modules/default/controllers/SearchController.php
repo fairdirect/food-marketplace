@@ -16,19 +16,32 @@ class SearchController extends Zend_Controller_Action
         }
     }
 
-    public function searchAction()
-    {
-        if(!$this->getRequest()->getParam('query')){
+    public function searchAction(){
+        $request = $this->getRequest();
+        if(!$request->getParam('query')){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
-        $products = Model_Product::findBySearchString($this->getRequest()->getParam('query', $this->limit, $this->offset));
-        if(!$products){
+
+        $onlyBio = $onlyDiscount = $onlyWholesale = false;
+        if($request->getParam('bio') || $request->getParam('discount') || $request->getParam('wholesale')){
+            $onlyBio = ($request->getParam('bio') == 'bio');
+            $onlyDiscount = ($request->getParam('discount') == 'discount');
+            $onlyWholesale = ($request->getParam('wholesale') == 'wholesale');
+        }
+        $page = ($request->getParam('page')) ? $request->getParam('page') : '1';
+
+        $productCount = count(Model_Product::findBySearchString($this->getRequest()->getParam('query'), null, null, $onlyBio, $onlyDiscount, $onlyWholesale));
+        if(!$productCount){
             $this->_helper->redirector('noresult');
         }
 
         $this->view->headTitle('Suchergebnisse für ' . $this->getRequest()->getParam('query') . ' | Epelia');
         $this->view->searchQuery = $this->getRequest()->getParam('query');
-        $this->view->products = $products;
+        $this->view->productCount = $productCount;
+        $this->view->onlyBio = $onlyBio;
+        $this->view->onlyDiscount = $onlyDiscount;
+        $this->view->onlyWholesale = $onlyWholesale;
+        $this->view->page = $page;
     }
 
     public function noresultAction(){
