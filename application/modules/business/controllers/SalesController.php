@@ -204,7 +204,7 @@ class Business_SalesController extends Zend_Controller_Action
         $pdf->Multicell(65, 5, utf8_decode($order->getShop()->company . "\n" . $order->getShop()->street . ' ' . $order->getShop()->house . "\n" . $order->getShop()->zip . ' ' . $order->getShop()->city), 'T');
         $pdf->setY(255);
         $pdf->setX(65);
-        $pdf->Multicell(65, 5, utf8_decode('Tel: ' . $order->getShop()->phone . "\n" . (($order->getShop()->taxnumber) ? 'Steuernummer: ' . $order->getShop()->taxnumber : '') . "\n" . (($order->getShop()->salestax_id) ? 'USt-ID: ' . $oder->getShop()->salestax_id : '')), 'T');
+        $pdf->Multicell(65, 5, utf8_decode('Tel: ' . $order->getShop()->phone . "\n" . (($order->getShop()->taxnumber) ? 'Steuernummer: ' . $order->getShop()->taxnumber : '') . "\n" . (($order->getShop()->salestax_id) ? 'USt-ID: ' . $order->getShop()->salestax_id : '')), 'T');
         $pdf->setY(255);
         $pdf->setX(130);
         $pdf->Multicell(65, 5, utf8_decode('Kontoinhaber: ' . $order->getShop()->bank_account_holder . "\n" . 'Konto-Nr.: ' . $order->getShop()->bank_account_number . "\n" . 'BLZ: ' . $order->getShop()->bank_id), 'T');
