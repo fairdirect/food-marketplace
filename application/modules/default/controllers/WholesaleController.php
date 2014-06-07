@@ -18,6 +18,7 @@ class WholesaleController extends Zend_Controller_Action
                 $mail = new Zend_Mail('UTF-8');
                 $mail->setFrom('mail@epelia.com', 'Epelia');
                 $mail->addTo('hoesel@derhoesel.de', 'Epelia');
+                $mail->addTo('mail@epelia.com', 'Epelia');
                 $mail->setSubject('Großandels-Registrierung');
                 $mail->setBodyText(
                     "Neue Großhandels-Anmeldung:\n\n" . 
