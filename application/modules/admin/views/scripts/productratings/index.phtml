@@ -5,7 +5,7 @@
     </thead>
     <tbody>
 <?php foreach($this->ratings as $rating): ?>
-        <tr><td><?= $this->escape($rating->rating) ?></td><td><?= $this->escape($rating->comment) ?></td><td><a href="/admin/products/edit/id/<?= $this->escape($rating->getProduct()->id) ?>/"><?= $this->escape($rating->getProduct()->name) ?></a></td><td><a href="/admin/users/edit/id/<?= $this->escape($rating->getUser()->id) ?>/"><?= $this->escape($rating->getUser()->email) ?></a><td><a href="/admin/contenttypes/edit/id/<?= $this->escape($type->id) ?>">Editieren</a></td><?php if($rating->status == 'new'): ?><a href="/admin/productratings/approve/id/<?= $this->escape($rating->id) ?>/">freischalten</a>&nbsp;<?php endif; ?><a href="/admin/productratings/id/<?= $this->escape($rating->id) ?>/">löschen</a></td></tr>
+        <tr><td><?= $this->escape($rating->rating) ?></td><td><?= $this->escape($rating->comment) ?></td><td><a href="/admin/products/edit/id/<?= $this->escape($rating->getProduct()->id) ?>/"><?= $this->escape($rating->getProduct()->name) ?></a></td><td><a href="/admin/users/edit/id/<?= $this->escape($rating->getUser()->id) ?>/"><?= $this->escape($rating->getUser()->email) ?></a><td><a href="/admin/productratings/edit/id/<?= $this->escape($rating->id) ?>">Editieren</a><br /><?php if($rating->status == 'new'): ?><a href="/admin/productratings/approve/id/<?= $this->escape($rating->id) ?>/">freischalten</a><br /><?php endif; ?><a href="/admin/productratings/delete/id/<?= $this->escape($rating->id) ?>/">löschen</a></td></tr>
 <?php
 endforeach;
 ?>

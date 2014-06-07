@@ -7,7 +7,7 @@ class Form_Ratings extends Zend_Form
         $this->setMethod('post');
         $this->setAttribs(array('id' => 'ratingForm'));
 
-        $productid = new Zend_Form_Element_Hidden('productid');
+        $productid = new Zend_Form_Element_Hidden('product_id');
         $productid->setRequired(true);
 
         $rating = new Zend_Form_Element_Hidden('rating');

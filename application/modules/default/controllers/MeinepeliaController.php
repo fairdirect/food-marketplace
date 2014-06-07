@@ -159,7 +159,7 @@ class MeinepeliaController extends Zend_Controller_Action
             }
         }
 
-        $id = $this->getRequest()->getParam('productid');
+        $id = $this->getRequest()->getParam('product_id');
         if(!$id || !in_array($id, $unratedProductIds)){
             exit('Forbidden!'); // prevent user from rating products not ordered by them
         }
@@ -168,7 +168,7 @@ class MeinepeliaController extends Zend_Controller_Action
 
         if($this->getRequest()->getParam('Speichern')){
             if($form->isValid($this->getRequest()->getPost())){
-                $rating = new Model_ProductRating(array_merge($form->getValues(), array('product_id' => $form->getValue('productid'), 'user_id' => $this->user->id)));
+                $rating = new Model_ProductRating(array_merge($form->getValues(), array('product_id' => $form->getValue('product_id'), 'user_id' => $this->user->id)));
                 if($rating->rating < 1 || $rating->rating > 5){ // double check
                     exit('Wert muss zwischen 1 und 5 liegen');
                 }
@@ -179,7 +179,7 @@ class MeinepeliaController extends Zend_Controller_Action
             }
         }
         else{
-            $form->populate(array('productid' => $id));
+            $form->populate(array('product_id' => $id));
         }
 
         $product = Model_Product::find($id);
