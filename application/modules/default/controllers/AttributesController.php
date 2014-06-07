@@ -26,6 +26,7 @@ class AttributesController extends Zend_Controller_Action
         }
         $this->view->headTitle($attribute->name . ' | Epelia');
         $this->view->productCount = $attribute->getProductCount($onlyBio, $onlyDiscount, $onlyWholesale);
+        $attribute->clearProducts(); // need to do this to reset limit / offset
         $this->view->attribute = $attribute;
         $this->view->onlyBio = $onlyBio;
         $this->view->onlyDiscount = $onlyDiscount;
