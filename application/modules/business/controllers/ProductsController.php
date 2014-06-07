@@ -207,4 +207,20 @@ class Business_ProductsController extends Zend_Controller_Action
         $product->delete();
         $this->_helper->redirector('index');
     }
+
+    public function activateAction(){
+        $id = $this->getRequest()->getParam('id');
+        $product = Model_Product::find($id);
+        $product->active = true;
+        $product->save();
+        $this->_helper->redirector('index');
+    }
+
+    public function deactivateAction(){
+        $id = $this->getRequest()->getParam('id');
+        $product = Model_Product::find($id);
+        $product->active = false;
+        $product->save();
+        $this->_helper->redirector('index');
+    }
 }

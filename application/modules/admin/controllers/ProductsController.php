@@ -27,7 +27,7 @@ class Admin_ProductsController extends Zend_Controller_Action
                 ($product->active) ? 'ja' : 'nein',
                 (is_null($product->stock)) ? 'unbegrenzt' : htmlspecialchars($product->stock),
                 date('d.m.Y', strtotime($product->created)),
-                '<a href="/admin/products/edit/id/' . htmlspecialchars($product->id) . '">Editieren</a>&nbsp;<a href="/admin/products/pictures/id/' . htmlspecialchars($product->id) . '">Bilder</a>&nbsp;' . (($product->active) ? '<a href="/admin/products/deactivate/id/' . htmlspecialchars($product->id) . '/" class="icon-thumbs-down" title="deaktivieren">deaktivieren</a>' : '<a href="/admin/products/activate/id/' . htmlspecialchars($product->id) . '/" class="icon-thumbs-up" title="aktivieren">aktivieren</a>')
+                '<a href="/admin/products/edit/id/' . htmlspecialchars($product->id) . '">Editieren</a><br /><a href="/admin/products/pictures/id/' . htmlspecialchars($product->id) . '">Bilder</a><br />' . (($product->active) ? '<a href="/admin/products/deactivate/id/' . htmlspecialchars($product->id) . '/" title="deaktivieren">deaktivieren</a>' : '<a href="/admin/products/activate/id/' . htmlspecialchars($product->id) . '/" title="aktivieren">aktivieren</a>' ) . '<br /><a href="/admin/products/delete/id/' . htmlspecialchars($product->id) . '/" title="löschen">löschen</a>'
             );
         }
         exit(json_encode($ret));

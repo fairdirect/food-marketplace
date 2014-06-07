@@ -9,7 +9,23 @@
 <?php
 foreach($this->products as $product):
 ?>
-        <tr><td><?= $this->escape($product->name) ?></td><td><?= ($product->active) ? $this->translate('misc_yes') : $this->translate('misc_no') ?></td><td><?= (is_null($product->stock)) ? $this->translate('misc_unlimited') : $this->escape($product->stock) ?></td><td><?= date('d.m.Y' , strtotime($product->created)) ?></td><td><a href="/business/products/edit/id/<?= $this->escape($product->id) ?>"><?= $this->translate('misc_edit') ?></a>&nbsp;<a href="/business/products/pictures/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_pictures') ?></a>&nbsp;<a href="/business/products/delete/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_delete') ?></a></td></tr>
+        <tr>
+            <td><?= $this->escape($product->name) ?></td>
+            <td><?= ($product->active) ? $this->translate('misc_yes') : $this->translate('misc_no') ?></td>
+            <td><?= (is_null($product->stock)) ? $this->translate('misc_unlimited') : $this->escape($product->stock) ?></td>
+            <td><?= date('d.m.Y' , strtotime($product->created)) ?></td>
+            <td>
+                <a href="/business/products/edit/id/<?= $this->escape($product->id) ?>"><?= $this->translate('misc_edit') ?></a><br />
+                <a href="/business/products/pictures/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_pictures') ?></a><br />
+<?php if($product->active): ?>
+                <a href="/business/products/deactivate/id/<?= $this->escape($product->id) ?>/" title="<?= $this->translate('misc_deactivate') ?>"><?= $this->translate('misc_deactivate') ?></a>
+<?php else: ?>
+                <a href="/business/products/activate/id/<?= $this->escape($product->id) ?>/"  title="<?= $this->translate('misc_activate') ?>"><?= $this->translate('misc_activate') ?></a>
+<?php endif; ?>
+                <br />
+                <a href="/business/products/delete/id/<?= $this->escape($product->id) ?>/"><?= $this->translate('misc_delete') ?></a>
+            </td>
+        </tr>
 <?php
 endforeach;
 ?>
