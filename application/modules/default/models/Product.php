@@ -87,7 +87,9 @@ class Model_Product extends Model_ModelAbstract
                 if($pic->id == $this->main_picture_id){
                     return $pic;
                 }
-            }
+            } 
+		// at this point we have no default pic, take the first
+		return $pics[0];
         }
         return false;
     }
