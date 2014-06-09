@@ -8,10 +8,10 @@ class ShopsController extends Zend_Controller_Action
     }
 
     public function showAction(){
-        if(!$this->getRequest()->getParam('id')){
+        if(!$this->getRequest()->getParam('url')){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
-        $shop = Model_Shop::find($this->getRequest()->getParam('id'));
+        $shop = Model_Shop::findByUrl($this->getRequest()->getParam('url'));
         if(!$shop){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }

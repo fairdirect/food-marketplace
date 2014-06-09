@@ -203,6 +203,21 @@ class Model_Shop extends Model_ModelAbstract
         return new self($result);
     }
 
+    public static function findByUrl($url){
+        $table = self::getDbTable();
+        $select = $table->select();
+        $ret = array();
+
+        $select->where('url = ?', $url);
+        
+        $result = $table->fetchRow($select);
+        if (is_null($result)) {
+            return false;
+        }
+        return new self($result);
+    }
+
+
     public function getLogo(){
         if(is_null($this->_logo) && !is_null($this->logo_id)){
             $this->_logo = Model_Picture::find($this->logo_id);
@@ -384,6 +399,10 @@ class Model_Shop extends Model_ModelAbstract
             }
         }
         return $this->_womas;
+    }
+
+    public function getLink(){
+        return '/shops/' . $this->url . '/';
     }
 
 

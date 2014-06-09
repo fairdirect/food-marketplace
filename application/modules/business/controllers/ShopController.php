@@ -30,10 +30,19 @@ class Business_ShopController extends Zend_Controller_Action{
                     $shop = new Model_Shop();
                 }
                 $shop->init(array_merge(array('user_id' => $this->user->id), $request->getPost()));
+                if($shop->url){
+                    $shop->url = Epelia_Helper::make_url($shop->url);
+                }
+                else{
+                    $shop->url = Epelia_Helper::make_url($shop->name);
+                }
                 try{
                     $shop->save();
                     $this->_redirect('/business/');
                 } catch(Exception $e){
+                    if($e->getCode() == 23505){
+                        $this->view->error = 'Die URL "' . $shop->url . '" wird bereits verwendet.';
+                    }
                 }
             }
         }

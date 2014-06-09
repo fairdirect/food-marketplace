@@ -34,12 +34,22 @@ class VerkaufenController extends Zend_Controller_Action
                         $shop = new Model_Shop(array(
                             'user_id' => $user->id,
                             'name' => $request->getPost('shopname'),
-                            'url' => $request->getPost('website'),
                             'company' => $request->getPost('company'),
                             'representative' => $request->getPost('gender') . ' ' . $request->getPost('firstname') . ' ' . $request->getPost('name'),
                             'phone' => $request->getPost('phone'),
                             'country' => $request->getPost('country')
                         ));
+                        $shop->url = Epelia_Helper::make_url($shop->name);
+                        $urlExitst = Model_Shop::findByUrl($shop->url);
+                        if($urlExitst){
+                            $counter = 1;
+                            $newUrl = $shop->url . '-' . $counter;
+                            while(Model_Shop::findByUrl($newUrl)){
+                                $counter++;
+                                $newUrl = $shop->url . '-' . $counter;
+                            }
+                            $shop->url = $newUrl;
+                        }
                         try{
                             $shop->save();
                         } catch(Exception $e){
