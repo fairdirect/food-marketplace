@@ -153,10 +153,10 @@ class Business_ProductsController extends Zend_Controller_Action
                 $filenamesInUse[] = $pic->filename;
             }
             while(in_array($filename . '.' . $extension, $filenamesInUse)){
-                $filename = str_replace('_' . ($counter), '', $filename);
-                $filename .= '_' . ($counter+1);
-                $counter++;
+                $filename = str_replace('-' . ($counter), '', $filename);
+                $filename .= '-' . (++$counter);
             }
+	    $filename .= '.' . $extension;
 
             try{
                 $img = new Imagick();
@@ -164,13 +164,13 @@ class Business_ProductsController extends Zend_Controller_Action
                 $img->writeImage($filepath . 'original/' . $filename);
                 $img->thumbnailImage(380, null);
                 $img->writeImage($filepath . '380w/' . $filename);
-                $img->thumbnailImage(380, 380, true);
+                $img->thumbnailImage(380, 285, true);
                 $img->writeImage($filepath . '380x285/' . $filename);
-                $img->thumbnailImage(174, 174, true);
+                $img->thumbnailImage(174, 136, true);
                 $img->writeImage($filepath . '174x136/' . $filename);
-                $img->thumbnailImage(90, 90, true);
+                $img->thumbnailImage(90, 68, true);
                 $img->writeImage($filepath . '90x68/' . $filename);
-                $img->thumbnailImage(36, 36, true);
+                $img->thumbnailImage(36, 27, true);
                 $img->writeImage($filepath . '36x27/' . $filename);
                 
                 $picture = new Model_Picture(array('filename' => $filename));
