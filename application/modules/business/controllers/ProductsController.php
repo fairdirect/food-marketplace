@@ -147,14 +147,16 @@ class Business_ProductsController extends Zend_Controller_Action
             $extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
             $filename = 'products_' . $product->id;
             $filepath = $_SERVER['DOCUMENT_ROOT'] . Zend_Registry::get('config')->pictureupload->path . Zend_Registry::get('config')->productpictures->dir;
-
             $counter = 0;
-            while(file_exists($filepath . $filename . '.' . $extension)){
+            $filenamesInUse = array();
+            foreach($product->getPictures() as $pic){
+                $filenamesInUse[] = $pic->filename;
+            }
+            while(in_array($filename . '.' . $extension, $filenamesInUse)){
                 $filename = str_replace('_' . ($counter), '', $filename);
                 $filename .= '_' . ($counter+1);
                 $counter++;
             }
-            $filename = $filename . '.' . $extension;
 
             try{
                 $img = new Imagick();
@@ -178,7 +180,7 @@ class Business_ProductsController extends Zend_Controller_Action
                 exit($e->getMessage());
             }
 
-            $ret = '<tr><td><input type="checkbox" name="imagesDelete[]" value="" /></td><td><img style="width:120px;" src="/img/products/174x136/' . $filename . '" alt=""></td></tr>';
+            $ret = '<tr><td><input type="checkbox" name="imagesDelete[]" value="' . $picture->id . '" /></td><td><img style="width:120px;" src="/img/products/174x136/' . $filename . '" alt=""></td><td><input class="check_default" type="checkbox" onclick="setDefaultPic(' . $picture->id . ')" value="' . $picture->id . '" name="is_default"></tr>';
             exit(json_encode(array('data' => $ret)));
         }
     }
@@ -222,5 +224,34 @@ class Business_ProductsController extends Zend_Controller_Action
         $product->active = false;
         $product->save();
         $this->_helper->redirector('index');
+    }
+
+    public function setdefaultpictureAction(){
+        $product_id = $this->getRequest()->getParam('product_id');
+        if(!$product_id){
+            exit(json_encode(array('suc' => false, 'msg' => 'Keine Produkt-ID!')));
+        }
+        $product = Model_Product::find($product_id);
+        if(!$product){
+            exit(json_encode(array('suc' => false, 'msg' => 'Kein Produkt!')));
+        }
+        if($product->getShop()->user_id != $this->user->id){
+            exit(json_encode(array('suc' => false, 'msg' => 'Nicht erlaubt!'))); // prevent user from writing products not owned by them
+        }
+        $pictures = $product->getPictures();
+        $picturesToProduct = array();
+        foreach($pictures as $pic){
+            $picturesToProduct[] = $pic->id;
+        }
+        if(!$this->getRequest()->getParam('id') || !in_array($this->getRequest()->getParam('id'), $picturesToProduct)){
+            exit(json_encode(array('suc' => false, 'msg' => 'Bild nicht zugeordnet')));
+        }
+        
+        $product->main_picture_id = $this->getRequest()->getParam('id');
+        $product->save();
+
+        exit(json_encode(array('suc' => true)));
+
+
     }
 }

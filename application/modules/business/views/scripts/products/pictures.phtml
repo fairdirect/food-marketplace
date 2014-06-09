@@ -1,9 +1,15 @@
 <h1><?= $this->translate('business_products_pictures_headline') ?></h1>
 <input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
 <table class="table" id="bilder">
+    <thead>
+        <tr><td>Auswahl</td><td></td><td>Standard-Bild?</td></tr>
+    </thead>
+    <tbody>
+        
 <?php foreach($this->product->getPictures() as $pic): ?>
-    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174x136/<?= $this->escape($pic->filename) ?>" alt=""></td></tr>
+    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174x136/<?= $this->escape($pic->filename) ?>" alt=""></td><td><input type="checkbox" name="is_default" class="check_default" value="<?= $pic->id ?>" onclick="setDefaultPic('<?= $pic->id ?>')"<?php if($this->product->main_picture_id == $pic->id): ?> checked="checked"<?php endif; ?> /></td></tr>
 <?php endforeach; ?>
+    </tbody>
 </table>
 <button class="btn" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>
 
@@ -27,6 +33,29 @@
             });
         });
     });
+
+    function setDefaultPic(picId){
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            url: "/business/products/setdefaultpicture/",
+            data: {
+                id : picId,
+                product_id : <?= $this->product->id ?>
+            }
+        }).done(function(res){
+            if(res.suc){
+                $('.check_default').each(function(){
+                    if($(this).val() != picId){
+                        $(this).attr('checked', false);
+                    }
+                });
+            }
+            else{
+                alert('Fehler: ' + res.msg);
+            }
+        });
+    }
 
     $(function () {
         $('#fileupload').fileupload({
