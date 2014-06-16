@@ -4345,5 +4345,16 @@
                 <seg></seg>
             </tuv>
         </tu>     
+        <tu tuid='misc_help'>
+            <tuv xml:lang="de">
+                <seg>Hilfe</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Aiuto</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
     </body>
 </tmx>

@@ -87,5 +87,21 @@ class AjaxController extends Zend_Controller_Action
         }
         exit($ret);
     }
+
+    public function setlanguageAction(){
+        $session = new Zend_Session_Namespace('Default');
+        switch($this->getRequest()->getParam('language_id')){
+            case 'de':       
+                $session->language = 'de';
+                break;
+            case 'it':
+                $session->language = 'it';
+                break;
+            default:
+                $session->language = 'de';
+                break;
+        }
+
+    }
 }
 

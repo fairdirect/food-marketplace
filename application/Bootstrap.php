@@ -33,11 +33,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 
     protected function _initTranslation(){
+        $session = new Zend_Session_Namespace('Default');
         $translator = new Zend_Translate(
             array(
                 'adapter' => 'Zend_Translate_Adapter_Tmx',
                 'content' => APPLICATION_PATH . '/configs/languages.tmx',
-                'locale'  => 'de'
+                'locale'  => $session->language ? $session->language : 'de'
             )
         );
         Zend_Form::setDefaultTranslator($translator);
@@ -47,7 +48,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             array(
                 'adapter' => 'array',
                 'content' => APPLICATION_PATH . '/../resources/languages',
-                'locale'  => 'de',
+                'locale'  => $session->language ? $session->language : 'de',
                 'scan' => Zend_Translate::LOCALE_DIRECTORY
             )
         );
@@ -70,9 +71,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 
     protected function _initRoutes(){
-/*        $front = Zend_Controller_Front::getInstance();       
-        $router = $front->getRouter();
-        $router->addRoute('bla', new Zend_Controller_Router_Route('bla/', array('controller' => 'products', 'action' => 'index'))); */
+
         $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/routes.ini', 'routes');
         $router = Zend_Controller_Front::getInstance()->getRouter();
         $router->addConfig( $config, 'routes' );
