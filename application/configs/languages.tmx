@@ -4020,7 +4020,7 @@
                 <seg>Passwort zurücksetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Password Reset</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4031,7 +4031,7 @@
                 <seg>Hier können Sie ihr Passwort zurücksetzen lassen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Qui è possibile reimpostare la password.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4042,7 +4042,7 @@
                 <seg>Passwort zurücksetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Password Reset</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4053,7 +4053,7 @@
                 <seg>Mail versendet</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>posta inviata</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4064,7 +4064,7 @@
                 <seg>Eine E-Mail mit der Anleitung zum Zurücksetzen des Passworts wurde an die angegebene Adresse versendet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Una e-mail con le istruzioni per reimpostare la password è stata inviata all'indirizzo specificato.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4075,7 +4075,7 @@
                 <seg>Passwort erfolgreich geändert</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Password modificata con successo</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4086,7 +4086,7 @@
                 <seg>Ihr Passwort wurde erfolgreich geändert. Sie können sich nun mit Ihrem neuen Passwort einloggen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La tua password è stata cambiata con successo. È possibile effettuare il login con la nuova password adesso.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4097,7 +4097,7 @@
                 <seg>Passwort-Reset fehlgeschlagen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Reimpostazione della password non riuscito</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4108,7 +4108,7 @@
                 <seg>Der Passwort-Reset ist fehlgeschlagen. Bitte prüfen Sie ob der Link in der Reset-E-Mail korrekt übernommen wurde.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>La reimpostazione della password non riuscita. È stato Verificare se il link nella mail di reset adottato correttamente.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4119,7 +4119,7 @@
                 <seg>Bitte wählen Sie eine Liefer- und Rechnungsadresse aus.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Si prega di selezionare una consegna e indirizzo di fatturazione.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4133,7 +4133,7 @@
                 <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Si Prega Di Una selezionare Consegna e Indirizzo di fatturazione.</seg>
             </tuv>
         </tu>
         <tu tuid='myepelia_orders_waiting'>
@@ -4141,7 +4141,7 @@
                 <seg>Warten auf Zahlungseingang</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>In attesa di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4152,7 +4152,7 @@
                 <seg>In Bearbeitung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>In Progress</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4163,7 +4163,7 @@
                 <seg>Versendet</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Spedito</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4174,7 +4174,7 @@
                 <seg>Wochenmarkt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>mercato settimanale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4185,7 +4185,7 @@
                 <seg>Wochenmarkt editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Editing mercato del contadino</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4196,7 +4196,7 @@
                 <seg>Wochenmarkt-Name</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Nome del mercato settimanale</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4218,7 +4218,7 @@
                 <seg>Produkt ist derzeit nicht verfügbar.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Il prodotto non è attualmente disponibile.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4229,7 +4229,7 @@
                 <seg>Hier verkaufen Produzenten und Direktimporteure Lebensmittel und Drogerie-Artikel direkt an Sie. </seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Qui di vendita del produttore e importatori diretti prodotti alimentari e farmacia direttamente a voi.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4240,7 +4240,7 @@
                 <seg>+ in 150 Shops einkaufen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>+ acquisti in 150 negozi</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4251,7 +4251,7 @@
                 <seg>+ ein Warenkorb und eine Kasse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>+ un carrello e checkout</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4262,7 +4262,7 @@
                 <seg>+ direkte Lieferung frisch zu Ihnen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>+ fresco consegna diretta a loro</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4273,7 +4273,7 @@
                 <seg>mehr</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>di più</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4284,7 +4284,7 @@
                 <seg>Auf der Startseite bewerben?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>applica per la casa</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4295,7 +4295,7 @@
                 <seg>Zum Shop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>al negozio</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4306,7 +4306,7 @@
                 <seg>Umsatzsteuer</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>imposta sulle vendite</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4317,7 +4317,7 @@
                 <seg>Aktivieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>attivare</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4328,7 +4328,7 @@
                 <seg>Deaktivieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>disattivare</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4356,5 +4356,170 @@
                 <seg></seg>
             </tuv>
         </tu>     
+         <tu tuid='misc_forgotten_password'>
+            <tuv xml:lang="de">
+                <seg>Passwort vergessen?</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Hai dimenticato la password?</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
+        <tu tuid='cooperative_headline'>
+            <tuv xml:lang="de">
+                <seg>Epeliagenossenschaft</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Epelia cooperativa</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub'>
+            <tuv xml:lang="de">
+                <seg>Wenn Ihnen die Idee hinter Epelia gefällt, dann werden sie doch ein Teil davon. Wir werden genossenschaftlich und suchen Menschen denen unsere Grundlagen wichtig sind:</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Se vi piace l'idea dietro Epelia, non sono che una parte di esso. Siamo cooperativa e alla ricerca di persone in cui le nostre basi sono importanti:</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub_1'>
+            <tuv xml:lang="de">
+                <seg>zentraler Einkauf ohne Zwischenhandel</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>centrale di committenza, senza scambi intermedi</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub_2'>
+            <tuv xml:lang="de">
+                <seg>Lebensmittel mit Herkunftsnachweis</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Cibo con prova dell'origine</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub_3'>
+            <tuv xml:lang="de">
+                <seg>Förderung regionaler Strukturen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Promozione delle strutture regionali</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub_4'>
+            <tuv xml:lang="de">
+                <seg>respektabler Umgang mit Lebensmitteln</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>cibo manipolazione rispettabile</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub_5'>
+            <tuv xml:lang="de">
+                <seg>Unterstützung kleiner Produzenten</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Supporto per i piccoli produttori</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
+        <tu tuid='cooperative_sub_6'>
+            <tuv xml:lang="de">
+                <seg>Mitspracherecht bei der weiteren Entwicklung von Epelia</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Dire l'ulteriore sviluppo di Epelia</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>     
+        <tu tuid='cooperative_sub_7'>
+            <tuv xml:lang="de">
+                <seg>Melden Sie sich unverbindlich für unseren Genossenschafts-Newsletter an und verpassen Sie so nicht die nächsten Schritte.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Iscriviti alla nostra newsletter obbligo cooperativa e vi perdete quindi non i passi successivi.</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu> 
+        <tu tuid='misc_send'>
+            <tuv xml:lang="de">
+                <seg>absenden</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>inviare</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu> 
+        <tu tuid='cooperative_suc_1'>
+            <tuv xml:lang="de">
+                <seg>Vielen Dank für Ihre Registrierung</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Grazie per la tua registrazione</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
+        <tu tuid='cooperative_suc_2'>
+            <tuv xml:lang="de">
+                <seg>Vielen Dank für Ihre Registrierung zum Genossenschafts-Newsletter.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Grazie per esserti registrato alla newsletter Epelia.</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>
+        <tu tuid='language_de'>
+            <tuv xml:lang="de">
+                <seg>Deutsch</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>tedesco</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu> 
+        <tu tuid='language_it'>
+            <tuv xml:lang="de">
+                <seg>Italienisch</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>italiano</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
     </body>
 </tmx>
