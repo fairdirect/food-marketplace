@@ -4521,5 +4521,27 @@
                 <seg></seg>
             </tuv>
         </tu>            
+        <tu tuid='shops_show_all'>
+            <tuv xml:lang="de">
+                <seg>alle Produkte anzeigen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu> 
+        <tu tuid='shops_attibute_products'>
+            <tuv xml:lang="de">
+                <seg>Lebensmittel für Allergiker</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg></seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
     </body>
 </tmx>

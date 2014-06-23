@@ -175,11 +175,44 @@ class Model_Shop extends Model_ModelAbstract
         return $this->_products;
     }
 
+    public function getProductsByCategory($catID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){ 
+        // must not save this in _products
+        return Model_Product::findByShopAndCategory($this->id, $catID, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+    }
+
+    public function getProductsByAttribute($attributeID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){ 
+        // must not save this in _products
+        return Model_Product::findByShopAndAttribute($this->id, $attributeID, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+    }    
+
     public function getCategories($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
         if(is_null($this->_categories)){
             $this->_categories = Model_ProductCategory::findByShop($this->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
         }
         return $this->_categories;
+    }
+
+    public function getAttributes($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $type = 'allergen'){
+        return Model_ProductAttribute::findByShop($this->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $type);
+    }
+
+    public function getAttributeProducts(){
+        $products = $productIds = array();
+        $attributes = $this->getAttributes();
+        foreach($attributes as $attr){
+            $attrProducts = $this->getProductsByAttribute($attr->id);
+            foreach($attrProducts as $attrProduct){
+                if(!in_array($attrProduct->id, $productIds)){
+                    $productIds[] = $attrProduct->id;
+                    $products[] = $attrProduct;
+                }
+            }
+        }
+        return $products;
+    }
+
+    public function clearProducts(){
+        $this->_products = null;
     }
 
     public function getShippingCosts(){

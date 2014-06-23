@@ -393,6 +393,49 @@ class Model_Product extends Model_ModelAbstract
         return $ret;
     }
 
+
+    public static function findByShopAndCategory($shopID, $catID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+        $ret = array();
+   
+        $select->where('shop_id = ?', $shopID);
+        $select->where('category_id = ?', $catID);
+
+        if($onlyBio){
+            $select->where('is_bio = ?', 'true');
+        }
+        if($onlyDiscount){
+            $select->where('is_discount = ?', 'true');
+        }
+        if($onlyWholesale){
+            $select->join('epelia_product_prices', $table->getTableName() . '.id = epelia_product_prices.product_id', array());
+            $select->where('epelia_product_prices.is_wholesale', 'true');
+            $select->group($table->getTableName() . '.id');
+        }
+
+        if($onlyActivated){
+            $select->where($table->getTableName() . '.active = ?', true);
+        }
+
+        if(!$all){
+            $select->where($table->getTableName() . '.deleted != ?', true);
+        }
+
+        $select->order($table->getTableName() . '.name ASC');
+        $select->limit($limit, $offset);
+
+        $result = $select->query()->fetchAll();
+
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
     public static function findFeaturedHomeByShop($shopID){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*');
@@ -532,5 +575,49 @@ class Model_Product extends Model_ModelAbstract
         }
         return $ret;
     }
+
+    public static function findByShopAndAttribute($shopID, $attributeID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+        $ret = array();
+        $table = self::getDbTable();
+
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+        $select->where('shop_id = ?', $shopID);
+
+        $select->join('epelia_products_product_attributes', $table->getTableName() . '.id = epelia_products_product_attributes.product_id', array());
+        $select->where('epelia_products_product_attributes.product_attribute_id = ?', $attributeID);
+
+        if($onlyBio){
+            $select->where('is_bio = ?', 'true');
+        }
+        if($onlyDiscount){
+            $select->where('is_discount = ?', 'true');
+        }
+        if($onlyWholesale){
+            $select->join('epelia_product_prices', $table->getTableName() . '.id = epelia_product_prices.product_id', array());
+            $select->where('epelia_product_prices.is_wholesale', 'true');
+            $select->group($table->getTableName() . '.id');
+        }
+
+        if($onlyActivated){
+            $select->where($table->getTableName() . '.active = ?', true);
+        }
+
+        if(!$all){
+            $select->where($table->getTableName() . '.deleted != ?', true);
+        }
+
+        $select->group($table->getTableName() . '.id'); 
+        $select->limit($limit, $offset);
+
+        $result = $select->query()->fetchAll();
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
 
 }

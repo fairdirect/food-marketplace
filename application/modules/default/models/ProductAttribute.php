@@ -101,4 +101,54 @@ class Model_ProductAttribute extends Model_ModelAbstract
         $db = self::getDbTable()->getAdapter();
         $query = $db->query('DELETE FROM epelia_products_product_attributes WHERE product_id = ?', $productID)->execute();
     }
+
+    public static function findByShop($shopID, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $type = null){
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from(array($table->getTableName(), 'epelia_products'), array('*')); // need to use adapter select here to be able to join
+        $select->join('epelia_products_product_attributes', $table->getTableName() . '.id = epelia_products_product_attributes.product_attribute_id', array());
+
+        $ret = array();
+
+        $subSelect = $table->getAdapter()->select()->from('epelia_products', 'id'); 
+        $subSelect->where('epelia_products.shop_id = ?', $shopID);
+
+        if($onlyBio){
+            $subSelect->where('epelia_products.is_bio = ?', true);
+        }
+        if($onlyDiscount){
+            $subSelect->where('epelia_products.is_discount = ?', true);
+        }
+        if($onlyWholesale){
+            $subSelect->join('epelia_product_prices', 'epelia_products.id = epelia_product_prices.product_id', array());
+            $subSelect->where('epelia_product_prices.is_wholesale = ?', true);
+
+        }
+
+        if($onlyActivated){
+            $subSelect->where('epelia_products.active = ?', true);
+        }
+
+        if(!$all){
+            $subSelect->where('epelia_products.deleted != ?', true);
+        }
+        $select->where('epelia_products_product_attributes.product_id IN ?', $subSelect);
+
+        if($type){
+            $select->where('epelia_product_attributes.type = ?', $type);
+        }
+
+        $select->group($table->getTableName() . '.id');
+        $select->order($table->getTableName() . '.name DESC');
+
+        $result = $select->query()->fetchAll();
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $cat = new self($r);
+
+            $ret[] = $cat; 
+        }
+        return $ret;
+    }
 }

@@ -6,6 +6,8 @@ class Model_ProductCategory extends Model_ModelAbstract
     public $name;
     public $product_group_id;
 
+    private $_count; // this is a flexible value, assigned as needed
+
     private $_productGroup = null;
     private $_products = null;
 
@@ -17,6 +19,15 @@ class Model_ProductCategory extends Model_ModelAbstract
     public function delete(){
         $this->deleted = true;
         $this->save();
+    }
+
+    public function setCount($count){
+        $this->_count = $count;
+        return $this;
+    }
+
+    public function getCount(){
+        return $this->_count;
     }
 
     public static function getDbTable(){
@@ -91,7 +102,7 @@ class Model_ProductCategory extends Model_ModelAbstract
 
     public static function findByShop($shopID, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
         $table = self::getDbTable();
-        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+        $select = $table->getAdapter()->select()->from(array($table->getTableName(), 'epelia_products'), array('*', 'COUNT(epelia_products.id)')); // need to use adapter select here to be able to join
         $ret = array();
 
         $select->join('epelia_products', $table->getTableName() . '.id = epelia_products.category_id', array());
@@ -126,12 +137,13 @@ class Model_ProductCategory extends Model_ModelAbstract
             return array();
         }
         foreach($result as $r){
-            $ret[] = new self($r);
+            $cat = new self($r);
+            $cat->setCount($r['count']);
+            $ret[] = $cat; 
         }
         return $ret;
-
-
     }
+
 
     public static function findAll(){
         $table = self::getDbTable();
