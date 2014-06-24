@@ -8,10 +8,10 @@ class WomasController extends Zend_Controller_Action
     }
 
     public function showAction(){
-        if(!$this->getRequest()->getParam('id')){
+        if(!$this->getRequest()->getParam('url')){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
-        $woma = Model_Woma::find($this->getRequest()->getParam('id'));
+        $woma = Model_Woma::findByUrl($this->getRequest()->getParam('url'));
         if(!$woma){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
@@ -21,10 +21,10 @@ class WomasController extends Zend_Controller_Action
 
     public function showallAction(){
         $request = $this->getRequest();
-        if(!$request->getParam('id')){
+        if(!$request->getParam('url')){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
-        $woma = Model_Woma::find($request->getParam('id'));
+        $woma = Model_Woma::findByUrl($request->getParam('url'));
 
         $onlyBio = $onlyDiscount = $onlyWholesale = false;
         if($request->getParam('bio') || $request->getParam('discount') || $request->getParam('wholesale')){
@@ -49,10 +49,10 @@ class WomasController extends Zend_Controller_Action
 
     public function showwomacatAction(){
         $request = $this->getRequest();
-        if(!$request->getParam('id') || !$request->getParam('catid')){
+        if(!$request->getParam('url') || !$request->getParam('catid')){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
-        $woma = Model_Woma::find($request->getParam('id'));
+        $woma = Model_Woma::findByUrl($request->getParam('url'));
         $cat = Model_ProductCategory::find($request->getParam('catid'));
 
         $onlyBio = $onlyDiscount = $onlyWholesale = false;
@@ -78,10 +78,10 @@ class WomasController extends Zend_Controller_Action
 
     public function showwomaattrAction(){
         $request = $this->getRequest();
-        if(!$request->getParam('id') || !$request->getParam('attrid')){
+        if(!$request->getParam('url') || !$request->getParam('attrid')){
             throw new Zend_Controller_Action_Exception('This page does not exist', 404);
         }
-        $woma = Model_Woma::find($request->getParam('id'));
+        $woma = Model_Woma::findByUrl($request->getParam('url'));
         $attr = Model_ProductAttribute::find($request->getParam('attrid'));
 
         $onlyBio = $onlyDiscount = $onlyWholesale = false;

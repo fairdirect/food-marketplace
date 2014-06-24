@@ -112,6 +112,21 @@ class Model_Woma extends Model_ModelAbstract
         return $ret;
     }
 
+    public static function findByUrl($url){
+        $table = self::getDbTable();
+        $select = $table->select();
+        $ret = array();
+
+        $select->where('url = ?', $url);
+        
+        $result = $table->fetchRow($select);
+        if (is_null($result)) {
+            return false;
+        }
+        return new self($result);
+    }
+
+
     public static function getCount(){
         $select = self::getDbTable()->select();
         $select->from(self::getDbTable(), array('count(*) as amount'));
@@ -267,7 +282,7 @@ class Model_Woma extends Model_ModelAbstract
     }
 
     public function getLink(){
-        return '/womas/' . $this->id . '/';
+        return '/womas/' . $this->url . '/';
     }
 
     
