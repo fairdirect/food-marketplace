@@ -160,6 +160,77 @@ class Model_Woma extends Model_ModelAbstract
         return $this->_products;
     }
 
+    public function getProductsByCategory($catID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){ 
+        $products = array();
+        foreach($this->getShops() as $shop){
+            $shopProducts = Model_Product::findByShopAndCategory($shop->id, $catID, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+            foreach($shopProducts as $shopPr){
+                $products[] = $shopPr;
+            }
+        }
+        return $products;
+    }
+
+    public function getProductsByAttribute($attributeID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){ 
+        $products = array();
+        foreach($this->getShops() as $shop){
+            $shopProducts = Model_Product::findByShopAndAttribute($shop->id, $attributeID, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+            foreach($shopProducts as $shopPr){
+                $products[] = $shopPr;
+            }
+        }
+        return $products;
+    }    
+
+    public function getCategories($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+        $categories = $categoryIds = array();
+        foreach($this->getShops() as $shop){
+            $shopCats = Model_ProductCategory::findByShop($shop->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+            foreach($shopCats as $cat){
+                if(!in_array($cat->id, $categoryIds)){
+                    $categoryIds[] = $cat->id;
+                    $categories[] = $cat;
+                }
+            }
+        }
+        return $categories;
+    }
+
+    public function getAttributes($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $type = 'allergen'){
+        $attributes = $attributeIds = array();
+        foreach($this->getShops() as $shop){
+            $shopAttributes = Model_ProductAttribute::findByShop($shop->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $type);
+            foreach($shopAttributes as $attr){
+                if(!in_array($attr->id, $attributeIds)){
+                    $attributeIds[] = $attr->id;
+                    $attributes[] = $attr;
+                }
+            }
+         }
+         return $attributes;
+    }
+
+    public function getAttributeProducts(){
+        $products = $productIds = array();
+        $attributes = $this->getAttributes();
+        foreach($attributes as $attr){
+            $attrProducts = $this->getProductsByAttribute($attr->id);
+            foreach($attrProducts as $attrProduct){
+                if(!in_array($attrProduct->id, $productIds)){
+                    $productIds[] = $attrProduct->id;
+                    $products[] = $attrProduct;
+                }
+            }
+        }
+        return $products;
+    }
+
+    public function clearProducts(){
+        $this->_products = null;
+    }
+
+
+
     public function getLogo(){
         if(is_null($this->_logo) && !is_null($this->logo_id)){
             $this->_logo = Model_Picture::find($this->logo_id);
@@ -193,6 +264,10 @@ class Model_Woma extends Model_ModelAbstract
             $this->_shippingCosts = Model_WomaShippingCost::findByWoma($this->id);
         }
         return $this->_shippingCosts;
+    }
+
+    public function getLink(){
+        return '/womas/' . $this->id . '/';
     }
 
     
