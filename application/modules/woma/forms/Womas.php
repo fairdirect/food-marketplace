@@ -207,7 +207,7 @@ class Woma_Form_Womas extends Zend_Form
 
         $additional = new Zend_Form_Element_Textarea('additional');
         $additional
-            ->setLabel($this->getTranslator()->translate('business_shop_additional'))
+            ->setLabel($this->getTranslator()->translate('woma_business_hours'))
             ->setAttrib('class', 'span2')
             ->setAttrib('rows', 5)
             ->setOrder(330);

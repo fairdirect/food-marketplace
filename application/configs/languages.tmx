@@ -4526,7 +4526,7 @@
                 <seg>alle Produkte anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>               
+                <seg>Vedi tutti i prodotti</seg>               
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
@@ -4537,11 +4537,44 @@
                 <seg>Lebensmittel für Allergiker</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>               
+                <seg>Cibo per allergici</seg>               
             </tuv>
             <tuv xml:lang="en">
                 <seg></seg>
             </tuv>
         </tu>            
+        <tu tuid='woma_next_offers'>
+            <tuv xml:lang="de">
+                <seg>Angebote des nächsten Markttages</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Offerte del successivo giorno di mercato</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
+        <tu tuid='woma_visit_us'>
+            <tuv xml:lang="de">
+                <seg>besuchen Sie unseren Wochenmarkt</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>visita il nostro mercato settimanale</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>            
+        <tu tuid='woma_business_hours'>
+            <tuv xml:lang="de">
+                <seg>Öffnungszeiten</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>orari di apertura</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg></seg>
+            </tuv>
+        </tu>    
     </body>
 </tmx>
