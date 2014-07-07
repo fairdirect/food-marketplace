@@ -65,7 +65,7 @@ class Admin_SalesController extends Zend_Controller_Action
             $year = $request->getPost('year');
             $invoices = Model_Invoice::getByDate($month, $year);
             foreach($invoices as $invoice){
-                $orderContent .= '<tr><td><input type="checkbox" class="send_check" name="invoices[]" value="' . $invoice->id . '" /></td><td>' . 'EP' . $invoice->id . '</td><td>' . $invoice->getShop()->name . ' </td><td>' . $invoice->getShop()->getUser()->email . '</td><td>' . number_format($invoice->invoice_amount, 2, ',', '') . ' EUR</td><td>' . number_format($invoice->payout, 2, ',', '') . ' EUR</td><td><a href="/admin/sales/showinvoice/id/' . $invoice->id . '/">' . $invoice->file . '</a></td><td>' . date('d.m.Y', strtotime($invoice->last_sent)) . '</td></tr>'; 
+                $orderContent .= '<tr><td><input type="checkbox" class="send_check" name="invoices[]" value="' . $invoice->id . '" /></td><td>' . 'EP' . $invoice->id . '</td><td>' . $invoice->getShop()->name . ' </td><td>' . $invoice->getShop()->getUser()->email . '</td><td>' . number_format($invoice->invoice_amount, 2, ',', '') . ' EUR</td><td>' . number_format($invoice->payout, 2, ',', '') . ' EUR</td><td><a href="/admin/sales/showinvoice/id/' . $invoice->id . '/">' . $invoice->file . '</a></td><td>' . (($invoice->last_sent) ? date('d.m.Y', strtotime($invoice->last_sent)) : 'nie' ) . '</td></tr>'; 
             }
             exit($orderContent);       
         }
