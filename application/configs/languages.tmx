@@ -4511,6 +4511,17 @@
                 <seg>German</seg>
             </tuv>
         </tu> 
+        <tu tuid='language_en'>
+            <tuv xml:lang="de">
+                <seg>Englisch</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>inglese</seg>               
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>English</seg>
+            </tuv>
+        </tu>     
         <tu tuid='language_it'>
             <tuv xml:lang="de">
                 <seg>Italienisch</seg>

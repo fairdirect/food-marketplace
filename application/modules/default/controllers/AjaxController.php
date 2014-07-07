@@ -97,6 +97,9 @@ class AjaxController extends Zend_Controller_Action
             case 'it':
                 $session->language = 'it';
                 break;
+            case 'en':
+                $session->language = 'en';
+                break;
             default:
                 $session->language = 'de';
                 break;
