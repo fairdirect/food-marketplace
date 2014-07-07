@@ -11,7 +11,7 @@
                 <seg>* Tutti i pressi includono IVA e spese di spedizione aggiuntive</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>* All prices incl. VAT and excl. shipping costs</seg>
             </tuv>
         </tu>
         <tu tuid='misc_javascript_1'>
@@ -19,10 +19,10 @@
                 <seg>Wir haben festgestellt, dass in Ihrem Browser JavaScript deaktiviert ist.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Abbiamo rilevato che JavaScript non è attivo sul vostro browser</seg>
+                <seg>Abbiamo rilevato che JavaScript non è attivo sul vostro browser.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>We noticed that JavaScript is deactivated in your browser.</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_javascript_2'>
@@ -30,10 +30,10 @@
                 <seg>Sie müssen JavaScript in Ihrem Browser aktivieren, um den vollen Funktionsumfang dieser Website nutzen zu können.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dovete attivare JavaScript sul vostro browser per poter utilizzare pienamante le funzionalità di questo sito web</seg>
+                <seg>Dovete attivare JavaScript sul vostro browser per poter utilizzare pienamante le funzionalità di questo sito web.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>You have to activate JavaScript in your browse in order to use the full functionality of this website.</seg>
             </tuv>
         </tu>
         <tu tuid='misc_shoppingcart'>
@@ -44,7 +44,7 @@
                 <seg>Cestino</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shopping cart</seg>
             </tuv>
         </tu>
         <tu tuid='misc_cashier'>
@@ -55,7 +55,7 @@
                 <seg>Procedi all'acquisto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Checkout</seg>
             </tuv>
         </tu>
         <tu tuid='misc_business'>
@@ -63,10 +63,10 @@
                 <seg>Mein Shop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Business</seg>
+                <seg>Mio Negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>My Shop</seg>
             </tuv>
         </tu>
         <tu tuid='misc_admin'>
@@ -77,7 +77,7 @@
                 <seg>Admin</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Admin</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_help'>
@@ -88,7 +88,7 @@
                 <seg>Aiuto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Help</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_about'>
@@ -99,7 +99,7 @@
                 <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>About Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='misc_logout'>
@@ -110,7 +110,7 @@
                 <seg>Disconnetti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Logout</seg>
             </tuv>
         </tu>
         <tu tuid='misc_login'>
@@ -121,7 +121,7 @@
                 <seg>Accedi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Login</seg>
             </tuv>
         </tu>
         <tu tuid='misc_telephone_1'>
@@ -132,7 +132,7 @@
                 <seg>Ordinare telefonicamente: 0180 EINKAUF</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Order via telephone: 0180 EINKAUF</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_telephone_2'>
@@ -143,7 +143,7 @@
                 <seg>(9 cent/min su rete fissa Telecom tedesca</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>(9 ct/min in the landline network of Deutsche Telekom,</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_telephone_3'>
@@ -154,7 +154,7 @@
                 <seg>tariffa eventualmente diversa su rete mobile)</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>potentially different prices in mobile networks)</seg>
             </tuv>
         </tu>
         <tu tuid='misc_groceries'>
@@ -165,7 +165,7 @@
                 <seg>Beni alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Food</seg>
             </tuv>
         </tu>
         <tu tuid='misc_drugstore'>
@@ -176,7 +176,7 @@
                 <seg>Beni per la casa e per la persona</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Drugstore</seg>
             </tuv>
         </tu>
         <tu tuid='misc_forum'>
@@ -187,7 +187,7 @@
                 <seg>Forum</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Forum</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_sell'>
@@ -198,7 +198,7 @@
                 <seg>Vendere</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Sell</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_wholesale'>
@@ -209,7 +209,7 @@
                 <seg>Commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Wholesale</seg>
             </tuv>
         </tu>
         <tu tuid='misc_my_epelia'>
@@ -220,7 +220,7 @@
                 <seg>Il mio account Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>My Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='misc_wholesale'>
@@ -231,7 +231,7 @@
                 <seg>Commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Wholesale</seg>
             </tuv>
         </tu>
         <tu tuid='misc_orders'>
@@ -242,7 +242,7 @@
                 <seg>I miei ordini</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>My Orders</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_addresses'>
@@ -253,7 +253,7 @@
                 <seg>I miei indirizzi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>My Addresses</seg>
             </tuv>
         </tu>
 
@@ -265,7 +265,7 @@
                 <seg>Le mie valutazioni sui prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>My Product Ratings</seg>
             </tuv>
         </tu>
         <tu tuid='misc_categories'>
@@ -276,7 +276,7 @@
                 <seg>Categorie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Categories</seg>
             </tuv>
         </tu>
         <tu tuid='misc_all_categories'>
@@ -287,7 +287,7 @@
                 <seg>Tutte le categorie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All categories</seg>
             </tuv>
         </tu>
         <tu tuid='misc_bio_products'>
@@ -298,7 +298,7 @@
                 <seg>Prodotti BIO</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Organic products</seg>
             </tuv>
         </tu>
         <tu tuid='misc_allergy_products'>
@@ -309,7 +309,7 @@
                 <seg>Prodotti alimentari per intolleranti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Allergy-proof food</seg>
             </tuv>
         </tu>
         <tu tuid='misc_discount_products'>
@@ -320,7 +320,7 @@
                 <seg>Prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Discount products</seg>
             </tuv>
         </tu>
         <tu tuid='misc_search'>
@@ -331,7 +331,7 @@
                 <seg>Cerca</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Search</seg>
             </tuv>
         </tu>
         <tu tuid='misc_show'>
@@ -342,7 +342,7 @@
                 <seg>Mostra</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>View</seg>
             </tuv>
         </tu>
         <tu tuid='misc_salutation'>
@@ -353,7 +353,7 @@
                 <seg>Formula di saluto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Salutation</seg>
             </tuv>
         </tu>
         <tu tuid='misc_company'>
@@ -364,7 +364,7 @@
                 <seg>Azienda</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Company</seg>
             </tuv>
         </tu>
         <tu tuid='misc_firstname'>
@@ -375,7 +375,7 @@
                 <seg>Nome</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>First name</seg>
             </tuv>
         </tu>
         <tu tuid='misc_lastname'>
@@ -386,7 +386,7 @@
                 <seg>Cognome</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Last name</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_street'>
@@ -394,10 +394,10 @@
                 <seg>Straße</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>via</seg>
+                <seg>Via</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Street</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_housenumber'>
@@ -408,7 +408,7 @@
                 <seg>Numero</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Number</seg>
             </tuv>
         </tu>
         <tu tuid='misc_zip'>
@@ -419,7 +419,7 @@
                 <seg>CAP</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>post code</seg>
             </tuv>
         </tu>
         <tu tuid='misc_city'>
@@ -427,10 +427,10 @@
                 <seg>Stadt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>città</seg>
+                <seg>Città</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>City</seg>
             </tuv>
         </tu>
         <tu tuid='misc_save'>
@@ -441,7 +441,7 @@
                 <seg>Salva</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Save</seg>
             </tuv>
         </tu>
         <tu tuid='misc_email'>
@@ -452,7 +452,7 @@
                 <seg>E-mail</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>E-mail</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_password'>
@@ -463,7 +463,7 @@
                 <seg>Password</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Password</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_comment'>
@@ -474,7 +474,7 @@
                 <seg>Commento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Comment</seg>
             </tuv>
         </tu>
         <tu tuid='misc_repeat_password'>
@@ -485,7 +485,7 @@
                 <seg>Conferma password</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Confirm password</seg>
             </tuv>
         </tu>
         <tu tuid='misc_country'>
@@ -496,7 +496,7 @@
                 <seg>Paese</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Country</seg>
             </tuv>
         </tu>
         <tu tuid='misc_shopname'>
@@ -507,7 +507,7 @@
                 <seg>Nome del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shop name</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_phone'>
@@ -518,7 +518,7 @@
                 <seg>Telefono</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Phone</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_fax'>
@@ -529,7 +529,7 @@
                 <seg>Fax</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Fax</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_website'>
@@ -540,7 +540,7 @@
                 <seg>Sito web</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Website</seg>
             </tuv>
         </tu>
         <tu tuid='misc_contact_person'>
@@ -551,7 +551,7 @@
                 <seg>Persona di riferimento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Contact person</seg>
             </tuv>
         </tu>
         <tu tuid='misc_trade_certificate'>
@@ -562,7 +562,7 @@
                 <seg>Licenza di commercio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Business registration certificate</seg>
             </tuv>
         </tu>
         <tu tuid='misc_yes'>
@@ -573,7 +573,7 @@
                 <seg>Sì</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Yes</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_no'>
@@ -584,7 +584,7 @@
                 <seg>No</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>No</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_unlimited'>
@@ -595,7 +595,7 @@
                 <seg>illimitato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>unlimited</seg>
             </tuv>
         </tu>
         <tu tuid='misc_pictures'>
@@ -606,7 +606,7 @@
                 <seg>Immagini</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Images</seg>
             </tuv>
         </tu>
         <tu tuid='misc_type'>
@@ -617,7 +617,7 @@
                 <seg>Tipo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Type</seg>
             </tuv>
         </tu>
 
@@ -629,7 +629,7 @@
                 <seg>Gruppo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Group</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_category'>
@@ -640,7 +640,7 @@
                 <seg>Categoria</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Category</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_description'>
@@ -651,7 +651,7 @@
                 <seg>Descrizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Description</seg>
             </tuv>
         </tu>
         <tu tuid='misc_general'>
@@ -662,7 +662,7 @@
                 <seg>Generale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>General</seg>
             </tuv>
         </tu>
         <tu tuid='product_delivery_costs'>
@@ -673,7 +673,7 @@
                 <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>excl. shipment costs</seg>
             </tuv>
         </tu>       
         <tu tuid='product_add_to_cart'>
@@ -684,7 +684,7 @@
                 <seg>Nel cestino</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>add to shopping cart</seg>
             </tuv>
         </tu>       
         <tu tuid='product_info'>
@@ -695,7 +695,7 @@
                 <seg>Informazioni sul prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Product information</seg>
             </tuv>
         </tu>
         <tu tuid='product_size'>
@@ -703,10 +703,10 @@
                 <seg>Bestellgröße:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dimensioni del prodotto</seg>
+                <seg>Dimensioni del prodotto:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Order size:</seg>
             </tuv>
         </tu>
         <tu tuid='product_show_more'>
@@ -717,7 +717,7 @@
                 <seg>Vedi altri prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Show more products</seg>
             </tuv>
         </tu>
         <tu tuid='product_ingredients'>
@@ -728,7 +728,7 @@
                 <seg>Ingredienti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ingredients</seg>
             </tuv>
         </tu>       
         <tu tuid='product_tags'>
@@ -739,7 +739,7 @@
                 <seg>Parole chiave</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Keywords</seg>
             </tuv>
         </tu>       
         <tu tuid='product_sizes'>
@@ -750,7 +750,7 @@
                 <seg>Dimensioni del prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Order sizes</seg>
             </tuv>
         </tu>
         <tu tuid='product_buy'>
@@ -761,7 +761,7 @@
                 <seg>Acquista</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Buy</seg>
             </tuv>
         </tu>
         <tu tuid='product_delivery_costs_of'>
@@ -772,7 +772,7 @@
                 <seg>Spese di spedizione di</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment costs of</seg>
             </tuv>
         </tu>
         <tu tuid='product_sent_from'>
@@ -783,7 +783,7 @@
                 <seg>Prodotto spedito da</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Articles will be shipped from:</seg>
             </tuv>
         </tu>       
         <tu tuid='product_delivery_to'>
@@ -794,7 +794,7 @@
                 <seg>Consegna a</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment to:</seg>
             </tuv>
         </tu>       
         <tu tuid='product_delivery_price'>
@@ -805,7 +805,7 @@
                 <seg>Costi di spedizione:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Cost:</seg>
             </tuv>
         </tu>
         <tu tuid='product_delivery_free_from'>
@@ -816,7 +816,7 @@
                 <seg>Spese di spedizione gratuite a partire da:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Free shipment from:</seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_guarantee'>
@@ -827,7 +827,7 @@
                 <seg>Garanzia Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Epelia warranty</seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_1'>
@@ -838,7 +838,7 @@
                 <seg>Miglior prezzo, perché tutti i prodotti sono venduti direttamente dal produttore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Best price, as all products come directly from the manufacturer</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_2'>
@@ -849,7 +849,7 @@
                 <seg>Nessun magazzino intermedio, prodotti più freschi che mai</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>No intermediate store, it couldn't be more fresh.</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_3'>
@@ -860,7 +860,7 @@
                 <seg>Servizio gratuito, 0180 EINKAUF (9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Free service, 0180 EINKAUF (9 ct/min in the landline network of Deutsche Telekom; different prices can apply in mobile networks)</seg>
             </tuv>
         </tu>
         <tu tuid='search_no_results'>
@@ -871,7 +871,7 @@
                 <seg>Nessun risultato trovato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>No results found</seg>
             </tuv>
         </tu>
         <tu tuid='search_results'>
@@ -882,7 +882,7 @@
                 <seg>Risultati per</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Results for</seg>
             </tuv>
         </tu>
         <tu tuid='misc_edit'>
@@ -893,7 +893,7 @@
                 <seg>Modifica</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Edit</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_delete'>
@@ -904,7 +904,7 @@
                 <seg>Elimina</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Delete</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_headline'>
@@ -915,7 +915,7 @@
                 <seg>Controlla e conferma l'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Review and confirm your order</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_product'>
@@ -926,7 +926,7 @@
                 <seg>Articolo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Article</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_amount'>
@@ -937,7 +937,7 @@
                 <seg>Quantità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Amount</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_single_price'>
@@ -948,7 +948,7 @@
                 <seg>Prezzo singolo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Individual price</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_availability'>
@@ -959,7 +959,7 @@
                 <seg>Disponibilità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Availability</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_total_price'>
@@ -970,7 +970,7 @@
                 <seg>Prezzo totale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Total price</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_seller'>
@@ -981,7 +981,7 @@
                 <seg>Venditore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Seller</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_total'>
@@ -992,7 +992,7 @@
                 <seg>Totale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Sum</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_single_sum'>
@@ -1003,7 +1003,7 @@
                 <seg>Subtotale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Subtotal</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_delivery'>
@@ -1014,7 +1014,7 @@
                 <seg>Consegna</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_total'>
@@ -1025,7 +1025,7 @@
                 <seg>Totale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Total</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_taxes_7'>
@@ -1036,7 +1036,7 @@
                 <seg>7,0% IVA</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>VAT 7.0%</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_taxes_19'>
@@ -1047,7 +1047,7 @@
                 <seg>19,0% IVA</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>VAT 19.0%</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_order'>
@@ -1058,7 +1058,7 @@
                 <seg>Procedi all'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Order (subject to a charge)</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_payment_type'>
@@ -1069,7 +1069,7 @@
                 <seg>Metodo di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Payment method</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_edit'>
@@ -1080,7 +1080,7 @@
                 <seg>modifica</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>modify</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_remove_product_1'>
@@ -1091,7 +1091,7 @@
                 <seg>Rimuovi articolo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Remove article</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_remove_product_2'>
@@ -1102,7 +1102,7 @@
                 <seg>Rimuovi dal cestino</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Remove from shopping cart</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_available'>
@@ -1113,7 +1113,7 @@
                 <seg>attualmente disponibile</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>immediately available</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_continue_shopping'>
@@ -1124,7 +1124,7 @@
                 <seg>Continua a fare shopping</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Proceed shopping</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_headline'>
@@ -1135,7 +1135,7 @@
                 <seg>Grazie per aver acquistato con noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Many thanks for your purchase</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_success_ordered'>
@@ -1146,7 +1146,7 @@
                 <seg>Il suo ordine è andato a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Your order has been received.</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_success_accepted'>
@@ -1157,7 +1157,7 @@
                 <seg>Il suo ordine è stato accettato.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Your order has been processed.</seg>
             </tuv>
         </tu>    
         <tu tuid='checkout_success_prepay_1'>
@@ -1168,7 +1168,7 @@
                 <seg>La preghiamo di versare l'importo su:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please pay the total amount by bank transfer to:</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_2'>
@@ -1179,7 +1179,7 @@
                 <seg>Intestatario: Epelia Warehandel Gattinger</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Owner: Epelia Warenhandel Gattinger</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_3'>
@@ -1190,7 +1190,7 @@
                 <seg>Conto: 4647483</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Account No. 4647483</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_4'>
@@ -1201,7 +1201,7 @@
                 <seg>Banca: Volksbank Heuchelheim</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Bank: Volksbank Heuchelheim</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_5'>
@@ -1212,18 +1212,18 @@
                 <seg>Codice di identificazione della banca: 51361021</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Sort code: 51361021</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_6'>
             <tuv xml:lang="de">
-                <seg>Verwendungszweck: </seg>
+                <seg>Verwendungszweck:</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Causale:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Reference:</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_7'>
@@ -1234,7 +1234,7 @@
                 <seg>Per bonifico dall'estero:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>For payments from abroad:</seg>
             </tuv>
         </tu>
         <tu tuid='addresses_default_delivery'>
@@ -1245,7 +1245,7 @@
                 <seg>Indirizzo di consegna standard?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Default shipment address?</seg>
             </tuv>
         </tu>       
         <tu tuid='addresses_default_invoice'>
@@ -1256,7 +1256,7 @@
                 <seg>Indirizzo di fatturazione standard?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Default invoice address?</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_actions'>
@@ -1267,7 +1267,7 @@
                 <seg>Promozioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Actions</seg>
             </tuv>
         </tu>
         <tu tuid='addresses_edit'>
@@ -1275,10 +1275,10 @@
                 <seg>Adresse hinzufügen / editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Inserisci/modifica indirizzo</seg>
+                <seg>Inserisci / modifica indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Add / edit address</seg>
             </tuv>
         </tu>
         <tu tuid='addresses_addresses'>
@@ -1289,7 +1289,7 @@
                 <seg>Indirizzo inserito</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Existing addresses</seg>
             </tuv>
         </tu>
 
@@ -1301,7 +1301,7 @@
                 <seg>Inserisci nuovo indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Create new address</seg>
             </tuv>
         </tu>
         <tu tuid='addresses_set_default_delivery'>
@@ -1312,7 +1312,7 @@
                 <seg>Imposta come indirizzo di consegna standard</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Use as default shipment address</seg>
             </tuv>
         </tu>
 
@@ -1324,7 +1324,7 @@
                 <seg>Imposta come indirizzo di fatturazione standard</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Use as default invoice address</seg>
             </tuv>
         </tu>       
         <tu tuid='orders_headline'>
@@ -1335,7 +1335,7 @@
                 <seg>Riepilogo ordini</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Overview of orders</seg>
             </tuv>
         </tu>       
         <tu tuid='orders_open'>
@@ -1346,7 +1346,7 @@
                 <seg>Ordini attivi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Open orders</seg>
             </tuv>
         </tu>
         <tu tuid='orders_complete'>
@@ -1357,7 +1357,7 @@
                 <seg>Ordini completati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Commpleted orders</seg>
             </tuv>
         </tu>
         <tu tuid='orders_date'>
@@ -1368,7 +1368,7 @@
                 <seg>Ordinato il</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ordered on</seg>
             </tuv>
         </tu>
         <tu tuid='orders_number'>
@@ -1379,7 +1379,7 @@
                 <seg>Numero ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Order ID</seg>
             </tuv>
         </tu>       
         <tu tuid='orders_price_products'>
@@ -1390,7 +1390,7 @@
                 <seg>Prezzo dei prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Price of products</seg>
             </tuv>
         </tu>       
         <tu tuid='orders_delivery_costs'>
@@ -1401,7 +1401,7 @@
                 <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment costs</seg>
             </tuv>
         </tu>
         <tu tuid='orders_price'>
@@ -1412,7 +1412,7 @@
                 <seg>Prezzo totale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Total price</seg>
             </tuv>
         </tu>
         <tu tuid='orders_products'>
@@ -1423,7 +1423,7 @@
                 <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Products</seg>
             </tuv>
         </tu>
         <tu tuid='orders_status'>
@@ -1434,7 +1434,7 @@
                 <seg>Stato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Status</seg>
             </tuv>
         </tu>       
         <tu tuid='ratings_open'>
@@ -1445,7 +1445,7 @@
                 <seg>Valutazioni dei prodotti attive</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Open product reviews</seg>
             </tuv>
         </tu>       
         <tu tuid='ratings_rated'>
@@ -1456,7 +1456,7 @@
                 <seg>Valutazioni dei prodotti effettuate</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Submitted product reviews</seg>
             </tuv>
         </tu>
         <tu tuid='ratings_product'>
@@ -1467,7 +1467,7 @@
                 <seg>Prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Product</seg>
             </tuv>
         </tu>
         <tu tuid='ratings_buy_date'>
@@ -1478,7 +1478,7 @@
                 <seg>acquistato il</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ordered on</seg>
             </tuv>
         </tu>
         <tu tuid='ratings_rating'>
@@ -1489,7 +1489,7 @@
                 <seg>Valutazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Score</seg>
             </tuv>
         </tu>       
         <tu tuid='ratings_text'>
@@ -1500,7 +1500,7 @@
                 <seg>Testo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Text</seg>
             </tuv>
         </tu>       
         <tu tuid='ratings_rating_date'>
@@ -1511,7 +1511,7 @@
                 <seg>Valutato il</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Submitted on</seg>
             </tuv>
         </tu>
         <tu tuid='pagination_prev'>
@@ -1522,7 +1522,7 @@
                 <seg>Indietro</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Back</seg>
             </tuv>
         </tu>
         <tu tuid='pagination_next'>
@@ -1533,7 +1533,7 @@
                 <seg>Avanti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Forward</seg>
             </tuv>
         </tu>
         <tu tuid='pagination_current'>
@@ -1544,7 +1544,7 @@
                 <seg>Pagina attuale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>current page</seg>
             </tuv>
         </tu>       
         <tu tuid='pagination_page'>
@@ -1555,7 +1555,7 @@
                 <seg>Pagina</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>page</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_failure_headline'>
@@ -1566,7 +1566,7 @@
                 <seg>Si è verificato un errore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>An error has occurred</seg>
             </tuv>
         </tu>
         <tu tuid='sell_failure_text'>
@@ -1577,7 +1577,7 @@
                 <seg>Siamo spiacenti. Si è verificato un errore nel corso della registrazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Unfortunately, an error occurred during your registration.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_headline'>
@@ -1588,7 +1588,7 @@
                 <seg>Vendere prodotti alimentari e beni per la casa e per la persona su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Sell food and drugstore articles with Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='sell_1'>
@@ -1599,7 +1599,7 @@
                 <seg>Il tuo negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Own webshop</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_2'>
@@ -1610,7 +1610,7 @@
                 <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore. Segui l'esempio di altri 150 produttori!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Use your Epelia seller account like your own online shop: with your food articles, images and producer profile. Do it like 150 producers before you!</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
@@ -1621,7 +1621,7 @@
                 <seg>Aumenta il giro d'affari e la visibilità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Increase turnover and visibility</seg>
             </tuv>
         </tu>
         <tu tuid='sell_4'>
@@ -1632,7 +1632,7 @@
                 <seg>I processi ottimizzati e il marchio Epelia vi procureranno un aumento delle vendite e un maggior numero di clienti. Un buon sistema di ricerca e una community di acquirenti contribuiscono a mettere in luce la vostra attività. Tutto ciò vi procurerà attenzione e un più ampio campo d'azione su internet.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Optimized processes and the strong Epelia brand provide you with increased turnover and more customers. Good search engine positions and an active customer community make people talk about your products. You gain more attention and reach on the Internet.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_5'>
@@ -1643,7 +1643,7 @@
                 <seg>Condizioni oneste e vantaggiose</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Fair and low-priced contract conditions</seg>
             </tuv>
         </tu>
         <tu tuid='sell_6'>
@@ -1654,7 +1654,7 @@
                 <seg>Solo il 4% di commissioni sulle vendite. Nessun costo fisso. Nessun costo di apertura. Nessun accordo contrattuale. Nessun costo nascosto.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Only 4% sales commission. No fixed fees. No setup fee. No minimum contract runtime. No hidden costs.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
@@ -1665,7 +1665,7 @@
                 <seg>Pagamento sicuro</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Secure payment processing</seg>
             </tuv>
         </tu>
         <tu tuid='sell_8'>
@@ -1676,7 +1676,7 @@
                 <seg>Per tutti gli ordini Epelia si occupa del pagamento e fa sì che il denaro arrivi a voi. Offriamo ai clienti Epelia diversi metodi di pagamento.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Epelia processes the payments of all orders and cares that you get your money. We offer several payment options to the Epelia customers.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_9'>
@@ -1687,7 +1687,7 @@
                 <seg>Allestite il vostro negozio Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Create your Epelia shop</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_register'>
@@ -1698,7 +1698,7 @@
                 <seg>Registrati adesso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Register now</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_phone'>
@@ -1709,7 +1709,7 @@
                 <seg>O telefonaci al: 0180 EINKAUF (01803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Or call us: 0180 EINKAUF (01803 465283; 9 ct/min in the landline network of German Telekom; different prices can apply in mobile networks)</seg>
             </tuv>
         </tu>
         <tu tuid='sell_register_headline'>
@@ -1720,7 +1720,7 @@
                 <seg>Richiedere informazioni su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Request information about Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='sell_register_text'>
@@ -1731,7 +1731,7 @@
                 <seg>Sei interessato a diventare parte della nostra piattaforma commerciale? Iscriviti ora!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>You are interested to participate in our unique food marketplace? Just complete the form and we will contact you promptly.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_success_headline'>
@@ -1742,7 +1742,7 @@
                 <seg>Grazie per esserti registrato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_success_text'>
@@ -1753,7 +1753,7 @@
                 <seg>Grazie per esserti registrato.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration.</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_headline'>
@@ -1764,7 +1764,7 @@
                 <seg>Commercio all'ingrosso di beni alimentari e prodotti per la casa e per la persona</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Wholesale market for food and drugstore articles</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_1'>
@@ -1775,7 +1775,7 @@
                 <seg>Il commercio all'ingrosso Epelia è l'opportunità ideale e professionale per il reparto gastronomico, rivenditori o produttori su ampia scala di ordinare beni alimentari e prodotti per la casa e per la persona.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The Epelia wholesale marketplace is the ideal and professional possibility for gastrononmy, resellers and producers to order larger quantities of food and drugstore articles.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_2'>
@@ -1786,40 +1786,40 @@
                 <seg>Dopo la registrazione gratuita potrete ordinare direttamente dai produttori, al miglior prezzo e in tutta facilità.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>After a cost-free registration, you can order here directly, comfortably and for best prices from many farmers, manufacturers, traders, direct importers or producers.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_3'>
             <tuv xml:lang="de">
-                <seg>Das Sortiment reicht von guten Standardprodukten, regionalen Spezialitäten über exotische Köstlichkeiten bis hin zu biologisch erzeugten Produkten. Viele Anbieter stellen sich und ihre Arbeitsweise, ihren Betrieb oder spezielle Herstellungsarten in ihren einenen Shop`s vor, so wissen Sie ganz genau, woher z.b. Ihr Fleisch kommt.</seg>
+                <seg>Das Sortiment reicht von guten Standardprodukten, regionalen Spezialitäten über exotische Köstlichkeiten bis hin zu biologisch erzeugten Produkten. Viele Anbieter stellen sich und ihre Arbeitsweise, ihren Betrieb oder spezielle Herstellungsarten in ihren einenen Shops vor, so wissen Sie ganz genau, woher z.b. Ihr Fleisch kommt.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>L'assortimento varia da ottimi prodotti standard, specialità regionali, delizie esotiche, fino ad arrivare ai prodotti biologici. Moltissimi offerenti presentano il proprio modo di lavorare, la propria azienda o speciali metodi di produzione sulla pagina del proprio negozio, in modo che sappiate precisamente, ad esempio, da dove viene la carne che mangiate. </seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The product range covers good-quality standard products, regional specialties, exotic delicacies and also organically produced products. Many producers present themselves and their way of work, their company or special modes of manufacturing in their shop. This way, you'll know exactly where for example your meat is from.</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_4'>
             <tuv xml:lang="de">
-                <seg>Alle hier angebotenen Waren haben, wie überall auf Epelia, einen Herstellernachweis, wir mögen keine "produziert für" Waren.</seg>
+                <seg>Alle hier angebotenen Waren haben, wie überall auf Epelia, einen Herstellernachweis, wir mögen keine „produziert für“ Waren.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Tutti i prodotti messi in vendita qui, come su tutta la piattaforma Epelia, hanno una documentazione relativa alla produzione. Non amiamo la merce "prodotta per".</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All products offered here carry a manufacturer identification, as everywhere on Epelia - we do not like “produced for” goods.</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_5'>
             <tuv xml:lang="de">
-                <seg>Der Epelia Lebensmittel - Großhandel und Drogerie - Großhandel steht für frisch und direkt bei vielen einkaufen!</seg>
+                <seg>Der Epelia Lebensmittel-Großhandel und Drogerie-Großhandel steht für frisch und direkt bei vielen einkaufen!</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>La piattaforma di commercio all'ingrosso di beni alimentari e prodotti per la persona e per la casa Epelia offre prodotti freschi e acquistabili direttamente dal produttore!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The Epelia food wholesale market and drugstore wholesale market signifies purchasing freshly and diretly from many sellers.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_login_1'>
@@ -1830,7 +1830,7 @@
                 <seg>Sei pregato di registrarti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please log in</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_login_2'>
@@ -1841,7 +1841,7 @@
                 <seg>per poter utilizzare il settore del commercio all'ingrosso o per registrarsi in tale ambito.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>In order to use the wholesale section or register for using it.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_show_all'>
@@ -1852,7 +1852,7 @@
                 <seg>Mostra tutti i prodotti all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Show all wholesale products</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_register_headline'>
@@ -1863,18 +1863,18 @@
                 <seg>Registrazione per il settore del commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Registration for the wholesale section</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_register_text'>
             <tuv xml:lang="de">
-                <seg>Für den Einkauf von Großhandels-Artikels müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
+                <seg>Für den Einkauf von Großhandels-Artikeln müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Per l'acquisto di prodotti all'ingrosso è necessario avere un account. Riempite il seguente modulo e inviateci una licenza di esercizio sia con il modulo che via fax al numero 06426-967338</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>You have to be admitted by Epelia in order to buy wholesale articles. Please fill in the following form and send us your business registration confirmation, either within this form or via fax to +49 6426 967338.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_show_all_headline'>
@@ -1885,7 +1885,7 @@
                 <seg>Tutte le categorie del commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All wholesale categories</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_success_headline'>
@@ -1896,7 +1896,7 @@
                 <seg>Grazie per la registrazione nel settore del commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration for the wholesale area</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_success_text'>
@@ -1907,7 +1907,7 @@
                 <seg>Grazie per la registrazione. La tua registrazione sarà verificata.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration. We will now check your registration.</seg>
             </tuv>
         </tu>
         <tu tuid='login_confirm_error_headline'>
@@ -1918,7 +1918,7 @@
                 <seg>Conferma fallita</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Confirmation failed</seg>
             </tuv>
         </tu>
         <tu tuid='login_confirm_error_1'>
@@ -1929,7 +1929,7 @@
                 <seg>La conferma non è andata a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The confirmation failed.</seg>
             </tuv>
         </tu>       
 
@@ -1941,7 +1941,7 @@
                 <seg>solo prodotti Bio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>only organic products</seg>
             </tuv>
         </tu>       
         <tu tuid='filter_discount'>
@@ -1952,18 +1952,18 @@
                 <seg>Solo prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>only discount products</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_groceries'>
             <tuv xml:lang="de">
-                <seg>Allegie Lebensmittel</seg>
+                <seg>Allergie Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Alimenti per allergici</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>allergy-proof food</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_headline'>
@@ -1974,7 +1974,7 @@
                 <seg>Epelia vi aiuta nelle allergie alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Epelia supports you if you suffer from food allergies.</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_sub_1'>
@@ -1985,7 +1985,7 @@
                 <seg>Alimenti per intolleranti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>allergen-free food</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_text_1'>
@@ -1996,7 +1996,7 @@
                 <seg>Le allergie alimentari sono il motivo del cambiamento delle abitudini alimentari del 5% della popolazione tedesca.Ma anche le intolleranze alimentari possono portare ad un cambiamento nell'alimentazione.Se vegetariano, senza uova, senza lattosio o senza noci, troverete, nel nostro vasto assortimento di prodotti per allergici, quello che fa per voi. Molte persone hanno abitudini alimentari specifiche o soffrono di intolleranze alimentari. </seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Food allergies are a reason for changing nutrition habits for 5% of the German population. But also food intolerances can lead to a different way of nutrition. Whether it’s vegetarian, without eggs, egg-free, without milk or without nuts – find the product for your health from many allergen-free food items here. Many individuals adhere to a special mode of nutrition or suffer from a food intolerance. There are many reasons to look in detail at what we eat. With our nutrition and allergy search feature, you can find exactly the food items you are looking for.</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_sub_2'>
@@ -2007,7 +2007,7 @@
                 <seg>Alimenti privi di additivi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Food without additives</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_text_2'>
@@ -2018,7 +2018,7 @@
                 <seg>Sempre più consumatori hanno perplessità riguardo ai molteplici additivi che si trovano negli alimenti, o sono allergici ad alcuni o a più additivi. Determitati additivi possono rendere i bambini iperattivi, causare mal di testa o malattie. Molti additivi sono riportati solo con sigle, e rendono quasi impossibile una rapida visione d'insieme. Qui troverete prodotti che sono consapevolmente privi di additivi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>More and more consumers are clueless how to handle the multitude of additives in our food, or they react allergically against one or more additives. Certain additives can cause hyperactivity in children, or can cause headaches or diseases. In addition, many additives are only identified with abbreviations, making a quick overview near impossible. Here you find food items in which such additives were consciously avoided.</seg>
             </tuv>
         </tu>
         <tu tuid='bio_headline'>
@@ -2029,7 +2029,7 @@
                 <seg>Prodotti Bio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Organic products</seg>
             </tuv>
         </tu>
         <tu tuid='bio_intro'>
@@ -2040,7 +2040,7 @@
                 <seg>Su Epelia trovate prodotti biologici, che potrete ordinare direttamente dagli agricoltori Bio. Tutti i nostri produttori Bio vogliono produrre per voi alimenti sani e gustosi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>On Epelia, you can find certified organic food items which you can order directly from the organic producer. All our organic producers want to create unpolluted, healthy and tasty food for you.</seg>
             </tuv>
         </tu>
         <tu tuid='bio_show_all'>
@@ -2051,7 +2051,7 @@
                 <seg>Mostra tutti i prodotti Bio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>show all organic products</seg>
             </tuv>
         </tu>
         <tu tuid='bio_sub_1'>
@@ -2062,7 +2062,7 @@
                 <seg>Cosa sono i prodotti alimentari biologici?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>What is organic food?</seg>
             </tuv>
         </tu>
         <tu tuid='bio_list_intro'>
@@ -2073,7 +2073,7 @@
                 <seg>Per avere i requisiti necessari ad ottenere la certificazione Bio, i produttori lavorano in armonia con la natura:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>In order to fulfill the requirements for organic certification, organic producers work in harmony with nature.</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_1'>
@@ -2084,7 +2084,7 @@
                 <seg>Rinunciano alla cura delle piante con prodotti chimici e sintetici</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>They refrain from plant protection that uses synthetical chemical substances.</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_2'>
@@ -2095,7 +2095,7 @@
                 <seg>Non utilizzano concimi minerali solubili</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>They do not use any soluble mineral fertilizers.</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_3'>
@@ -2106,7 +2106,7 @@
                 <seg>Curano la diminuzione della fertilità del terreno con l'utilizzo di humus</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>They care for soil fertility with humus.</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_4'>
@@ -2117,7 +2117,7 @@
                 <seg>Non utilizzano regolatori della crescita chimici o sintetici o ormoni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>They do no use synthetical, chemical growth regulators or hormones</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_5'>
@@ -2128,7 +2128,7 @@
                 <seg>Si impegnano nella protezione degli animali</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>They support species-appropriate husbandry</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_6'>
@@ -2139,7 +2139,7 @@
                 <seg>Rinunciano all'uso di antibiotici</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>As far as possible, they do not use antibiotics</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_7'>
@@ -2150,7 +2150,7 @@
                 <seg>Seguono una coltura diversificata per permettere una migliore sostenibilità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>They employ a diversified crop rotation in the interest of our planet's sustainability</seg>
             </tuv>
         </tu>       
         <tu tuid='bio_list_outro'>
@@ -2161,7 +2161,7 @@
                 <seg>L'agricoltura biologica e le società di trasformazione di prodotti alimentari biologici hanno cura delle risorse naturali e hanno, in moltissimi campi, effetti positivi sull'ambiente. Entrate in contatto con i nostri produttori BIO e scoprite il gusto di formaggio, carne e moltissimi altri alimenti biologici</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Organic agriculture and processors of organic food spare natural resources and have positive effects on the environment in many areas. Get in touch with our organic producers and explore the taste of organic cheese, organic meat and many other organic food items.</seg>
             </tuv>
         </tu>
         <tu tuid='bio_all_categories'>
@@ -2172,7 +2172,7 @@
                 <seg>Tutte le categorie BIO</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All organic food categories</seg>
             </tuv>
         </tu>
         <tu tuid='cats_all_categories'>
@@ -2183,7 +2183,7 @@
                 <seg>Tutte le categorie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All categories</seg>
             </tuv>
         </tu>
         <tu tuid='discount_headline'>
@@ -2194,7 +2194,7 @@
                 <seg>Prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Discount products</seg>
             </tuv>
         </tu>
         <tu tuid='discount_intro'>
@@ -2205,7 +2205,7 @@
                 <seg>Qui trovate articoli che vengono messi in vendita a prezzi scontati. Tutti i prodotti sono con indicazioni dei produttori, quindi nessun articolo "prodotto per", e vengono direttamente da costruttori, produttori, ditte produttrici o commercianti, che commercializzano tali prodotti.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Here you can find articles which are offered at rates similar to discount prices. All products carry a manufacturer indication (so, no “produced for” items) and come directly from manufacturers, producers, farmers or traders which market them.</seg>
             </tuv>
         </tu>
         <tu tuid='discount_show_all'>
@@ -2216,7 +2216,7 @@
                 <seg>Mostra tutti i prodotti discount</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Show all discount products</seg>
             </tuv>
         </tu>
         <tu tuid='discount_all_categories'>
@@ -2227,7 +2227,7 @@
                 <seg>Tutte le categorie discount</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All discount categories</seg>
             </tuv>
         </tu>
         <tu tuid='index_1'>
@@ -2238,7 +2238,7 @@
                 <seg>Presentazione del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shop presentation</seg>
             </tuv>
         </tu>       
         <tu tuid='index_2'>
@@ -2249,7 +2249,7 @@
                 <seg>Visitate il nostro negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Visit our shop</seg>
             </tuv>
         </tu>       
         <tu tuid='index_3'>
@@ -2260,7 +2260,7 @@
                 <seg>Categorie beni alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Food categories</seg>
             </tuv>
         </tu>
         <tu tuid='index_4'>
@@ -2271,7 +2271,7 @@
                 <seg>Categoria beni per la casa e la persona</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Drugstore categories</seg>
             </tuv>
         </tu>
         <tu tuid='footer_about'>
@@ -2282,7 +2282,7 @@
                 <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>About Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='footer_order'>
@@ -2293,7 +2293,7 @@
                 <seg>Ordinare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ordering</seg>
             </tuv>
         </tu>
         <tu tuid='footer_payment'>
@@ -2304,7 +2304,7 @@
                 <seg>Possibilità di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Payment options</seg>
             </tuv>
         </tu>       
         <tu tuid='footer_delivery'>
@@ -2315,7 +2315,7 @@
                 <seg>Spedizione e consegna</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment and delivery</seg>
             </tuv>
         </tu>       
         <tu tuid='footer_contact'>
@@ -2326,7 +2326,7 @@
                 <seg>Contatti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Contact</seg>
             </tuv>
         </tu>
         <tu tuid='footer_law_info'>
@@ -2337,7 +2337,7 @@
                 <seg>Informazioni legali</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Legal information</seg>
             </tuv>
         </tu>
         <tu tuid='footer_usage'>
@@ -2348,7 +2348,7 @@
                 <seg>Condizioni di utilizzo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Terms of use</seg>
             </tuv>
         </tu>
         <tu tuid='footer_agb'>
@@ -2359,7 +2359,7 @@
                 <seg>Condizioni generali</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Terms</seg>
             </tuv>
         </tu>       
         <tu tuid='footer_privacy'>
@@ -2370,7 +2370,7 @@
                 <seg>Protezione dati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Privacy</seg>
             </tuv>
         </tu>       
         <tu tuid='footer_impress'>
@@ -2381,18 +2381,18 @@
                 <seg>Colophon</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Imprint</seg>
             </tuv>
         </tu>
         <tu tuid='footer_sell'>
             <tuv xml:lang="de">
-                <seg>Für Verkäufer - Verkaufen mit Epelia</seg>
+                <seg>Für Verkäufer – Verkaufen mit Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per i venditori - Vendere su Epelia</seg>
+                <seg>Per i venditori – Vendere su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>For sellers – sell with Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='footer_wholesale'>
@@ -2403,7 +2403,7 @@
                 <seg>Commercio all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Wholesale</seg>
             </tuv>
         </tu>    
         <tu tuid='areasearch'>
@@ -2414,7 +2414,7 @@
                 <seg>Ricerca per raggio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Proximity search</seg>
             </tuv>
         </tu>
 
@@ -2426,7 +2426,7 @@
                 <seg>CAP</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>post code</seg>
             </tuv>
         </tu>
         <tu tuid='areasearch_country'>
@@ -2437,7 +2437,7 @@
                 <seg>Paese</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Country</seg>
             </tuv>
         </tu>
         <tu tuid='areasearch_germany'>
@@ -2448,7 +2448,7 @@
                 <seg>Germania</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Germany</seg>
             </tuv>
         </tu>
         <tu tuid='areasearch_austria'>
@@ -2459,7 +2459,7 @@
                 <seg>Austria</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Austria</seg>
             </tuv>
         </tu>       
         <tu tuid='areasearch_switzerland'>
@@ -2470,7 +2470,7 @@
                 <seg>Svizzera</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Switzerland</seg>
             </tuv>
         </tu>       
         <tu tuid='areasearch_distance'>
@@ -2481,7 +2481,7 @@
                 <seg>Distanza</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Distance</seg>
             </tuv>
         </tu>
         <tu tuid='areasearch_error'>
@@ -2492,7 +2492,7 @@
                 <seg>Tutti i campi devono essere riempiti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>All fields have to be filled.</seg>
             </tuv>
         </tu>
         <tu tuid='areasearch_headline_1'>
@@ -2503,7 +2503,7 @@
                 <seg>Negozi nel raggio di</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shops within a distance of</seg>
             </tuv>
         </tu>       
         <tu tuid='areasearch_headline_2'>
@@ -2514,7 +2514,7 @@
                 <seg>km da</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>km of</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_product'>
@@ -2525,7 +2525,7 @@
                 <seg>Prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Product</seg>
             </tuv>
         </tu>
         <tu tuid='shops_products'>
@@ -2536,18 +2536,18 @@
                 <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Products</seg>
             </tuv>
         </tu>
         <tu tuid='shops_since'>
             <tuv xml:lang="de">
-                <seg>Bei epelia seit </seg>
+                <seg>Bei Epelia seit</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Su Epelia da</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>On Epelia since</seg>
             </tuv>
         </tu>
         <tu tuid='shops_more_about'>
@@ -2558,7 +2558,7 @@
                 <seg>Maggiori informazioni su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>more about us</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_our_products'>
@@ -2569,7 +2569,7 @@
                 <seg>Nel nostro negozio trovate</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>In our shop you will find</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_about_us'>
@@ -2580,7 +2580,7 @@
                 <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>About us</seg>
             </tuv>
         </tu>
         <tu tuid='shops_philosophy'>
@@ -2591,7 +2591,7 @@
                 <seg>La nostra filosofia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Our philosophy</seg>
             </tuv>
         </tu>
         <tu tuid='shops_procedure'>
@@ -2602,7 +2602,7 @@
                 <seg>Modo di lavorare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Way of working</seg>
             </tuv>
         </tu>
         <tu tuid='shops_history'>
@@ -2613,7 +2613,7 @@
                 <seg>Storia di</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>History of</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_delivery_costs'>
@@ -2624,7 +2624,7 @@
                 <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment costs</seg>
             </tuv>
         </tu>       
         <tu tuid='login_confirm_error_headline'>
@@ -2635,7 +2635,7 @@
                 <seg>Problemi nella conferma</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Confirmation failed</seg>
             </tuv>
         </tu>
         <tu tuid='login_confirm_error_1'>
@@ -2646,7 +2646,7 @@
                 <seg>La conferma non è andata a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The confirmation failed.</seg>
             </tuv>
         </tu>       
         <tu tuid='login_confirm_error_2'>
@@ -2657,7 +2657,7 @@
                 <seg>Controlla di aver copiato il link completo presente nella e-mail di conferma</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please make sure that you copied the complete link from the confirmation e-mail.</seg>
             </tuv>
         </tu>       
         <tu tuid='login_confirm_success_headline'>
@@ -2668,7 +2668,7 @@
                 <seg>Grazie per la conferma</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your confirmation</seg>
             </tuv>
         </tu>
         <tu tuid='login_confirm_success_1'>
@@ -2679,7 +2679,7 @@
                 <seg>Grazie per la conferma</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your confirmation</seg>
             </tuv>
         </tu>       
         <tu tuid='login_confirm_success_2'>
@@ -2690,7 +2690,7 @@
                 <seg>Puoi ora accedere al tuo account.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>You can now log into your user account</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_agb'>
@@ -2701,7 +2701,7 @@
                 <seg> Ho letto le <link><![CDATA[<a href="/hilfe/agb/" target="_blank">condizioni generali di contratto</a>]]></link> e <link><![CDATA[<a href="/hilfe/datenschutz/" target="_blank">le direttive sulla protezione dei dati</a>]]></link></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>I have read the <link><![CDATA[<a href="/hilfe/agb/" target="_blank">General Terms and Conditions</a>]]></link> and the <link><![CDATA[<a href="/hilfe/datenschutz/" target="_blank">Privacy statement</a>]]></link>.</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_newsletter'>
@@ -2712,7 +2712,7 @@
                 <seg>Abbonarsi alla newsletter Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Subscribe to the Epelia newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_register'>
@@ -2723,7 +2723,7 @@
                 <seg>Registrarsi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Register</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_failure_headline'>
@@ -2734,7 +2734,7 @@
                 <seg>Registrazione fallita</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Registration failed</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_failure_1'>
@@ -2745,7 +2745,7 @@
                 <seg>La registrazione non è andata a buon fine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The registration failed.</seg>
             </tuv>
         </tu>
         <tu tuid='login_left_headline'>
@@ -2756,7 +2756,7 @@
                 <seg>Ho un account cliente su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>I have a customer account at Epelia</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_1'>
@@ -2767,7 +2767,7 @@
                 <seg>Rapidi tempi di consegna</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Short shipment times</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_2'>
@@ -2778,7 +2778,7 @@
                 <seg>Tutela consumatori</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Buyer protection</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_3'>
@@ -2789,7 +2789,7 @@
                 <seg>Servizio gratuito</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Free service</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_4'>
@@ -2797,10 +2797,10 @@
                 <seg>0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>0180 EINKAUF (01803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>0180 EINKAUF (+49 1803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>+49 180 EINKAUF (+49 1803 465283; 9 ct/min in the landline network of German Telekom; different rates might apply in mobile networks)</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_5'>
@@ -2811,7 +2811,7 @@
                 <seg>Protezione dati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Privacy</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_6'>
@@ -2822,7 +2822,7 @@
                 <seg>Spedizione dal produttore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Delivered by the manufacturer</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_7'>
@@ -2833,7 +2833,7 @@
                 <seg>Pagamento sicuro con codificazione SSL</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Secure payments with SSL encryption</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_headline'>
@@ -2844,7 +2844,7 @@
                 <seg>Sono un nuovo cliente</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>I am a new customer</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_sub_1'>
@@ -2855,7 +2855,7 @@
                 <seg>Domande in merito all'ordine?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Do you have questions about your order?</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_sub_2'>
@@ -2866,18 +2866,18 @@
                 <seg>Il nostro team, cordiale e competente, vi aiuterà volentieri.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Our service team is glad to help you, friendly and capably.</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_sub_3'>
             <tuv xml:lang="de">
-                <seg>Rufen Sie uns an unter: </seg>
+                <seg>Rufen Sie uns an unter:</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Chiamaci al:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Call us at:</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_sell'>
@@ -2885,10 +2885,10 @@
                 <seg>Erstellen Sie hier ein neues Verkäuferkonto.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Creare un nuovo account venditore</seg>
+                <seg>Creare un nuovo account venditore.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Register here a new seller account.</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_success_headline'>
@@ -2899,7 +2899,7 @@
                 <seg>Grazie per la registrazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_success_1'>
@@ -2907,10 +2907,10 @@
                 <seg>Vielen Dank für Ihre Anmeldung.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per la registrazione</seg>
+                <seg>Grazie per la registrazione.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration.</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_success_2'>
@@ -2918,10 +2918,10 @@
                 <seg>Es wurde Ihnen eine E-Mail mit einem Bestätigungs-Link an die angegebene Addresse zugesendet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Abbiamo inviato una e-mail con un link di conferma all'indirizzo inserito</seg>
+                <seg>Abbiamo inviato una e-mail con un link di conferma all'indirizzo inserito.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>We have sent an e-mail with a confirmatin link to the indicated e-mail address.</seg>
             </tuv>
         </tu>
         <tu tuid='shoppingcart_addresses_headline'>
@@ -2932,7 +2932,7 @@
                 <seg>Scegliere indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Select address</seg>
             </tuv>
         </tu>       
         <tu tuid='shoppingcart_addresses_error'>
@@ -2943,7 +2943,7 @@
                 <seg>Spiacente, i seguenti prodotti non possono essere spediti nel paese selezionato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Unfortunately, the following products cannot be delivered to the chosen destination country:</seg>
             </tuv>
         </tu>       
         <tu tuid='shoppingcart_addresses_delivery'>
@@ -2954,7 +2954,7 @@
                 <seg>Indirizzo di spedizione:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment address:</seg>
             </tuv>
         </tu>
         <tu tuid='shoppingcart_addresses_invoice'>
@@ -2965,7 +2965,7 @@
                 <seg>Indirizzo di fatturazione:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Invoice address:</seg>
             </tuv>
         </tu>
         <tu tuid='shoppingcart_addresses_choose'>
@@ -2976,7 +2976,7 @@
                 <seg>Scegliere l'indirizzo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please select an address.</seg>
             </tuv>
         </tu>
         <tu tuid='shoppingcart_choose_delivery'>
@@ -2987,7 +2987,7 @@
                 <seg>Scegliere l'indirizzo di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Select as shipment address</seg>
             </tuv>
         </tu>       
         <tu tuid='shoppingcart_choose_billing'>
@@ -2998,7 +2998,7 @@
                 <seg>Scegliere l'indirizzo di fatturazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Select as invoice address</seg>
             </tuv>
         </tu>       
         <tu tuid='payment_headline'>
@@ -3009,7 +3009,7 @@
                 <seg>Scegliere il metodo di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please choose your mode of payment</seg>
             </tuv>
         </tu>
         <tu tuid='payment_instant'>
@@ -3017,10 +3017,10 @@
                 <seg>Sofortüberweisung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Bonifico immediato</seg>
+                <seg>Sofortüberweisung (bonifico immediato)</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Sofortüberweisung (immediate bank transfer service provided by SOFORT AG)</seg>
             </tuv>
         </tu>
         <tu tuid='payment_credit_card'>
@@ -3031,7 +3031,7 @@
                 <seg>Carta di credito</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>credit card</seg>
             </tuv>
         </tu>
         <tu tuid='payment_prepay'>
@@ -3042,7 +3042,7 @@
                 <seg>Pagamento anticipato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>advance payment</seg>
             </tuv>
         </tu>       
         <tu tuid='payment_prepay_1'>
@@ -3053,7 +3053,7 @@
                 <seg>Procedere anzitutto al versamento del totale sul nostro conto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please transfer the total amount in advance to our bank account</seg>
             </tuv>
         </tu>       
         <tu tuid='payment_prepay_2'>
@@ -3064,7 +3064,7 @@
                 <seg>Dopo il processo di pagamento i prodotti saranno inviati direttamente a casa vostra</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>After receipt of payment, your order will be shippd to you</seg>
             </tuv>
         </tu>
         <tu tuid='payment_prepay_3'>
@@ -3075,7 +3075,7 @@
                 <seg>Dopo l'ordine riceverà i dettagli riguardo alle nostre coordinate bancarie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>You will receive our bank details after placing the order</seg>
             </tuv>
         </tu>
         <tu tuid='payment_continue'>
@@ -3086,7 +3086,7 @@
                 <seg>Continua</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Forward to confirmation</seg>
             </tuv>
         </tu>
         <tu tuid='business_headline'>
@@ -3097,7 +3097,7 @@
                 <seg>Benvenuto!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Welcome!</seg>
             </tuv>
         </tu>       
         <tu tuid='business_product_edit_headline'>
@@ -3105,10 +3105,10 @@
                 <seg>Produkt hinzufügen / editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Aggiungi/modifica prodotto</seg>
+                <seg>Aggiungi / modifica prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Add / edit product</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_headline'>
@@ -3119,7 +3119,7 @@
                 <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Products</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_name'>
@@ -3130,7 +3130,7 @@
                 <seg>Nome</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Name</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_active'>
@@ -3141,7 +3141,7 @@
                 <seg>Attivo?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Active?</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_amount'>
@@ -3152,7 +3152,7 @@
                 <seg>Scorta</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Stock amount</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_creation'>
@@ -3163,7 +3163,7 @@
                 <seg>Creazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Created at</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_new'>
@@ -3174,7 +3174,7 @@
                 <seg>Aggiungi nuovo prodotto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Create new product</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_pictures_headline'>
@@ -3182,10 +3182,10 @@
                 <seg>Bilder hochladen / löschen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Carica/elimina immagini</seg>
+                <seg>Carica / elimina immagini</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Upload / delete images</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_pictures_delete'>
@@ -3196,7 +3196,7 @@
                 <seg>elimina selezionate</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>delete selected</seg>
             </tuv>
         </tu>
         <tu tuid='business_orders_archive_headline'>
@@ -3207,7 +3207,7 @@
                 <seg>Ordini terminati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Completed orders</seg>
             </tuv>
         </tu>       
         <tu tuid='business_orders_order_date'>
@@ -3218,7 +3218,7 @@
                 <seg>Ordinato il</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ordered on</seg>
             </tuv>
         </tu>       
         <tu tuid='business_orders_sent_date'>
@@ -3229,7 +3229,7 @@
                 <seg>Inviato il</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipped on</seg>
             </tuv>
         </tu>       
         <tu tuid='business_orders_ordernumber'>
@@ -3240,7 +3240,7 @@
                 <seg>Numero d'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Order ID</seg>
             </tuv>
         </tu>
         <tu tuid='business_orders_price_products'>
@@ -3251,7 +3251,7 @@
                 <seg>Prezzo dei prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Products price</seg>
             </tuv>
         </tu>
         <tu tuid='business_orders_price_delivery'>
@@ -3262,7 +3262,7 @@
                 <seg>Spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipment costs</seg>
             </tuv>
         </tu>
 
@@ -3274,7 +3274,7 @@
                 <seg>Prezzo totale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Total</seg>
             </tuv>
         </tu>       
         <tu tuid='business_orders_products'>
@@ -3285,7 +3285,7 @@
                 <seg>Prodotti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Products</seg>
             </tuv>
         </tu>       
         <tu tuid='business_orders_open_headline'>
@@ -3296,7 +3296,7 @@
                 <seg>Ordini attivi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Open orders</seg>
             </tuv>
         </tu>
         <tu tuid='business_orders_mark_sent'>
@@ -3307,7 +3307,7 @@
                 <seg>Segna come inviato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Mark as shipped</seg>
             </tuv>
         </tu>
         <tu tuid='business_delivery_headline'>
@@ -3318,7 +3318,7 @@
                 <seg>Modifica le spese di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Modify shipment costs</seg>
             </tuv>
         </tu>
         <tu tuid='business_delivery_text'>
@@ -3329,7 +3329,7 @@
                 <seg>È possibile effettuare spedizioni solo nei Paesi di cui sono indicate le spese di spedizione. Per la spedizione gratuita inserire "0". Il campo "Spedizione gratuita a partire da" è opzionale.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>It is only possible to ship into a country if shipment costs for this country have been entered. For free shipment, enter "0". The field "Free shipment from" is optional.</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_headline'>
@@ -3340,7 +3340,7 @@
                 <seg>Modifica i dati del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Edit shop data</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_images_headline'>
@@ -3351,7 +3351,7 @@
                 <seg>Carica immagini</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Upload / delete images</seg>
             </tuv>
         </tu>     
         <tu tuid='business_products_unlimited'>
@@ -3362,7 +3362,7 @@
                 <seg>Scorte illimitate</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Do not limit the stock amount</seg>
             </tuv>
         </tu>    
         <tu tuid='business_products_ingredients'>
@@ -3373,7 +3373,7 @@
                 <seg>Ingredienti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ingredients</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_traces'>
@@ -3384,7 +3384,7 @@
                 <seg>Questo prodotto può contenere tracce di</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>This product may contain traces of</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_bio'>
@@ -3395,7 +3395,7 @@
                 <seg>Prodotti Bio?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Organic product?</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_discount'>
@@ -3406,7 +3406,7 @@
                 <seg>Prodotti discount?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Discount product?</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_additives'>
@@ -3417,7 +3417,7 @@
                 <seg>Additivi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Additives</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_allergenes'>
@@ -3428,7 +3428,7 @@
                 <seg>Allergeni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Allergenes</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_events'>
@@ -3439,7 +3439,7 @@
                 <seg>Eventi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Occasions</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_flavor'>
@@ -3450,7 +3450,7 @@
                 <seg>Gusto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Taste</seg>
             </tuv>
         </tu>
 
@@ -3462,7 +3462,7 @@
                 <seg>Modifiche</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Manipulations</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_price_amount'>
@@ -3473,7 +3473,7 @@
                 <seg>Unità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Unit</seg>
             </tuv>
         </tu>       
         <tu tuid='business_products_price_unit'>
@@ -3484,7 +3484,7 @@
                 <seg>Confezione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Packaging</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_price_content'>
@@ -3495,7 +3495,7 @@
                 <seg>Contenuto per unità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Content per unit</seg>
             </tuv>
         </tu>
         <tu tuid='business_product_price_content_type'>
@@ -3506,7 +3506,7 @@
                 <seg>Quantità</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Amount</seg>
             </tuv>
         </tu>
         <tu tuid='business_product_price_default'>
@@ -3517,7 +3517,7 @@
                 <seg>Prezzo normale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Normal price</seg>
             </tuv>
         </tu>       
         <tu tuid='business_product_price_wholesale'>
@@ -3528,7 +3528,7 @@
                 <seg>Prezzo all'ingrosso</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Wholesale price</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shipping_value'>
@@ -3539,7 +3539,7 @@
                 <seg>Costi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Costs</seg>
             </tuv>
         </tu>
         <tu tuid='business_shipping_free_from'>
@@ -3550,7 +3550,7 @@
                 <seg>Spese di spedizione gratuite a partire da</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Free shipment from</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_name'>
@@ -3561,7 +3561,7 @@
                 <seg>Nome del negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shop name</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_url'>
@@ -3572,7 +3572,7 @@
                 <seg>URL</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>URL</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_infos'>
@@ -3583,7 +3583,7 @@
                 <seg>Info sul negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shop information</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_ag'>
@@ -3594,7 +3594,7 @@
                 <seg>S.p.A.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>public stock company</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_eg'>
@@ -3605,7 +3605,7 @@
                 <seg>Società registrata</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>registered company</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_ek'>
@@ -3616,7 +3616,7 @@
                 <seg>Commerciante registrato</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>registered sole trader</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_single'>
@@ -3627,7 +3627,7 @@
                 <seg>Singola impresa</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>sole proprietorship</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_gbr'>
@@ -3638,7 +3638,7 @@
                 <seg>Società semplice</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>company constituted under civil law</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_gmbh'>
@@ -3649,7 +3649,7 @@
                 <seg>S.r.l.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>LLC (limited liability company)</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_gmbhco'>
@@ -3660,7 +3660,7 @@
                 <seg>S.r.l. <![CDATA[&]]> Co. S.a.s.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>GmbH und Co. KG (LLC in limited commercial partnership)</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_kg'>
@@ -3671,7 +3671,7 @@
                 <seg>S.a.s</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>limited commercial partnership</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_ltd'>
@@ -3682,7 +3682,7 @@
                 <seg>Ltd.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ltd.</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_ltdkg'>
@@ -3690,10 +3690,10 @@
                 <seg>Ltd. und Co. KG.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ltd. und Co. S.a.s.</seg>
+                <seg>Ltd. <![CDATA[&]]> Co. S.a.s.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Ltd. and Co. KG (Ltd. in limited commercial partnership)</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_ohg'>
@@ -3704,7 +3704,7 @@
                 <seg>S.n.c.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>general partnership</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_partg'>
@@ -3715,7 +3715,7 @@
                 <seg>Partiti politici</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>partnership company</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_ev'>
@@ -3726,7 +3726,7 @@
                 <seg>Associazione registrata</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>registered association</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_other'>
@@ -3737,7 +3737,7 @@
                 <seg>altro</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>other</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_company_type'>
@@ -3748,7 +3748,7 @@
                 <seg>Tipo di azienda</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>company type</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_address'>
@@ -3759,7 +3759,7 @@
                 <seg>Indirizzo dell'azienda</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>company address</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_taxnumber'>
@@ -3770,7 +3770,7 @@
                 <seg>Codice fiscale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>tax ID</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_salestax_id'>
@@ -3781,7 +3781,7 @@
                 <seg>Codice fiscale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>VAT ID</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_small_business'>
@@ -3792,7 +3792,7 @@
                 <seg>Esonero dall'IVA?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>VAT exempt?</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_register_id'>
@@ -3803,7 +3803,7 @@
                 <seg>Registro di commercio-Nr.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>commercial register number</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_register_court'>
@@ -3814,7 +3814,7 @@
                 <seg>Tribunale commerciale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Register court</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_office'>
@@ -3825,7 +3825,7 @@
                 <seg>Sede dell'azienda</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Registered seat of the company</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_representative'>
@@ -3836,7 +3836,7 @@
                 <seg>Rappresentante/i</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Authorized representative</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_eco_control_board'>
@@ -3847,7 +3847,7 @@
                 <seg>Punto di controllo ecologico</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Organic production inspection body</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_eco_control_id'>
@@ -3858,7 +3858,7 @@
                 <seg>Numero di controllo ecologico</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Organic food inspection number</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_company_data'>
@@ -3869,7 +3869,7 @@
                 <seg>Dati dell'azienda</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Company data</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_bank_holder'>
@@ -3880,7 +3880,7 @@
                 <seg>Intestatario del conto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Account owner</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_bank_account_number'>
@@ -3891,7 +3891,7 @@
                 <seg>Numero di conto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Account number</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_bank_number'>
@@ -3902,7 +3902,7 @@
                 <seg>CAB</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Sort code</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_bank_name'>
@@ -3913,7 +3913,7 @@
                 <seg>Nome della banca</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Name of bank</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_bank_swift'>
@@ -3924,7 +3924,7 @@
                 <seg>SWIFT</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>SWIFT</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_bank_iban'>
@@ -3935,7 +3935,7 @@
                 <seg>IBAN</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>IBAN</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_bank'>
@@ -3946,7 +3946,7 @@
                 <seg>Coordinate bancarie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Bank details</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_description'>
@@ -3957,7 +3957,7 @@
                 <seg>Descrizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Description</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_history'>
@@ -3968,7 +3968,7 @@
                 <seg>Storia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>History</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_philosophy'>
@@ -3979,7 +3979,7 @@
                 <seg>Filosofia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Philosophy</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_procedure'>
@@ -3990,7 +3990,7 @@
                 <seg>Modo di lavorare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Mode of working</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_additional'>
@@ -4001,7 +4001,7 @@
                 <seg>Informazioni aggiuntive</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Additional information</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_infos'>
@@ -4012,18 +4012,19 @@
                 <seg>Informazioni per i clienti</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Information for customers</seg>
             </tuv>
         </tu>
+        <!-- TODO Create / check Italian translations from here on until end of document. So far these are only auto-translated texts. -->
         <tu tuid='login_reset_password_headline'>
             <tuv xml:lang="de">
                 <seg>Passwort zurücksetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Password Reset</seg>
+                <seg>Reset the password</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Reset the password</seg>
             </tuv>
         </tu>
         <tu tuid='login_reset_password_content'>
@@ -4034,7 +4035,7 @@
                 <seg>Qui è possibile reimpostare la password.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>You can reset your password here.</seg>
             </tuv>
         </tu>
         <tu tuid='login_reset_password'>
@@ -4042,10 +4043,10 @@
                 <seg>Passwort zurücksetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Password Reset</seg>
+                <seg>Reset the password</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Reset the password</seg>
             </tuv>
         </tu>
         <tu tuid='login_send_reset_password_headline'>
@@ -4056,7 +4057,7 @@
                 <seg>posta inviata</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>E-mail sent.</seg>
             </tuv>
         </tu>
         <tu tuid='login_send_reset_password_content'>
@@ -4067,7 +4068,7 @@
                 <seg>Una e-mail con le istruzioni per reimpostare la password è stata inviata all'indirizzo specificato.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>An e-mail with instructions for resetting the password have been sent to the given address.</seg>
             </tuv>
         </tu>
         <tu tuid='login_reset_success_headline'>
@@ -4078,7 +4079,7 @@
                 <seg>Password modificata con successo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Password successfully changed</seg>
             </tuv>
         </tu>
         <tu tuid='login_reset_success_content'>
@@ -4089,7 +4090,7 @@
                 <seg>La tua password è stata cambiata con successo. È possibile effettuare il login con la nuova password adesso.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Your password has been changed successfully. You can now log in with your new password.</seg>
             </tuv>
         </tu>
         <tu tuid='login_reset_failure_headline'>
@@ -4100,7 +4101,7 @@
                 <seg>Reimpostazione della password non riuscito</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Password reset failed</seg>
             </tuv>
         </tu>
         <tu tuid='login_reset_failure_content'>
@@ -4111,7 +4112,7 @@
                 <seg>La reimpostazione della password non riuscita. È stato Verificare se il link nella mail di reset adottato correttamente.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The password reset failed. Please make sure that you used the link from the reset e-mail correctly.</seg>
             </tuv>
         </tu>
         <tu tuid='shoppingcart_noaddresses_error'>
@@ -4122,7 +4123,7 @@
                 <seg>Si prega di selezionare una consegna e indirizzo di fatturazione.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Please select a shipment and invoice address.</seg>
             </tuv>
         </tu>
         <tu tuid='shoppingcart_nopayment_error'>
@@ -4130,10 +4131,10 @@
                 <seg>Bitte wählen Sie eine Zahlungsart aus.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>Si Prega Di Una selezionare Consegna e Indirizzo di fatturazione.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Si Prega Di Una selezionare Consegna e Indirizzo di fatturazione.</seg>
+                <seg>Please select a payment method.</seg>
             </tuv>
         </tu>
         <tu tuid='myepelia_orders_waiting'>
@@ -4144,7 +4145,7 @@
                 <seg>In attesa di pagamento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Waiting for payment</seg>
             </tuv>
         </tu>       
         <tu tuid='myepelia_orders_in_process'>
@@ -4152,10 +4153,10 @@
                 <seg>In Bearbeitung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>In Progress</seg>
+                <seg>In progress</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>In progress</seg>
             </tuv>
         </tu>
         <tu tuid='myepelia_orders_complete'>
@@ -4166,7 +4167,7 @@
                 <seg>Spedito</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Shipped</seg>
             </tuv>
         </tu>
         <tu tuid='misc_woma'>
@@ -4177,7 +4178,7 @@
                 <seg>mercato settimanale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>farmers market</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_headline'>
@@ -4188,7 +4189,7 @@
                 <seg>Editing mercato del contadino</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Edit farmers market</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_name'>
@@ -4199,7 +4200,7 @@
                 <seg>Nome del mercato settimanale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Farmers market name</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_images_headline'>
@@ -4210,7 +4211,7 @@
                 <seg>Carica immagini</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Upload / delete images</seg>
             </tuv>
         </tu>     
         <tu tuid='product_not_available'>
@@ -4221,18 +4222,18 @@
                 <seg>Il prodotto non è attualmente disponibile.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>The product is currently not available.</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_1'>
             <tuv xml:lang="de">
-                <seg>Hier verkaufen Produzenten und Direktimporteure Lebensmittel und Drogerie-Artikel direkt an Sie. </seg>
+                <seg>Hier verkaufen Produzenten und Direktimporteure Lebensmittel und Drogerie-Artikel direkt an Sie.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Qui di vendita del produttore e importatori diretti prodotti alimentari e farmacia direttamente a voi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Here, producers and direct importers sell food and drugstore articles directly to you.</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_2'>
@@ -4243,7 +4244,7 @@
                 <seg>+ acquisti in 150 negozi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>+ purchase from 150 shops</seg>
             </tuv>
         </tu>     
         <tu tuid='index_about_3'>
@@ -4254,7 +4255,7 @@
                 <seg>+ un carrello e checkout</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>+ one shopping cart and one checkout</seg>
             </tuv>
         </tu>     
         <tu tuid='index_about_4'>
@@ -4265,7 +4266,7 @@
                 <seg>+ fresco consegna diretta a loro</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>+ direct shipment fresh to you</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_more'>
@@ -4276,7 +4277,7 @@
                 <seg>di più</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>more</seg>
             </tuv>
         </tu>     
         <tu tuid='admin_shop_featured_home'>
@@ -4287,7 +4288,7 @@
                 <seg>applica per la casa</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Apply for being featured on the home page?</seg>
             </tuv>
         </tu>     
         <tu tuid='product_to_shop'>
@@ -4298,7 +4299,7 @@
                 <seg>al negozio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>To the shop</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_salestax'>
@@ -4309,7 +4310,7 @@
                 <seg>imposta sulle vendite</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>value-added tax</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_activate'>
@@ -4320,7 +4321,7 @@
                 <seg>attivare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Activate</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_deactivate'>
@@ -4331,7 +4332,7 @@
                 <seg>disattivare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Deactivate</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_cooperative'>
@@ -4342,7 +4343,7 @@
                 <seg>Cooperativa</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Cooperative</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_help'>
@@ -4353,7 +4354,7 @@
                 <seg>Aiuto</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Help</seg>
             </tuv>
         </tu>     
          <tu tuid='misc_forgotten_password'>
@@ -4364,7 +4365,7 @@
                 <seg>Hai dimenticato la password?</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Forgot the password?</seg>
             </tuv>
         </tu>            
         <tu tuid='cooperative_headline'>
@@ -4375,7 +4376,7 @@
                 <seg>Epelia cooperativa</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Epelia cooperative</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub'>
@@ -4386,7 +4387,7 @@
                 <seg>Se vi piace l'idea dietro Epelia, non sono che una parte di esso. Siamo cooperativa e alla ricerca di persone in cui le nostre basi sono importanti:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>If you like the Idea of Epelia, why not become part of it? We will become a cooperative and look for people who value our basic principles:</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_1'>
@@ -4397,7 +4398,7 @@
                 <seg>centrale di committenza, senza scambi intermedi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>central purchasing without intermediary traders</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_2'>
@@ -4408,7 +4409,7 @@
                 <seg>Cibo con prova dell'origine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>food with proof of origin</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_3'>
@@ -4419,18 +4420,18 @@
                 <seg>Promozione delle strutture regionali</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>supporting regional structures</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_4'>
             <tuv xml:lang="de">
-                <seg>respektabler Umgang mit Lebensmitteln</seg>
+                <seg>respektvoller Umgang mit Lebensmitteln</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>cibo manipolazione rispettabile</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>dealing with food repectfully</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_5'>
@@ -4441,7 +4442,7 @@
                 <seg>Supporto per i piccoli produttori</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>support for small-scale producers</seg>
             </tuv>
         </tu>            
         <tu tuid='cooperative_sub_6'>
@@ -4452,7 +4453,7 @@
                 <seg>Dire l'ulteriore sviluppo di Epelia</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>a voice in the further development of Epelia</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_7'>
@@ -4463,7 +4464,7 @@
                 <seg>Iscriviti alla nostra newsletter obbligo cooperativa e vi perdete quindi non i passi successivi.</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Register without obligations for receiving our cooperative newsletter and you will not miss our next steps.</seg>
             </tuv>
         </tu> 
         <tu tuid='misc_send'>
@@ -4474,7 +4475,7 @@
                 <seg>inviare</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>send</seg>
             </tuv>
         </tu> 
         <tu tuid='cooperative_suc_1'>
@@ -4485,7 +4486,7 @@
                 <seg>Grazie per la tua registrazione</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for your registration</seg>
             </tuv>
         </tu>            
         <tu tuid='cooperative_suc_2'>
@@ -4496,7 +4497,7 @@
                 <seg>Grazie per esserti registrato alla newsletter Epelia.</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Thank you for registering for the cooperative newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='language_de'>
@@ -4507,7 +4508,7 @@
                 <seg>tedesco</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>German</seg>
             </tuv>
         </tu> 
         <tu tuid='language_it'>
@@ -4518,7 +4519,7 @@
                 <seg>italiano</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Italian</seg>
             </tuv>
         </tu>            
         <tu tuid='shops_show_all'>
@@ -4529,7 +4530,7 @@
                 <seg>Vedi tutti i prodotti</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Show all products</seg>
             </tuv>
         </tu> 
         <tu tuid='shops_attibute_products'>
@@ -4540,7 +4541,7 @@
                 <seg>Cibo per allergici</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Food for allergy sufferers</seg>
             </tuv>
         </tu>            
         <tu tuid='woma_next_offers'>
@@ -4551,30 +4552,31 @@
                 <seg>Offerte del successivo giorno di mercato</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>Offers from the upcoming market day</seg>
             </tuv>
-        </tu>            
-        <tu tuid='woma_visit_us'>
-            <tuv xml:lang="de">
-                <seg>besuchen Sie unseren Wochenmarkt</seg>
-            </tuv>
-            <tuv xml:lang="it">
-                <seg>visita il nostro mercato settimanale</seg>               
-            </tuv>
-            <tuv xml:lang="en">
-                <seg></seg>
-            </tuv>
-        </tu>            
-        <tu tuid='woma_business_hours'>
-            <tuv xml:lang="de">
-                <seg>Öffnungszeiten</seg>
-            </tuv>
-            <tuv xml:lang="it">
-                <seg>orari di apertura</seg>               
-            </tuv>
-            <tuv xml:lang="en">
-                <seg></seg>
-            </tuv>
-        </tu>           
+        </tu> 
+	<tu tuid='woma_visit_us'>
+  	     <tuv xml:lang="de">
+	         <seg>besuchen Sie unseren Wochenmarkt</seg>
+             </tuv>
+             <tuv xml:lang="it">
+                 <seg>visita il nostro mercato settimanale</seg>               
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg>visit our farmers market</seg>
+             </tuv>
+         </tu>            
+         <tu tuid='woma_business_hours'>
+             <tuv xml:lang="de">
+                 <seg>Öffnungszeiten</seg>
+             </tuv>
+             <tuv xml:lang="it">
+                 <seg>orari di apertura</seg>               
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg>opening hours</seg>
+             </tuv>
+         </tu> 
     </body>
 </tmx>
+
