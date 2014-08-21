@@ -270,7 +270,7 @@ class ShoppingcartController extends Zend_Controller_Action
                 $orderContent,
                 $cart->getDeliveryAddress()->toMailFormatedString(),
                 $cart->getBillingAddress()->toMailFormatedString(),
-                'Bitte überweisen Sie den Betrag auf folgendes Konto:
+                'Bitte überweisen Sie den Betrag in Höhe von ' . number_format($cart->getPriceTotal(), 2, ',', '.') . ' EUR auf folgendes Konto:
 
                 Empfänger: Epelia Warenhandel Gattinger
                 Kto. Nr.: 4647483
