@@ -77,4 +77,19 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $router->addConfig( $config, 'routes' );
     }
 
+    protected function _initJquery() {
+ 
+        $this->bootstrap('view');
+        $view = $this->getResource('view'); //get the view object
+ 
+        $view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
+ 
+        // jQuery lib includes here (Loads from google CDN by default, but via HTTP, so we modify it.)
+        $view->jQuery()->enable()
+            ->setCdnSsl(true) // Load from SSL location. B/c FF blocks non-SSL includes on https://example.com/*
+            ->setVersion('1.7.1') // Or use '1.7' to get '1.7.latest' automatically.
+            ->setUiVersion('1.8.18') // Or use '1.8' to get '1.8.latest' automatically.
+            ->uiEnable();
+    }
+
 }
