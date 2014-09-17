@@ -1946,7 +1946,7 @@
         </tu>       
         <tu tuid='filter_discount'>
             <tuv xml:lang="de">
-                <seg>nur Dicount-Produkte</seg>
+                <seg>nur Discount-Produkte</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Solo prodotti discount</seg>
