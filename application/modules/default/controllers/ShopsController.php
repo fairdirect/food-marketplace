@@ -19,6 +19,42 @@ class ShopsController extends Zend_Controller_Action
         $this->view->shop = $shop;
     }
 
+    public function businesstermsAction(){
+        if(!$this->getRequest()->getParam('url')){
+            throw new Zend_Controller_Action_Exception('This page does not exist', 404);
+        }
+        $shop = Model_Shop::findByUrl($this->getRequest()->getParam('url'));
+        if(!$shop){
+            throw new Zend_Controller_Action_Exception('This page does not exist', 404);
+        }
+        $this->view->headTitle('Allgemeine Geschäftsbedingungen von ' . $shop->name . ' | Epelia');
+        $this->view->shop = $shop;
+    }
+
+    public function privacyAction(){
+        if(!$this->getRequest()->getParam('url')){
+            throw new Zend_Controller_Action_Exception('This page does not exist', 404);
+        }
+        $shop = Model_Shop::findByUrl($this->getRequest()->getParam('url'));
+        if(!$shop){
+            throw new Zend_Controller_Action_Exception('This page does not exist', 404);
+        }
+        $this->view->headTitle('Datenschutzbestimmungen von ' . $shop->name . ' | Epelia');
+        $this->view->shop = $shop;
+    }
+
+    public function legalnoticeAction(){
+        if(!$this->getRequest()->getParam('url')){
+            throw new Zend_Controller_Action_Exception('This page does not exist', 404);
+        }
+        $shop = Model_Shop::findByUrl($this->getRequest()->getParam('url'));
+        if(!$shop){
+            throw new Zend_Controller_Action_Exception('This page does not exist', 404);
+        }
+        $this->view->headTitle('Impressum von ' . $shop->name . ' | Epelia');
+        $this->view->shop = $shop;
+    }
+
     public function showallAction(){
         $request = $this->getRequest();
         if(!$request->getParam('url')){
