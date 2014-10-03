@@ -4216,13 +4216,13 @@
         </tu>     
         <tu tuid='product_not_available'>
             <tuv xml:lang="de">
-                <seg>Produkt ist derzeit nicht verfügbar.</seg>
+                <seg>Produkt ist online nicht verfügbar.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il prodotto non è attualmente disponibile.</seg>
+                <seg>Il prodotto non è disponibile online.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The product is currently not available.</seg>
+                <seg>The product is not available online.</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_1'>
