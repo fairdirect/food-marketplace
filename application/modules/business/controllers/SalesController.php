@@ -90,7 +90,7 @@ class Business_SalesController extends Zend_Controller_Action
         self::getBody($pdf, $order);
         self::getFooter($pdf, $order);
 
-        $pdf->Output('test.pdf', 'D');
+        $pdf->Output($order->getShop()->id . '-' . $order->order_number . '.pdf', 'D');
         exit();
     }
 
@@ -196,6 +196,11 @@ class Business_SalesController extends Zend_Controller_Action
             $pdf->Ln();
             $pdf->Cell(180, 5, utf8_decode('Diese Rechnung ist gemäß §19 UStG. von der Umsatzsteuer befreit.'));
         }
+        $pdf->Ln();
+        $pdf->Ln();
+        $pdf->Cell(180, 5, utf8_decode('Lieferung an:'));
+        $pdf->Ln(1);
+        $pdf->Multicell(140, 5, utf8_decode($order->getDeliveryAddress()->toMailFormatedString()));
     }
 
     private function getFooter($pdf, $order){

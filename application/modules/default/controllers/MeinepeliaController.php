@@ -16,6 +16,10 @@ class MeinepeliaController extends Zend_Controller_Action
 
     public function indexAction(){        
         $this->view->headTitle("Home");
+        if($this->user->getShop()){
+            $this->view->inProcessOrders = Model_Order::findByShop($this->user->getShop()->id, 'in_process');
+            $this->view->completeOrders = Model_Order::findByShop($this->user->getShop()->id, 'complete');
+        }
     }
 
     public function ordersAction(){
