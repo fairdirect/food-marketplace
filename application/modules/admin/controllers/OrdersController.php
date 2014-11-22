@@ -16,8 +16,16 @@ class Admin_OrdersController extends Zend_Controller_Action
         $cart = Model_ShoppingCart::find($id);
         try{
             $shopsWithOrderedProducts = $cart->getShopsWithOrderedProducts();
+            $counter = 0;
             foreach($shopsWithOrderedProducts as $shop_id => $shop){
-                $order = new Model_Order(array('user_id' => $cart->user_id, 'shop_id' => $shop->id, 'delivery_addr_id' => $cart->delivery_addr_id, 'billing_addr_id' => $cart->billing_addr_id, 'status' => 'in_process', 'order_number' => $cart->id));
+                if(count($shopsWithOrderedProducts) > 1){ // need to add counter to unique order_number
+                    $counter++;
+                    $order_number = $cart->id . '-' . $counter;
+                }
+                else{
+                    $order_number = $cart->id;
+                }
+                $order = new Model_Order(array('user_id' => $cart->user_id, 'shop_id' => $shop->id, 'delivery_addr_id' => $cart->delivery_addr_id, 'billing_addr_id' => $cart->billing_addr_id, 'status' => 'in_process', 'order_number' => $order_number));
                 $order->save();
 
                 $orderContent = '';
