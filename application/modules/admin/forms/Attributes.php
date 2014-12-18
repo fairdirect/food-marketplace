@@ -23,8 +23,14 @@ class Admin_Form_Attributes extends Zend_Form
             ->setLabel('Name')
             ->setAttrib('class', 'span2');
 
+        $opposite = new Zend_Form_Element_Text('opposite');
+        $opposite->addFilters(array('StripTags', 'StripNewlines'))
+            ->setRequired(true)
+            ->setLabel('Gegenteil')
+            ->setAttrib('class', 'span2');
+
         $submit = new Zend_Form_Element_Submit('Speichern');
 
-        $this->addElements(array($id, $type, $name, $submit));
+        $this->addElements(array($id, $type, $name, $opposite, $submit));
     }
 }

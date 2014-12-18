@@ -1,0 +1,3 @@
+ALTER TABLE epelia_product_attributes ADD opposite TEXT DEFAULT NULL;
+ALTER TABLE epelia_products_product_attributes DROP CONSTRAINT epelia_products_product_attributes_product_attribute_id_fkey ;
+ALTER TABLE epelia_products_product_attributes ADD CONSTRAINT epelia_products_product_attributes_product_attribute_id_fkey FOREIGN KEY (product_attribute_id) REFERENCES epelia_product_attributes ON DELETE CASCADE;

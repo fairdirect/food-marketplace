@@ -40,7 +40,7 @@ class Admin_AttributesController extends Zend_Controller_Action
     public function deleteAction(){
         $id = $this->getRequest()->getParam('id');
         $attribute = Model_ProductAttribute::find($id);
-        $attribut->delete();
+        $attribute->delete();
         $this->_helper->redirector('index');
     }
 

@@ -5,6 +5,7 @@ class Model_ProductAttribute extends Model_ModelAbstract
     public $id;
     public $name;
     public $type;
+    public $opposite;
 
     private $_products;
  
@@ -84,6 +85,55 @@ class Model_ProductAttribute extends Model_ModelAbstract
         $select->join('epelia_products_product_attributes', $table->getTableName() . '.id = epelia_products_product_attributes.product_attribute_id', array());
         $select->where('epelia_products_product_attributes.product_id = ?', $productID);
         $select->group($table->getTableName() . '.id');       
+
+        $select->order($table->getTableName() . '.type DESC');
+
+        $result = $select->query()->fetchAll();
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
+    public static function getAllergenesByProduct($productID){
+        $notIncluded = self::getNotIncludedAllergenesByProduct($productID);
+        $nIds = array();
+        foreach($notIncluded as $n){
+            $nIds[] = $n->id;
+        }
+
+        $ret = array();
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); 
+        $select->where($table->getTableName() . '.type = ?', 'allergen');
+        $select->where($table->getTableName() . '.opposite IS NOT NULL');
+        $select->where($table->getTableName() . '.opposite <> ?', '');
+        $select->where($table->getTableName() . '.id NOT IN (?)', $nIds);
+
+        $select->order($table->getTableName() . '.type DESC');
+
+        $result = $select->query()->fetchAll();
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
+    public static function getNotIncludedAllergenesByProduct($productID){
+        $ret = array();
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+
+        $select->join('epelia_products_product_attributes', $table->getTableName() . '.id = epelia_products_product_attributes.product_attribute_id', array());
+        $select->where('epelia_products_product_attributes.product_id = ?', $productID);
+        $select->where($table->getTableName() . '.type = ?', 'allergen');
+        $select->group($table->getTableName() . '.id');
 
         $select->order($table->getTableName() . '.type DESC');
 

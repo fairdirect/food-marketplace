@@ -16,13 +16,13 @@ foreach($this->attributes as $attr):
 <h2><?= $this->escape($attributeNames[$curType]) ?></h2>
 <table class="table attrTable" id="<?= $this->escape($curType) ?>Table">
     <thead>
-    <tr><th>Name</th><th>Aktionen</th></tr>
+    <tr><th>Name</th><th>Gegenteil</th><th>Aktionen</th></tr>
     </thead>
     <tbody>
 <?php
     endif;
 ?>
-        <tr><td><?= $this->escape($attr->name) ?></td><td><a href="/admin/attributes/edit/id/<?= $this->escape($attr->id) ?>">Editieren</a></td></tr>
+        <tr><td><?= $this->escape($attr->name) ?></td><td><?= $this->escape($attr->opposite) ?></td><td><a href="/admin/attributes/edit/id/<?= $this->escape($attr->id) ?>">Editieren</a><br /><a href="/admin/attributes/delete/id/<?= $this->escape($attr->id) ?>">Löschen</a></td></tr>
 <?php
 endforeach;
 ?>

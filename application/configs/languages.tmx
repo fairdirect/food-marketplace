@@ -4588,6 +4588,28 @@
                  <seg>opening hours</seg>
              </tuv>
          </tu> 
+        <tu tuid='products_traces'>
+            <tuv xml:lang="de">
+                <seg>Dieses Produkt kann folgende Spuren enthalten</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Questo prodotto può contenere tracce di</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>This product may contain traces of</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_netto'>
+            <tuv xml:lang="de">
+                <seg>netto</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>netto</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>netto</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 

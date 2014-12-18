@@ -22,6 +22,7 @@ class Model_Product extends Model_ModelAbstract
 
     private $_shop = null;
     private $_attributes = null;
+    private $_allergenes = null;
     private $_category = null;
     private $_prices = null;
     private $_pictures = null;
@@ -61,6 +62,13 @@ class Model_Product extends Model_ModelAbstract
         }
         return $this->_attributes;
     }
+
+    public function getAllergenes(){
+         if(is_null($this->_allergenes)){
+            $this->_allergenes = Model_ProductAttribute::getAllergenesByProduct($this->id);
+        }
+        return $this->_allergenes;
+    }       
 
     public function addPicture($pictureID){
         $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_pictures(product_id, picture_id) VALUES(?, ?)', array($this->id, $pictureID));
