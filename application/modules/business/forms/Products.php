@@ -61,11 +61,6 @@ class Business_Form_Products extends Zend_Form
             ->setLabel($this->getTranslator()->translate('business_products_ingredients'))
             ->setAttrib('rows', 5);
 
-        $traces = new Zend_Form_Element_Textarea('traces');
-        $traces->addFilters(array('StripTags'))
-            ->setLabel($this->getTranslator()->translate('business_products_traces'))
-            ->setAttrib('rows', 5);
-
         $tags = new Zend_Form_Element_Textarea('tags');
         $tags->addFilters(array('StripTags'))
             ->setLabel($this->getTranslator()->translate('product_tags'))
@@ -86,7 +81,7 @@ class Business_Form_Products extends Zend_Form
             ->setAttrib('class', 'span2')
             ->setLabel($this->getTranslator()->translate('misc_salestax'));
  
-        $this->addDisplayGroup(array($name, $description, $unlimitedStock, $stock, $ingredients, $traces, $tags, $is_bio, $is_discount, $tax), 'product_data', array('legend' => $this->getTranslator()->translate('misc_general')));
+        $this->addDisplayGroup(array($name, $description, $unlimitedStock, $stock, $ingredients,  $tags, $is_bio, $is_discount, $tax), 'product_data', array('legend' => $this->getTranslator()->translate('misc_general')));
 
         $attributeTypes = array('additive' => $this->getTranslator()->translate('business_products_additives'), 'allergen' => $this->getTranslator()->translate('business_products_allergenes'), 'event' => $this->getTranslator()->translate('business_products_events'), 'flavor' => $this->getTranslator()->translate('business_products_flavor'), 'manipulation' => $this->getTranslator()->translate('business_products_manipulations'));
         foreach($attributeTypes as $aName => $aLabel){
