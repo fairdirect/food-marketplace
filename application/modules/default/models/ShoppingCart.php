@@ -331,6 +331,7 @@ class Model_ShoppingCart extends Model_ModelAbstract
      */
     public function concludeOrder(){
         
+	$this->id = null; // make sure a new shopping cart is used
         $this->save();
         $failedItems = array();
        
