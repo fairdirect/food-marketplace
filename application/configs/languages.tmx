@@ -722,7 +722,7 @@
         </tu>
         <tu tuid='product_ingredients'>
             <tuv xml:lang="de">
-                <seg>Inhaltsstoffe</seg>
+                <seg>Zutaten</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Ingredienti</seg>
