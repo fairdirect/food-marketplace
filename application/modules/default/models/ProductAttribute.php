@@ -111,7 +111,9 @@ class Model_ProductAttribute extends Model_ModelAbstract
         $select->where($table->getTableName() . '.type = ?', 'allergen');
         $select->where($table->getTableName() . '.opposite IS NOT NULL');
         $select->where($table->getTableName() . '.opposite <> ?', '');
-        $select->where($table->getTableName() . '.id NOT IN (?)', $nIds);
+        if($nIds){
+            $select->where($table->getTableName() . '.id NOT IN (?)', $nIds);
+        }            
 
         $select->order($table->getTableName() . '.type DESC');
 
