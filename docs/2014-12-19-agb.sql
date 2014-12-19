@@ -1,0 +1,1 @@
+ALTER TABLE epelia_shops ADD agb TEXT DEFAULT NULL;
