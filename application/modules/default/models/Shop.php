@@ -44,6 +44,8 @@ class Model_Shop extends Model_ModelAbstract
     public $procedure_picture_id;
     public $additional;
 
+    public $agb;
+
     public $created;
 
     public $featured_home = false;

@@ -215,6 +215,17 @@ class Business_Form_Shops extends Zend_Form
 
         $this->addDisplayGroup(array($description, $history, $philosophy, $procedure, $additional), 'shop_infos', array('legend' => $this->getTranslator()->translate('business_shop_infos')));
 
+        $agb = new Zend_Form_Element_Textarea('agb');
+        $agb
+            ->setLabel($this->getTranslator()->translate('footer_agb'))
+            ->setAttrib('class', 'span2')
+            ->setAttrib('rows', 50)
+            ->setAttrib('style', 'width:750px')
+            ->setOrder(340);
+
+        $this->addDisplayGroup(array($agb), 'agb_group', array('legend' => $this->getTranslator()->translate('footer_agb')));
+
+
         $submit = new Zend_Form_Element_Submit($this->getTranslator()->translate('misc_save'));
         $submit->setOrder(350);
 
