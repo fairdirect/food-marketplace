@@ -1604,13 +1604,13 @@
         </tu>       
         <tu tuid='sell_2'>
             <tuv xml:lang="de">
-                <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Produzentenprofil. Machen Sie es wie schon 150 Produzenten vor Ihnen!</seg>
+                <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Produzentenprofil.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore. Segui l'esempio di altri 150 produttori!</seg>
+                <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Use your Epelia seller account like your own online shop: with your food articles, images and producer profile. Do it like 150 producers before you!</seg>
+                <seg>Use your Epelia seller account like your own online shop: with your food articles, images and producer profile.</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
@@ -3378,13 +3378,13 @@
         </tu>
         <tu tuid='business_products_traces'>
             <tuv xml:lang="de">
-                <seg>Dieses Produkt kann folgende Spuren enthalten</seg>
+                <seg>Dieses Produkt kann Anteile enthalten von:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Questo prodotto può contenere tracce di</seg>
+                <seg>Questo prodotto può contenere tracce di:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>This product may contain traces of</seg>
+                <seg>This product may contain amounts of:</seg>
             </tuv>
         </tu>
         <tu tuid='business_products_bio'>
@@ -4238,13 +4238,13 @@
         </tu>       
         <tu tuid='index_about_2'>
             <tuv xml:lang="de">
-                <seg>+ in 150 Shops einkaufen</seg>
+                <seg>+ in verschiedenen Shops einkaufen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>+ acquisti in 150 negozi</seg>
+                <seg>+ acquisti in diversi negozi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+ purchase from 150 shops</seg>
+                <seg>+ purchase from different shops</seg>
             </tuv>
         </tu>     
         <tu tuid='index_about_3'>
@@ -4590,13 +4590,13 @@
          </tu> 
         <tu tuid='products_traces'>
             <tuv xml:lang="de">
-                <seg>Dieses Produkt kann folgende Spuren enthalten</seg>
+                <seg>Dieses Produkt kann Anteile enthalten von:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Questo prodotto può contenere tracce di</seg>
+                <seg>Questo prodotto può contenere tracce di:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>This product may contain traces of</seg>
+                <seg>This product may contain amounts of:</seg>
             </tuv>
         </tu>
         <tu tuid='misc_netto'>
