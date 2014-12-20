@@ -1,3 +1,16 @@
 <h1><?= $this->translate('business_shop_headline') ?></h1>
 <div class="error"><?= $this->escape($this->error) ?></div>
 <?= $this->form; ?>
+
+<script type="text/javascript">
+     $(document).ready(function(){
+         $('#standardagb').change(function(){
+             if($('#agb').attr('readonly')){
+                 $('#agb').removeAttr('readonly');
+             }
+             else{
+                 $('#agb').attr('readonly', 'readonly');
+             }
+         });
+     });
+</script>     

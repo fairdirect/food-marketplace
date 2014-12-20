@@ -49,6 +49,14 @@ class Business_ShopController extends Zend_Controller_Action{
         else{
             $shop = $this->user->getShop();
             if($shop){
+                if(!$shop->agb){
+                    $shop->agb = strip_tags($this->view->partial('partials/agb.phtml', array('shop' => $shop)));
+                    $form->getElement('agb')->setAttrib('readonly', 'readonly');
+                }
+                else{
+                    $shop->standardagb = 1;
+                }
+
                 $form->populate($shop->toArray());
             }
         }
