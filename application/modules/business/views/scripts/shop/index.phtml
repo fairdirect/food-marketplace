@@ -5,11 +5,11 @@
 <script type="text/javascript">
      $(document).ready(function(){
          $('#standardagb').change(function(){
-             if($('#agb').attr('readonly')){
-                 $('#agb').removeAttr('readonly');
+             if($('#agb').attr('disabled')){
+                 $('#agb').removeAttr('disabled');
              }
              else{
-                 $('#agb').attr('readonly', 'readonly');
+                 $('#agb').attr('disabled', 'disabled');
              }
          });
      });

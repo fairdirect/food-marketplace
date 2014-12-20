@@ -36,6 +36,9 @@ class Business_ShopController extends Zend_Controller_Action{
                 else{
                     $shop->url = Epelia_Helper::make_url($shop->name);
                 }
+                if(!$request->getPost('standardagb')){
+                    $shop->agb = null;
+                }
                 try{
                     $shop->save();
                     $this->_redirect('/business/');
@@ -51,7 +54,7 @@ class Business_ShopController extends Zend_Controller_Action{
             if($shop){
                 if(!$shop->agb){
                     $shop->agb = strip_tags($this->view->partial('partials/agb.phtml', array('shop' => $shop)));
-                    $form->getElement('agb')->setAttrib('readonly', 'readonly');
+                    $form->getElement('agb')->setAttrib('disabled', 'disabled');
                 }
                 else{
                     $shop->standardagb = 1;
