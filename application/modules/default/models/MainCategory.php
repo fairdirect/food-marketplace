@@ -12,7 +12,7 @@ class Model_MainCategory extends Model_ModelAbstract
         $select = $table->select();
         $ret = array();
 
-        $select->order('name DESC');
+        $select->order('name ASC');
 
         $result = $table->fetchAll($select);
         if (is_null($result)) {
