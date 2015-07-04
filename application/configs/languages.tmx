@@ -1582,13 +1582,13 @@
         </tu>
         <tu tuid='sell_headline'>
             <tuv xml:lang="de">
-                <seg>Lebensmittel und Drogerie-Artikel mit Epelia verkaufen</seg>
+                <seg>Erstellen Sie Ihren eigenen Epelia Online-Shop</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Vendere prodotti alimentari e beni per la casa e per la persona su Epelia</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Sell food and drugstore articles with Epelia</seg>
+                <seg>Set up your own Epelia webshop</seg>
             </tuv>
         </tu>
         <tu tuid='sell_1'>
@@ -4172,13 +4172,13 @@
         </tu>
         <tu tuid='misc_woma'>
             <tuv xml:lang="de">
-                <seg>Wochenmarkt</seg>
+                <seg>Regionale Versandzelle</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>mercato settimanale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>farmers market</seg>
+                <seg>regional shipment cell</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_headline'>
