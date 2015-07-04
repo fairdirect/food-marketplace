@@ -4,7 +4,7 @@ class Model_ProductGroup extends Model_ModelAbstract
 {
     public $id;
     public $name;
-    public $type;
+    public $main_category;
 
     private $_categories = null;
 
@@ -23,6 +23,25 @@ class Model_ProductGroup extends Model_ModelAbstract
     {
         parent::init($data);
     }
+
+    public static function getAll(){
+        $table = self::getDbTable();
+        $select = $table->select();
+        $ret = array();
+
+        $select->order('main_category DESC');
+        $select->order('name DESC');
+
+        $result = $table->fetchAll($select);
+        if (is_null($result)) {
+            return array();
+        }
+        foreach($result as $r){
+            $ret[] = new self($r);
+        }
+        return $ret;
+    }
+
 
     public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
         return Model_Product::findByGroup($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated);
@@ -46,12 +65,17 @@ class Model_ProductGroup extends Model_ModelAbstract
         return new Model_DbTable_ProductGroup();
     }
 
-    public static function getByType($type, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
+    public static function getByType($mainCategory, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
  
-        $select->where('type = ?', $type);
+        if($mainCategory){
+            $select->where('main_category = ?', $mainCategory);
+        }
+        else{
+            $select->where('main_category IS NULL');
+        }
 
         if($onlyBio || $onlyDiscount || $onlyWholesale || $onlyActivated){
             $select->join('epelia_product_categories', $table->getTableName() . '.id = epelia_product_categories.product_group_id', array());

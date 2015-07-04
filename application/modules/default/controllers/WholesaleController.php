@@ -52,8 +52,7 @@ class WholesaleController extends Zend_Controller_Action
             return;
         }
         $this->view->headTitle('Großhandels-Produkte | Epelia');
-        $this->view->groceryGroups = Model_ProductGroup::getByType('groceries', false, false, true);
-        $this->view->drugstoreGroups = Model_ProductGroup::getByType('drugstore', false, false, true);
+        $this->view->mainCategories = Model_MainCategory::getAll();
     }
 
     public function successAction(){

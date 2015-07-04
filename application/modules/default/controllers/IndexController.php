@@ -10,6 +10,7 @@ class IndexController extends Zend_Controller_Action
         $homeGroups = Model_Homegroup::findAll();
         $this->view->randomShop = $shop;
         $this->view->homegroups = $homeGroups;
+        $this->view->mainCategories = Model_MainCategory::getAll();
 	}
 
 }

@@ -42,8 +42,7 @@ class Plugin_Front extends Zend_Controller_Plugin_Abstract{
                 $view = $layout->getView();
                 $view->user = (Zend_Auth::getInstance()->hasIdentity()) ? Zend_Auth::getInstance()->getIdentity() : null;
                 $view->shoppingCart = Model_ShoppingCart::getRunningShoppingCart();
-                $view->globalGroceryGroups = Model_ProductGroup::getByType('groceries');
-                $view->globalDrugstoreGroups = Model_ProductGroup::getByType('drugstore');
+                $view->mainCategories = Model_MainCategory::getAll();
                 return;
         }
     }

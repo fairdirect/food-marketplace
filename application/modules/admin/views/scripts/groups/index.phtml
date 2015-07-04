@@ -1,31 +1,35 @@
 <h1 style="margin-bottom:5px;">Gruppen</h1>
 <a href="/admin/groups/edit/">Neue Gruppe anlegen</a>
-<h2>Lebensmittel</h2>
-<table class="table" id="groceryTable">
+<?php foreach($this->mainCategories as $cat): ?>
+<h2><?= $cat->name ?></h2>
+<table class="table" id="<?= $cat->name ?>Table">
     <thead>
     <tr><th>Name</th><th>Aktionen</th></tr>
     </thead>
     <tbody>
-<?php foreach($this->groceryGroups as $gr): ?>
+<?php foreach($cat->getGroups(false, false, false, false) as $gr): ?>
     <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
 <?php endforeach; ?>
     </tbody>
 </table>
-<h2>Drogerie</h2>
-<table class="table" id="drugstoreTable">
+<?php endforeach; ?>
+<?php if($this->groupsWithoutMain): ?>
+<h2>Ohne Hauptkategorie</h2>
+<table class="table" id="withoutMainTable">
     <thead>
-        <tr><th>Name</th><th>Aktionen</th></tr>
+    <tr><th>Name</th><th>Aktionen</th></tr>
     </thead>
     <tbody>
-<?php foreach($this->drugstoreGroups as $gr): ?>
+<?php foreach($this->groupsWithoutMain as $gr): ?>
     <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
 <?php endforeach; ?>
     </tbody>
 </table>
-
+<?php endif; ?>
 <script type="text/javascript">
+<?php foreach($this->mainCategories as $cat): ?>
     $(document).ready(function() {
-        $('#groceryTable').dataTable({
+        $('#<?= $cat->name ?>Table').dataTable({
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "aoColumns": [
@@ -51,31 +55,34 @@
             }
         });
     });
-
-   $('#drugstoreTable').dataTable({
-        "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
-        "sPaginationType": "bootstrap",
-        "aoColumns": [
-            null,
-            { "bSortable": false } 
-        ],
-        "oLanguage": {
-            "sProcessing": "Bitte warten...",
-            "sLengthMenu": "_MENU_ Einträge anzeigen",
-            "sZeroRecords": "Keine Einträge vorhanden.",
-            "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
-            "sInfoEmpty": "0 bis 0 von 0 Einträgen",
-            "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
-            "sInfoPostFix": "",
-            "sSearch": "Suchen",
-            "sUrl": "",
-            "oPaginate": {
-                "sFirst":    "Erster",
-                "sPrevious": "Zurück",
-                "sNext":     "Nächster",
-                "sLast":     "Letzter"
+<?php endforeach; ?>    
+<?php if($this->groupsWithoutMain): ?>          
+    $(document).ready(function() {
+        $('#withoutMainTable').dataTable({
+            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
+            "sPaginationType": "bootstrap",
+            "aoColumns": [
+                null, 
+                { "bSortable": false } 
+            ],
+            "oLanguage": {
+                "sProcessing": "Bitte warten...",
+                "sLengthMenu": "_MENU_ Einträge anzeigen",
+                "sZeroRecords": "Keine Einträge vorhanden.",
+                "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                "sInfoPostFix": "",
+                "sSearch": "Suchen",
+                "sUrl": "",
+                "oPaginate": {
+                    "sFirst":    "Erster",
+                    "sPrevious": "Zurück",
+                    "sNext":     "Nächster",
+                    "sLast":     "Letzter"
+                }
             }
-        }
+        });
     });
-           
+<?php endif; ?>    
 </script>

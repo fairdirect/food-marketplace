@@ -10,9 +10,13 @@ class Admin_Form_Groups extends Zend_Form
 
         $id = new Zend_Form_Element_Hidden('id');
 
-        $options = array('' => '', 'groceries' => 'Lebensmittel', 'drugstore' => 'Drogerie');
-        $type = new Zend_Form_Element_Select('type');
-        $type->addMultiOptions($options)
+        $mainCats = Model_MainCategory::getAll();
+        $options = array('' => '');
+        foreach($mainCats as $cat){
+            $options[$cat->id] = $cat->name;
+        }
+        $main_category = new Zend_Form_Element_Select('main_category');
+        $main_category->addMultiOptions($options)
             ->setRequired(true)
             ->setAttrib('class', 'span2')
             ->setLabel('Typ');
@@ -30,6 +34,6 @@ class Admin_Form_Groups extends Zend_Form
 
         $submit = new Zend_Form_Element_Submit('Speichern');
 
-        $this->addElements(array($id, $type, $name, $description, $submit));
+        $this->addElements(array($id, $main_category, $name, $description, $submit));
     }
 }

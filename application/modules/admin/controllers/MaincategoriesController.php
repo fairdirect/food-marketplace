@@ -1,6 +1,6 @@
 <?php
 
-class Admin_GroupsController extends Zend_Controller_Action
+class Admin_MaincategoriesController extends Zend_Controller_Action
 {
 
     public function init()
@@ -11,29 +11,26 @@ class Admin_GroupsController extends Zend_Controller_Action
     public function indexAction()
     {
         $this->view->headTitle("Verwaltung");
-           
         $this->view->mainCategories = Model_MainCategory::getAll();
-        $this->view->groupsWithoutMain = Model_ProductGroup::getByType(NULL);
-
     }
 
     public function editAction(){
-        $form = new Admin_Form_Groups();
+        $form = new Admin_Form_Maincategories();
 
         $request = $this->getRequest();
         $id = $request->getParam('id');
         if($request->getParam('Speichern')){
             if($form->isValid($request->getPost())){
-                $group = new Model_ProductGroup($request->getPost());
+                $group = new Model_MainCategory($request->getPost());
                 $group->save();
                 $this->_helper->redirector('index');
             }
         }
         else{
             if($id){
-               $group = Model_ProductGroup::find($id);
-                if($group){
-                    $form->populate($group->toArray());
+               $mainCategory = Model_MainCategory::find($id);
+                if($mainCategory){
+                    $form->populate($mainCategory->toArray());
                 }
             }
         }
@@ -43,7 +40,7 @@ class Admin_GroupsController extends Zend_Controller_Action
 
     public function deleteAction(){
         $id = $this->getRequest()->getParam('id');
-        $gr = Model_ProductGroup::find($id);
+        $gr = Model_MainCategory::find($id);
         $gr->delete();
         $this->_helper->redirector('index');
     }

@@ -35,8 +35,7 @@ class CatsController extends Zend_Controller_Action
     }
 
     public function showallAction(){
-        $this->view->groceryGroups = Model_ProductGroup::getByType('groceries');
-        $this->view->drugstoreGroups = Model_ProductGroup::getByType('drugstore');
+        $this->view->mainCategories = Model_MainCategory::getAll();
     }
 }
 
