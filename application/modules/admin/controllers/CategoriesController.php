@@ -30,9 +30,17 @@ class Admin_CategoriesController extends Zend_Controller_Action
         else{
             if($id){
                $cat = Model_ProductCategory::find($id);
-                if($cat){
-                    $form->populate($cat->toArray());
-                }
+
+               $group = $cat->getProductGroup();
+               $mainCat = Model_MainCategory::find($group->main_category);
+               $typeGroups = $mainCat->getGroups();
+               $groupElements = array();
+               foreach($typeGroups as $gr){
+                   $groupElements[$gr->id] = $gr->name;
+               }
+               $form->getElement('product_group_id')->addMultiOptions($groupElements);
+               $formData = array_merge($cat->toArray(), array('type' => $mainCat->id, 'group_id' => $group->id));
+               $form->populate($formData);
             }
         }
 

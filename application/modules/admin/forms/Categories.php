@@ -10,7 +10,12 @@ class Admin_Form_Categories extends Zend_Form
 
         $id = new Zend_Form_Element_Hidden('id');
 
-        $options = array('' => '', 'groceries' => 'Lebensmittel', 'drugstore' => 'Drogerie');
+        $mainCats = Model_MainCategory::getAll();
+        $options = array('' => '');
+        foreach($mainCats as $cat){
+            $options[$cat->id] = $cat->name;
+        }
+
         $type = new Zend_Form_Element_Select('type');
         $type->addMultiOptions($options)
             ->setRequired(true)
