@@ -12,7 +12,11 @@ class Business_Form_Products extends Zend_Form
 
         $this->addElement($id);
 
-        $options = array('' => '', 'groceries' => $this->getTranslator()->translate('misc_groceries'), 'drugstore' => $this->getTranslator()->translate('misc_drugstore'));
+        $mainCats = Model_MainCategory::getAll();
+        $options = array('' => '');
+        foreach($mainCats as $cat){
+            $options[$cat->id] = $cat->name;
+        }
         $type = new Zend_Form_Element_Select('type');
         $type->addMultiOptions($options)
             ->setRequired(true)

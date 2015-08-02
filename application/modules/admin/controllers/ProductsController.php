@@ -116,7 +116,8 @@ class Admin_ProductsController extends Zend_Controller_Action
                 if($product){
                     $category = $product->getCategory();
                     $group = $category->getProductGroup();
-                    $typeGroups = Model_ProductGroup::getByType($group->type);
+                    $mainCat = Model_MainCategory::find($group->main_category);
+                    $typeGroups = $mainCat->getGroups();
                     $groupElements = array();
                     foreach($typeGroups as $gr){
                         $groupElements[$gr->id] = $gr->name;
@@ -128,7 +129,7 @@ class Admin_ProductsController extends Zend_Controller_Action
                         $categoryElements[$cat->id] = $cat->name;
                     }
                     $form->getElement('category_id')->addMultiOptions($categoryElements);
-                    $formData = array_merge($product->toFormArray(), array('type' => $group->type, 'group_id' => $group->id, 'category_id' => $category->id));
+                    $formData = array_merge($product->toFormArray(), array('type' => $mainCat->id, 'group_id' => $group->id, 'category_id' => $category->id));
                     $form->populate($formData);
                 }
             }

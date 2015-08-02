@@ -19,25 +19,17 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        if($('#type').val() == 'drugstore'){
-            $('.groceryOnly').hide();
-        }
         if($('#unlimited_stock').attr('checked')){
             $('#stock').attr('disabled', 'disabled');
         }
     });
     $('#type').live('change', function(){ 
-        if($('#type').val() == 'drugstore'){
-            $('.groceryOnly').hide();
-        }
-        else{
-            $('.groceryOnly').show();
-        }
         $.ajax({ 
             url: '/ajax/getgroups/type/' + $('#type').val(), 
             datatype: 'html', 
             success: function(data){ 
                 $('#group_id').empty().html(data); 
+                $('#category_id').empty(); 
             } 
         }); 
     });

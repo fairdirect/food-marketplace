@@ -59,18 +59,10 @@ class AjaxController extends Zend_Controller_Action
 
     public function getgroupsAction(){
         $type = $this->getRequest()->getParam('type');
+        $mainCat = Model_MainCategory::find($type);
+        $groups = $mainCat->getGroups();
         $ret = '<option value=""></option>';
 
-        switch($type){
-            case 'groceries':
-                $groups = Model_ProductGroup::getByType('groceries', false, false, false, false);
-                break;
-            case 'drugstore':
-                $groups = Model_ProductGroup::getByType('drugstore', false, false, false, false);
-                break;
-            default:
-                exit();
-        }
         foreach($groups as $gr){
             $ret .= '<option value="' . $gr->id . '">' . $gr->name . '</option>';
         }
