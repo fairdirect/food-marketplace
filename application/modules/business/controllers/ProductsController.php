@@ -109,13 +109,13 @@ class Business_ProductsController extends Zend_Controller_Action
                     $category = $product->getCategory();
                     $group = $category->getProductGroup();
                     $mainCat = Model_MainCategory::find($group->main_category);
-                    $typeGroups = $mainCat->getGroups();
+                    $typeGroups = $mainCat->getGroups(false, false, false, false);
                     $groupElements = array();
                     foreach($typeGroups as $gr){
                         $groupElements[$gr->id] = $gr->name;
                     }
                     $form->getElement('group_id')->addMultiOptions($groupElements);
-                    $groupCategories = Model_ProductCategory::findByGroup($group->id);
+                    $groupCategories = Model_ProductCategory::findByGroup($group->id, false, false, false, false);
                     $categoryElements = array();
                     foreach($groupCategories as $cat){
                         $categoryElements[$cat->id] = $cat->name;

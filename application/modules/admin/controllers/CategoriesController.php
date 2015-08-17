@@ -33,7 +33,7 @@ class Admin_CategoriesController extends Zend_Controller_Action
 
                $group = $cat->getProductGroup();
                $mainCat = Model_MainCategory::find($group->main_category);
-               $typeGroups = $mainCat->getGroups();
+               $typeGroups = $mainCat->getGroups(false, false, false, false);
                $groupElements = array();
                foreach($typeGroups as $gr){
                    $groupElements[$gr->id] = $gr->name;
