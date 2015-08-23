@@ -27,7 +27,7 @@ class Model_Homegroup extends Model_ModelAbstract
         $select = $table->select();
         $ret = array();
 
-        $select->order('id DESC');
+        $select->order('id ASC');
 
         $result = $table->fetchAll($select);
         if (is_null($result)) {
@@ -39,9 +39,9 @@ class Model_Homegroup extends Model_ModelAbstract
         return $ret;
     }
 
-    public function getProducts(){
+    public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
         if(is_null($this->_products)){
-            $this->_products = Model_Product::findByHomegroup($this->id);
+            $this->_products = Model_Product::findByHomegroup($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
         }
         return $this->_products;
     }

@@ -43,18 +43,48 @@ class Model_Product extends Model_ModelAbstract
         }
     }
 
-    public static function findByHomegroup($homegroupID){
+    public static function findByHomegroup($homegroupID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+        $table = self::getDbTable();
+        $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
+        $select->join('epelia_products_home_groups_products', $table->getTableName() . '.id = epelia_products_home_groups_products.product_id', array());
+
         $ret = array();
-        $db = self::getDbTable()->getAdapter();
-        $result = $db->query("SELECT product_id FROM epelia_products_home_groups_products WHERE group_id = ?", $homegroupID);
-        if(is_null($result)){
+   
+        $select->where('epelia_products_home_groups_products.group_id = ?', $homegroupID);
+
+        if($onlyBio){
+            $select->where('is_bio = ?', 'true');
+        }
+        if($onlyDiscount){
+            $select->where('is_discount = ?', 'true');
+        }
+        if($onlyWholesale){
+            $select->join('epelia_product_prices', $table->getTableName() . '.id = epelia_product_prices.product_id', array());
+            $select->where('epelia_product_prices.is_wholesale', 'true');
+            $select->group($table->getTableName() . '.id');
+        }
+
+        if($onlyActivated){
+            $select->where($table->getTableName() . '.active = ?', true);
+        }
+
+        if(!$all){
+            $select->where($table->getTableName() . '.deleted != ?', true);
+        }
+
+        $select->order($table->getTableName() . '.name ASC');
+        $select->limit($limit, $offset);
+
+        $result = $select->query()->fetchAll();
+        if (is_null($result)) {
             return array();
         }
         foreach($result as $r){
-            $ret[] = self::find($r);
+            $ret[] = new self($r);
         }
         return $ret;
     }
+
 
     public function getAttributes(){
         if(is_null($this->_attributes)){

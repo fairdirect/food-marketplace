@@ -133,6 +133,10 @@ class Admin_ProductsController extends Zend_Controller_Action
                     $form->populate($formData);
                 }
             }
+            else{
+                $allergenes = $form->getElement('allergen');
+                $allergenes->setAttrib('checked', 'checked');
+            }
         }
         $this->view->form = $form;
     }

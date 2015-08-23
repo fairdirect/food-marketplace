@@ -10,6 +10,7 @@ class Model_ShoppingCart extends Model_ModelAbstract
     public $status = 'running';
     public $created;
     public $ip;
+    public $is_self_collecting = false;
 
     private $_items = null;
 
@@ -104,6 +105,9 @@ class Model_ShoppingCart extends Model_ModelAbstract
     }
 
     public function getShippingCosts(){
+        if($this->is_self_collecting){
+            return 0.0;
+        }
         $shops = $this->getShopsWithOrderedProducts();
         $shipping = 0.00;
         if($this->delivery_addr_id){

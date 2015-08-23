@@ -6,7 +6,7 @@
     </thead>
     <tbody>
 <?php foreach($this->homegroups as $group): ?>
-    <tr><td><?= $this->escape($group->name) ?></td><td><?= count($group->getProducts()) ?></td><td><a href="/admin/productshome/edit/id/<?= $this->escape($group->id) ?>">Editieren</a>&nbsp;<a href="/admin/productshome/bygroup/id/<?= $this->escape($group->id) ?>/">Produkte</a>&nbsp;<a href="/admin/productshome/delete/id/<?= $this->escape($group->id) ?>">Löschen</a></td></tr>
+    <tr><td><?= $this->escape($group->name) ?></td><td><?= count($group->getProducts(null, null, false, false, false, false)) ?></td><td><a href="/admin/productshome/edit/id/<?= $this->escape($group->id) ?>">Editieren</a>&nbsp;<a href="/admin/productshome/bygroup/id/<?= $this->escape($group->id) ?>/">Produkte</a>&nbsp;<a href="/admin/productshome/delete/id/<?= $this->escape($group->id) ?>">Löschen</a></td></tr>
 <?php endforeach; ?>
     </tbody>
 </table>

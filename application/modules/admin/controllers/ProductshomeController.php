@@ -49,7 +49,7 @@ class Admin_ProductshomeController extends Zend_Controller_Action
         $homegroup = Model_Homegroup::find($id);
         $this->view->headTitle("Produkte für Gruppe " . $homegroup->name);
         $this->view->homegroup = $homegroup;
-        $this->view->products = $homegroup->getProducts();
+        $this->view->products = $homegroup->getProducts(null, null, false, false, false, false);
     }
 
     public function addproductAction(){

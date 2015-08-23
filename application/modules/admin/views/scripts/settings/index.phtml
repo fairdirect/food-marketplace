@@ -1,29 +1,20 @@
-<h1>Produkte für Gruppe <?= $this->escape($this->homegroup->name) ?></h1>
-<h2>Produkt hinzufügen</h2>
-<form method="post" action="/admin/productshome/addproduct">
-    <input type="hidden" name="group_id" value="<?= $this->escape($this->homegroup->id) ?>" />
-    <label for="product_id">Produkt:</label>
-    <input type="text" id="product_id" name="product_id">
-    <input type="submit" value="Hinzufügen" />
-</form>
-<table class="table" id="productTable">
+<h1 style="margin-bottom:5px;">Einstellungen</h1>
+<table class="table" id="settingTable">
     <thead>
-        <tr><th>ID</th><th>Name</th><th>Aktionen</th></tr>
+    <tr><th>Name</th><th>Wert</th><th>Aktionen</th></tr>
     </thead>
     <tbody>
+<?php foreach($this->settings as $setting): ?>
+        <tr><td><?= $this->escape($setting->id) ?></td><td><?= $this->escape($setting->value) ?></td><td><a href="/admin/settings/edit/id/<?= $this->escape($setting->id) ?>">Editieren</a></td></tr>
 <?php
-    foreach($this->products as $product):
-?>
-        <tr><td><?= $this->escape($product->id) ?></td><td><?= $this->escape($product->name) ?><?php if(!$product->active): ?> <strong style="color:red">PRODUKT NICHT AKTIV!</strong><?php endif; ?></td><td><a href="/admin/productshome/deleteproduct/product_id/<?= $this->escape($product->id) ?>/group_id/<?= $this->escape($this->homegroup->id) ?>"/>Löschen</a></td></tr>
-<?php
-    endforeach;
+endforeach;
 ?>
     </tbody>
 </table>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#productTable').dataTable({
+        $('#newsletterTable').dataTable({
             "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
             "sPaginationType": "bootstrap",
             "aoColumns": [
@@ -52,4 +43,3 @@
     });
            
 </script>
-

@@ -95,12 +95,7 @@ class Business_Form_Products extends Zend_Form
                 foreach($attributes as $a){
                     $aElem->addMultiOption($a->id, $a->name);
                 }
-                if($aName == 'flavor' || $aName == 'allergen'){
-                    $this->addDisplayGroup(array($aElem), $aLabel, array('legend' => $aLabel, 'class' => 'groceryOnly'));
-                }
-                else{
-                    $this->addDisplayGroup(array($aElem), $aLabel, array('legend' => $aLabel));
-                }
+                $this->addDisplayGroup(array($aElem), $aLabel, array('legend' => $aLabel));
             }
         }     
 
