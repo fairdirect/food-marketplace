@@ -4227,13 +4227,13 @@
         </tu>       
         <tu tuid='index_about_1'>
             <tuv xml:lang="de">
-                <seg>Hier verkaufen Produzenten und Direktimporteure Lebensmittel und Drogerie-Artikel direkt an Sie.</seg>
+                <seg>Herzlich willkommen auf unserem Wochenmarkt!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Qui di vendita del produttore e importatori diretti prodotti alimentari e farmacia direttamente a voi.</seg>
+                <seg>Welcome to our Farmers Market!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Here, producers and direct importers sell food and drugstore articles directly to you.</seg>
+                <seg>Welcome to our Farmers Market!</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_2'>
