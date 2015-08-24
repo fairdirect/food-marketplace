@@ -50,6 +50,8 @@ class Model_Shop extends Model_ModelAbstract
 
     public $featured_home = false;
 
+    public $woma_id = null;
+
     private $shop_type;
 
     private $_woma_ids = array(); // must be private for save()
@@ -69,6 +71,8 @@ class Model_Shop extends Model_ModelAbstract
     private $_country;
 
     private $_featured_products_home = null;
+
+    private $_woma;
 
     public function __construct($data = array())
     {
@@ -219,7 +223,12 @@ class Model_Shop extends Model_ModelAbstract
 
     public function getShippingCosts(){
         if(is_null($this->_shippingCosts)){
-            $this->_shippingCosts = Model_ShippingCost::findByShop($this->id);
+            if($this->getWoma()){
+                $this->_shippingCosts = $this->getWoma()->getShippingCosts();
+            }
+            else{
+                $this->_shippingCosts = Model_ShippingCost::findByShop($this->id);
+            }
         }
         return $this->_shippingCosts;
     }
@@ -398,42 +407,11 @@ class Model_Shop extends Model_ModelAbstract
         }
     }
 
-    public function setWomaIds($womaIds){
-        $this->_woma_ids = $womaIds;
-    }
-
-    public function getWomaIds(){
-        if(!$this->_woma_ids){
-            $result = self::getDbTable()->getAdapter()->fetchAll('SELECT woma_id FROM epelia_womas_shops WHERE shop_id = ?', $this->id);
-
-            if (is_null($result)) {
-                return array();
-            }
-            foreach($result as $r){
-                $this->_woma_ids[] = $r['woma_id'];
-            }
+    public function getWoma(){
+        if(is_null($this->_woma) && $this->woma_id){
+            $this->_woma = Model_Woma::find($this->woma_id);
         }
-        return $this->_woma_ids;
-    }
-
-    public function insertWomas(){
-        if(!$this->id){ // this should not happen, but in case we dont have an id we need one
-            $this->save();
-        }
-        $query = self::getDbTable()->getAdapter()->query('DELETE FROM epelia_womas_shops WHERE shop_id = ?', array($this->id));
-        foreach($this->_woma_ids as $womaID){
-            $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_womas_shops(woma_id, shop_id) VALUES(?,?)', array($womaID, $this->id));
-        }
-    }
-
-    public function getWomas(){
-        if(is_null($this->_womas)){
-            $this->_womas = array();
-            foreach($this->_woma_ids as $womaID){
-                $this->_womas[] = Model_Woma::find($womaID);
-            }
-        }
-        return $this->_womas;
+        return $this->_woma;
     }
 
     public function getLink(){

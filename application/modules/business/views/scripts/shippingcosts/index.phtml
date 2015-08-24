@@ -1,4 +1,7 @@
 <h1><?= $this->translate('business_delivery_headline') ?></h1>
+<?php if($this->woma): ?>
+<p style="font-weight: bold; color:red;">Achtung! Da dieser Shop Mitglied der Regionalversandzelle "<?= $this->woma->name ?>" ist gelten die Versandkosten der Regionalzelle!</p>
+<?php endif; ?>
 <p><?= $this->translate('business_delivery_text') ?></p>
 <?= $this->form; ?>
 

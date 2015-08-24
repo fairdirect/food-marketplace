@@ -45,10 +45,11 @@ class Admin_ShopsController extends Zend_Controller_Action
             if($form->isValid($request->getPost())){
                 $shop = Model_Shop::find($id); 
                 $shop->init($request->getPost());
-                $shop->setWomaIds($request->getParam('woma_ids'));
+                if(!$shop->woma_id){
+                    $shop->woma_id = null;
+                }
                 try{
                     $shop->save();
-                    $shop->insertWomas();
                     if($request->getPost('imagesDelete')){
                         foreach($request->getPost('imagesDelete') as $imgId){
                             $img = Marktplatz_Model_ProductImage::getImage($imgId);
@@ -70,10 +71,6 @@ class Admin_ShopsController extends Zend_Controller_Action
                             ));
                         }
                     }
-                    if($request->getPost('featured_home_products')){
-                        $shop->setFeaturedProductsHome($request->getPost('featured_home_products'));
-                    }
-
                     $this->_helper->redirector('index');
                 } catch(Exception $e){
                     if($e->getCode() == 23503){
@@ -89,7 +86,7 @@ class Admin_ShopsController extends Zend_Controller_Action
             if($id){
                $shop = Model_Shop::find($id);
                 if($shop){
-                    $form->populate(array_merge($shop->toArray(), array('woma_ids' => $shop->getWomaIds())));
+                    $form->populate(array_merge($shop->toArray()));
                 }
             }
         }
@@ -104,23 +101,5 @@ class Admin_ShopsController extends Zend_Controller_Action
         $this->_helper->redirector('index');
     }
 
-    public function ajaxgetfeaturedhomeAction(){
-        $id = $this->getRequest()->getParam('id');
-        $shop = Model_Shop::find($id);
-        $ret = '<ul>';
-        
-        $featuredProductsIds = array();
-        foreach($shop->getFeaturedProductsHome() as $fe){
-            $featuredProductsIds[] = $fe->id;
-        }
-
-        foreach($shop->getProducts() as $pr){
-            $ret .= '<li><input type="checkbox" id="featured_home_product_' . $pr->id . '" value="' . $pr->id . '" name="featured_home_products[]"' . ((in_array($pr->id, $featuredProductsIds)) ? ' checked="checked"' : '') . ' /><label for="featured_home_product_' . $pr->id . '">' . $pr->name . '</label></li>';
-        }
-
-        $ret .= '</ul>';
-        exit($ret);
-
-    }        
 
 }

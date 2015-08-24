@@ -1,33 +1,3 @@
 <h1>Shop hinzufügen / editieren</h1>
 <div class="error"><?= $this->error ?></div>
 <?= $this->form; ?>
-<script type="text/javascript">
-<?php if($this->shopID): // if we create a new shop we dont need to choose featured products ?> 
-    $(document).ready(function(){
-        if($('#featured_home').attr('checked')){
-            $.ajax({
-                url: '/admin/shops/ajaxgetfeaturedhome/id/' + <?= $this->shopID ?>,
-                datatype: 'html',
-                success: function(data){
-                    $('<div id="featured_home_products" style="padding-left:20px;"><h5><?= $this->translate('shops_products') ?></h5>' + data + '</div>').insertAfter('#featured_home-element');
-                }
-            });
-        }
-    });
-
-    $('#featured_home').live('click', function(){
-        if($('#featured_home').attr('checked')){
-            $.ajax({
-                url: '/admin/shops/ajaxgetfeaturedhome/id/' + <?= $this->shopID ?>,
-                datatype: 'html',
-                success: function(data){
-                    $('<div id="featured_home_products" style="padding-left:20px;"><h5><?= $this->translate('shops_products') ?></h5>' + data + '</div>').insertAfter('#featured_home-element');
-                }
-            });
-        }
-        else{
-            $('#featured_home_products').remove();
-        }
-    });
-<?php endif; ?>
-</script>

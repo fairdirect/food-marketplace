@@ -110,10 +110,19 @@ class Model_ShoppingCart extends Model_ModelAbstract
         }
         $shops = $this->getShopsWithOrderedProducts();
         $shipping = 0.00;
+        $calculatedWomas = array();
         if($this->delivery_addr_id){
             $deliveryAddress = Model_Address::find($this->delivery_addr_id);
             foreach($shops as $shop_id => $shop){
                 $shippingCosts = $shop->getShippingCosts();
+                if($shop->getWoma()){
+                    if(in_array($shop->getWoma()->id, $calculatedWomas)){
+                        continue;
+                    }
+                    else{
+                        $calculatedWomas[] = $shop->getWoma()->id;
+                    }
+                }
                 $val = 0.00;
                 foreach($shop->orderedProducts as $pr){
                     if(isset($pr['value'])){

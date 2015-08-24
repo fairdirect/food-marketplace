@@ -146,13 +146,13 @@ class Model_Woma extends Model_ModelAbstract
 
     public function getShopIds(){
         if(!$this->_shop_ids){
-            $result = self::getDbTable()->getAdapter()->fetchAll('SELECT shop_id FROM epelia_womas_shops WHERE woma_id = ?', $this->id);
+            $result = self::getDbTable()->getAdapter()->fetchAll('SELECT id FROM epelia_shops WHERE woma_id = ?', $this->id);
 
             if (is_null($result)) {
                 return array();
             }
             foreach($result as $r){
-                $this->_shop_ids[] = $r['shop_id'];
+                $this->_shop_ids[] = $r['id'];
             }
         }
         return $this->_shop_ids;
@@ -244,7 +244,14 @@ class Model_Woma extends Model_ModelAbstract
         $this->_products = null;
     }
 
-
+    public static function getRandomWoma(){
+        $db = self::getDbTable()->getAdapter();       
+        $query = 'SELECT s.* FROM epelia_womas s ORDER BY random() LIMIT 1';
+        $result = $db->fetchAll($query);
+        if($result){
+            return new self($result[0]);
+        }
+    }
 
     public function getLogo(){
         if(is_null($this->_logo) && !is_null($this->logo_id)){

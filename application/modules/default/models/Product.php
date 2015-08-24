@@ -500,7 +500,7 @@ class Model_Product extends Model_ModelAbstract
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
    
-        $select->where('shop_id IN (SELECT shop_id FROM epelia_womas_shops WHERE woma_id = ?)', $womaID);
+        $select->where('shop_id IN (SELECT shop_id FROM epelia_shops WHERE woma_id = ?)', $womaID);
 
         if($onlyBio){
             $select->where('is_bio = ?', 'true');

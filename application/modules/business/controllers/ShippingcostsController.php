@@ -44,6 +44,7 @@ class Business_ShippingCostsController extends Zend_Controller_Action{
             }
             $form->populate($formArray);
         }
+        $this->view->woma = $this->user->getShop()->getWoma();
         $this->view->form = $form;
     }
 
