@@ -28,6 +28,7 @@ class ShoppingcartController extends Zend_Controller_Action
             $products[$product->shop_id][] = array('product' => $product, 'product_price' => $price, 'quantity' => $item['quantity']);
             $total += $price->value * $item['quantity'];
         }
+        $this->view->user = $this->auth->getIdentity();
         $this->view->cart = Model_ShoppingCart::getRunningShoppingCart();
         $this->view->products = $products;
         $this->view->total = $total;

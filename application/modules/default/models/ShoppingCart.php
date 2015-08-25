@@ -113,16 +113,53 @@ class Model_ShoppingCart extends Model_ModelAbstract
         $calculatedWomas = array();
         if($this->delivery_addr_id){
             $deliveryAddress = Model_Address::find($this->delivery_addr_id);
-            foreach($shops as $shop_id => $shop){
-                $shippingCosts = $shop->getShippingCosts();
-                if($shop->getWoma()){
-                    if(in_array($shop->getWoma()->id, $calculatedWomas)){
-                        continue;
-                    }
-                    else{
-                        $calculatedWomas[] = $shop->getWoma()->id;
-                    }
+        }
+        else{
+            $deliveryAddress = new Model_Address(array('country_id' => 'DE')); // assume DE until we know better...
+        }
+        foreach($shops as $shop_id => $shop){
+            $shippingCosts = $shop->getShippingCosts();
+            if($shop->getWoma()){
+                if(in_array($shop->getWoma()->id, $calculatedWomas)){
+                    continue;
                 }
+                else{
+                    $calculatedWomas[] = $shop->getWoma()->id;
+                }
+            }
+            $val = 0.00;
+            foreach($shop->orderedProducts as $pr){
+                if(isset($pr['value'])){
+                    $val += $pr['quantity'] * $pr['value'];
+                }
+                else{
+                    $val += $pr['quantity'] * Model_ProductPrice::find($pr['product_price_id'])->value;
+                }
+            }
+            foreach($shippingCosts as $shippingCost){
+                if($shippingCost->country_id == $deliveryAddress->country && ($val < $shippingCost->free_from || !$shippingCost->free_from)){
+                    $shipping += $shippingCost->value;
+                }
+            }
+        }        
+        return $shipping;
+    }
+            
+    public function getShippingCostsForShop($shopID){
+        $shops = $this->getShopsWithOrderedProducts();
+        $shipping = 0.00;
+        if($this->is_self_collecting){
+            return 0.00;
+        }
+        if($this->delivery_addr_id){
+            $deliveryAddress = Model_Address::find($this->delivery_addr_id);
+        }
+        else{
+            $deliveryAddress = new Model_Address(array('country_id' => 'DE')); // assume DE until we know better...
+        }
+        foreach($shops as $shop_id => $shop){
+            if($shop_id == $shopID){
+                $shippingCosts = $shop->getShippingCosts();
                 $val = 0.00;
                 foreach($shop->orderedProducts as $pr){
                     if(isset($pr['value'])){
@@ -138,34 +175,7 @@ class Model_ShoppingCart extends Model_ModelAbstract
                     }
                 }
             }
-        }
-        return $shipping;
-    }
             
-    public function getShippingCostsForShop($shopID){
-        $shops = $this->getShopsWithOrderedProducts();
-        $shipping = 0.00;
-        if($this->delivery_addr_id){
-            $deliveryAddress = Model_Address::find($this->delivery_addr_id);
-            foreach($shops as $shop_id => $shop){
-                if($shop_id == $shopID){
-                    $shippingCosts = $shop->getShippingCosts();
-                    $val = 0.00;
-                    foreach($shop->orderedProducts as $pr){
-                        if(isset($pr['value'])){
-                            $val += $pr['quantity'] * $pr['value'];
-                        }
-                        else{
-                            $val += $pr['quantity'] * Model_ProductPrice::find($pr['product_price_id'])->value;
-                        }
-                    }
-                    foreach($shippingCosts as $shippingCost){
-                        if($shippingCost->country_id == $deliveryAddress->country && ($val < $shippingCost->free_from || !$shippingCost->free_from)){
-                            $shipping += $shippingCost->value;
-                        }
-                    }
-                }
-            }
         }
         return $shipping;
     }
