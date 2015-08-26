@@ -4601,13 +4601,13 @@
         </tu>
         <tu tuid='misc_netto'>
             <tuv xml:lang="de">
-                <seg>netto</seg>
+                <seg>nt.wt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>netto</seg>
+                <seg>nt.wt.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>netto</seg>
+                <seg>nt.wt.</seg>
             </tuv>
         </tu>
     </body>
