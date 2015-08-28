@@ -3,7 +3,7 @@
 
 <script type="text/javascript">
 
-    $('#type').live('change', function(){ 
+    $('#type').change(function(){ 
         $.ajax({ 
             url: '/ajax/getgroups/type/' + $('#type').val(), 
             datatype: 'html', 

@@ -272,7 +272,7 @@ class ShoppingcartController extends Zend_Controller_Action
                 '#shopContent#'
             ),
             array(
-                $cart->id,
+                $cart->getCartId(),
                 date('d.m.Y', time()),
                 $cart->getBillingAddress()->firstname,
                 $cart->getBillingAddress()->name,
@@ -288,7 +288,7 @@ class ShoppingcartController extends Zend_Controller_Action
                 IBAN: DE24513610210004647483
                 BIC: GENODE51HHE
 
-                Betreff: Bestellnummer ' . $cart->id
+                Betreff: Bestellnummer ' . $cart->getCartId()
             ),
             $concludeMail->content
         );
@@ -296,11 +296,11 @@ class ShoppingcartController extends Zend_Controller_Action
         $mail->setBodyText(strip_tags($content));
         $mail->setFrom('mail@epelia.com', 'Epelia');
         $mail->addTo($this->user->email);
-        $mail->setSubject(str_replace('#orderNumber#', $cart->id, $concludeMail->subject));
+        $mail->setSubject(str_replace('#orderNumber#', $cart->getCartId(), $concludeMail->subject));
         $mail->send();
 
         if($cart->payment_type == 'directtransfer'){
-            $url = $this->redirectDirecttransfer($cart->id);
+            $url = $this->redirectDirecttransfer($cart->getCartId());
             $this->_helper->redirector->gotoUrlAndExit($url);
         }
         else{
@@ -371,7 +371,7 @@ class ShoppingcartController extends Zend_Controller_Action
             'sender_country_id' => Model_Address::find($cart->billing_addr_id)->country,
             'amount' => number_format($cart->getPriceTotal(), 2),
             'currency_id' => 'EUR',
-            'reason_1' => 'Bestellnr.: '. $cart->id,
+            'reason_1' => 'Bestellnr.: '. $cart->getCartId(),
             'reason_2' => 'Epelia',
             "user_variable_0" => '',   
             "user_variable_1" => '',

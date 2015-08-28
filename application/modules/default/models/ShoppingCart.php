@@ -26,6 +26,10 @@ class Model_ShoppingCart extends Model_ModelAbstract
         return new Model_DbTable_ShoppingCart();
     }
 
+    public function getCartId(){
+        return Model_Setting::find('region_id')->value . $this->id;
+    }
+
     public function getDeliveryAddress(){
         if(is_null($this->_delivery_address) && $this->delivery_addr_id){
             $this->_delivery_address = Model_Address::find($this->delivery_addr_id);

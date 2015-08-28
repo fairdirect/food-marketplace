@@ -147,7 +147,7 @@ class ShopsController extends Zend_Controller_Action
         $zip = $request->getPost('zip');
         $country = $request->getPost('country');
         $distance = ($request->getPost('distance')) ? $request->getPost('distance') : 1;
-        if(!$zip || !$country || !in_array($country, array('DE', 'AT', 'CH'))){
+        if(!$zip || !$country || !is_numeric($distance) || !in_array($country, array('DE', 'AT', 'CH'))){
             $this->_redirect('/');
         }
         $shops = Model_Shop::findByPlzAndDistance($zip, $country, $distance);

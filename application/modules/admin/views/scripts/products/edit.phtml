@@ -19,11 +19,11 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        if($('#unlimited_stock').attr('checked')){
+        if($('#unlimited_stock').is(':checked')){
             $('#stock').attr('disabled', 'disabled');
         }
     });
-    $('#type').live('change', function(){ 
+    $('#type').change(function(){ 
         $.ajax({ 
             url: '/ajax/getgroups/type/' + $('#type').val(), 
             datatype: 'html', 
@@ -33,7 +33,7 @@
             } 
         }); 
     });
-    $('#group_id').live('change', function(){
+    $('#group_id').change(function(){
         $.ajax({
             url: '/ajax/getcategories/group/' + $('#group_id').val(),
             datatype: 'html',
@@ -42,8 +42,8 @@
             }
         });
     });
-    $('#unlimited_stock').live('click', function(){
-        if($('#unlimited_stock').attr('checked')){
+    $('#unlimited_stock').click(function(){
+        if($('#unlimited_stock').is(':checked')){
             $('#stock').attr('disabled', 'disabled');
         }
         else{

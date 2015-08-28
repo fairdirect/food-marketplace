@@ -96,6 +96,7 @@ class AjaxController extends Zend_Controller_Action
                 $session->language = 'de';
                 break;
         }
+        exit(json_encode(array('suc' => true)));
 
     }
 }

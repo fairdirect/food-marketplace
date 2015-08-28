@@ -20,10 +20,10 @@ class Admin_OrdersController extends Zend_Controller_Action
             foreach($shopsWithOrderedProducts as $shop_id => $shop){
                 if(count($shopsWithOrderedProducts) > 1){ // need to add counter to unique order_number
                     $counter++;
-                    $order_number = $cart->id . '-' . $counter;
+                    $order_number = $cart->getCartId() . '-' . $counter;
                 }
                 else{
-                    $order_number = $cart->id;
+                    $order_number = $cart->getCartId();
                 }
                 $order = new Model_Order(array('user_id' => $cart->user_id, 'shop_id' => $shop->id, 'delivery_addr_id' => $cart->delivery_addr_id, 'billing_addr_id' => $cart->billing_addr_id, 'status' => 'in_process', 'order_number' => $order_number));
                 $order->save();
