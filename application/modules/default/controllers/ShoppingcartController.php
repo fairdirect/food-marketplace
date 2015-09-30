@@ -300,7 +300,7 @@ class ShoppingcartController extends Zend_Controller_Action
         $mail->send();
 
         if($cart->payment_type == 'directtransfer'){
-            $url = $this->redirectDirecttransfer($cart->getCartId());
+            $url = $this->redirectDirecttransfer($cart->id);
             $this->_helper->redirector->gotoUrlAndExit($url);
         }
         else{
