@@ -37,7 +37,7 @@ There is nothing special about it:
 
 1. Create an empty database initialized with [`epelia.sql`](https://github.com/Fairdirect/epelia/blob/master/docs/epelia.sql).
 
-2. Configure database access etc. in ['application/configs/application.ini'](https://github.com/Fairdirect/epelia/blob/master/application/configs/application.ini).
+2. Configure database access etc. in [`application/configs/application.ini`](https://github.com/Fairdirect/epelia/blob/master/application/configs/application.ini).
 
 3. Configure your webserver to serve directory [`public/`](https://github.com/Fairdirect/epelia/tree/master/public) as the document root directory of the software.
 
