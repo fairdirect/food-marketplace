@@ -1,0 +1,52 @@
+	<div id="register-content" class="request">
+		
+		<h2><?= $this->translate('cooperative_headline') ?></h2>
+		
+		<p class="intro-block"><?= $this->translate('cooperative_sub') ?></p>
+		<ul>
+			<li><?= $this->translate('cooperative_sub_1') ?></li>
+			<li><?= $this->translate('cooperative_sub_2') ?></li>
+			<li><?= $this->translate('cooperative_sub_3') ?></li>
+			<li><?= $this->translate('cooperative_sub_4') ?></li>
+			<li><?= $this->translate('cooperative_sub_5') ?></li>
+			<li><?= $this->translate('cooperative_sub_6') ?></li>
+		</ul><br />
+		<p><?= $this->translate('cooperative_sub_7') ?></p>
+	
+		<form name="registerform" id="register_form" method="post" action="/genossenschaft/register/">
+			<fieldset>
+				<ol>
+					<li>
+						<label for="firma"><?= $this->translate('misc_company') ?></label>
+						<input type="text" name="Firma" id="firma" class="input_text" value="" tabindex="1" />
+					</li>
+					<li>
+						<label for="lastname"><?= $this->translate('misc_lastname') ?></label>
+						<input type="text" name="Nachname" id="lastname" class="input_text" value="" tabindex="5" />
+					</li>
+					<li>
+						<label for="firstname"><?= $this->translate('misc_firstname') ?></label>
+						<input type="text" name="Vorname" id="firstname" value="" tabindex="6" />
+					</li>
+					<li>
+						<label for="tel"><?= $this->translate('misc_phone') ?></label>
+						<input type="text" name="Telefon" id="tel" value=""  tabindex="7" />
+					</li>
+					<li>
+						<label for="email"><?= $this->translate('misc_email') ?></label>
+						<input type="text" name="E-Mail" id="email" value="" tabindex="8" />
+					</li>
+					<li>
+						<label for="website"><?= $this->translate('misc_website') ?></label>
+						<input type="text" name="webseite" id="website" value="" tabindex="9" />						
+					</li>
+				</ol>
+				
+			</fieldset>
+			<fieldset>
+				<label>&nbsp;<input type="hidden" name="register" value="1" /></label>
+                <input type="submit" value="<?= $this->translate('misc_send') ?>" />
+			</fieldset>	
+		</form>
+		
+	</div>

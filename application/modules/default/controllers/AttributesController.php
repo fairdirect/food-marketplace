@@ -2,6 +2,12 @@
 
 class AttributesController extends Zend_Controller_Action
 {
+    public function init() {
+        if(!Model_Region::getCurrentRegion()) { // region selected
+            $this->_redirect('/regions/');
+        }
+    }
+
     public function indexAction(){
         $this->view->allergenes = Model_ProductAttribute::getByType('allergen');
         $this->view->additives = Model_ProductAttribute::getByType('additive');

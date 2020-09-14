@@ -1,0 +1,134 @@
+<?php
+    $session = new Zend_Session_Namespace('Default');
+    $helpPrefix = 'hilfe'; 
+    if($session->language == 'it'): 
+        $helpPrefix = 'hilfeit';
+    endif;
+    if($session->language == 'en'): 
+        $helpPrefix = 'hilfeeng';
+    endif;
+?>
+
+<div class="row">
+    <div class="col bg-light border m-3" style="width:90%">
+
+
+<?php if($this->randomWoma): ?>
+    <div class="shopview_content_top" style="height:235px;">
+        <div class="column_left">
+            <?php if($this->randomWoma->getLogo()): ?><img src="/img/womas/<?= $this->escape($this->randomWoma->getLogo()->filename) ?>" alt="<?= $this->escape($this->randomWoma->name) ?>" /><?php endif; ?>
+            <ul style="margin-top:5px;">
+                <li><?= count($this->randomWoma->getProducts()) ?> <?= (count($this->randomWoma->getProducts()) == 1) ? $this->translate('shops_product') : $this->translate('shops_products') ?></li>
+            </ul>
+        </div>
+        <div class="column_ctr" style="margin-top:15px;">
+            <p class="illu" style="padding-right: 0px;">
+                <strong style="font-size:16px; color:#1E211F"><?= $this->randomWoma->name ?></strong>
+                <span class="place">
+                    <?= $this->escape($this->randomWoma->street) ?> <?= $this->escape($this->randomWoma->house) ?><br /><?= $this->escape($this->randomWoma->zip) ?> <?= $this->escape($this->randomWoma->city) ?><br /><?= $this->escape($this->randomWoma->getCountry()->name) ?><br/>
+                    Telefon: +<?= $this->escape($this->randomWoma->getCountry()->phone) ?> <?= $this->escape($this->randomWoma->phone) ?><br />
+                    <span style="font-weight:bold"><?= $this->translate('Besuchen Sie uns vor Ort:') ?></span><br />
+                    <?= $this->escape($this->randomWoma->additional) ?>
+                </span>
+            </p>
+            <p class="clear"></p>
+
+            <a href="<?= $this->randomWoma->getLink() ?>" rel="nofollow" title="<?= $this->translate('shops_more_about') ?>"><?= $this->translate('shops_more_about') ?></a>
+
+        </div> 
+
+        <div id="slideshow" style="left:-60px; height:240px; border-left: 5px solid white;">
+<?php $counter = 0; ?>        
+<?php foreach($this->randomWoma->getShops() as $shop): 
+    if(!$shop->featured_home){
+        continue;
+    }
+    $counter++;
+?>    
+            <a href="<?= $shop->getLink() ?>" <?php if($counter == 1): ?>class="active" <?php endif; ?>style="text-align:center; background-color:#EFEFDE;width:430px; height:230px;">
+                <h3 style="margin-left:35px; margin-top:10px;">Shopvorstellung: <?= $shop->name ?></h3>
+                <div class="column_left" style="margin-top:15px;">
+                    <?php if($shop->getLogo()): ?><img src="/img/shops/<?= $this->escape($shop->getLogo()->filename) ?>" alt="<?= $this->escape($shop->name) ?>" /><?php endif; ?>
+                    <ul style="margin-top:5px;">
+                        <li><?= count($shop->getProducts()) ?> <?= (count($shop->getProducts()) == 1) ? $this->translate('shops_product') : $this->translate('shops_products') ?></li>
+                    </ul>
+                </div>
+                <div class="column_ctr">
+                    <p class="illu">
+                        <span class="place">
+                            <?= $this->escape($shop->street) ?> <?= $this->escape($shop->house) ?><br /><?= $this->escape($shop->zip) ?> <?= $this->escape($shop->city) ?><br /><?= $this->escape($shop->getCountry()->name) ?><br/>
+                            Telefon: +<?= $this->escape($shop->getCountry()->phone) ?> <?= $this->escape($shop->phone) ?>
+                        </span>
+                    </p>
+                    <p class="clear"></p>
+                </div>
+            </a>
+<?php endforeach; ?>
+   
+        </div>
+    </div>
+<?php endif; ?>    
+
+    <div class="clear"></div>
+
+    <div class="left sidemenu">
+<?php foreach($this->mainCategories as $mainCat): 
+    if(!$mainCat->getGroups()):
+        continue;
+    endif; ?>       
+        <div class="block">
+            <h2><?= $this->translate($mainCat->name) ?></h2>
+            <ul class="list">
+    <?php foreach($mainCat->getGroups() as $group): ?>
+                <li><a href="/groups/<?= $this->escape($group->id) ?>" title="<?= $this->escape($group->name) ?>"><?= $this->escape($group->name) ?></a> <span class="counter"><?= $this->escape($group->getProductCount()) ?></span></li>
+    <?php endforeach; ?>
+            </ul>
+        </div>
+<?php endforeach; ?>        
+        <div class="block">
+            <p class="title"><?= $this->translate('misc_help') ?></p>
+            <ul>
+                <li>
+                    <a href="/<?= $helpPrefix ?>/ueber/" title="<?= $this->translate('misc_about') ?>"><?= $this->translate('misc_about') ?></a>
+                </li>
+                <li>
+                    <a href="/<?= $helpPrefix ?>/bestellen/" title="<?= $this->translate('footer_order') ?>"><?= $this->translate('footer_order') ?></a>
+                </li>
+                <li>
+                    <a href="/<?= $helpPrefix ?>/bezahlung/" title="<?= $this->translate('footer_payment') ?>"><?= $this->translate('footer_payment') ?></a>         
+                </li>
+                <li>
+                    <a href="/<?= $helpPrefix ?>/versandlieferung/" title="<?= $this->translate('footer_delivery') ?>"><?= $this->translate('footer_delivery') ?></a>
+                </li>
+            </ul>
+            <ul style="border-top:1px solid #e3e2d0; padding-top:16px;">            
+                <li>
+                    <a href="/verkaufen" title="<?= $this->translate('footer_sell') ?>"><?= $this->translate('footer_sell') ?></a>
+                </li>
+            </ul>   
+        </div>
+    </div>
+    <div class="left productgrid" style="width:650px;">
+<?php foreach($this->homegroups as $group): ?>    
+        <h3><?= $this->escape($group->name) ?></h3>
+        <p class="clear" style="height:26px;">&nbsp;</p>
+    <?php foreach($group->getProducts() as $product): ?>
+        <div class="grid-item-wrapper">
+            <a style="text-align:center; display: block; background-color:white;" href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>">
+                <img src="<?php if($product->getDefaultPicture()): ?>/img/products/174x136/<?= $this->escape($product->getDefaultPicture()->filename) ?><?php endif; ?>" alt="<?= $this->escape($product->name) ?>" />
+            </a>
+            <p style="text-align:center; margin-bottom:0px;">
+                <a class="productlink" href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>">
+                    <span class="name"><?= (strlen($product->name) > 20) ? (($this->escape(substr($product->name, 0, 20))) ? $this->escape(substr($product->name, 0, 20)) : $this->escape(substr($product->name, 0, 21))) . ' ...' : $this->escape($product->name) ?></span><br />
+                    <span class="price"><span class="value"><?= $this->escape($product->getFirstNormalPrice()->value) ?></span> EUR</span>
+                </a>
+            </p>
+            <div style="font-size:9px;font-weight:bold;color:#88877A; text-align:center"><?php if($product->getFirstNormalPrice()->getBasePriceString()): ?>(<?= $this->escape($product->getFirstNormalPrice()->getBasePriceString()) ?>)<?php endif; ?> </div>
+        </div>
+    <?php endforeach; ?>
+    <div class="clear" style="height:5px;"></div>
+<?php endforeach; ?>
+
+    </div>
+    <div class="clear" style="height:25px;"></div>
+</div>

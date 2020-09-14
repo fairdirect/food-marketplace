@@ -1,6 +1,10 @@
-<h1><?= $this->translate('business_shop_headline') ?></h1>
-<div class="error"><?= $this->escape($this->error) ?></div>
-<?= $this->form; ?>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1><?= $this->translate('business_shop_headline') ?></h1>
+        <div class="error"><?= $this->escape($this->error) ?></div>
+        <?= $this->form; ?>
+    </div>
+</div>
 
 <script type="text/javascript">
      $(document).ready(function(){

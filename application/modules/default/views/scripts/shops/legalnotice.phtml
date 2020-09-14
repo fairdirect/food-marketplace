@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="col-2 bg-light border m-3">
+	<?php if($this->shop->getLogo()): ?>
+	    <a href="<?= $this->shop->getLink() ?>"><img class="img-thumbnail" src="/img/shops/<?= $this->escape($this->shop->getLogo()->filename) ?>" alt="<?= $this->escape($this->shop->name) ?>" /></a>
+	<?php endif; ?>
+	<p><a href="<?= $this->shop->getLink() ?>" title="<?= $this->shop->getLink() ?>"><?= $this->escape($this->shop->name) ?></a></p>
+	<p><?= $this->escape($this->shop->city) ?><br /><?= $this->escape($this->shop->getCountry()->name) ?></p>
+	<p><a href="<?= $this->shop->getLink() ?>" title="">Besuchen Sie unseren Shop</a></p>
+	<ul>
+		<li>
+			<a href="mailto:<?= $this->shop->getUser()->email ?>" title="Kontakt">Kontakt</a>	
+		</li>
+		<li>
+			<a href="<?= $this->shop->getLink() ?>agb" title="AGB">AGB</a>
+		</li>
+		<li>
+			<a href="<?= $this->shop->getLink() ?>datenschutz" title="Datenschutz">Datenschutz</a>		
+		</li>
+		<li>
+			Impressum		
+		</li>		
+	</ul>
+    </div>
+    <div class="col bg-light border m-3">
+	<h2>Impressum von <?= $this->shop->name ?></h2>
+
+        <?php if($this->shop->id == 4002 or $this->shop->id == 4121): ?>
+        <p><strong>Dieser Shop dient ausschließlich zur Demonstration der Software. Produkte 
+          können nicht erworben werden, und alle Produkte und Anbieter-Angaben (mit Ausnahme 
+          der Bildnachweise) sind als Füllinhalte ohne Bedeutung zu verstehen.</strong></p>
+        <?php endif; ?>
+	
+	<p><?= $this->shop->company ?></p>
+	<p><?= $this->shop->street ?></p>
+	<p><?= $this->shop->zip ?> <?= $this->shop->city ?></p>
+	<p><?= $this->shop->getCountry->name ?></p>
+	
+	<p>&nbsp;</p>
+	
+	<p>Telefon: +<?= $this->shop->getCountry()->phone ?> <?= $this->shop->phone ?></p>
+	<p>E-Mail: <?= $this->shop->getUser()->email ?></p>
+	
+	<p>&nbsp;</p>
+
+	<?php if(trim($this->shop->register_id)): ?>	
+	<p>Registernummer: <?= $this->escape($this->shop->register_id) ?></p>
+	<?php endif; ?>
+	<?php if(trim($this->shop->taxnumber)): ?>
+	<p>Steuer-Nr: <?= $this->escape($this->shop->taxnumber) ?></p>
+	<?php endif; ?>
+	<?php if(trim($this->shop->salestax_id)): ?>
+	<p>Ust-Ident-Nr: <?= $this->escape($this->shop->salestax_id) ?></p>
+	<?php endif; ?>
+	<?php if(trim($this->shop->register_court)): ?>
+	<p>Registergericht: <?= $this->escape($this->shop->register_court) ?></p>
+	<?php endif; ?>
+	<?php if(trim($this->shop->representative)): ?>
+	<p>Vertretungsberechtigt / Geschäftsführung: <?= $this->escape($this->shop->representative) ?></p>
+	<?php endif; ?>
+	<?php if(trim($this->shop->eco_control_board)): ?>
+	<p>Öko-Kontrollstelle: <?= $this->escape($this->shop->eco_control_board) ?></p>
+	<?php endif; ?>
+	<?php if(trim($this->shop->eco_control_id)): ?>
+	<p>Öko-Kontrollnummer: <?= $this->escape($this->shop->eco_control_id) ?></p>			
+	<?php endif; ?>
+	<p>&nbsp;</p>
+	
+	<p>Angabe gemäß §6 Anbieterkennzeichnung des TMG (Telemediengesetz)</p>
+	
+	<p>&nbsp;</p>
+
+        <?php if($this->shop->id == 4002): ?>
+        <p>Bildnachweis "rote Mettwurst": Rainer Sturm / <a href="http://www.pixelio.de/">pixelio.de</a></p>
+        <p>Bildnachweis "Wurstsalat": Joujou / <a href="http://www.pixelio.de/">pixelio.de</a></p>
+        <p>&nbsp;</p>
+        <?php endif; ?>
+
+        <?php if($this->shop->id == 4121): ?>
+        <p>Bildnachweis "Erdbeeren": PeterA / <a href="http://www.pixelio.de/">pixelio.de</a></p>
+        <p>Bildnachweis "Karotten": Petra Bork / <a href="http://www.pixelio.de/">pixelio.de</a></p>
+        <p>&nbsp;</p>
+        <?php endif; ?>
+
+	<p>Die Informationen auf dieser Website werden regelmäßig überprüft und aktualisiert. Trotz aller Sorgfalt können sich Informationen geändert haben. Eine Haftung oder Garantie für die Aktualität, Richtigkeit und Vollständigkeit der zur Verfügung gestellten Informationen kann daher nicht übernommen werden. Gleiches gilt auch für alle anderen Webseiten, auf die mittels Hyperlink verwiesen wird. Epelia ist für den Inhalt der Webseiten, die aufgrund einer solchen Verbindung erreicht werden, nicht verantwortlich. Des weiteren behalten wir uns das Recht vor, Änderungen oder Ergänzungen der bereitgestellten Informationen vorzunehmen.<br/>
+<br/>
+Inhalt und Struktur dieser Webseiten sind geschützt. Die Vervielfältigung von Informationen oder Daten, insbesondere die Verwendung von Texten oder Bildmaterial bedarf der vorherigen Zustimmung durch uns.</p>
+		
+    </div>
+</div>

@@ -99,5 +99,21 @@ class AjaxController extends Zend_Controller_Action
         exit(json_encode(array('suc' => true)));
 
     }
+
+    public function selectregionAction(){
+        $request = $this->getRequest();
+        if($request->getPost('plz') && $request->getPost('country')){
+            $region = Model_Region::find($request->getPost('plz') . '_' . $request->getPost('country'));
+            if($region) {
+                exit(json_encode(array('suc' => true, 'message' => '', 'data' => $region)));
+            } else {
+                exit(json_encode(array('suc' => false, 'message' => 'No region found')));
+            }
+        }
+        else{
+            exit(json_encode(array('suc' => false, 'message' => 'Incomplete request')));
+        }
+    }
+
 }
 

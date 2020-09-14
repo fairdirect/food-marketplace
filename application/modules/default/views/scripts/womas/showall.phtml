@@ -1,0 +1,48 @@
+<div id="content-search">
+    <div class="sidewrapper">
+        <div class="block">
+            <ul class="categoryList">
+<?php foreach($this->woma->getCategories() as $cat): ?>
+                <li><a href="<?= $this->woma->getLink() ?>categories/<?= $this->escape($cat->id) ?>/" title="<?= $this->escape($cat->name) ?>"><?= $this->escape($cat->name) ?></a></li>
+<?php endforeach; ?>
+                <li class="filter_bio" style="padding-bottom:5px;">
+                    <input id="i_bio" type="checkbox" class="filter" value="bio" name="only_bio"<?php if($this->onlyBio): ?> checked="checked"<?php endif; ?> />
+                    <label style="display:inline" for="i_bio"><a><?= $this->translate('filter_bio') ?></a></label>
+                </li>
+                <li class="filter_discount" style="padding-bottom:5px;">
+                    <input id="i_discount" type="checkbox" class="filter" value="discount" name="only_discount"<?php if($this->onlyDiscount): ?> checked="checked"<?php endif; ?> />
+                    <label style="display:inline" for="i_discount"><a><?= $this->translate('filter_discount') ?></a></label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="search-products">
+<?php $this->woma->clearProducts() ?>    
+        <h2 class="clear">Alle Produkte (<a href="<?= $this->escape($this->woma->getLink()) ?>"><?= $this->escape($this->woma->name) ?></a>)</h2>
+<?= $this->partial('partials/productgrid.phtml', array('products' => $this->woma->getProducts(9, ($this->page > 1) ? (9 * $this->page - 9) : null, $this->onlyBio, $this->onlyDiscount))) ?>        
+<?php if($this->productCount): ?>            
+            <?= $this->partial('partials/pagination.phtml', array('page' => $this->page, 'productCount' => $this->productCount, 'onlyBio' => $this->onlyBio, 'onlyDiscount' => $this->onlyDiscount, 'onlyWholesale' => $this->onlyWholesale, 'customLink' => $this->woma->getLink() . 'showall/')); ?>
+<?php endif; ?>
+
+      
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.filter').change(function(){
+            var bio = ($('#i_bio').is(':checked'));
+            var discount = ($('#i_discount').is(':checked'));
+            var pathnameAttr = $(location).attr('pathname').split('/');
+            if(!bio && !discount){
+                location.href = '/' + pathnameAttr[1] + '/' + pathnameAttr[2] + '/' + pathnameAttr[3] + '/';
+            }
+            else{
+                if(!pathnameAttr[6]) pathnameAttr[6] = 'all';
+                pathnameAttr[7] = 1;
+                location.href = '/' + pathnameAttr[1] + '/' + pathnameAttr[2] + '/' + pathnameAttr[3] + '/' + ((bio) ? 'bio' : 'all') + '/' + ((discount) ? 'discount': 'all') + '/' + pathnameAttr[6] + '/' + pathnameAttr[7] + '/';
+            }
+        });
+    });
+
+</script>

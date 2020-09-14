@@ -1,0 +1,27 @@
+<div id="content_buy">
+    <div class="left tplAnallergenicLeft" style="width:100%">   
+        <h1><?= $this->translate('allergies_headline') ?></h1>
+        <h3><?= $this->translate('allergies_sub_1') ?></h3>
+
+        <p class="textblock"><?= $this->translate('allergies_text_1') ?></p>       
+        <div class="linklist">
+            <ul>
+<?php foreach($this->allergenes as $attr): ?>
+                <li><a href="/attributes/<?= $this->escape($attr->id) ?>/" title="<?= $this->escape($attr->name) ?>"><?= $this->escape($attr->name) ?></a> <span><?= count($attr->getProducts()) ?></span></li>
+<?php endforeach; ?>
+            </ul>
+        </div>
+        <p class="clear"></p>        
+        <p class="clear" style="height:20px;"></p>
+        <h3><?= $this->translate('allergies_sub_2') ?></h3>
+        <p class="textblock"><?= $this->translate('allergies_text_2') ?></p>
+        <div class="linklist_additives">
+            <ul>
+<?php foreach($this->additives as $attr): ?>
+                <li><a href="/attributes/<?= $this->escape($attr->id) ?>/" title="<?= $this->escape($attr->name) ?>"><?= $this->escape($attr->name) ?></a> <span><?= count($attr->getProducts()) ?></span></li>
+<?php endforeach; ?>
+           </ul>
+        </div>   
+        <p class="clear"></p>
+    </div>  
+</div>

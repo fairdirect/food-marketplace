@@ -14,8 +14,12 @@
     }
 
 </style>
-<h1><?= $this->translate('business_product_edit_headline') ?></h1>
-<?= $this->form; ?>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1><?= $this->translate('business_product_edit_headline') ?></h1>
+        <?= $this->form; ?>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function(){

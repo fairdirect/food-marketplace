@@ -1,0 +1,12 @@
+<div id="content_buy">
+    <h1 style="margin-bottom:0px;"><?= $this->translate('discount_all_categories') ?></h1>
+    <div class="content_buy_categories">
+<?php foreach($this->mainCategories as $cat): 
+    if(!$cat->getGroups(false, true, false)):
+        continue;
+    endif; ?>
+        <?= $this->partial('partials/groupgrid.phtml', array('groupTitle' => $this->translate($cat->name), 'groups' => $cat->getGroups(false, true, false), 'onlyBio' => false, 'onlyDiscount' => true, 'onlyWholesale' => false)) ?>
+<?php endforeach; ?>        
+    </div>
+    <p class="clear"></p>
+</div>

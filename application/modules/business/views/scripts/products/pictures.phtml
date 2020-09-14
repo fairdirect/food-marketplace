@@ -1,17 +1,21 @@
-<h1><?= $this->translate('business_products_pictures_headline') ?></h1>
-<input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
-<table class="table" id="bilder">
-    <thead>
-        <tr><td>Auswahl</td><td></td><td>Standard-Bild?</td></tr>
-    </thead>
-    <tbody>
-        
-<?php foreach($this->product->getPictures() as $pic): ?>
-    <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174x136/<?= $this->escape($pic->filename) ?>" alt=""></td><td><input type="checkbox" name="is_default" class="check_default" value="<?= $pic->id ?>" onclick="setDefaultPic('<?= $pic->id ?>')"<?php if($this->product->main_picture_id == $pic->id): ?> checked="checked"<?php endif; ?> /></td></tr>
-<?php endforeach; ?>
-    </tbody>
-</table>
-<button class="btn" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1><?= $this->translate('business_products_pictures_headline') ?></h1>
+        <input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
+        <table class="table" id="bilder">
+            <thead>
+                <tr><td>Auswahl</td><td></td><td>Standard-Bild?</td></tr>
+            </thead>
+            <tbody>
+
+        <?php foreach($this->product->getPictures() as $pic): ?>
+            <tr><td><input class="check_delete_pic" type="checkbox" name="imagesDelete[]" value="<?= $this->escape($pic->id) ?>" /></td><td><img style="width:120px;" src="/img/products/174x136/<?= $this->escape($pic->filename) ?>" alt=""></td><td><input type="checkbox" name="is_default" class="check_default" value="<?= $pic->id ?>" onclick="setDefaultPic('<?= $pic->id ?>')"<?php if($this->product->main_picture_id == $pic->id): ?> checked="checked"<?php endif; ?> /></td></tr>
+        <?php endforeach; ?>
+            </tbody>
+        </table>
+        <button class="btn" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>
+    </div>
+</div>
 
 <script src="/js/libs/jquery.iframe-transport.js"></script>
 <script src="/js/libs/jquery.fileupload.js"></script>
@@ -62,10 +66,10 @@
             dataType: 'json',
             formData: {id: <?= $this->escape($this->product->id) ?>},
             send: function(e, data){
-		$('#please_wait').show();
+		        $('#please_wait').show();
             },
             done: function (e, data) {
-		$('#please_wait').hide();
+		        $('#please_wait').hide();
                 if(data){
                     $('#bilder').append(data.result.data);
                 }

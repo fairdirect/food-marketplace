@@ -24,9 +24,9 @@ class Model_MainCategory extends Model_ModelAbstract
         return $ret;
     }
 
-    public function getGroups($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
+    public function getGroups($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyFromRegion = false){
         if(is_null($this->_groups)){
-            $this->_groups = Model_ProductGroup::getByType($this->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated);
+            $this->_groups = Model_ProductGroup::getByType($this->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $onlyFromRegion);
         }
         return $this->_groups;
     }

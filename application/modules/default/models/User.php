@@ -39,6 +39,8 @@ class Model_User extends Model_ModelAbstract
 
     private $_product_ratings = null;
 
+    private $_region = null;
+
     public static function refreshAuth(){
         if(Zend_Auth::getInstance()->hasIdentity()){
             $user_id = Zend_Auth::getInstance()->getIdentity()->id;
@@ -123,6 +125,18 @@ class Model_User extends Model_ModelAbstract
             $this->_product_ratings = Model_ProductRating::findByUser($this->id);
         }
         return $this->_product_ratings;
+    }
+
+    public function getRegion(){
+        if (!is_null($this->_region)) {
+            return $this->_region;
+        }
+        $address = $this->getMainDeliveryAddress();
+        if($address) {
+            $this->_region = Model_Region::find($address->zip . '_' . $address->country);
+            return $this->_region;
+        }
+        return null;
     }
 
     public function __construct($data){

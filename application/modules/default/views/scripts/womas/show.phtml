@@ -1,0 +1,251 @@
+<script type="text/javascript">
+
+function slideSwitch() {
+    var $active = $('#slideshow a.active');
+    if ( $active.length == 0 )
+        $active = $('#slideshow a:last');
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow a:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+
+</script>
+<div id="shop" class="shopview">
+    <h2><?= $this->escape($this->woma->name) ?></h2>
+    <div style="padding:0px 10px 10px 10px; font-size:15px; font-weight:bold">
+        <a href="/epelia-versandzellen.pdf">Über die Regionalen Versandzellen (PDF)</a><br/>
+        <a href="/epelia-logistik.pdf">Über das Epelia Logistik-Konzept (PDF)</a>
+    </div>
+    <div class="shopview_content_top" style="height:235px;">
+        <div class="column_left">
+            <?php if($this->woma->getLogo()): ?><img src="/img/womas/<?= $this->escape($this->woma->getLogo()->filename) ?>" alt="<?= $this->escape($this->woma->name) ?>" /><?php endif; ?>
+            <ul>
+                <li><?= $this->translate('shops_since') ?> <?= date('d.m.Y', strtotime($this->woma->created)) ?></li>
+                <li><?= count($this->woma->getProducts()) ?> <?= (count($this->woma->getProducts()) == 1) ? $this->translate('shops_product') : $this->translate('shops_products') ?></li>
+            </ul>
+        </div>
+        <div class="column_ctr">
+            <p class="illu" style="padding-right: 0px;">
+                <span class="place">
+                    <?= $this->escape($this->woma->street) ?> <?= $this->escape($this->woma->house) ?><br /><?= $this->escape($this->woma->zip) ?> <?= $this->escape($this->woma->city) ?><br /><?= $this->escape($this->woma->getCountry()->name) ?><br/>
+                    Telefon: +<?= $this->escape($this->woma->getCountry()->phone) ?> <?= $this->escape($this->woma->phone) ?><br />
+                    <span style="font-weight:bold"><?= $this->translate('woma_visit_us') ?></span><br />
+                    <?= $this->escape($this->woma->additional) ?>
+                </span>
+            </p>
+            <p class="clear"></p>
+
+            <a href="#about" rel="nofollow" title="<?= $this->translate('shops_more_about') ?>"><?= $this->translate('shops_more_about') ?></a>
+
+        </div> 
+
+        <div id="slideshow" style="left:-60px;">
+<?php $counter = 0; ?>        
+<?php foreach($this->woma->getShops() as $shop): 
+    $counter++;
+?>    
+            <a href="<?= $shop->getLink() ?>" <?php if($counter == 1): ?>class="active" <?php endif; ?>style="text-align:center; background-color:white;width:470px;">
+                <div class="column_left" style="margin-top:15px;">
+                    <?php if($shop->getLogo()): ?><img src="/img/shops/<?= $this->escape($shop->getLogo()->filename) ?>" alt="<?= $this->escape($shop->name) ?>" /><?php endif; ?>
+                    <ul>
+                        <li><?= $this->translate('shops_since') ?> <?= date('d.m.Y', strtotime($shop->created)) ?></li>
+                        <li><?= count($shop->getProducts()) ?> <?= (count($shop->getProducts()) == 1) ? $this->translate('shops_product') : $this->translate('shops_products') ?></li>
+                    </ul>
+                </div>
+                <div class="column_ctr">
+                    <p class="illu">
+                        <span class="place">
+                            <?= $this->escape($shop->street) ?> <?= $this->escape($shop->house) ?><br /><?= $this->escape($shop->zip) ?> <?= $this->escape($shop->city) ?><br /><?= $this->escape($shop->getCountry()->name) ?><br/>
+                            Telefon: +<?= $this->escape($shop->getCountry()->phone) ?> <?= $this->escape($shop->phone) ?>
+                        </span>
+                    </p>
+                    <p class="clear"></p>
+                </div>
+            </a>
+<?php endforeach; ?>
+        </div>
+    </div>
+
+<?php if($this->woma->getProducts()): ?>
+    <div class="contentblock">
+        <div class="lists" style="width:190px;">
+            <ul style="margin-top: 18px">
+    <?php foreach($this->woma->getCategories() as $cat): ?>        
+                <li><a title="<?= $cat->name ?>" href="<?= $this->woma->getLink() ?>categories/<?= $cat->id ?>/"><?= $cat->name ?></a><span class="num_counter"><?= $cat->getCount() ?></span></li>
+    <?php endforeach; ?>
+            </ul>
+
+            <ul style="margin-top: 18px">
+                <li>
+                    <a title="<?= $this->translate('shops_show_all') ?>" href="<?= $this->woma->getLink() ?>showall/"><?= $this->translate('shops_show_all') ?></a>
+                </li>
+            </ul>
+        </div>
+        <div class="products-grid" style="width:688px; margin-bottom:0px;">
+<?php 
+$counter = 0;
+foreach($this->woma->getProducts() as $product):
+    $counter++;
+    if($counter > 6){
+        break;
+    }
+?>
+            <div class="grid-item<?php if($counter%3 == 0): ?> no_rightmargin<?php endif; ?>" style="margin-right:10px;">                
+                <a href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>" class="grid-item-picture" style="text-align:center;">
+                    <img src="<?php if($product->getDefaultPicture()): ?>/img/products/174x136/<?= $this->escape($product->getDefaultPicture()->filename) ?><?php endif; ?>" alt="<?= $this->escape($product->name) ?>" />
+                </a>
+                <div class="grid-item-data">
+                    <ul>
+                        <li>
+                            <a href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>"><?= $this->escape($product->name) ?></a>
+                        </li>
+        <?php if($product->getFirstNormalPrice()): ?>
+                        <li class="li-price"><?= $this->escape($product->getFirstNormalPrice()->value) ?> &euro; <span><?= $this->escape($product->getFirstNormalPrice()->quantity) ?> <?= ($product->getFirstNormalPrice()->quantity == 1) ? $this->escape($product->getFirstNormalPrice()->getUnitType()->singular) : $this->escape($product->getFirstNormalPrice()->getUnitType()->plural) ?><br /><?php if($product->getFirstNormalPrice()->getBasePriceString()): ?>(<?= $this->escape($product->getFirstNormalPrice()->getBasePriceString()) ?>)<?php endif; ?></span></li>
+        <?php endif; ?>
+                    </ul>
+                    
+                    <div class="pos_abs bottomleft">               
+                        <a class="kisju-btn-trans-22" href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->translate('misc_show') ?>"><span><?= $this->translate('misc_show') ?></span></a>
+                    </div>
+                </div>                                
+                <div class="bubbles">
+                    <ul>
+            <?php if($product->is_bio): ?>
+                        <li class="b-bio"></li>
+            <?php endif; ?>
+                    </ul>
+                </div>
+
+            </div>      
+    <?php endforeach; ?>
+        </div>
+        <p class="clear"></p>
+    </div>
+
+    <?php if($this->woma->getAttributes()): ?>    
+
+    <div class="contentblock">
+        <h3><?= $this->translate('shops_attibute_products') ?></h3>
+        <div class="lists" style="width:190px;">
+            <p class="clear"></p>
+            <ul style="margin-top: 18px">
+    <?php foreach($this->woma->getAttributes() as $attr): 
+        $count = count($this->woma->getProductsByAttribute($attr->id));
+    ?>                        
+                <li><a title="<?= $attr->name ?>" href="<?= $this->woma->getLink() ?>attributes/<?= $attr->id ?>/"><?= $attr->name ?></a><span class="num_counter"><?= $count ?></span></li>
+    <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="products-grid" style="width:688px; padding-top:30px; margin-bottom:0px;">
+<?php 
+$counter = 0;
+foreach($this->woma->getAttributeProducts() as $product):
+    $counter++;
+    if($counter > 3){
+        break;
+    }
+?>
+            <div class="grid-item<?php if($counter%3 == 0): ?> no_rightmargin<?php endif; ?>" style="margin-right:10px;">                
+                <a href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>" class="grid-item-picture" style="text-align:center;">
+                    <img src="<?php if($product->getDefaultPicture()): ?>/img/products/174x136/<?= $this->escape($product->getDefaultPicture()->filename) ?><?php endif; ?>" alt="<?= $this->escape($product->name) ?>" />
+                </a>
+                <div class="grid-item-data">
+                    <ul>
+                        <li>
+                            <a href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>"><?= $this->escape($product->name) ?></a>
+                        </li>
+        <?php if($product->getFirstNormalPrice()): ?>
+                        <li class="li-price"><?= $this->escape($product->getFirstNormalPrice()->value) ?> &euro; <span><?= $this->escape($product->getFirstNormalPrice()->quantity) ?> <?= ($product->getFirstNormalPrice()->quantity == 1) ? $this->escape($product->getFirstNormalPrice()->getUnitType()->singular) : $this->escape($product->getFirstNormalPrice()->getUnitType()->plural) ?><br /><?php if($product->getFirstNormalPrice()->getBasePriceString()): ?>(<?= $this->escape($product->getFirstNormalPrice()->getBasePriceString()) ?>)<?php endif; ?></span></li>
+        <?php endif; ?>
+                    </ul>
+                    
+                    <div class="pos_abs bottomleft">               
+                        <a class="kisju-btn-trans-22" href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->translate('misc_show') ?>"><span><?= $this->translate('misc_show') ?></span></a>
+                    </div>
+                </div> 
+                <div class="bubbles">
+                    <ul>
+            <?php if($product->is_bio): ?>
+                        <li class="b-bio"></li>
+            <?php endif; ?>
+                    </ul>
+                </div>
+            </div>      
+    <?php endforeach; ?>                                
+        </div>
+        <p class="clear"></p>
+    </div>
+
+    <?php endif; ?>    
+<?php  endif; ?>
+
+
+    <a name="about"></a>
+    <div class="contentblock details">
+<?php if($this->woma->description): ?>        
+        <h3><?= $this->translate('shops_about_us') ?></h3>
+        <p><?= $this->escape($this->woma->description) ?></p>   
+        <p class="clear"></p>
+<?php endif; ?>
+<?php if($this->woma->philosophy): ?>
+        <h3><?= $this->translate('shops_philosophy') ?></h3>
+        <p><?= $this->escape($this->woma->philosophy) ?></p>       
+        <p class="clear"></p>
+<?php endif; ?>
+<?php if($this->woma->procedure): ?>
+        <h3><?= $this->translate('shops_procedure') ?></h3>
+    <?php if($this->woma->getProcedurePicture()): ?>
+        <img src="/img/womas/<?= $this->escape($this->woma->getProcedurePicture()->filename) ?>" alt="<?= $this->escape($this->woma->name) ?>" />
+    <?php endif; ?>
+        <p><?= $this->escape($this->woma->procedure) ?></p>       
+        <p class="clear"></p>
+<?php endif; ?>
+<?php if($this->woma->history): ?>
+        <h3><?= $this->translate('shops_history') ?> <?= $this->escape($this->woma->name) ?></h3>
+    <?php if($this->woma->getHistoryPicture()): ?>
+        <img src="/img/womas/<?= $this->escape($this->woma->getHistoryPicture()->filename) ?>" alt="<?= $this->escape($this->woma->name) ?>" />
+    <?php endif; ?>
+        <p><?= $this->escape($this->woma->history) ?></p>           
+        <p class="clear"></p>
+<?php endif; ?>        
+    </div>
+
+    <a name="versand"></a>
+    <div class="contentblock shipping">
+        <h3><?= $this->translate('shops_delivery_costs') ?></h3>
+        <span><?= $this->translate('product_sent_from') ?> <strong><?= $this->escape($this->woma->getCountry()->name) ?></strong></span>
+
+
+        <table class="tbl_shipping">
+            <tr>
+                <td width="145px"><?= $this->translate('product_delivery_to') ?></td>
+                <td><?= $this->translate('product_delivery_price') ?></td>
+                <td><?= $this->translate('product_delivery_free_from') ?></td>
+            </tr>
+<?php foreach($this->woma->getShippingCosts() as $cost): ?>
+            <tr>
+                <td><?= $this->escape($cost->getCountry()->name) ?></td>
+                <td><?= number_format($cost->value, 2, ',', '') ?> EUR</td>
+                <td align="right"><?php if($cost->free_from): ?><?= number_format($cost->free_from, 2, ',', '') ?> EUR<?php else: ?>-<?php endif; ?></td>
+            </tr>
+<?php endforeach; ?>
+        </table>       
+    </div>
+</div>

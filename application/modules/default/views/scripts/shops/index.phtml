@@ -1,0 +1,229 @@
+          <div class="hubs ng-scope" id="hubs" ng-controller="EnterprisesCtrl">
+            <div class="row">
+              <div class="small-12 columns">
+                <h1>
+                  Anbieter suchen
+                </h1>
+              </div>
+            </div>
+            <div class="row" id="active-table-search">
+              <div class="small-12 columns">
+                <input inputmode="search" ng-debounce="500" ng-model="query" ofn-disable-enter="" placeholder="Suche nach Name oder Ort..." type="search" class="ng-pristine ng-untouched ng-valid ng-empty">
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-6 columns">
+                <a class="button success tiny filterbtn ng-binding" ng-click="filtersActive = !filtersActive" ng-show="filterSelectors.selectors.length > 0">
+                  Filtern nach
+                  <i class="ofn-i_005-caret-down" ng-show="!filtersActive"></i>
+                  <i class="ofn-i_006-caret-up ng-hide" ng-show="filtersActive"></i>
+                </a>
+                <a class="button secondary tiny filterbtn disabled ng-hide" ng-show="filterSelectors.selectors.length == 0">
+                  Keine Filter
+                </a>
+              </div>
+            </div>
+            <div class="row animate-show filter-row ng-hide" ng-show="filtersActive">
+              <div class="small-12 columns">
+                <div class="row filter-box">
+                  <div class="small-12 large-9 columns">
+                    <h5 class="tdhead">
+                      <div class="light">
+                        Filtern nach
+                      </div>
+                      Art
+                    </h5>
+                    <ul active-selectors="activeTaxons" class="small-block-grid-2 medium-block-grid-4 large-block-grid-5 ng-isolate-scope" objects="visibleMatches | taxonsOf" selector-set="filterSelectors">
+  <!-- ngRepeat: selector in allSelectors --><li ng-class="{active: selector.active}" ng-repeat="selector in allSelectors" ng-show="ifDefined(selector.fits, true)" class="ng-scope">
+  <a ng-class="{active: selector.active, 'has-tip': selector.object.value}" ng-transclude="" tooltip-placement="bottom" tooltip="" class="ng-scope">
+    <span ng-bind="::selector.object.name" class="ng-binding ng-scope">Gemüse</span>
+  </a>
+</li><!-- end ngRepeat: selector in allSelectors --><li ng-class="{active: selector.active}" ng-repeat="selector in allSelectors" ng-show="ifDefined(selector.fits, true)" class="ng-scope">
+  <a ng-class="{active: selector.active, 'has-tip': selector.object.value}" ng-transclude="" tooltip-placement="bottom" tooltip="" class="ng-scope">
+    <span ng-bind="::selector.object.name" class="ng-binding ng-scope">Früchte</span>
+  </a>
+</li><!-- end ngRepeat: selector in allSelectors --><li ng-class="{active: selector.active}" ng-repeat="selector in allSelectors" ng-show="ifDefined(selector.fits, true)" class="ng-scope">
+  <a ng-class="{active: selector.active, 'has-tip': selector.object.value}" ng-transclude="" tooltip-placement="bottom" tooltip="" class="ng-scope">
+    <span ng-bind="::selector.object.name" class="ng-binding ng-scope">Vom Tier</span>
+  </a>
+</li><!-- end ngRepeat: selector in allSelectors --><li ng-class="{active: selector.active}" ng-repeat="selector in allSelectors" ng-show="ifDefined(selector.fits, true)" class="ng-scope">
+  <a ng-class="{active: selector.active, 'has-tip': selector.object.value}" ng-transclude="" tooltip-placement="bottom" tooltip="" class="ng-scope">
+    <span ng-bind="::selector.object.name" class="ng-binding ng-scope">Getränke</span>
+  </a>
+</li><!-- end ngRepeat: selector in allSelectors -->
+</ul>
+                  </div>
+                  <div class="small-12 large-3 columns">
+                    <h5 class="tdhead">
+                      <div class="light">
+                        Filtern nach
+                      </div>
+                      Lieferung
+                    </h5>
+                    <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-2">
+  <!-- ngRepeat: (name, selector) in selectors --><li ng-class="{active: selector.active}" ng-repeat="(name, selector) in selectors" class="ng-scope">
+  <a ng-class="{active: selector.active, 'has-tip': selector.object.value}" ng-transclude="" tooltip-placement="bottom" tooltip="" class="ng-scope">
+    <i ng-class="selector.icon" class="ng-scope ofn-i_039-delivery"></i><span class="ng-binding ng-scope">
+    Lieferung
+  </span></a>
+</li><!-- end ngRepeat: (name, selector) in selectors --><li ng-class="{active: selector.active}" ng-repeat="(name, selector) in selectors" class="ng-scope">
+  <a ng-class="{active: selector.active, 'has-tip': selector.object.value}" ng-transclude="" tooltip-placement="bottom" tooltip="" class="ng-scope">
+    <i ng-class="selector.icon" class="ng-scope ofn-i_038-takeaway"></i><span class="ng-binding ng-scope">
+    Abholen
+  </span></a>
+</li><!-- end ngRepeat: (name, selector) in selectors -->
+</ul>
+                  </div>
+                  <div class="small-12 large-12 columns">
+                    <h5 class="tdhead">
+                      <div class="light">
+                        Filtern nach
+                      </div>
+                      Eigentum
+                    </h5>
+                    <div class="filter-shopfront property-selectors">
+                      <ul active-selectors="activeProperties" objects="visibleMatches | closedShops:show_closed | taxons:activeTaxons | shipping:shippingTypes | propertiesOf:'distributed_properties'" selector-set="filterSelectors" class="ng-isolate-scope">
+  <!-- ngRepeat: selector in allSelectors -->
+</ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row filter-box clear-filters animate-show ng-hide" ng-show="filtersActive &amp;&amp; filterSelectors.totalActive() > 0">
+              <div class="small-12 columns">
+                <a class="button secondary small expand" ng-click="filterSelectors.clearAll()">
+                  <i class="ofn-i_009-close"></i>
+                  Alle Filter löschen
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <div class="name-matches ng-hide" ng-show="nameMatchesFiltered.length > 0">
+                  <h2>
+                    Meintest Du?
+                  </h2>
+                  <div class="active_table">
+                    <!-- ngRepeat: hub in nameMatchesFiltered = (nameMatches | closedShops:show_closed | taxons:activeTaxons | properties:activeProperties:'distributed_properties' | shipping:shippingTypes | orderBy:['-active', '+distance', '+orders_close_at']) -->
+                    <producer class="row" ng-show="nameMatchesFiltered.length == 0">
+                      <p class="no-results">
+                        Es wurden leider keine Ergebnisse für <strong class="ng-binding"></strong> gefunden. Versuchen Sie eine andere Suche?
+                      </p>
+                    </producer>
+                  </div>
+                </div>
+                <!-- ngIf: nameMatchesFiltered.length == 0 || distanceMatchesShown --><div class="distance-matches ng-scope" ng-if="nameMatchesFiltered.length == 0 || distanceMatchesShown">
+                  <h2 ng-show="nameMatchesFiltered.length > 0 || query.length > 0" class="ng-hide">
+                    Meintest Du?
+                    <span ng-show="nameMatchesFiltered.length > 0" class="ng-binding ng-hide">...</span>
+                    <span ng-hide="nameMatchesFiltered.length > 0" class="ng-binding">...</span>
+                  </h2>
+                  <div class="active_table">
+                    <!-- ngRepeat: hub in distanceMatchesFiltered = (distanceMatches | closedShops:show_closed | taxons:activeTaxons | properties:activeProperties:'distributed_properties' | shipping:shippingTypes | orderBy:['-active', '+distance', '+orders_close_at']) --><hub class="active_table_node row ng-scope closed current" id="fredo-s-farm-hub" ng-class="{'is_profile' : hub.category == 'hub_profile', 'closed' : !open(), 'open' : open(), 'inactive' : !hub.active, 'current' : current()}" ng-controller="HubNodeCtrl" ng-repeat="hub in distanceMatchesFiltered = (distanceMatches | closedShops:show_closed | taxons:activeTaxons | properties:activeProperties:'distributed_properties' | shipping:shippingTypes | orderBy:['-active', '+distance', '+orders_close_at'])" style="">
+                      <div class="small-12 columns">
+                        <!-- ngIf: hub.is_distributor --><div class="row active_table_row ng-scope closed" ng-class="{'closed' : !open(), 'is_distributor' : producer.is_distributor}" ng-click="toggle($event)" ng-if="hub.is_distributor">
+                          <div class="columns small-12 medium-5 large-5 skinny-head">
+                            <a class="hub ng-isolate-scope primary" data-is-link="true" ng-attr-target="{{ embedded_layout ? '_blank' : undefined}}" ng-class="{primary: hub.active, secondary: !hub.active}" ng-href="/fredo-s-farm-hub/shop" ofn-change-hub="hub" href="/fredo-s-farm-hub/shop">
+                              <i ng-class="::hub.icon_font" class="ofn-i_063-hub"></i>
+                              <span class="margin-top hub-name-listing ng-binding" ng-bind="::hub.name | truncate:40">Test Secondfood- Produzent</span>
+                            </a>
+                          </div>
+                          <div class="columns small-4 medium-2 large-2">
+                            <span class="margin-top ng-binding" ng-bind="::hub.address.city">Lohra</span>
+                          </div>
+                          <div class="columns small-2 medium-1 large-1">
+                            <span class="margin-top ng-binding" ng-bind="::hub.address.state_name">HE</span>
+                            <!-- ngIf: hub.distance != null && hub.distance > 0 -->
+                          </div>
+                          <!-- ngIf: ::hub.active --><div class="columns small-4 medium-3 large-3 text-right ng-scope" ng-if="::hub.active">
+                            <a class="hub open_closed ng-isolate-scope primary" ng-attr-target="{{ embedded_layout ? '_blank' : undefined}}" ng-class="{primary: hub.active, secondary: !hub.active}" ng-href="/fredo-s-farm-hub/shop" ofn-change-hub="hub" href="/fredo-s-farm-hub/shop">
+                              <i class="ofn-i_068-shop-reversed"></i>
+                              <!-- ngIf: ::current() --><span class="margin-top ng-scope" ng-if="::current()">
+                                <em>Hier bestellen</em>
+                              </span><!-- end ngIf: ::current() -->
+                              <!-- ngIf: ::!current() -->
+                            </a>
+                          </div><!-- end ngIf: ::hub.active -->
+                          <!-- ngIf: ::!hub.active -->
+                          <div class="columns small-2 medium-1 large-1 text-right">
+                            <span class="margin-top">
+                              <i ng-class="{'ofn-i_005-caret-down' : !open(), 'ofn-i_006-caret-up' : open()}" class="ofn-i_005-caret-down"></i>
+                            </span>
+                          </div>
+                        </div><!-- end ngIf: hub.is_distributor -->
+                        <!-- ngIf: !hub.is_distributor -->
+                        <div class="row active_table_row ng-hide" ng-class="{'open' : open()}" ng-click="toggle($event)" ng-show="open()">
+                          <div class="columns small-12 fat text-center ng-hide" ng-show="open() &amp;&amp; shopfront_loading">
+                            <p>
+                              <img class="spinner text-center" src="/assets/spinning-circles.svg">
+                            </p>
+                          </div>
+                          <div class="columns small-12 medium-6 large-5 fat ng-hide" ng-show="open() &amp;&amp; !shopfront_loading">
+                            <!-- ngIf: ::hub.taxons --><div ng-if="::hub.taxons" class="ng-scope">
+                              <label>
+                                Suche nach:
+                              </label>
+                              <div class="trans-sentence">
+                                <div>
+                                  <!-- ngRepeat: taxon in hub.taxons --><span class="fat-taxons ng-scope" ng-repeat="taxon in hub.taxons">
+                                    <render-svg path="/assets/default_taxon.png"><svg-wrapper></svg-wrapper></render-svg>
+                                    <span ng-bind="::taxon.name" class="ng-binding">Getränke</span>
+                                  </span><!-- end ngRepeat: taxon in hub.taxons --><span class="fat-taxons ng-scope" ng-repeat="taxon in hub.taxons">
+                                    <render-svg path="/assets/default_taxon.png"><svg-wrapper></svg-wrapper></render-svg>
+                                    <span ng-bind="::taxon.name" class="ng-binding">Gemüse</span>
+                                  </span><!-- end ngRepeat: taxon in hub.taxons -->
+                                </div>
+                                <div>
+                                  <!-- ngRepeat: property in hub.distributed_properties -->
+                                </div>
+                              </div>
+                            </div><!-- end ngIf: ::hub.taxons -->
+                            <!-- ngIf: ::hub.taxons.length==0 -->
+                          </div>
+                          <div class="columns small-12 medium-3 large-2 fat ng-hide" ng-show="open() &amp;&amp; !shopfront_loading">
+                            <!-- ngIf: ::(hub.pickup || hub.delivery) --><div ng-if="::(hub.pickup || hub.delivery)" class="ng-scope">
+                              <label>
+                                Lieferoptionen
+                              </label>
+                              <ul class="small-block-grid-2 medium-block-grid-1 large-block-grid-1">
+                                <!-- ngIf: ::hub.pickup --><li class="pickup ng-scope" ng-if="::hub.pickup">
+                                  <i class="ofn-i_038-takeaway"></i>
+                                  Abholen
+                                </li><!-- end ngIf: ::hub.pickup -->
+                                <!-- ngIf: ::hub.delivery -->
+                              </ul>
+                            </div><!-- end ngIf: ::(hub.pickup || hub.delivery) -->
+                          </div>
+                          <div class="columns small-12 medium-3 large-5 fat ng-hide" ng-show="open() &amp;&amp; !shopfront_loading">
+                            <!-- ngIf: ::hub.producers -->
+                            <!-- ngIf: ::hub.producers.length==0 -->
+                          </div>
+                        </div>
+                      </div>
+                    </hub><!-- end ngRepeat: hub in distanceMatchesFiltered = (distanceMatches | closedShops:show_closed | taxons:activeTaxons | properties:activeProperties:'distributed_properties' | shipping:shippingTypes | orderBy:['-active', '+distance', '+orders_close_at']) -->
+                    <producer class="row ng-hide" ng-show="distanceMatchesFiltered.length == 0" style="">
+                      <p class="no-results">
+                        Es wurden leider keine Ergebnisse für <strong class="ng-binding"></strong> gefunden. Versuchen Sie eine andere Suche?
+                      </p>
+                    </producer>
+                  </div>
+                </div><!-- end ngIf: nameMatchesFiltered.length == 0 || distanceMatchesShown -->
+                <div class="show-distance-matches ng-hide" ng-show="nameMatchesFiltered.length > 0 &amp;&amp; !distanceMatchesShown">
+                  <a href="" ng-click="showDistanceMatches()" class="ng-binding">
+                    Läden in der Nähe von suchen
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="more-controls">
+              <img class="spinner text-center ng-hide" ng-show="closed_shops_loading" src="/assets/spinning-circles.svg">
+              <!-- ngIf: !show_closed --><span ng-if="!show_closed" class="ng-scope">
+                <a class="button" href="" ng-click="showClosedShops()">
+                  Inaktive Anbieter anzeigen
+                </a>
+              </span><!-- end ngIf: !show_closed -->
+              <!-- ngIf: show_closed -->
+              <a class="button" href="/map">Alle auf der Karte zeigen</a>
+            </div>
+          </div>

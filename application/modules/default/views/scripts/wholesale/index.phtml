@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('wholesale_headline') ?></h2>
+        <p><?= $this->translate('wholesale_text_1') ?></p>
+        <p><?= $this->translate('wholesale_text_2') ?></p>
+        <p><?= $this->translate('wholesale_text_3') ?></p>
+        <p><?= $this->translate('wholesale_text_4') ?></p>
+        <p><?= $this->translate('wholesale_text_5') ?></p>
+
+<?php 
+if(!$this->user):
+ ?>
+    <p><a href="/login/"><?= $this->translate('wholesale_login_1') ?></a> <?= $this->translate('wholesale_login_2') ?></p>
+<?php 
+else: 
+    if($this->user->is_wholesale): 
+?>
+        <a href="/wholesale/showall/"><?= $this->translate('wholesale_show_all') ?></a>
+<?php
+    else: 
+?>
+        <h1><?= $this->translate('wholesale_register_headline') ?></h1>
+        <p><?= $this->translate('wholesale_register_text') ?></p>
+        <?= $this->wholesaleForm ?>
+<?php
+    endif;
+endif;
+?> 
+    </div>  
+</div>

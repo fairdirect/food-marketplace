@@ -13,7 +13,7 @@ class Admin_GroupsController extends Zend_Controller_Action
         $this->view->headTitle("Verwaltung");
            
         $this->view->mainCategories = Model_MainCategory::getAll();
-        $this->view->groupsWithoutMain = Model_ProductGroup::getByType(NULL);
+        $this->view->groupsWithoutMain = Model_ProductGroup::getByType(NULL, false, false, false, false, false );
 
     }
 

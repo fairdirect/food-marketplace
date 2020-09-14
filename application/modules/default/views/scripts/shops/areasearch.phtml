@@ -1,0 +1,13 @@
+<div id="content_buy">  
+    <div> 
+        <h2><?= count($this->shops) ?> <?= $this->translate('areasearch_headline_1') ?> <?= $this->escape($this->distance) ?> <?= $this->translate('areasearch_headline_2') ?> <?= $this->escape($this->zip) ?> (<?= $this->escape(Model_Country::find($this->country)->name) ?>)</h2>
+        <table style="font-size:16px; font-weight:bold;">
+<?php foreach($this->shops as $shop): ?>
+            <tr>
+                <td style="width:110px;"><?php if($shop->getLogo()): ?><img src="/img/shops/<?= $this->escape($shop->getLogo()->filename) ?>" alt="<?= $this->escape($shop->name) ?>" /><?php endif; ?></td>
+                <td style="padding:10px;"><a target="_blank" href="<?= $this->escape($shop->getLink()) ?>"><?= $this->escape($shop->name) ?></a> (<?= count($shop->getProducts()) ?> Produkte)</td>
+            </tr>
+<?php endforeach; ?>
+        </table>
+    </div>    
+</div>

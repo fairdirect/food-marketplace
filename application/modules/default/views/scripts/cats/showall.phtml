@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('cats_all_categories') ?> in Deiner Region <?= $this->region->name ?></h2>
+        <div class="content_buy_categories">
+    <?php foreach($this->mainCategories as $cat):
+        if(!$cat->getGroups(false, false, false, true, true)):
+            continue;
+        endif; ?>
+            <?= $this->partial('partials/groupgrid.phtml', array('groupTitle' => $this->translate($cat->name), 'groups' => $cat->getGroups())) ?>
+    <?php endforeach; ?>
+        </div>
+    </div>
+</div>

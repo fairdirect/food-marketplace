@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1><?= $this->translate('misc_my_epelia') ?></h1>
+        <ul>
+            <li><a href="/meinepelia/orders/" title="<?= $this->translate('misc_orders') ?>"><?= $this->translate('misc_orders') ?></a></li>
+            <li><a href="/meinepelia/addresses/" title="<?= $this->translate('misc_addresses') ?>"><?= $this->translate('misc_addresses') ?></a></li>
+            <li><a href="/meinepelia/productratings/" title="<?= $this->translate('misc_ratings') ?>"><?= $this->translate('misc_ratings') ?></a></li>
+        </ul>
+    <?php if($this->user->getShop()): ?>
+        <h1>Mein Shop</h1>
+        <ul>
+            <li><a href="/business/sales/orders/">Mein Shop - Bestellungen</a> (<?= count($this->inProcessOrders) ?> Bestellungen)</li>
+            <li><a href="/business/sales/archive/">Mein Shop - Bestellarchiv</a> (<?= count($this->completeOrders) ?> Bestellungen)</li>
+        </ul>
+    <?php endif; ?>
+    </div>
+</div>
