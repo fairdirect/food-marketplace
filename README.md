@@ -8,7 +8,6 @@
 
 **[4. Usage](#4-usage)**
 
-
 ## 1. Introduction
 
 **Overview.** The Fairdirect Food Marktplace platform is an open source marketplace software specially made for online food sales and food donations. It comes in two variants, contained in branches: one for normal food sales, and one as a platform to offer food as donations to charitable organizations (such as Germany's "Tafeln"). You can find a more detailed description of the functionality (in German) on [fairdirect.org/erzeugermarkt](https://fairdirect.org/erzeugermarkt).
