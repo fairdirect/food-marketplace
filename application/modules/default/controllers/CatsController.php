@@ -2,6 +2,12 @@
 
 class CatsController extends Zend_Controller_Action
 {
+    public function init() {
+        if(!Model_Region::getCurrentRegion()) { // region selected
+            $this->_redirect('/regions/');
+        }
+    }
+
     public function indexAction()
     {
       throw new Zend_Controller_Action_Exception('This page does not exist', 404);

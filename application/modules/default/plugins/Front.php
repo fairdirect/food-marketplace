@@ -43,6 +43,7 @@ class Plugin_Front extends Zend_Controller_Plugin_Abstract{
                 $view->user = (Zend_Auth::getInstance()->hasIdentity()) ? Zend_Auth::getInstance()->getIdentity() : null;
                 $view->shoppingCart = Model_ShoppingCart::getRunningShoppingCart();
                 $view->mainCategories = Model_MainCategory::getAll();
+                $view->region = Model_Region::getCurrentRegion();
                 return;
         }
     }

@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h3><?= $this->translate('login_left_headline') ?></h3>
+        <?php if($this->error):?>
+            <p class="error" style="margin-left:12px;"><?php echo $this->error; ?></p>
+        <?php endif; ?>
+        <?php echo $this->loginForm; ?>
+        <a style="margin-left:20px;" href="/login/resetpassword/" title="<?= $this->translate('misc_forgotten_password') ?>"><?= $this->translate('misc_forgotten_password') ?></a>
+    </div>
+    <div id="new_user" class="col bg-light border m-3">
+        <h3><?= $this->translate('login_register_headline') ?></h3>
+<?php if($this->registerError):?>
+        <p class="error" style="margin-left:12px;"><?= $this->registerError; ?></p>
+<?php endif; ?>
+        <?= $this->registerForm; ?>
+    </div>
+</div>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <p class="left">
+            <strong><?= $this->translate('login_register_sub_1') ?></strong><br/>
+            <?= $this->translate('login_register_sub_2') ?>
+        </p>
+        <p class="right"><?= $this->translate('login_register_sub_3') ?> <?= $this->translate('login_list_4') ?></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <p><a href="/verkaufen/" rel="nofollow" title="<?= $this->translate('login_register_sell') ?>"><?= $this->translate('login_register_sell') ?></a></p>
+    </div>
+</div>

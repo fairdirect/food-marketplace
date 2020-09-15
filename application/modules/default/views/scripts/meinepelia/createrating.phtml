@@ -1,0 +1,23 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#rating-label').raty(
+            { 
+                path: '/img/raty/',
+                width: false,
+                click: function(score, evt) {
+                    $('#rating').val(score);
+                }
+<?php if($this->form->getValue('rating')): ?>
+                ,score: <?= $this->form->getValue('rating') ?>
+<?php endif; ?>
+            }
+        ).prepend('Bewertung: ');
+    });      
+</script>
+
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1>Produkt "<?= $this->escape($this->product->name) ?>" bewerten</h1>
+        <?= $this->form ?>
+    </div>
+</div>

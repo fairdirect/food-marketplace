@@ -1,0 +1,1 @@
+CREATE TABLE epelia_regions ( id TEXT NOT NULL UNIQUE, plz TEXT NOT NULL, name TEXT NOT NULL, country TEXT NOT NULL REFERENCES epelia_countries(id) ON DELETE CASCADE, PRIMARY KEY(id));

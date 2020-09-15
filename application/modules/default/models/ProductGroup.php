@@ -65,7 +65,7 @@ class Model_ProductGroup extends Model_ModelAbstract
         return new Model_DbTable_ProductGroup();
     }
 
-    public static function getByType($mainCategory, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
+    public static function getByType($mainCategory, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyFromRegion = false){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
@@ -77,9 +77,11 @@ class Model_ProductGroup extends Model_ModelAbstract
             $select->where('main_category IS NULL');
         }
 
-        if($onlyBio || $onlyDiscount || $onlyWholesale || $onlyActivated){
+        if($onlyBio || $onlyDiscount || $onlyWholesale || $onlyActivated || $onlyFromRegion){
             $select->join('epelia_product_categories', $table->getTableName() . '.id = epelia_product_categories.product_group_id', array());
             $select->join('epelia_products', 'epelia_product_categories.id = epelia_products.category_id', array());
+            $select->join('epelia_shops', 'epelia_products.shop_id = epelia_shops.id', array());
+            $select->join('epelia_regions', 'epelia_shops.zip = epelia_regions.plz AND epelia_shops.country = epelia_regions.country', array());
 
             if($onlyBio){
                 $select->where('is_bio = ?', 'true');
@@ -94,6 +96,19 @@ class Model_ProductGroup extends Model_ModelAbstract
             if($onlyActivated){
                 $select->where('epelia_products.active = ?', true);
             }
+            if($onlyActivated){
+                $select->where('epelia_products.active = ?', true);
+            }
+            if($onlyFromRegion){
+                $region = Model_Region::getCurrentRegion();
+                if(!$region) {
+                    return array();
+                }
+                $select->where('epelia_shops.country = ?', $region->country);
+                $select->where('epelia_regions.name = ?', $region->name);
+            }
+
+            $select->where('epelia_products.deleted = ?', '0');
         }
         $select->group($table->getTableName() . '.id');
         $select->order($table->getTableName() . '.name ASC');
@@ -105,6 +120,7 @@ class Model_ProductGroup extends Model_ModelAbstract
         foreach($result as $r){
             $ret[] = new self($r);
         }
+
         return $ret;
     }  
 }

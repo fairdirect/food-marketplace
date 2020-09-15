@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col bg-light border m-3" style="width:90%">
+        <h2><?= $this->translate('addresses_addresses') ?></h2>
+        <a href="/meinepelia/addressesedit/"><?= $this->translate('addresses_new_address') ?></a>
+        <table class="table table-striped table-bordered" id="addressTable">
+            <thead>
+            <tr><th><?= $this->translate('misc_salutation') ?></th><th><?= $this->translate('misc_company') ?></th><th><?= $this->translate('misc_firstname') ?></th><th><?= $this->translate('misc_lastname') ?></th><th><?= $this->translate('misc_street') ?></th><th><?= $this->translate('misc_housenumber') ?></th><th><?= $this->translate('misc_zip') ?></th><th><?= $this->translate('misc_city') ?></th><th><?= $this->translate('addresses_default_delivery') ?></th><th><?= $this->translate('addresses_default_invoice') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
+            </thead>
+            <tbody>
+        <?php
+            foreach($this->addresses as $address):
+        ?>
+                <tr></td><td><?= $this->escape($address->gender) ?></td><td><?= $this->escape($address->company) ?></td><td><?= $this->escape($address->firstname) ?></td><td><?= $this->escape($address->name) ?></td><td><?= $this->escape($address->street) ?></td><td><?= $this->escape($address->house) ?></td><td><?= $this->escape($address->zip) ?></td><td><?= $this->escape($address->city) ?></td><td><?= ($address->id == $this->user->main_delivery_address_id) ? 'ja' : 'nein' ?></td><td><?= ($address->id == $this->user->main_billing_address_id) ? 'ja' : 'nein' ?></td><td><a href="/meinepelia/addressesedit/id/<?= $this->escape($address->id) ?>/">Editieren</a><?php if($address->id != $this->user->main_delivery_address_id): ?><br /><a href="/meinepelia/setdefaultdelivery/addressid/<?= $this->escape($address->id) ?>/"><?= $this->translate('addresses_set_default_delivery') ?></a><?php endif; ?><?php if($address->id != $this->user->main_billing_address_id): ?><br /><a href="/meinepelia/setdefaultbilling/addressid/<?= $this->escape($address->id) ?>/"><?= $this->translate('addresses_set_default_invoice') ?></a><?php endif; ?></td></tr>
+        <?php
+            endforeach;
+        ?>
+            </tbody>
+        </table>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#addressTable').dataTable({
+                    "scrollX": true,
+                    "aoColumns": [
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        { "bSortable": false }
+                    ],
+                    "oLanguage": {
+                        "sProcessing": "Bitte warten...",
+                        "sLengthMenu": "_MENU_ Einträge anzeigen",
+                        "sZeroRecords": "Keine Einträge vorhanden.",
+                        "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
+                        "sInfoEmpty": "0 bis 0 von 0 Einträgen",
+                        "sInfoFiltered": "(gefiltert von _MAX_  Einträgen)",
+                        "sInfoPostFix": "",
+                        "sSearch": "Suchen",
+                        "sUrl": "",
+                        "oPaginate": {
+                            "sFirst":    "Erster",
+                            "sPrevious": "Zurück",
+                            "sNext":     "Nächster",
+                            "sLast":     "Letzter"
+                        }
+                    }
+                });
+            });
+
+        </script>
+    </div>
+</div>

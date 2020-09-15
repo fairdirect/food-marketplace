@@ -1,7 +1,11 @@
-<h1><?= $this->translate('business_headline') ?></h1>
-<ul>
-    <li><a href="/business/sales/orders/">Mein Shop - Bestellungen</a> (<?= count($this->inProcessOrders) ?> Bestellungen)</li>
-    <li><a href="/business/sales/archive/">Mein Shop - Bestellarchiv</a> (<?= count($this->completeOrders) ?> Bestellungen)</li>
-<ul>
-<br />
-<a href="<?= $this->shop->getLink() ?>">Zum eigenen Shop</a>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1><?= $this->translate('business_headline') ?></h1>
+        <ul>
+            <li><a href="/business/sales/orders/">Mein Shop - Bestellungen</a> (<?= count($this->inProcessOrders) ?> Bestellungen)</li>
+            <li><a href="/business/sales/archive/">Mein Shop - Bestellarchiv</a> (<?= count($this->completeOrders) ?> Bestellungen)</li>
+        </ul>
+        <br />
+        <a href="<?= $this->shop->getLink() ?>">Zum eigenen Shop</a>
+    </div>
+</div>

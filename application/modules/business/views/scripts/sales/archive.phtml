@@ -1,34 +1,36 @@
-<h1 style="margin-bottom:5px;"><?= $this->translate('business_orders_archive_headline') ?></h1>
-<table class="table" id="ordersTable">
-    <thead>
-    <tr><th><?= $this->translate('business_orders_order_date') ?></th><th><?= $this->translate('business_orders_sent_date') ?></th><th><?= $this->translate('business_orders_ordernumber') ?></th><th><?= $this->translate('business_orders_price_products') ?></th><th><?= $this->translate('business_orders_price_delivery') ?></th><th><?= $this->translate('business_orders_price_total') ?></th><th><?= $this->translate('business_orders_products') ?></th><th><?= $this->translate('shoppingcart_addresses_delivery') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
-    </thead>
-    <tbody>
-<?php
-    foreach($this->completeOrders as $order):
-        $orderProducts = $order->getProducts();
-        $products = array();
-        $total = 0;
-        foreach($orderProducts as $key => $item){
-            $product = Model_Product::find($item['product_id']);
-            $products[] = $product;
-            $orderProducts[$key]['productname'] = $product->name;
-            $total += $item['value'] * $item['quantity'];
-        }
-?>
-        <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= date('d.m.Y', strtotime($order->send_date)) ?></td><td><?= $this->escape($order->order_number) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $item['contents'] ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><?= $order->getDeliveryAddress()->toFormatedString() ?><?php if($order->getUser()): ?><br /><a href="mailto:<?= $order->getUser()->email ?>"><?= $order->getUser()->email ?></a><?php endif; ?></td><td><a href="/business/sales/showinvoice/id/<?= $order->id ?>/">Rechnung</a></tr>
-
-<?php
-    endforeach;
-?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3" style="width:90%" >
+        <h2><?= $this->translate('business_orders_archive_headline') ?></h2>
+        <table class="table table-striped table-bordered" id="ordersTable">
+            <thead>
+            <tr><th><?= $this->translate('business_orders_order_date') ?></th><th><?= $this->translate('business_orders_sent_date') ?></th><th><?= $this->translate('business_orders_ordernumber') ?></th><th><?= $this->translate('business_orders_price_products') ?></th><th><?= $this->translate('business_orders_price_delivery') ?></th><th><?= $this->translate('business_orders_price_total') ?></th><th><?= $this->translate('business_orders_products') ?></th><th><?= $this->translate('shoppingcart_addresses_delivery') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
+            </thead>
+            <tbody>
+        <?php
+            foreach($this->completeOrders as $order):
+                $orderProducts = $order->getProducts();
+                $products = array();
+                $total = 0;
+                foreach($orderProducts as $key => $item){
+                    $product = Model_Product::find($item['product_id']);
+                    $products[] = $product;
+                    $orderProducts[$key]['productname'] = $product->name;
+                    $total += $item['value'] * $item['quantity'];
+                }
+        ?>
+                <tr><td><?= date('d.m.Y', strtotime($order->created)) ?></td><td><?= date('d.m.Y', strtotime($order->send_date)) ?></td><td><?= $this->escape($order->order_number) ?></td><td><?= number_format($total, 2, ',', '') ?> EUR</td><td><?= number_format($order->shipping, 2, ',', '') ?> EUR</td><td><?= number_format($total + $order->shipping, 2, ',', '') ?> EUR</td><td><?php foreach($orderProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['productname']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $item['contents'] ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><?= $order->getDeliveryAddress()->toFormatedString() ?><?php if($order->getUser()): ?><br /><a href="mailto:<?= $order->getUser()->email ?>"><?= $order->getUser()->email ?></a><?php endif; ?></td><td><a href="/business/sales/showinvoice/id/<?= $order->id ?>/">Rechnung</a></tr>
+        <?php
+            endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {
         $('#ordersTable').dataTable({
-            "sDom": "<'row'<'span6'l><''f>r>t<'row'<'span6'i><'span6'p>>",
-            "sPaginationType": "bootstrap",
+            "scrollX": true,
             "aoColumns": [
                 null,
                 null,
@@ -38,7 +40,7 @@
                 null,
                 null,
                 null,
-                null
+                { "bSortable": false, bSearchable: false }
             ],
             "oLanguage": {
                 "sProcessing": "Bitte warten...",

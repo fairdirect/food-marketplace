@@ -1,0 +1,126 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <div id="content-checkout">
+            <div class="data-container">
+                <p class="title"><?= $this->translate('payment_headline') ?></p>
+                <form id="payment_frm" method="POST" name="payment_frm" style="display:inline">
+                    <input type="hidden" name="sendform" id="sendform" value="1" />
+                    <table cellpadding="0" cellspacing="0" class="tbl_payment">
+                        <tr>
+                            <td class="td_input">
+                                <input id="pay_methode_2" type="radio" name="method" class="paymethod_select" value="directtransfer" />
+                            </td>
+                            <td class="td_label">
+                                <label for="pay_methode_2">Sofortüberweisung</label>
+                            </td>
+
+                            <td class="td_descr">
+                                <div class="descr">
+                                    <p>Zahlen Sie bequem und sicher online per Sofortüberweisung.</p>
+                                    <div style="width:124px; height:47px; background:url('/images/cart/logo-dd.gif') no-repeat center center"></div>
+        <!--
+                                    <span id="lnk_info" style="padding:10px 0 10px 0;" >
+                                        <a href="#info" onclick="javascript:openpopup('http://epelia.webdevsh.com/popups/directtransfer', 610, 460, 'directtransfer')">
+                                            Weitere Informationen zur Sofortüberweisung                             </a>
+                                    </span> -->
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td class="td_input">
+                                <input id="pay_methode_1" type="radio" name="method" class="paymethod_select"  value="prepayment" />
+                            </td>
+                            <td class="td_label">
+                                <label for="pay_methode_1"><?= $this->translate('payment_prepay') ?></label>
+                            </td>
+
+                            <td class="td_pp_descr" style="line-height: 21px;">
+                                    <ul>
+                                        <li><?= $this->translate('payment_prepay_1') ?></li>
+                                        <li><?= $this->translate('payment_prepay_2') ?></li>
+                                        <li><?= $this->translate('payment_prepay_3') ?></li>
+                                    </ul>
+                            </td>
+                        </tr>
+                        <!-- /**
+                                            <tr>
+                                <td class="td_input">
+                                    <input id="pay_methode_4" type="radio" name="methode"  value="4" />
+                                </td>
+                                <td class="td_label">
+                                    <label for="pay_methode_4">Kreditkarte</label>
+                                </td>
+
+                                <td class="td_pp_descr">Zahlen Sie schnell und einfach mit Kreditkarte. Nach Bestellabschluss können Sie Ihre Zahlungsdaten eintragen. Die Datenübertragung erfolgt über eine zertifizierte Sicherheitsverbindung.</td>
+                            </tr>
+
+                                            <tr>
+                                <td class="td_input"></td>
+                                <td class="td_label">Lastschrift</td>
+                                <td class="td_pp_descr" style="color:#777">
+                                    Die Abbuchung über das elektronische Lastschriftverfahren ist ab der 3. Bestellung möglich.
+                                </td>
+                            </tr>
+                                        */ -->
+                    </table>
+
+                </form>
+
+            </div>
+
+            <div class="left data-container" style="margin-top:20px; width:642px; padding:5px;">
+                    <table class="tbl_innersummary_l" style="border:none;">
+                        <tr>
+                            <td class="td_img">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><?= $this->translate('login_list_1') ?></li>
+                                    <li><?= $this->translate('login_list_2') ?></li>
+                                    <li><?= $this->translate('login_list_3') ?><br/><?= $this->translate('login_list_4') ?></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li><?= $this->translate('login_list_5') ?></li>
+                                    <li><?= $this->translate('login_list_6') ?></li>
+                                    <li><?= $this->translate('login_list_7') ?></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+
+            <div class="right" style="margin:30px 22px 0 0">
+                <a id="id_send_button" href="" class="btn_checkout" title="<?= $this->translate('payment_continue') ?>" style="margin-bottom:10px;"><span><?= $this->translate('payment_continue') ?></span>
+                </a>
+                <div class="error" id="noPaymentError"></div>
+            </div>
+            <br class="clear" />
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.paymethod_select').click(function(e){
+            $('#id_send_button').attr('href', '/shoppingcart/checkout/paymenttype/' + e.target.value + '/');
+        });
+
+        $('#id_send_button').click(function(e){
+            e.preventDefault();
+            if(!$('#id_send_button').attr('href')){
+                $('#noPaymentError').html('<?= $this->translate('shoppingcart_nopayment_error') ?>');
+                return false;
+            }
+            else{
+                $('#noPaymentError').html('');
+                window.location = e.currentTarget.href;
+                return true;
+            }
+        });
+    });
+</script>

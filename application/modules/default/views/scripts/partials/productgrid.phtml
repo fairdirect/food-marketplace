@@ -1,0 +1,35 @@
+<div class="row">
+    <?php
+    $counter = 0;
+    foreach($this->products as $product):
+    if($counter++ % 3 == 0):
+    ?>
+</div>
+<div class="row">
+    <?php
+        endif;
+    ?>
+    <div class="col-4">
+        <div class="card bg-light m-3">
+            <div class="card-header">
+                <a href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>"><?= $this->escape($product->name) ?></a>
+            </div>
+            <div class="card-body">
+            <a href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->escape($product->name) ?>" class="grid-item-picture" style="text-align:center;">
+                <img class="img-fluid" src="<?php if($product->getDefaultPicture()): ?>/img/products/original/<?= $this->escape($product->getDefaultPicture()->filename) ?><?php endif; ?>" alt="<?= $this->escape($product->name) ?>" />
+            </a>
+    <?php if($product->getFirstNormalPrice()): ?>
+                   <?= $this->escape($product->getFirstNormalPrice()->value) ?> &euro; <span><?= $this->escape($product->getFirstNormalPrice()->quantity) ?> <?= ($product->getFirstNormalPrice()->quantity == 1) ? $this->escape($product->getFirstNormalPrice()->getUnitType()->singular) : $this->escape($product->getFirstNormalPrice()->getUnitType()->plural) ?><br /><?php if($product->getFirstNormalPrice()->getBasePriceString()): ?>(<?= $this->escape($product->getFirstNormalPrice()->getBasePriceString()) ?>)<?php endif; ?></span>
+    <?php endif; ?>
+            </div>
+            <div class="card-footer text-center">
+                    <a class="btn btn-outline-secondary" href="/products/<?= $this->escape($product->id) ?>/" title="<?= $this->translate('misc_show') ?>"><?= $this->translate('misc_show') ?></a>
+            </div>
+        </div>
+
+    </div>
+<?php endforeach; ?>          
+            
+</div>
+<p class="product-legals" style="float:left"><?= $this->translate('misc_taxes') ?></p>        
+

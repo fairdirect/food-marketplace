@@ -9,6 +9,7 @@ class Business_Form_Products extends Zend_Form
         $this->setAttribs(array('id' => 'productForm'));
 
         $id = new Zend_Form_Element_Hidden('id');
+        $id->setDecorators(array('ViewHelper'));
 
         $this->addElement($id);
 

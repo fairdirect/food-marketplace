@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" />
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+    <script src="/js/libs/jquery.iframe-transport.js"></script>
+    <script src="/js/libs/jquery.fileupload.js"></script>
+
+    <?php echo $this->headTitle(); ?>
+    <?php
+    $session = new Zend_Session_Namespace('Default');
+    $helpPrefix = 'hilfe';
+    if($session->language == 'it'):
+        $helpPrefix = 'hilfeit';
+        ?>
+
+    <?php endif;
+    if($session->language == 'en'):
+        $helpPrefix = 'hilfeeng';
+    endif;
+    ?>
+</head>
+<body style="background: url('/img/layout/background.jpg') center center  no-repeat fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+<div id="modal_box"></div>
+<div class="container" style="background-color:rgba(255,255,255,0.92); min-height:100%; height:100%">
+    <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand mr-auto" href="/business/">
+            <img src="/img/layout/ofb-logo.png" style="height:50px" alt="">
+        </a>
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item border">
+                <a class="nav-link" href="/"  rel="nofollow" title="Zurück zum öffentlichen Bereich">Zurück zum öffentlichen Bereich</a>
+            <li class="nav-item border">
+                <?php if(!is_null($this->user)): ?>
+                    <a class="nav-link" href="/login/logout/" rel="nofollow" title="<?= $this->translate('misc_logout') ?>"><?= $this->translate('misc_logout') ?></a>
+                <?php else: ?>
+                    <a class="nav-link" href="/login/"  rel="nofollow" title="<?= $this->translate('misc_login') ?>"><?= $this->translate('misc_login') ?></a>
+                <?php endif; ?>
+            </li>
+        </ul>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/business/">Übersicht</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shopverwaltung
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/business/shop/">Shop</a>
+                        <a class="dropdown-item" href="/business/shop/pictures">Shop-Bilder</a>
+                        <a class="dropdown-item" href="/business/products/">Produkte</a>
+                        <a class="dropdown-item" href="/business/shippingcosts/">Versandkosten</a>
+                        <a class="dropdown-item" href="/business/shop/terms/">AGB</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Verkäufe
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/business/sales/orders/">Bestellungen</a>
+                        <a class="dropdown-item" href="/business/sales/archive/">Bestellarchiv</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <?php echo $this->layout()->content; ?>
+
+    <!-- footer [+] -->
+
+    <hr />
+    <footer class="page-footer pt-3">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-unstyled">
+                        <li><a href="/<?= $helpPrefix ?>/ueber/" title="<?= $this->translate('footer_about') ?>"><?= $this->translate('footer_about') ?></a></li>
+                        <li><a href="/<?= $helpPrefix ?>/bestellen/" title="<?= $this->translate('footer_order') ?>"><?= $this->translate('footer_order') ?></a></li>
+                        <li><a href="/<?= $helpPrefix ?>/bezahlung/" title="<?= $this->translate('footer_payment') ?>"><?= $this->translate('footer_payment') ?></a></li>
+                        <li><a href="/<?= $helpPrefix ?>/versandlieferung/" title="<?= $this->translate('footer_delivery') ?>"><?= $this->translate('footer_delivery') ?></a></li>
+                        <li><a href="/<?= $helpPrefix ?>/kontakt/" rel="nofollow" title="<?= $this->translate('footer_contact') ?>"><?= $this->translate('footer_contact') ?></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-unstyled">
+                        <li><a href="/<?= $helpPrefix ?>/gesetzlichebestimmungen/" rel="nofollow" title="<?= $this->translate('footer_law_info') ?>"><?= $this->translate('footer_law_info') ?></a></li>
+                        <li><a href="/<?= $helpPrefix ?>/nutzungsbedingungen/" rel="nofollow" title="<?= $this->translate('footer_usage') ?>"><?= $this->translate('footer_usage') ?></a></li>
+                        <li><a href="/<?= $helpPrefix ?>/datenschutz/" rel="nofollow" title="<?= $this->translate('footer_privacy') ?>"><?= $this->translate('footer_privacy') ?></a></li>
+                        <li class="lastListElem"><a href="/<?= $helpPrefix ?>/impressum/" rel="nofollow" title="<?= $this->translate('footer_impress') ?>"><?= $this->translate('footer_impress') ?></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mx-auto">
+                    <ul class="list-unstyled">
+                        <li><a href="/verkaufen/" title="<?= $this->translate('footer_sell') ?>"><?= $this->translate('footer_sell') ?></a></li>
+                        <li><a href="/wholesale/" title="<?= $this->translate('footer_wholesale') ?>"><?= $this->translate('footer_wholesale') ?></a></li>
+                        <li><a href="/genossenschaft/" title="<?= $this->translate('Genossenschaft') ?>"><?= $this->translate('Genossenschaft') ?></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            &copy; Epelia <?= date('Y', time()) ?>
+        </div>
+    </footer>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<p class="title">
+    <a rel="nofollow" title="Warenkorb" href="/shoppingcart/"><?= $this->translate('misc_shoppingcart') ?></a>
+</p>
+<div class="content">
+<?php foreach($this->shoppingCart->getProducts() as $item): 
+    $product = Model_Product::find($item['product_id']);
+    $price = Model_ProductPrice::find($item['product_price_id']);
+    if(!$product || !$price){
+        continue;
+    }
+?>
+    <div class="item">
+        <a title="<?= $this->escape($product->name) ?>">
+<?php if($product->getDefaultPicture()): ?>        
+            <img align="left" alt="<?= $this->escape($product->name) ?>" src="/img/products/36x27/<?= $this->escape($product->getDefaultPicture()->filename) ?>">
+<?php endif; ?>
+            <p>
+            <?= $this->escape($item['quantity']) ?> x <?= $this->escape($product->name) ?>
+            <br />
+            <span class="price"><?= $this->escape(number_format($price->value * $item['quantity'], 2, ',', '')) ?></span> EUR
+            </p>
+        </a>
+    </div>
+<?php endforeach; ?>
+</div>
+<div style="text-align:center; margin-top:17px; margin-left:42px;">
+<a class="btn_checkout" rel="nofollow" title="Zur Kasse" href="/shoppingcart/addresses/">
+<span><?= $this->translate('misc_cashier') ?></span>
+</a>
+</div>
+

@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->escape($this->shop->name) ?></h2>
+        <div class="row">
+            <div class="col-sm">
+            <?php if($this->shop->getLogo()): ?><img class="img-thumbnail" src="/img/shops/<?= $this->escape($this->shop->getLogo()->filename) ?>" alt="<?= $this->escape($this->shop->name) ?>" /><?php endif; ?>
+            </div>
+            <div class="col-sm">
+                <ul>
+                    <li><?= $this->translate('shops_since') ?> <?= date('d.m.Y', strtotime($this->shop->created)) ?></li>
+                    <li><?= count($this->shop->getProducts()) ?> <?= (count($this->shop->getProducts()) == 1) ? $this->translate('shops_product') : $this->translate('shops_products') ?></li>
+                </ul>
+            </div>
+            <div class="col-sm">
+                <p class="illu">
+                    <span class="place">
+                        <?= $this->escape($this->shop->street) ?> <?= $this->escape($this->shop->house) ?><br /><?= $this->escape($this->shop->zip) ?> <?= $this->escape($this->shop->city) ?><br /><?= $this->escape($this->shop->getCountry()->name) ?><br/>
+                        Telefon: +<?= $this->escape($this->shop->getCountry()->phone) ?> <?= $this->escape($this->shop->phone) ?><br />E-Mail: <a href="mailto:<?= $this->escape($this->shop->getUser()->email) ?>"><?= $this->escape($this->shop->getUser()->email) ?></a>
+                    </span>
+                </p>
+                <a href="#about" rel="nofollow" title="<?= $this->translate('shops_more_about') ?>"><?= $this->translate('shops_more_about') ?></a>
+<?php if($this->shop->getWoma()): ?>
+<!--                <br /><a href="<?= $this->shop->getWoma()->getLink() ?>">Zur Versandzelle</a> -->
+<?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <a name="about"></a>
+    <?php if($this->shop->description): ?>
+        <div class="row">
+            <div class="col-sm">
+                <h3><?= $this->translate('shops_about_us') ?></h3>
+                <p><?= $this->escape($this->shop->description) ?></p>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if($this->shop->philosophy): ?>
+        <div class="row">
+            <div class="col-sm">
+                <h3><?= $this->translate('shops_philosophy') ?></h3>
+                <p><?= $this->escape($this->shop->philosophy) ?></p>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if($this->shop->procedure): ?>
+            <h3><?= $this->translate('shops_procedure') ?></h3>
+        <div class="row">
+            <div class="col-sm-4">
+        <?php if($this->shop->getProcedurePicture()): ?>
+                <img class="img-thumbnail" src="/img/shops/<?= $this->escape($this->shop->getProcedurePicture()->filename) ?>" alt="<?= $this->escape($this->shop->name) ?>" />
+        <?php endif; ?>
+            </div>
+            <div class="col-sm">
+            <p><?= $this->escape($this->shop->procedure) ?></p>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if($this->shop->history): ?>
+            <h3><?= $this->translate('shops_history') ?> <?= $this->escape($this->shop->name) ?></h3>
+        <div class="row">
+            <div class="col-sm-4">
+        <?php if($this->shop->getHistoryPicture()): ?>
+            <img class="img-thumbnail"  src="/img/shops/<?= $this->escape($this->shop->getHistoryPicture()->filename) ?>" alt="<?= $this->escape($this->shop->name) ?>" />
+        <?php endif; ?>
+            </div>
+            <div class="col-sm">
+            <p><?= $this->escape($this->shop->history) ?></p>
+            </div>
+    <?php endif; ?>
+        </div>
+
+        <a name="versand"></a>
+        <div class="contentblock shipping">
+            <h3><?= $this->translate('shops_delivery_costs') ?></h3>
+            <span><?= $this->translate('product_sent_from') ?> <strong><?= $this->escape($this->shop->getCountry()->name) ?></strong></span>
+
+            <table class="tbl_shipping">
+                <tr>
+                    <td><?= $this->translate('product_delivery_to') ?></td>
+                    <td><?= $this->translate('product_delivery_price') ?></td>
+                    <td><?= $this->translate('product_delivery_free_from') ?></td>
+                </tr>
+    <?php foreach($this->shop->getShippingCosts() as $cost): ?>
+                <tr>
+                    <td><?= $this->escape($cost->getCountry()->name) ?></td>
+                    <td><?= number_format($cost->value, 2, ',', '') ?> EUR</td>
+                    <td align="right"><?php if($cost->free_from): ?><?= number_format($cost->free_from, 2, ',', '') ?> EUR<?php else: ?>-<?php endif; ?></td>
+                </tr>
+    <?php endforeach; ?>
+            </table>
+        </div>
+        <div class="contentblock last">
+        <a title="Kontakt" href="mailto:<?= $this->shop->getUser()->email ?>">Kontakt</a>&nbsp;
+        <a title="AGB" href="<?= $this->shop->getLink() ?>agb/">AGB</a>&nbsp;
+        <a title="Datenschutz" href="<?= $this->shop->getLink() ?>datenschutz/">Datenschutz</a>&nbsp;
+        <a title="Impressum" href="<?= $this->shop->getLink() ?>impressum">Impressum</a>
+        </div>
+    </div>
+</div>

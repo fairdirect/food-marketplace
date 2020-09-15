@@ -1,0 +1,208 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <div class="breadcrumb" style="margin-top:5px;">
+            <a href="/groups/<?= $this->escape($this->product->getCategory()->getProductGroup()->id) ?>" title="<?= $this->escape($this->product->getCategory()->getProductGroup()->name) ?>"><?= $this->escape($this->product->getCategory()->getProductGroup()->name) ?></a> &gt;
+            <a href="<?= $this->escape($this->product->getShop()->getLink()) ?>" title="<?= $this->escape($this->product->getShop()->name) ?>"><?= $this->escape($this->product->getShop()->name) ?></a>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 bg-light border m-3">
+<?php if(count($this->product->getPictures()) > 1): ?>            
+    <?php foreach($this->product->getPictures() as $pic): ?>
+        <?php if(!file_exists(APPLICATION_PATH . '/../public/img/products/original/' . $pic->filename)):
+            continue;
+        endif; ?>
+        <a style="text-align:center;" title="<?= $this->product->name ?>" href="javascript:showProdPic('<?= $pic->filename ?>');">
+            <img style="max-height: 200px" class="img-fluid img-thumbnail"  alt="" src="/img/products/original/<?= $pic->filename ?>">
+        </a>
+    <?php endforeach; ?>
+<?php endif; ?>
+    </div>
+    <div class="col bg-light border m-3">
+        <div class="row">
+            <div class="col bg-light mt-3" style="height:400px">
+                <div id="big_pic_preview">
+                    <?php if($this->product->getDefaultPicture()): ?><img class="img-fluid img-thumbnail" style="max-height: 400px" src="/img/products/original/<?= $this->escape($this->product->getDefaultPicture()->filename) ?>" alt="<?= $this->escape($this->product->name) ?>" class="prodview_bicpic" /><?php endif; ?>
+                </div>
+            </div>
+            <div class="col bg-light border m-3">
+                <h4 class="h2_pea"><?= $this->escape($this->product->name) ?><?php if($this->product->is_bio): ?> <span class="bio-signed">BIO</span><?php endif; ?></h4>
+<?php if($this->product->getFirstNormalPrice()): ?>
+                <p><?= $this->escape($this->product->getFirstNormalPrice()->value) ?></span> <span class="cur">EUR <?php if($this->product->getFirstNormalPrice()->getBasePriceString()): ?>(<?= $this->escape($this->product->getFirstNormalPrice()->getBasePriceString()) ?>)<?php endif; ?></p>
+                <p>inkl. MwSt. <a href="#shipping" title="<?= $this->translate('product_delivery_costs') ?>"><?= $this->translate('product_delivery_costs') ?></a></p>
+    <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>                    
+                    <p class="btn-cart">
+                        <select name="cart_btn1" id="cart_btn1" style="width:40px;  margin-top:7px;">
+        <?php for($i = 1; $i <= 100; $i++): ?>
+                            <option value="<?= $i ?>"><?= $i ?></option>
+        <?php endfor; ?>
+                        </select>
+                        <a class="btn btn-success" href="javascript:addToCart($('#cart_btn1').val(), <?= $this->escape($this->product->getFirstNormalPrice()->id) ?>)" title="<?= $this->translate('product_add_to_cart') ?>"><?= $this->translate('product_add_to_cart') ?></a>
+                    </p>
+    <?php else: ?>
+                    <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
+    <?php endif; ?>                    
+<?php else: ?>
+                    <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
+<?php endif; ?>                    
+<?php if($this->product->getFirstNormalPrice()): ?>
+                    <p class="title"><?= $this->translate('product_size') ?> <span class="sales_unit"><?= $this->escape($this->product->getFirstNormalPrice()->quantity) ?> <?= ($this->product->getFirstNormalPrice()->quantity == 1) ? $this->escape($this->product->getFirstNormalPrice()->getUnitType()->singular) : $this->escape($this->product->getFirstNormalPrice()->getUnitType()->plural) ?> &agrave; <?= $this->escape($this->product->getFirstNormalPrice()->contents) ?> <?= $this->escape($this->product->getFirstNormalPrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?><span></p>
+<?php endif; ?>
+<?php if(!is_null($this->user) && $this->user->is_wholesale && $this->product->getFirstWholesalePrice()): ?>
+                    <div class="clear quantity_discount_container">
+                        <div class="qdc_static_top">
+                            <p class="qdc_box_title">Großhandelspreise</p>
+                        </div>
+                        <div class="qdc_dyn_middle">
+                            <div class="qdc_middle_content">
+                                <p class="qdc_sales_price" style="height:28px; float:none"><?= $this->escape($this->product->getFirstWholesalePrice()->value) ?><span> EUR</span></p>
+                                <p style="margin-top:0px; line-height:26px;" class="qdc_bundle"><?= $this->escape($this->product->getFirstWholesalePrice()->quantity) ?> <?= ($this->product->getFirstWholesalePrice()->quantity == 1) ? $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->singular) : $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->plural) ?><br /><span style="padding-top:5px;">&agrave; <?= $this->escape($this->product->getFirstWholesalePrice()->contents) ?> <?= $this->escape($this->product->getFirstWholesalePrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></span></p>
+                                <p class="qdc_checkin">
+    <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>                                        
+                                    <a title="in den Warenkorb" href="javascript:addToCart(1, <?= $this->escape($this->product->getFirstWholesalePrice()->id) ?>)"> in den Warenkorb </a>
+    <?php endif; ?>                                    
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+<?php endif; ?>                    
+                    <a href="<?= $this->product->getShop()->getLink() ?>"><?= $this->translate('product_to_shop') ?></a>
+<?php if($this->product->getShop()->getWoma()): ?>
+<!--
+                    <br /><a href="<?= $this->product->getShop()->getWoma()->getLink() ?>">Zur Versandzelle</a>
+                    -->
+<?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h3><?= $this->escape($this->product->getShop()->name) ?> <a class="lightblue toList" href="<?= $this->escape($this->product->getShop()->getLink()) ?>" title="<?= $this->translate('product_show_more') ?>"><?= $this->translate('product_show_more') ?></a></h3>
+        <p style="padding-top:5px;"><?= $this->escape($this->product->description) ?></p>
+
+<?php if($this->product->ingredients): ?>
+        <h3><?= $this->translate('product_ingredients') ?></h3>
+        <p><?= $this->escape($this->product->ingredients) ?></p>
+<?php endif; ?>
+<?php if($this->product->getAllergenes()): ?>
+        <h3><?= $this->translate('products_traces') ?></h3>
+        <ul>
+    <?php foreach($this->product->getAllergenes() as $a): ?>
+            <li><strong><?= $a->opposite ?></strong></li>
+    <?php endforeach; ?>                            
+        </ul>
+<?php endif; ?>
+
+<?php if($this->product->tags): ?>
+        <h3><?= $this->translate('product_tags') ?></h3>
+        <p><?= $this->escape($this->product->tags) ?></p>
+<?php endif; ?>                    
+        <h3><?= $this->translate('product_sizes') ?> <?= $this->escape($this->product->name) ?></h3>
+        <table cellpadding="0" cellspacing="0">
+<?php
+foreach($this->product->getNormalPrices() as $price): 
+?>
+            <tr>
+                <td width="200"><?= $this->escape($price->quantity) ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></td>
+                <td width="150" style="text-align:right"><?= $this->escape($price->value) ?> EUR</td>
+                <td width="150" style="text-align:right"><?php if($price->getBasePriceString()): ?>(<?= $this->escape($price->getBasePriceString()) ?>)<?php endif; ?></td>
+                <td style="padding-left:35px; font-size:11px;">
+    <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
+                    <a href="javascript:addToCart(1, <?= $this->escape($price->id) ?>)" title="<?= $this->translate('product_buy') ?>"><?= $this->translate('product_buy') ?></a>
+    <?php endif; ?>                                    
+                </td>
+            </tr>
+<?php endforeach; ?>
+<?php if(!is_null($this->user) && $this->user->is_wholesale): ?>
+    <?php foreach($this->product->getWholesalePrices() as $price): 
+?>
+            <tr>
+                <td width="200"><?= $this->escape($price->quantity) ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></td>
+                <td width="150" style="text-align:right"><?= $this->escape($price->value) ?> EUR</td>
+                <td width="150" style="text-align:right"><?php if($price->getBasePriceString()): ?>(<?= $this->escape($price->getBasePriceString()) ?>)<?php endif; ?></td>
+                <td style="padding-left:35px; font-size:11px;">
+<?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
+                    <a href="javascript:addToCart(1, <?= $this->escape($price->id) ?>)" title="<?= $this->translate('product_buy') ?>"><?= $this->translate('product_buy') ?></a>
+<?php endif; ?>
+                </td>
+            </tr>
+    <?php endforeach; ?>
+<?php endif; ?>
+        </table>
+        <br />
+        <a name="shipping"></a>
+        <h3><?= $this->translate('product_delivery_costs_of') ?> <?= $this->escape($this->product->getShop()->name) ?></h3>
+        <p>
+            <?= $this->translate('product_sent_from') ?>
+            <strong><?= $this->escape($this->product->getShop()->getCountry()->name) ?></strong>
+        </p>
+        <table cellspacing="0" cellpadding="0"">
+            <tbody>
+                <tr>
+                    <td width="145px"><?= $this->translate('product_delivery_to') ?></td>
+                    <td width="120px"><?= $this->translate('product_delivery_price') ?></td>
+                    <td><?= $this->translate('product_delivery_free_from') ?></td>
+                </tr>
+<?php foreach($this->product->getShop()->getShippingCosts() as $s): ?>                            
+                <tr>
+                    <td><?= $this->escape($s->getCountry()->name) ?></td>
+                    <td><?= number_format($s->value, 2, ',', '') ?> EUR</td>
+                    <td><?= ($s->free_from) ? number_format($s->free_from, 2, ',', '') . ' EUR' : '-' ?></td>
+                </tr>
+<?php endforeach; ?>                                
+            </tbody>
+        </table>
+        <br />
+
+        <h3>Herstellerkennzeichnung</h3>
+
+        <p><?= $this->product->getShop()->company ?><br />
+        <?= $this->product->getShop()->street ?><br />
+        <?= $this->product->getShop()->zip ?> <?= $this->product->getShop()->city ?><br />
+        <?= $this->product->getShop()->getCountry()->name ?></p>
+
+
+        <p>Telefon: +<?= $this->product->getShop()->getCountry()->phone ?> <?= $this->product->getShop()->phone ?></p>
+        <p>E-Mail: <?= $this->product->getShop()->getUser()->email ?></p>
+
+        <p>
+            <a title="Kontakt" href="mailto:<?= $this->product->getShop()->getUser()->email ?>">Kontakt</a>&nbsp;
+            <a title="AGB" href="<?= $this->product->getShop()->getLink() ?>agb/">AGB</a>&nbsp;
+            <a title="Datenschutz" href="<?= $this->product->getShop()->getLink() ?>datenschutz/">Datenschutz</a>&nbsp;
+            <a title="Impressum" href="<?= $this->product->getShop()->getLink() ?>impressum">Impressum</a>
+        </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function showProdPic(filename){
+        $('#big_pic_preview').find('img').attr('src', '/img/products/380w/' + filename);
+    }
+
+    function addToCart(quantity, price_id){
+        $.ajax({
+            type: "POST",
+            url: "/ajax/addtoshoppingcart/",
+            dataType: 'json',
+            data:{
+                price_id: price_id,
+                quantity: quantity
+            },
+        }).done(function(){
+            $.ajax({
+                type: "POST",
+                url: "/ajax/getshoppingcart/",
+                dataType: 'html',
+            }).done(function(data){
+                if(!$('#shoppingcart-nav').html()) {
+                    location.reload(); // nav element not there yet -> reload
+                }
+                itemCount = $('#num_products_header').text();
+                $('#num_products_header').html(++itemCount);
+            });
+        });
+    };
+   
+</script>

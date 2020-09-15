@@ -1,9 +1,12 @@
 # Fairdirect Food Marketplace
 
 **[1. Introduction](#1-introduction)**
+
 **[2. Repository Layout](#2-repository-layout)**
+
 **[3. Installation](#3-installation)**
-**[5. Usage](#4-usage)**
+
+**[4. Usage](#4-usage)**
 
 
 ## 1. Introduction
@@ -70,11 +73,11 @@ Roles of the different branches:
 
 There is nothing special about it:
 
-1. Create an empty database initialized with [`epelia.sql`](https://github.com/Fairdirect/epelia/blob/master/docs/epelia.sql).
+1. Create an empty database initialized with [`epelia.sql`](https://github.com/fairdirect/food-marketplace/blob/master/docs/epelia.sql).
 
-2. Configure database access etc. in [`application/configs/application.ini`](https://github.com/Fairdirect/epelia/blob/master/application/configs/application.ini).
+2. Configure database access etc. in [`application/configs/application.ini`](https://github.com/fairdirect/food-marketplace/blob/master/application/configs/application.ini).
 
-3. Configure your webserver to serve directory [`public/`](https://github.com/Fairdirect/epelia/tree/master/public) as the document root directory of the software.
+3. Configure your webserver to serve directory [`public/`](https://github.com/fairdirect/food-marketplace/tree/master/public) as the document root directory of the software.
 
 4. Access the website.
 

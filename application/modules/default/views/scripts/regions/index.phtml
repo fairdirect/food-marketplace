@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col bg-light border m-3">
+        <?php if($this->region): ?>
+            <h2>Deine aktuelle Region: <?= $this->region->name ?></h2>
+            <h3>Region ändern</h3>
+            <p>Wenn Du Deine aktuell ausgewählte Region ändern möchtest suche hier nach einer neuen Region:</p>
+            <p>Solltest Du eine Lieferadresse hinterlegt haben wird beim nächsten Login automatisch wieder die Region deiner primären Adresse verwendet.</p>
+        <?php else: ?>
+            <h2>Bitte wähle deine Region aus</h2>
+            <p>Bitte suche hier nach einer Region, in der Du einkaufen möchtest:</p>
+            <p>Alternativ erstelle bitte <a href="http://epelia.localhost:8080/meinepelia/">ein Nutzerkonto</a> und
+                hinterlege eine Adresse, so dass Dir automatisch eine Region zugeordnet werden kann.</p>
+        <?php endif; ?>
+
+        <form id="regionForm" class="m-3">
+            <div class="row">
+                <div class="col">
+                      <input type="text" class="form-control" id="plz" placeholder="PLZ">
+                </div>
+                <div class="col">
+                    <select class="form-control" id="country">
+                        <option value="">Land auswählen</option>
+                        <?php foreach($this->availableRegions as $region): ?>
+                        <option value="<?= $region->id ?>"><?= $region->name ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Region suchen</button>
+                </div>
+            </div>
+            <div class="alert alert-success mt-2 collapse" id="found"></div>
+            <div class="alert alert-danger mt-2 collapse" id="error"></div>
+            <div class="alert alert-warning mt-2 collapse" id="warning"></div>
+        </form>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#regionForm").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        $('#error').hide();
+        $('#warning').hide();
+        $('#found').hide();
+
+        var plz = $("#plz").val();
+        var country = $("#country").val();
+        if(plz && country) {
+            choseRegion(plz, country);
+        } else{
+            $('#error').html('Bitte PLZ und Land angeben').show();
+        }
+    });
+
+    function choseRegion(plz, country){
+        $.ajax({
+            type: "POST",
+            url: "/ajax/selectregion/",
+            dataType: 'json',
+            data:{
+                plz: plz,
+                country: country
+            },
+        }).done(function(ret){
+            if(!ret.suc) {
+                if(ret.message == 'No region found') {
+                    $('#warning').html('Leider ist keine Region mit den angegebenen Daten im System hinterlegt.').show();
+                }
+            } else {
+                $('#found').html('Region gefunden: ' + ret.data.name + ' <a class="btn btn-success" href="/regions/changeregion/' + ret.data.id + '">Region wählen</a>').show();
+            }
+        });
+    };
+
+</script>
