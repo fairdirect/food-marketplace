@@ -1,17 +1,20 @@
-<h1 style="margin-bottom:5px;">Produkt-Bewertungen</h1>
-<table class="table" id="ratingTable">
-    <thead>
-    <tr><th>Bewertung</th><th>Text</th><th>Produkt</th><th>Benutzer</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->ratings as $rating): ?>
-        <tr><td><?= $this->escape($rating->rating) ?></td><td><?= $this->escape($rating->comment) ?></td><td><a href="/admin/products/edit/id/<?= $this->escape($rating->getProduct()->id) ?>/"><?= $this->escape($rating->getProduct()->name) ?></a></td><td><a href="/admin/users/edit/id/<?= $this->escape($rating->getUser()->id) ?>/"><?= $this->escape($rating->getUser()->email) ?></a><td><a href="/admin/productratings/edit/id/<?= $this->escape($rating->id) ?>">Editieren</a><br /><?php if($rating->status == 'new'): ?><a href="/admin/productratings/approve/id/<?= $this->escape($rating->id) ?>/">freischalten</a><br /><?php endif; ?><a href="/admin/productratings/delete/id/<?= $this->escape($rating->id) ?>/">löschen</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
-
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Produkt-Bewertungen</h1>
+        <table class="table" id="ratingTable">
+            <thead>
+            <tr><th>Bewertung</th><th>Text</th><th>Produkt</th><th>Benutzer</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->ratings as $rating): ?>
+                <tr><td><?= $this->escape($rating->rating) ?></td><td><?= $this->escape($rating->comment) ?></td><td><a href="/admin/products/edit/id/<?= $this->escape($rating->getProduct()->id) ?>/"><?= $this->escape($rating->getProduct()->name) ?></a></td><td><a href="/admin/users/edit/id/<?= $this->escape($rating->getUser()->id) ?>/"><?= $this->escape($rating->getUser()->email) ?></a><td><a href="/admin/productratings/edit/id/<?= $this->escape($rating->id) ?>">Editieren</a><br /><?php if($rating->status == 'new'): ?><a href="/admin/productratings/approve/id/<?= $this->escape($rating->id) ?>/">freischalten</a><br /><?php endif; ?><a href="/admin/productratings/delete/id/<?= $this->escape($rating->id) ?>/">löschen</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#unitTable').dataTable({

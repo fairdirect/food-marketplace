@@ -1,17 +1,20 @@
-<h1 style="margin-bottom:5px;">Einstellungen</h1>
-<table class="table" id="settingTable">
-    <thead>
-    <tr><th>Name</th><th>Wert</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->settings as $setting): ?>
-        <tr><td><?= $this->escape($setting->id) ?></td><td><?= $this->escape($setting->value) ?></td><td><a href="/admin/settings/edit/id/<?= $this->escape($setting->id) ?>">Editieren</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
-
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1>Einstellungen</h1>
+        <table class="table" id="settingTable">
+            <thead>
+            <tr><th>Name</th><th>Wert</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->settings as $setting): ?>
+                <tr><td><?= $this->escape($setting->id) ?></td><td><?= $this->escape($setting->value) ?></td><td><a href="/admin/settings/edit/id/<?= $this->escape($setting->id) ?>">Editieren</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#newsletterTable').dataTable({

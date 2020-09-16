@@ -1,21 +1,24 @@
-<h1 style="margin-bottom:5px;">Offene Bestellungen</h1>
-<table class="table" id="ordersTable">
-    <thead>
-    <tr><th>Bestellt am</th><th>Bestellnummer</th><th>Preis Produkte</th><th>Versandkosten</th><th>Gesamtpreis</th><th>Produkte</th><th></th></tr>
-    </thead>
-    <tbody>
-<?php
-    foreach($this->orderedCarts as $cart):
-        $cartProducts = $cart->getProducts();
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Offene Bestellungen</h1>
+        <table class="table" id="ordersTable">
+            <thead>
+            <tr><th>Bestellt am</th><th>Bestellnummer</th><th>Preis Produkte</th><th>Versandkosten</th><th>Gesamtpreis</th><th>Produkte</th><th></th></tr>
+            </thead>
+            <tbody>
+        <?php
+            foreach($this->orderedCarts as $cart):
+                $cartProducts = $cart->getProducts();
 
-?>
-        <tr><td><?= date('d.m.Y', strtotime($cart->created)) ?></td><td><?= $this->escape($cart->getCartId()) ?></td><td><?= number_format($cart->getPrice(), 2, ',', '') ?> EUR</td><td><?= number_format($cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?= number_format($cart->getPriceTotal(), 2, ',', '') ?> EUR</td><td><?php foreach($cartProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['product_name']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><a href="/admin/orders/setPaid/id/<?= $this->escape($cart->id) ?>/">als bezahlt markieren</a><br /><a href="/admin/orders/delete/id/<?= $this->escape($cart->id) ?>/">löschen</a></td></tr>
-<?php
-    endforeach;
-?>
-    </tbody>
-</table>
-
+        ?>
+                <tr><td><?= date('d.m.Y', strtotime($cart->created)) ?></td><td><?= $this->escape($cart->getCartId()) ?></td><td><?= number_format($cart->getPrice(), 2, ',', '') ?> EUR</td><td><?= number_format($cart->getShippingCosts(), 2, ',', '') ?> EUR</td><td><?= number_format($cart->getPriceTotal(), 2, ',', '') ?> EUR</td><td><?php foreach($cartProducts as $item): ?><?= $this->escape($item['quantity']) ?> x <?= $this->escape($item['product_name']) ?> (<?= $this->escape($item['price_quantity']) ?> x <?= $this->escape($item['unit_type']) ?> &agrave; <?= $this->escape($item['contents']) ?> <?= $this->escape($item['content_type']) ?>)<br /><?php endforeach; ?></td><td><a href="/admin/orders/setPaid/id/<?= $this->escape($cart->id) ?>/">als bezahlt markieren</a><br /><a href="/admin/orders/delete/id/<?= $this->escape($cart->id) ?>/">löschen</a></td></tr>
+        <?php
+            endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

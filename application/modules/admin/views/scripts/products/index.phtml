@@ -1,14 +1,17 @@
-<h1 style="margin-bottom:5px;">Produkte</h1>
-<a href="/admin/products/edit/">Neues Produkt anlegen</a>
-<h2>Produkte</h2>
-<table class="table" id="productTable">
-    <thead>
-    <tr><th>ID</th><th>Shopname</th><th>Name</th><th>Aktiv</th><th>Vorrat</th><th>Erstellung</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Produkte</h1>
+        <a href="/admin/products/edit/">Neues Produkt anlegen</a>
+        <h2>Produkte</h2>
+        <table class="table" id="productTable">
+            <thead>
+            <tr><th>ID</th><th>Shopname</th><th>Name</th><th>Aktiv</th><th>Vorrat</th><th>Erstellung</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function() {
         var productTable = $('#productTable').dataTable({

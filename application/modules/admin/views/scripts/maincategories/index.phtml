@@ -1,15 +1,19 @@
-<h1 style="margin-bottom:5px;">Hauptkategorien</h1>
-<a href="/admin/maincategories/edit/">Neue Hauptkategoie anlegen</a>
-<table class="table" id="mainCategoriesTable">
-    <thead>
-    <tr><th>Name</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->mainCategories as $cat): ?>
-    <tr><td><?= $this->escape($cat->name) ?></td><td><a href="/admin/maincategories/edit/id/<?= $this->escape($cat->id) ?>">Editieren</a><br /><a href="/admin/maincategories/delete/id/<?= $this->escape($cat->id) ?>">Löschen</a></td></tr>
-<?php endforeach; ?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Hauptkategorien</h1>
+        <a href="/admin/maincategories/edit/">Neue Hauptkategoie anlegen</a>
+        <table class="table" id="mainCategoriesTable">
+            <thead>
+            <tr><th>Name</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->mainCategories as $cat): ?>
+            <tr><td><?= $this->escape($cat->name) ?></td><td><a href="/admin/maincategories/edit/id/<?= $this->escape($cat->id) ?>">Editieren</a><br /><a href="/admin/maincategories/delete/id/<?= $this->escape($cat->id) ?>">Löschen</a></td></tr>
+        <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

@@ -1,17 +1,21 @@
-<h1 style="margin-bottom:5px;">Länder</h1>
-<a href="/admin/countries/edit/">Neues Land anlegen</a>
-<table class="table" id="countryTable">
-    <thead>
-    <tr><td>ID</th><th>Name</th><th>Vorwahl</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->countries as $country): ?>
-        <tr><td><?= $this->escape($country->id) ?></td><td><?= $this->escape($country->name) ?></td><td><?= $this->escape($country->phone) ?></td><td><a href="/admin/countries/edit/id/<?= $this->escape($country->id) ?>">Editieren</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Länder</h1>
+        <a href="/admin/countries/edit/">Neues Land anlegen</a>
+        <table class="table" id="countryTable">
+            <thead>
+            <tr><td>ID</th><th>Name</th><th>Vorwahl</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->countries as $country): ?>
+                <tr><td><?= $this->escape($country->id) ?></td><td><?= $this->escape($country->name) ?></td><td><?= $this->escape($country->phone) ?></td><td><a href="/admin/countries/edit/id/<?= $this->escape($country->id) ?>">Editieren</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

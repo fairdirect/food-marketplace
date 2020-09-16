@@ -1,17 +1,21 @@
-<h1 style="margin-bottom:5px;">Inhalt-Typen</h1>
-<a href="/admin/contenttypes/edit/">Neuen Typ anlegen</a>
-<table class="table" id="unitTable">
-    <thead>
-    <tr><th>Name</th><th>Grundeinheit</th><th>Faktor</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->types as $type): ?>
-        <tr><td><?= $this->escape($type->name) ?></td><td><?= $this->escape($type->base_unit) ?></td><td><?= $this->escape($type->base_factor) ?></td><td><a href="/admin/contenttypes/edit/id/<?= $this->escape($type->id) ?>">Editieren</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Inhalt-Typen</h1>
+        <a href="/admin/contenttypes/edit/">Neuen Typ anlegen</a>
+        <table class="table" id="unitTable">
+            <thead>
+            <tr><th>Name</th><th>Grundeinheit</th><th>Faktor</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->types as $type): ?>
+                <tr><td><?= $this->escape($type->name) ?></td><td><?= $this->escape($type->base_unit) ?></td><td><?= $this->escape($type->base_factor) ?></td><td><a href="/admin/contenttypes/edit/id/<?= $this->escape($type->id) ?>">Editieren</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

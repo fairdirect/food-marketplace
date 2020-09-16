@@ -1,36 +1,40 @@
-<h1 style="margin-bottom:5px;">Rechnungen</h1>
-<?php
-$months = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
-?>
-<form action="/admin/sales/invoiceactions">
-    <p>Monat wählen:</p>
-        <select name="month" id="month">
-    <?php for($i = 0; $i < 12; $i++): ?>
-            <option value="<?= $i + 1 ?>"><?= $months[$i] ?></option>
-    <?php endfor; ?>
-        </select>
-        <select name="year" id="year">
-    <?php for($i = $this->minYear; $i <= $this->maxYear; $i++): ?>
-            <option value="<?= $i ?>"><?= $i ?></option>
-    <?php endfor; ?>
-        </select>
-        <button type="button" style="margin-bottom:9px;" onclick="getInvoiceData()">OK</button>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Rechnungen</h1>
+        <?php
+        $months = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
+        ?>
+        <form action="/admin/sales/invoiceactions">
+            <p>Monat wählen:</p>
+                <select name="month" id="month">
+            <?php for($i = 0; $i < 12; $i++): ?>
+                    <option value="<?= $i + 1 ?>"><?= $months[$i] ?></option>
+            <?php endfor; ?>
+                </select>
+                <select name="year" id="year">
+            <?php for($i = $this->minYear; $i <= $this->maxYear; $i++): ?>
+                    <option value="<?= $i ?>"><?= $i ?></option>
+            <?php endfor; ?>
+                </select>
+                <button type="button" style="margin-bottom:9px;" onclick="getInvoiceData()">OK</button>
 
-    <table class="table" id="ordersTable">
-        <thead>
-            <tr><th>Auswahl</th><th>Rechnungsnummer</th><th>Shop</th><th>E-Mail</th><th>Provision</th><th>Umsatz</th><th>Datei</th><th>Zuletzt versendet</th></tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+            <table class="table" id="ordersTable">
+                <thead>
+                    <tr><th>Auswahl</th><th>Rechnungsnummer</th><th>Shop</th><th>E-Mail</th><th>Provision</th><th>Umsatz</th><th>Datei</th><th>Zuletzt versendet</th></tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
 
-    <div id="download" style="display:none;">
-        <input type="submit" value="Alle Rechnungen markieren" onclick="$('.send_check').attr('checked', true); return false;" />
-        <input type="submit" name="send" value="Markierte Rechnungen versenden" />
-        <input type="submit" name="download" value="Markierte Rechnungen herunterladen" />
+            <div id="download" style="display:none;">
+                <input type="submit" value="Alle Rechnungen markieren" onclick="$('.send_check').attr('checked', true); return false;" />
+                <input type="submit" name="send" value="Markierte Rechnungen versenden" />
+                <input type="submit" name="download" value="Markierte Rechnungen herunterladen" />
+            </div>
+
+        </form>
     </div>
-
-</form>
+</div>
 
 <script type="text/javascript">
     function initTable() {

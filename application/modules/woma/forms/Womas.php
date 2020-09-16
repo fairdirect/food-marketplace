@@ -60,9 +60,14 @@ class Woma_Form_Womas extends Zend_Form
             ->setAttrib('class', 'span2')
             ->setOrder(110);
 
-        $options = array('DE' => $this->getTranslator()->translate('areasearch_germany'), 'AT' => $this->getTranslator()->translate('areasearch_austria'), 'CH' => $this->getTranslator()->translate('areasearch_switzerland'));
+        $countries = Model_Region::getCountriesWithRegions();
+        $options = array('' => '');
+        foreach($countries as $c){
+            $options[$c->id] = $c->name;
+        }
         $country = new Zend_Form_Element_Select('country');
         $country->addMultiOptions($options)
+            ->setRequired(true)
             ->setLabel($this->getTranslator()->translate('misc_country'))
             ->setAttrib('class', 'span2')
             ->setOrder(130);

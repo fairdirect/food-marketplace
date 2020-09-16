@@ -1,27 +1,31 @@
-<h1 style="margin-bottom:5px;">CSV Export</h1>
-<?php
-$months = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
-?>
-<p>Monat wählen:</p>
-    <select name="month" id="month">
-<?php for($i = 0; $i < 12; $i++): ?>
-        <option value="<?= $i + 1 ?>"><?= $months[$i] ?></option>
-<?php endfor; ?>
-    </select>
-    <select name="year" id="year">
-<?php for($i = $this->minYear; $i <= $this->maxYear; $i++): ?>
-        <option value="<?= $i ?>"><?= $i ?></option>
-<?php endfor; ?>
-    </select>
-    <button style="margin-bottom:9px;" onclick="getCsvData()">OK</button>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1>CSV Export</h1>
+        <?php
+        $months = array('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember');
+        ?>
+        <p>Monat wählen:</p>
+            <select name="month" id="month">
+        <?php for($i = 0; $i < 12; $i++): ?>
+                <option value="<?= $i + 1 ?>"><?= $months[$i] ?></option>
+        <?php endfor; ?>
+            </select>
+            <select name="year" id="year">
+        <?php for($i = $this->minYear; $i <= $this->maxYear; $i++): ?>
+                <option value="<?= $i ?>"><?= $i ?></option>
+        <?php endfor; ?>
+            </select>
+            <button style="margin-bottom:9px;" onclick="getCsvData()">OK</button>
 
-<table class="table" id="ordersTable">
-    <thead>
-        <tr><th>Shop-ID</th><th>Firma</th><th>Kontaktperson</th><th>Bestellungen</th><th>Umsatz</th><th>Versand</th><th>Summe</th><th>Provision netto</th><th>MwSt 19%</th><th>Provision Brutto</th><th>Auszahlung</th></tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
+        <table class="table" id="ordersTable">
+            <thead>
+                <tr><th>Shop-ID</th><th>Firma</th><th>Kontaktperson</th><th>Bestellungen</th><th>Umsatz</th><th>Versand</th><th>Summe</th><th>Provision netto</th><th>MwSt 19%</th><th>Provision Brutto</th><th>Auszahlung</th></tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <div id="download"></div>
 

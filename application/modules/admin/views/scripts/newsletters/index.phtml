@@ -1,17 +1,21 @@
-<h1 style="margin-bottom:5px;">Newsletter</h1>
-<a href="/admin/newsletters/edit/">Neuen Newsletter anlegen</a>
-<table class="table" id="newsletterTable">
-    <thead>
-    <tr><th>Betreff</th><th>Typ</th><th>Erstellt</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->newsletters as $newsletter): ?>
-        <tr><td><?= $this->escape($newsletter->subject) ?></td><td><?= $this->escape($newsletter->type) ?></td><td><?= $this->escape($newsletter->created) ?></td><td><a href="/admin/newsletters/edit/id/<?= $this->escape($newsletter->id) ?>">Editieren / senden</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Newsletter</h1>
+        <a href="/admin/newsletters/edit/">Neuen Newsletter anlegen</a>
+        <table class="table" id="newsletterTable">
+            <thead>
+            <tr><th>Betreff</th><th>Typ</th><th>Erstellt</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->newsletters as $newsletter): ?>
+                <tr><td><?= $this->escape($newsletter->subject) ?></td><td><?= $this->escape($newsletter->type) ?></td><td><?= $this->escape($newsletter->created) ?></td><td><a href="/admin/newsletters/edit/id/<?= $this->escape($newsletter->id) ?>">Editieren / senden</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

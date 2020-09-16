@@ -1,16 +1,20 @@
-<h1 style="margin-bottom:5px;">System-Emails:</h1>
-<table class="table" id="emailTable">
-    <thead>
-    <tr><th>Name</th><th>Betreff</th><th>Variablen</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->emails as $email): ?>
-        <tr><td><?= $this->escape($email->name) ?></td><td><?= $this->escape($email->subject) ?></td><td><?= $this->escape($email->vars) ?></td><td><a href="/admin/emails/edit/name/<?= $this->escape($email->name) ?>">Editieren</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">System-Emails:</h1>
+        <table class="table" id="emailTable">
+            <thead>
+            <tr><th>Name</th><th>Betreff</th><th>Variablen</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->emails as $email): ?>
+                <tr><td><?= $this->escape($email->name) ?></td><td><?= $this->escape($email->subject) ?></td><td><?= $this->escape($email->vars) ?></td><td><a href="/admin/emails/edit/name/<?= $this->escape($email->name) ?>">Editieren</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

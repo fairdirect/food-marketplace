@@ -1,20 +1,23 @@
-<h1 style="margin-bottom:5px;">Bankverbindungen für Benutzer <?= $this->escape($this->user->email) ?></h1>
-<a href="/admin/bankaccounts/edit/user_id/<?= $this->escape($this->user->id) ?>/">Neue Bankverbindung anlegen</a>
-<table class="table" id="bankAccountTable">
-    <thead>
-    <tr><th>ID</th><th>Kontonummer</th><th>BLZ</th><th>Bank-Name</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php
-    foreach($this->bankaccounts as $account):
-?>
-        <tr><td><?= $this->escape($account->id) ?></td><td><?= $this->escape($account->account_nr) ?></td><td><?= $this->escape($account->bank_id) ?></td><td><?= $this->escape($account->bank_name) ?></td><td><a href="/admin/bankaccounts/edit/id/<?= $this->escape($account->id) ?>/">editieren</a></td></tr>
-<?php
-    endforeach;
-?>
-    </tbody>
-</table>
-
+<div class="row">
+    <div class="col bg-light border m-3">
+<        <h1 style="margin-bottom:5px;">Bankverbindungen für Benutzer <?= $this->escape($this->user->email) ?></h1>
+        <a href="/admin/bankaccounts/edit/user_id/<?= $this->escape($this->user->id) ?>/">Neue Bankverbindung anlegen</a>
+        <table class="table" id="bankAccountTable">
+            <thead>
+            <tr><th>ID</th><th>Kontonummer</th><th>BLZ</th><th>Bank-Name</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php
+            foreach($this->bankaccounts as $account):
+        ?>
+                <tr><td><?= $this->escape($account->id) ?></td><td><?= $this->escape($account->account_nr) ?></td><td><?= $this->escape($account->bank_id) ?></td><td><?= $this->escape($account->bank_name) ?></td><td><a href="/admin/bankaccounts/edit/id/<?= $this->escape($account->id) ?>/">editieren</a></td></tr>
+        <?php
+            endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#bankAccountTable').dataTable({

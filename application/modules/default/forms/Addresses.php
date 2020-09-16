@@ -59,7 +59,7 @@ class Form_Addresses extends Zend_Form
             ->setAttrib('class', 'span2');
 
         $options = array('' => '');
-        $countries = Model_Country::getAll();
+        $countries = Model_Region::getCountriesWithRegions();
         foreach($countries as $c){
             $options[$c->id] = $c->name;
         }

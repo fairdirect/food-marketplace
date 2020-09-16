@@ -55,7 +55,7 @@ class Form_Register extends Zend_Form
             ->setLabel($this->getTranslator()->translate('misc_city'))
             ->setAttrib('class', 'span2');
  
-        $countries = Model_Country::getAll();
+        $countries = Model_Region::getCountriesWithRegions();
         $options = array('' => '');
         foreach($countries as $c){
             $options[$c->id] = $c->name;

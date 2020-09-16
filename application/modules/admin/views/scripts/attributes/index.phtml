@@ -1,33 +1,37 @@
-<h1 style="margin-bottom:5px;">Attribute</h1>
-<a href="/admin/attributes/edit/">Neues Attribut anlegen</a>
-<?php
-$attributeNames = array('additive' => 'Zusatz', 'allergen' => 'Allergen', 'event' => 'Anlass', 'flavor' => 'Geschmack', 'manipulation' => 'Veränderung');
-$curType = null;
-foreach($this->attributes as $attr):
-    if(is_null($curType) || $curType != $attr->type):
-        if(!is_null($curType)):
-?>
-    </tbody>
-</table>
-<?php 
-        endif;
-        $curType = $attr->type;
-?>
-<h2><?= $this->escape($attributeNames[$curType]) ?></h2>
-<table class="table attrTable" id="<?= $this->escape($curType) ?>Table">
-    <thead>
-    <tr><th>Name</th><th>Gegenteil</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php
-    endif;
-?>
-        <tr><td><?= $this->escape($attr->name) ?></td><td><?= $this->escape($attr->opposite) ?></td><td><a href="/admin/attributes/edit/id/<?= $this->escape($attr->id) ?>">Editieren</a><br /><a href="/admin/attributes/delete/id/<?= $this->escape($attr->id) ?>">Löschen</a></td></tr>
-<?php
-endforeach;
-?>
-    </tbody>
-</table>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Attribute</h1>
+        <a href="/admin/attributes/edit/">Neues Attribut anlegen</a>
+        <?php
+        $attributeNames = array('additive' => 'Zusatz', 'allergen' => 'Allergen', 'event' => 'Anlass', 'flavor' => 'Geschmack', 'manipulation' => 'Veränderung');
+        $curType = null;
+        foreach($this->attributes as $attr):
+            if(is_null($curType) || $curType != $attr->type):
+                if(!is_null($curType)):
+        ?>
+            </tbody>
+        </table>
+        <?php
+                endif;
+                $curType = $attr->type;
+        ?>
+        <h2><?= $this->escape($attributeNames[$curType]) ?></h2>
+        <table class="table attrTable" id="<?= $this->escape($curType) ?>Table">
+            <thead>
+            <tr><th>Name</th><th>Gegenteil</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php
+            endif;
+        ?>
+                <tr><td><?= $this->escape($attr->name) ?></td><td><?= $this->escape($attr->opposite) ?></td><td><a href="/admin/attributes/edit/id/<?= $this->escape($attr->id) ?>">Editieren</a><br /><a href="/admin/attributes/delete/id/<?= $this->escape($attr->id) ?>">Löschen</a></td></tr>
+        <?php
+        endforeach;
+        ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function() {

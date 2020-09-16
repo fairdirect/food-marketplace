@@ -1,31 +1,36 @@
-<h1 style="margin-bottom:5px;">Gruppen</h1>
-<a href="/admin/groups/edit/">Neue Gruppe anlegen</a>
-<?php foreach($this->mainCategories as $cat): ?>
-<h2><?= $cat->name ?></h2>
-<table class="table" id="<?= $cat->name ?>Table">
-    <thead>
-    <tr><th>Name</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($cat->getGroups(false, false, false, false) as $gr): ?>
-    <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
-<?php endforeach; ?>
-    </tbody>
-</table>
-<?php endforeach; ?>
-<?php if($this->groupsWithoutMain): ?>
-<h2>Ohne Hauptkategorie</h2>
-<table class="table" id="withoutMainTable">
-    <thead>
-    <tr><th>Name</th><th>Aktionen</th></tr>
-    </thead>
-    <tbody>
-<?php foreach($this->groupsWithoutMain as $gr): ?>
-    <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
-<?php endforeach; ?>
-    </tbody>
-</table>
-<?php endif; ?>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h1 style="margin-bottom:5px;">Gruppen</h1>
+        <a href="/admin/groups/edit/">Neue Gruppe anlegen</a>
+        <?php foreach($this->mainCategories as $cat): ?>
+        <h2><?= $cat->name ?></h2>
+        <table class="table" id="<?= $cat->name ?>Table">
+            <thead>
+            <tr><th>Name</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($cat->getGroups(false, false, false, false) as $gr): ?>
+            <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
+        <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php endforeach; ?>
+        <?php if($this->groupsWithoutMain): ?>
+        <h2>Ohne Hauptkategorie</h2>
+        <table class="table" id="withoutMainTable">
+            <thead>
+            <tr><th>Name</th><th>Aktionen</th></tr>
+            </thead>
+            <tbody>
+        <?php foreach($this->groupsWithoutMain as $gr): ?>
+            <tr><td><?= $this->escape($gr->name) ?></td><td><a href="/admin/groups/edit/id/<?= $this->escape($gr->id) ?>">Editieren</a></td></tr>
+        <?php endforeach; ?>
+            </tbody>
+        </table>
+        <?php endif; ?>
+    </div>
+</div>
+
 <script type="text/javascript">
 <?php foreach($this->mainCategories as $cat): ?>
     $(document).ready(function() {
