@@ -1,11 +1,11 @@
 <?php
 
-if(!$argv[1] || !$argv[2])
-exit("Usage: php -f regions.php DBUSER DBPASS\n");
+if(!$argv[1] || !$argv[2] || !$argv[3])
+exit("Usage: php -f regions.php DBNAME DBUSER DBPASS\n");
 
 /* create postgres connection */
 try{
-    $postgres = new PDO('pgsql:dbname=epelia;host=localhost', $argv[1], $argv[2]);
+    $postgres = new PDO('pgsql:dbname=' . $argv[1] . ';host=localhost', $argv[2], $argv[3]);
     $postgres->exec("set names utf8");
 } catch(Exception $e){
     exit($e->getMessage());
@@ -220,7 +220,12 @@ $regions = array(
     array('69001','74000','Viljandi, Järva & Rapla','EE'),
     array('76993','79891','Viljandi, Järva & Rapla','EE'),
     array('80001','88442','Pärmu','EE'),
-    array('90101','94791','Lääne, Hiiu & Saaremaa','EE')
+    array('90101','94791','Lääne, Hiiu & Saaremaa','EE'),
+    array('10309','10903','Region Fernwest','NPL'),
+    array('21503','22414','Region Mittelwest','NPL'),
+    array('33203','44205','Region West','NPL'),
+    array('44206','56099','Region Mitte','NPL'),
+    array('56100','57511','Region Ost','NPL')
 );
 
 foreach($regions as $region) {
