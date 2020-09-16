@@ -42,6 +42,11 @@ class Model_Region extends Model_ModelAbstract
         foreach($countries as $country) {
             $ret[] = Model_Country::find($country);
         }
+
+        usort($ret, function($a, $b) { // sort by name, can't do in query before
+            return strcmp($a->name, $b->name);
+        });
+
         return $ret;
     }
 
