@@ -43,8 +43,14 @@ class Admin_ShopsController extends Zend_Controller_Action
         $id = $request->getParam('id');
         if($request->getParam('Speichern')){
             if($form->isValid($request->getPost())){
-                $shop = Model_Shop::find($id); 
-                $shop->init($request->getPost());
+                if($id){
+                    $shop = Model_Shop::find($id);
+                    $shop->init($request->getPost());
+                }
+                else{
+                    $shop = new Model_Shop($request->getPost());
+                }
+
                 if(!$shop->woma_id){
                     $shop->woma_id = null;
                 }
