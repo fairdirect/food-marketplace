@@ -1,8 +1,11 @@
 <?php
 
+if(!$argv[1] || !$argv[2])
+exit("Usage: php -f regions.php DBUSER DBPASS\n");
+
 /* create postgres connection */
 try{
-    $postgres = new PDO('pgsql:dbname=epelia;host=localhost', 'xxx', 'xxx');
+    $postgres = new PDO('pgsql:dbname=epelia;host=localhost', $argv[1], $argv[2]);
     $postgres->exec("set names utf8");
 } catch(Exception $e){
     exit($e->getMessage());
@@ -186,14 +189,47 @@ $regions = array(
     array('6000','6999','Zentralschweiz/ Tessin','CH'),
     array('7000','7999','Region Graubünden','CH'),
     array('8000','8999','Region Zürich','CH'),
-    array('9000','9999','Ostschweiz','CH')
+    array('9000','9999','Ostschweiz','CH'),
+    array('01001','01510','Basque','ES'),
+    array('20001','20870','Basque','ES'),
+    array('48001','48998','Basque','ES'),
+    array('03000','03870','Valencian Community','ES'),
+    array('12001','12609','Valencian Community','ES'),
+    array('46000','46989','Valencian Community','ES'),
+    array('06001','06980','Extremadura','ES'),
+    array('10001','10991','Extremadura','ES'),
+    array('07000','07870','Balearic Islands','ES'),
+    array('22001','22889','Aragon','ES'),
+    array('44001','44793','Aragon','ES'),
+    array('50001','50840','Aragon','ES'),
+    array('26001','26589','La Rioja','ES'),
+    array('28000','28991','Madrid','ES'),
+    array('30000','30893','Murcia','ES'),
+    array('31001','31890','Navarra','ES'),
+    array('33000','33996','Asturias','ES'),
+    array('35000','35660','Canary Islands','ES'),
+    array('38001','38917','Canary Islands','ES'),
+    array('51001','51080','Ceuta','ES'),
+    array('52000','52080','Melilla','ES'),
+    array('10001','19098','Harju','EE'),
+    array('74001','76992','Harju','EE'),
+    array('20001','43408','Ida-Viru','EE'),
+    array('44001','49604','Lääne Viru & Jögeva','EE'),
+    array('50050','62511','Tartu','EE'),
+    array('63001','68716','Põlva, Vöru & Valga','EE'),
+    array('69001','74000','Viljandi, Järva & Rapla','EE'),
+    array('76993','79891','Viljandi, Järva & Rapla','EE'),
+    array('80001','88442','Pärmu','EE'),
+    array('90101','94791','Lääne, Hiiu & Saaremaa','EE')
 );
-
-
 
 foreach($regions as $region) {
     for ($i = intval($region[0]); $i <= intval($region[1]); $i++) {
-        $plz = str_pad($i, 5, '0', STR_PAD_LEFT);
+        if (in_array($region[3], array('DE', 'IT', 'ES'))) { // countries with leading zeros
+            $plz = str_pad($i, 5, '0', STR_PAD_LEFT);
+        } else {
+            $plz = $i;
+        }
         $regions_query->execute(array($plz . '_' . $region[3], $plz, $region[2], $region[3]));
         $inserted++;
     }
