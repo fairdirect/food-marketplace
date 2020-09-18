@@ -59,7 +59,7 @@
         </div>
     <?php endif; ?>
     <?php if($this->shop->history): ?>
-            <h3><?= $this->translate('shops_history') ?> <?= $this->escape($this->shop->name) ?></h3>
+        <h3><?= $this->translate('shops_history') ?> <?= $this->escape($this->shop->name) ?></h3>
         <div class="row">
             <div class="col-sm-4">
         <?php if($this->shop->getHistoryPicture()): ?>
@@ -73,30 +73,38 @@
         </div>
 
         <a name="versand"></a>
-        <div class="contentblock shipping">
-            <h3><?= $this->translate('shops_delivery_costs') ?></h3>
-            <span><?= $this->translate('product_sent_from') ?> <strong><?= $this->escape($this->shop->getCountry()->name) ?></strong></span>
+        <div class="row">
+            <div class="col bg-light border m-3">
+                <h3><?= $this->translate('shops_delivery_costs') ?></h3>
+                <span><?= $this->translate('product_sent_from') ?> <strong><?= $this->escape($this->shop->getCountry()->name) ?></strong></span>
 
-            <table class="tbl_shipping">
-                <tr>
-                    <td><?= $this->translate('product_delivery_to') ?></td>
-                    <td><?= $this->translate('product_delivery_price') ?></td>
-                    <td><?= $this->translate('product_delivery_free_from') ?></td>
-                </tr>
-    <?php foreach($this->shop->getShippingCosts() as $cost): ?>
-                <tr>
-                    <td><?= $this->escape($cost->getCountry()->name) ?></td>
-                    <td><?= number_format($cost->value, 2, ',', '') ?> EUR</td>
-                    <td align="right"><?php if($cost->free_from): ?><?= number_format($cost->free_from, 2, ',', '') ?> EUR<?php else: ?>-<?php endif; ?></td>
-                </tr>
-    <?php endforeach; ?>
-            </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th><?= $this->translate('product_delivery_to') ?></th>
+                            <th class="text-right"><?= $this->translate('product_delivery_price') ?></th>
+                            <th class="text-right"><?= $this->translate('product_delivery_free_from') ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        <?php foreach($this->shop->getShippingCosts() as $cost): ?>
+                        <tr>
+                            <td><?= $this->escape($cost->getCountry()->name) ?></td>
+                            <td class="text-right"><?= number_format($cost->value, 2, ',', '') ?> EUR</td>
+                            <td class="text-right"><?php if($cost->free_from): ?><?= number_format($cost->free_from, 2, ',', '') ?> EUR<?php else: ?>-<?php endif; ?></td>
+                        </tr>
+        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="contentblock last">
-        <a title="Kontakt" href="mailto:<?= $this->shop->getUser()->email ?>">Kontakt</a>&nbsp;
-        <a title="AGB" href="<?= $this->shop->getLink() ?>agb/">AGB</a>&nbsp;
-        <a title="Datenschutz" href="<?= $this->shop->getLink() ?>datenschutz/">Datenschutz</a>&nbsp;
-        <a title="Impressum" href="<?= $this->shop->getLink() ?>impressum">Impressum</a>
+        <div class="row">
+            <div class="col bg-light m-3">
+                <a title="Kontakt" href="mailto:<?= $this->shop->getUser()->email ?>">Kontakt</a>&nbsp;
+                <a title="AGB" href="<?= $this->shop->getLink() ?>agb/">AGB</a>&nbsp;
+                <a title="Datenschutz" href="<?= $this->shop->getLink() ?>datenschutz/">Datenschutz</a>&nbsp;
+                <a title="Impressum" href="<?= $this->shop->getLink() ?>impressum">Impressum</a>
+            </div>
         </div>
     </div>
 </div>
