@@ -1,22 +1,20 @@
 <div class="row">
     <div class="col bg-light border m-3">
-<div id="content-checkout">
-    <h2><?= $this->translate('checkout_headline') ?></h2>
-    <p class="clear" style="height:12px;"></p>
-    <div class="wrapper" style="padding-top:0px; width:632px; ">
-            <table class="tbl_cart_header" cellpadding="0" cellspacing="0">
-                <tr>
-                    <th width="337" style="padding-left:11px;"><?= $this->translate('checkout_product') ?></th>
-                    <th width="84"><?= $this->translate('checkout_amount') ?></th>
-                    <th width="100"><?= $this->translate('checkout_single_price') ?></th>
-                    <th><?= $this->translate('checkout_total_price') ?></th>
-                </tr>
-            </table>
-<?php foreach($this->products as $shopID => $products):
-    $counter = 0;
-    $sum = 0;
-?>
-            <table cellspacing="0" cellpadding="0" class="tbl_cart_items">  
+       <h2><?= $this->translate('checkout_headline') ?></h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><?= $this->translate('checkout_product') ?></th>
+                        <th><?= $this->translate('checkout_amount') ?></th>
+                        <th><?= $this->translate('checkout_single_price') ?></th>
+                        <th><?= $this->translate('checkout_total_price') ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($this->products as $shopID => $products):
+                    $counter = 0;
+                    $sum = 0;
+                ?>
 <?php   foreach($products as $item):
     $counter++;
     $product = $item['product'];
@@ -25,117 +23,73 @@
     $sum += $quantity * $price->value;
 ?>
                     <tr>
-                        <td width='330' style="padding-left:19px;">
-                            <div class='product_pic'>
-                                <a href='/products/<?= $this->escape($product->id) ?>/'><img src='/img/products/90x68/<?= $this->escape($product->getDefaultPicture()->filename) ?>' alt='<?= $this->escape($product->name) ?>' /></a>
-                            </div>
-                            <div class='article'>
-                                <div class='product_name'><a href='/products/<?= $this->escape($product->id) ?>/' class='hiddenlink'><?= $this->escape($product->name) ?></a></div>
-                                <div class='product_unit'><?= $price->quantity ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?></div>
-                                <div class='product_seller'><?= $this->translate('checkout_seller') ?> <a href='<?= $this->escape($product->getShop()->getLink()) ?>' class='hiddenlink'><?= $this->escape($product->getShop()->name) ?></a></div>
-                            </div>
+                        <td>
+                            <a href='/products/<?= $this->escape($product->id) ?>/'><img src='/img/products/90x68/<?= $this->escape($product->getDefaultPicture()->filename) ?>' alt='<?= $this->escape($product->name) ?>' /></a><br />
+                            <a href='/products/<?= $this->escape($product->id) ?>/' class='hiddenlink'><?= $this->escape($product->name) ?></a><br />
+                            <?= $price->quantity ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?><br />
+                            <?= $this->translate('checkout_seller') ?> <a href='<?= $this->escape($product->getShop()->getLink()) ?>' class='hiddenlink'><?= $this->escape($product->getShop()->name) ?></a>
                         </td>
-
-                        <td width='90'>
-                            <div class='p_num'><?= $this->escape($quantity) ?></div>
-                        </td>
-
-                        <td class="td_ps_price"><?= number_format($price->value, 2, ',', '') ?> &euro;</td>
-
-                        <td class="td_p_price"><?= number_format($quantity * $price->value, 2, ',', '') ?> &euro;</td>
+                        <td><?= $this->escape($quantity) ?></td>
+                        <td><?= number_format($price->value, 2, ',', '') ?> &euro;</td>
+                        <td><?= number_format($quantity * $price->value, 2, ',', '') ?> &euro;</td>
                     </tr>
 <?php   endforeach; ?>
-                </table>
+
 <?php endforeach; ?>
-        <table cellpadding="0" cellspacing="0" class="tbl_cart_summary" style="padding:0px; background-color:white;">
-            <tr>
-                <td>
-                    <table class="tbl_innersummary_l" style="width:632px;">
-                        <tr>
-                            <td class="td_img">
-                            </td>
-                            <td style="padding-left:5px;">
-                                <ul>
-                                    <li><?= $this->translate('login_list_1') ?></li>
-                                    <li><?= $this->translate('login_list_2') ?></li>
-                                    <li><?= $this->translate('login_list_3') ?><br/><?= $this->translate('login_list_4') ?></li>
-                                </ul>
-                            </td>
-                            <td style="vertical-align: top">
-                                <ul>
-                                    <li><?= $this->translate('login_list_5') ?></li>
-                                    <li><?= $this->translate('login_list_6') ?></li>
-                                    <li><?= $this->translate('login_list_7') ?></li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-            <div class="clear" style="color:#5d5a59;margin-top:17px;">
-        Mit Ihrer Bestellung erkl&auml;ren Sie sich mit den <a href="/hilfe/agb/" title="Allgemeinen Geschäftsbedingungen" target="_blank">allgemeinen Gesch&auml;ftsbedingungen</a><br />
-        und den <a href="/hilfe/datenschutz/" target="_blank" title="Datenschutzbestimmungen">Datenschutzbestimmungen</a> von Epelia einverstanden.
+                </tbody>
+            </table>
+            <p>Mit Ihrer Bestellung erkl&auml;ren Sie sich mit den <a href="/hilfe/agb/" title="Allgemeinen Geschäftsbedingungen" target="_blank">allgemeinen Gesch&auml;ftsbedingungen</a><br />
+                und den <a href="/hilfe/datenschutz/" target="_blank" title="Datenschutzbestimmungen">Datenschutzbestimmungen</a> von Epelia einverstanden.</p>
+
+            <table class="table">
+                <tr>
+                    <td><strong><?= $this->translate('checkout_payment_type') ?>:</strong></td>
+                    <td><?= $this->escape($this->paymentType) ?></td>
+                    <td><a class="btn btn-primary" href="/shoppingcart/payment/" title="<?= $this->translate('checkout_edit') ?>"><?= $this->translate('checkout_edit') ?></a></td>
+                </tr>
+                <tr>
+                    <td><strong><?= $this->translate('shoppingcart_addresses_invoice') ?></strong></td>
+                    <td><?= $this->partial('partials/address.phtml', array('address' => $this->billingAddress)) ?></td>
+                    <td><a class="btn btn-primary href="/shoppingcart/addresses/" title="<?= $this->translate('checkout_edit') ?>"><?= $this->translate('checkout_edit') ?></a></td>
+                </tr>
+                <tr>
+                    <td><strong><?= $this->translate('shoppingcart_addresses_delivery') ?></strong></td>
+                    <td>
+                        <?php if(!$this->is_self_collecting): ?>
+                            <?= $this->partial('partials/address.phtml', array('address' => $this->deliveryAddress)) ?>
+                        <?php else: ?>
+                            Selbstabholung
+                        <?php endif; ?>
+                    </td>
+                    <td><a class="btn btn-primary" href="/shoppingcart/addresses/" title="<?= $this->translate('checkout_edit') ?>"><?= $this->translate('checkout_edit') ?></a></td>
+                </tr>
+            </table>
     </div>
-
-     </div>
-    <div id="cartsidebar" class="overview">
-
-<div class="" style="border:2px solid #7a961b;padding:11px 15px 19px 10px;">
-    <p style="font-size:15px; font-weight: bold; padding-bottom:23px;"><?= $this->translate('checkout_total') ?></p>
-    
-    <table cellpadding="0" cellspacing="0" class="tbl_summary_sideview">
-        <tr>
-            <td class="td_label n13"><?= $this->translate('checkout_single_sum') ?></td>
-            <td class="td_value n13"><?= number_format($this->total, 2, ',', '') ?> &euro;</td>
-        </tr>
-        <tr>
-            <td class="td_label n13a"><?= $this->translate('checkout_delivery') ?></td>
-            <td class="td_value n13a"><?= number_format($this->shippingCosts, 2, ',', '') ?> &euro;</td>
-        </tr>
-        <tr>
-            <td class="td_label b15"><?= $this->translate('checkout_total') ?></td>
-            <td class="td_value b15"><?= number_format($this->total + $this->shippingCosts, 2, ',', '') ?> &euro;</td>
-        </tr>
-        <tr>
-            <td colspan="2" style="height:34px;"></td>
-        </tr>
-        <tr>         
-            <td class="td_label" colspan="2">
-                <a class="btn_checkout" style="float:right" title="<?= $this->translate('checkout_order') ?>" href="/shoppingcart/conclude/">
-                    <span><?= $this->translate('checkout_order') ?></span>
-                </a>
-           </td>
-       </tr>
-        
-    </table>
-
 </div>
-
-<div class="summary_side_chapter">
-    <p style="padding-bottom:18px;">
-        <span style="float:left;"><?= $this->translate('checkout_payment_type') ?> <?= $this->escape($this->paymentType) ?></span>
-        <a style="float:right" href="/shoppingcart/payment/" title="<?= $this->translate('checkout_edit') ?>"><?= $this->translate('checkout_edit') ?></a>
-    </p>    
-    <p class="clear" style="height:16px;"></p>
-    <p>
-        <span style="float:left;"><strong><?= $this->translate('shoppingcart_addresses_invoice') ?></strong></span> 
-        <a style="float:right" href="/shoppingcart/addresses/" title="<?= $this->translate('checkout_edit') ?>"><?= $this->translate('checkout_edit') ?></a>
-    </p><br />
-    <?= $this->partial('partials/address.phtml', array('address' => $this->billingAddress)) ?>
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('checkout_total') ?></h2>
+        <table class="table">
+            <tr class="text-right">
+                <td><?= $this->translate('checkout_single_sum') ?></td>
+                <td><?= number_format($this->total, 2, ',', '') ?> &euro;</td>
+            </tr>
+            <tr class="text-right">
+                <td><?= $this->translate('checkout_delivery') ?></td>
+                <td><?= number_format($this->shippingCosts, 2, ',', '') ?> &euro;</td>
+            </tr>
+            <tr class="text-right">
+                <td><?= $this->translate('checkout_total') ?></td>
+                <td><?= number_format($this->total + $this->shippingCosts, 2, ',', '') ?> &euro;</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height:34px;"></td>
+            </tr>
+            <tr class="text-right">
+                <td class="td_label" colspan="2">
+                    <a class="btn btn-success" title="<?= $this->translate('checkout_order') ?>" href="/shoppingcart/conclude/"><?= $this->translate('checkout_order') ?></a>
+               </td>
+           </tr>
+        </table>
+    </div>
 </div>
-<div class="summary_side_chapter">
-    <p>
-        <span style="float:left"><strong><?= $this->translate('shoppingcart_addresses_delivery') ?></strong></span>
-        <a style="float:right" href="/shoppingcart/addresses/" title="<?= $this->translate('checkout_edit') ?>"><?= $this->translate('checkout_edit') ?></a>
-    </p><br />
-<?php if(!$this->is_self_collecting): ?>    
-     <?= $this->partial('partials/address.phtml', array('address' => $this->deliveryAddress)) ?>
-<?php else: ?>
-    <br />Selbstabholung
-<?php endif; ?>    
-</div>
-</div>
-
-</div></div>

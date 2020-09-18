@@ -1,61 +1,58 @@
 <div class="row">
-    <div class="col bg-light border m-3" style="width:90%">
-        <div style="margin-top:10px;">
-        <a class="btn_continue" id="choose_diff_address"  href="javascript:choose_diff_address();"><span>Andere Adresse wählen</span></a>
-        <a style="margin-left:15px;" class="btn_continue" title="<?= $this->translate('Selbst abholen') ?>" href="javascript:setAddress('selfcollect')"><span><?= $this->translate('Selbst abholen') ?></span></a>
-        </div>
-        <div style="clear:both; margin-top:10px;"></div>
+    <div class="col bg-light border m-3 pt-3" style="width:90%">
+        <a class="btn btn-primary" id="choose_diff_address"  href="javascript:choose_diff_address();"><span>Andere Adresse wählen</span></a>
+        <a class="btn btn-primary" title="<?= $this->translate('Selbst abholen') ?>" href="javascript:setAddress('selfcollect')"><span><?= $this->translate('Selbst abholen') ?></span></a>
+
         <?php if($this->cantDeliver && is_array($this->cantDeliver) && !empty($this->cantDeliver)): ?>
-        <div id="addressError" class="error">
-        <p><?= $this->translate('shoppingcart_addresses_error') ?></p>
-        <ul>
-        <?php foreach($this->cantDeliver as $product): ?>
-            <li><?= $this->escape($product->name) ?></li>
-        <?php endforeach; ?>
-        </ul>
+        <div id="addressError" class="alert alert-danger">
+            <p><?= $this->translate('shoppingcart_addresses_error') ?></p>
+            <ul>
+            <?php foreach($this->cantDeliver as $product): ?>
+                <li><?= $this->escape($product->name) ?></li>
+            <?php endforeach; ?>
+            </ul>
         </div>
         <?php endif; ?>
-        <div id="choosenDeliveryAddress" style="width:20%; float:left;">
-            <h5><?= $this->translate('shoppingcart_addresses_delivery') ?></h5>
-            <span id="choosenDeliveryAddressData">
-        <?php if($this->is_self_collecting): ?>
-                <br />Selbstabholung
-        <?php else: ?>
-            <?php if($this->choosenDeliveryAddress): ?>
-        <?= $this->partial('partials/address.phtml', array('address' => $this->choosenDeliveryAddress)) ?>
+        <br />
+        <div class="row">
+            <div class="col bg-light m-3 pt-3">
+                <h5><?= $this->translate('shoppingcart_addresses_delivery') ?></h5>
+                <span id="choosenDeliveryAddressData">
+            <?php if($this->is_self_collecting): ?>
+                    <br />Selbstabholung
             <?php else: ?>
-                <?php if($this->user->getMainDeliveryAddress()): ?>
-        <?= $this->partial('partials/address.phtml', array('address' => $this->user->getMainDeliveryAddress())) ?>
+                <?php if($this->choosenDeliveryAddress): ?>
+            <?= $this->partial('partials/address.phtml', array('address' => $this->choosenDeliveryAddress)) ?>
                 <?php else: ?>
-                <p><?= $this->translate('shoppingcart_addresses_choose') ?></p>
+                    <?php if($this->user->getMainDeliveryAddress()): ?>
+            <?= $this->partial('partials/address.phtml', array('address' => $this->user->getMainDeliveryAddress())) ?>
+                    <?php else: ?>
+                    <p><?= $this->translate('shoppingcart_addresses_choose') ?></p>
+                    <?php endif; ?>
                 <?php endif; ?>
             <?php endif; ?>
-        <?php endif; ?>
-            </span>
+                </span>
+            </div>
+            <div class="col bg-light m-3 pt-3">
+                <div id="choosenBillingAddress">
+                    <h5><?= $this->translate('shoppingcart_addresses_invoice') ?></h5>
+                    <span id="choosenBillingAddressData">
+                <?php if($this->choosenBillingAddress): ?>
+                <?= $this->partial('partials/address.phtml', array('address' => $this->choosenBillingAddress)) ?>
+                <?php else: ?>
+                    <?php if($this->user->getMainBillingAddress()): ?>
+                <?= $this->partial('partials/address.phtml', array('address' => $this->user->getMainBillingAddress())) ?>
+                    <?php else: ?>
+                        <p><?= $this->translate('shoppingcart_addresses_choose') ?></p>
+                    <?php endif; ?>
+                <?php endif; ?>
+                    </span>
+                </div>
+            </div>
         </div>
-
-        <div id="choosenBillingAddress" style="width:30%; float:left;">
-            <h5><?= $this->translate('shoppingcart_addresses_invoice') ?></h5>
-            <span id="choosenBillingAddressData">
-        <?php if($this->choosenBillingAddress): ?>
-        <?= $this->partial('partials/address.phtml', array('address' => $this->choosenBillingAddress)) ?>
-        <?php else: ?>
-            <?php if($this->user->getMainBillingAddress()): ?>
-        <?= $this->partial('partials/address.phtml', array('address' => $this->user->getMainBillingAddress())) ?>
-            <?php else: ?>
-                <p><?= $this->translate('shoppingcart_addresses_choose') ?></p>
-            <?php endif; ?>
-        <?php endif; ?>
-            </span>
-        </div>
-        <br style="clear:both;" />
-        <br />
-        <a class="btn_checkout" title="<?= $this->translate('misc_cashier') ?>" href="/shoppingcart/payment/" id="cashierLink" onclick="return checkAddresses()"><span><?= $this->translate('misc_cashier') ?></span></a>
-
-        <br style="clear:both;" />
-        <div class="error" id="noAddressError"></div>
-        <br />
-        <div id="address_select" style="display:none;">
+        <a class="btn btn-success mb-3" title="<?= $this->translate('misc_cashier') ?>" href="/shoppingcart/payment/" id="cashierLink" onclick="return checkAddresses()"><?= $this->translate('misc_cashier') ?></a>
+        <div class="alert alert-danger collapse" id="noAddressError"></div>
+        <div id="address_select" class="collapse">
             <h2 style="margin-bottom:5px;"><?= $this->translate('addresses_addresses') ?></h2>
             <a href="/meinepelia/addressesedit/"><?= $this->translate('addresses_new_address') ?></a>
             <table class="table" id="addressTable">
@@ -86,11 +83,11 @@
                 url : "/shoppingcart/ajaxcheckaddresses/"
             }).done(function(ret){
                 if(!ret.suc){
-                    $('#noAddressError').html('<?= $this->translate('shoppingcart_noaddresses_error') ?>');
+                    $('#noAddressError').html('<?= $this->translate('shoppingcart_noaddresses_error') ?>').show();
                     return false;
                 }
                 else{
-                    $('#noAddressError').html('');
+                    $('#noAddressError').html('').hide();
                     window.location = e.currentTarget.href;
                     return true;
                 }

@@ -1,6 +1,6 @@
 <div class="row">
-    <div class="col bg-light border m-3">
-        <h1><?= $this->translate('business_products_pictures_headline') ?></h1>
+    <div class="col bg-light border m-3 pb-3">
+        <h2><?= $this->translate('business_products_pictures_headline') ?></h2>
         <input id="fileupload" type="file" name="file" data-url="/business/products/pictures/" /><span id="please_wait" style="display:none;"><img src="/images/business/pic_loading.gif" alt="Bitte warten..."/> Bitte warten...</span>
         <table class="table" id="bilder">
             <thead>
@@ -13,7 +13,7 @@
         <?php endforeach; ?>
             </tbody>
         </table>
-        <button class="btn" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>
+        <button class="btn btn-danger" id="delete_pictures"><?= $this->translate('business_products_pictures_delete') ?></button>
     </div>
 </div>
 

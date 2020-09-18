@@ -1,25 +1,10 @@
-<style>
-<!--
-.tbl_success { font-size:13px; margin-left:10px; margin-top: 32px;  }
-.tbl_success td { vertical-align:top; text-align: top; padding-bottom:16px; }
-.tbl_success .td_label {  width: 202px; font-weight: bold; }
-.tbl_success .td_space { width: 60px; }
-.tbl_success .td_data { }
-
-.supportbox { width: 902px; margin-top: 44px; height:48px; background:#f7f7e5; padding:18px 0px 0px 15px; color:#5d5a59; font-size:12px; }
-.supportbox  .right { width: 324px; text-align:left; padding-top:10px; padding-left:40px; height:30px; background:url('/resources/images/cart/icon-telefon.gif') no-repeat left center; }
-
--->
-</style>
-    <div id="content-checkout" class="success">       
-            <h2><?= $this->translate('checkout_success_headline') ?></h2>
-            <div class="cartsuccess_content">
-                <div class="left" style="border:2px solid #d7d7d7; width:628px; padding: 22px 0 29px 15px;">
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('checkout_success_headline') ?></h2>
 <?php if($this->cart->status == 'ordered'): ?>
-                    <p class="boxtitle"><?= $this->translate('checkout_success_ordered') ?></p>
-                    
-                    <table cellpadding="0" cellspacing="0" class="tbl_success">
-                        <tr>
+        <h3><?= $this->translate('checkout_success_ordered') ?></h3>
+        <table class="table">
+            <tr>
 <?php 
 switch($this->cart->payment_type){
     case 'prepayment':
@@ -27,62 +12,38 @@ switch($this->cart->payment_type){
         break;
 }
 ?>
-                            <td class="td_label"><?= $this->translate('checkout_payment_type') ?>:</td>
-                            <td class="td_space">&nbsp;</td>
-                            <td class="td_data"><?= $this->escape($this->payment) ?></td>
-                        </tr>
-                        <tr>
-                            <td class="td_label"><?= $this->translate('checkout_total') ?>:</td>
-                            <td class="td_space">&nbsp;</td>
-                            <td class="td_data"><?= number_format($this->total, 2, ',', '') ?> &euro;</td>
-                        </tr>
-                        <tr>
-                            <td class="td_label"><?= $this->translate('orders_number') ?>:</td>
-                            <td class="td_space">&nbsp;</td>
-                            <td class="td_data"><?= $this->escape($this->cart->getCartId()) ?></td>
-                        </tr>
-                        
-                        <tr>
-                            <td class="td_label"><?= $this->translate('checkout_success_prepay_1') ?></td>
-                            <td class="td_space">&nbsp;</td>
-                            <td class="td_data">
-                                <?= $this->translate('checkout_success_prepay_2') ?><br />
-                                <?= $this->translate('checkout_success_prepay_3') ?><br />
-                                <?= $this->translate('checkout_success_prepay_4') ?><br />
-                                <?= $this->translate('checkout_success_prepay_5') ?><br />
-                                <?= $this->translate('checkout_success_prepay_6') ?> <?= $this->escape($this->cart->getCartId()) ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_label"><?= $this->translate('checkout_success_prepay_7') ?></td>                            
-                            <td class="td_space">&nbsp;</td>
-                            <td class="td_data">
-                                IBAN: DE24513610210004647483<br />
-                                BIC: GENODE51HHE                          
-                            </td>
-                        </tr>                       
-                                        
-                    </table> 
+                <td><?= $this->translate('checkout_payment_type') ?>:</td>
+                <td><?= $this->escape($this->payment) ?></td>
+            </tr>
+            <tr>
+                <td><?= $this->translate('checkout_total') ?>:</td>
+                <td><?= number_format($this->total, 2, ',', '') ?> &euro;</td>
+            </tr>
+            <tr>
+                <td><?= $this->translate('orders_number') ?>:</td>
+                <td><?= $this->escape($this->cart->getCartId()) ?></td>
+            </tr>
+            <tr>
+                <td><?= $this->translate('checkout_success_prepay_1') ?></td>
+                <td>
+                    <?= $this->translate('checkout_success_prepay_2') ?><br />
+                    <?= $this->translate('checkout_success_prepay_3') ?><br />
+                    <?= $this->translate('checkout_success_prepay_4') ?><br />
+                    <?= $this->translate('checkout_success_prepay_5') ?><br />
+                    <?= $this->translate('checkout_success_prepay_6') ?> <?= $this->escape($this->cart->getCartId()) ?>
+                </td>
+            </tr>
+            <tr>
+                <td><?= $this->translate('checkout_success_prepay_7') ?></td>
+                <td>
+                    IBAN: DE24513610210004647483<br />
+                    BIC: GENODE51HHE
+                </td>
+            </tr>
+        </table>
                     
 <?php else: ?>
-                    <p class="boxtitle"><?= $this->translate('checkout_success_accepted') ?></p>
+    <p class="boxtitle"><?= $this->translate('checkout_success_accepted') ?></p>
 <?php endif; ?>
-                </div>                
-                <!--
-                <div class="right">
-                    <div style="clear:left; margin-top:22px; text-align:center;">
-                        <a style="width:200px;" href="/" title="Zurück zu epelia.com" class="btn_checkout success"><span>Zurück zu epelia.com</span></a>
-                    </div>
-                    
-                </div> -->
-                
-            </div><!-- cartsuccess_content -->
-            
-            <div class="clear supportbox" style="height:100px;">
-                <p class="left">
-                    <strong><?= $this->translate('login_register_sub_1') ?></strong><br/>
-                    <?= $this->translate('login_register_sub_2') ?>
-                </p>
-                <p class="right"><?= $this->translate('login_register_sub_3') ?> <?= $this->translate('login_list_4') ?></p>
-                    <p class="left">
-            </div>
+    </div>
+</div>
