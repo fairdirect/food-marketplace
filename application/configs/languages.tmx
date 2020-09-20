@@ -369,7 +369,7 @@
         </tu>
         <tu tuid='misc_firstname'>
             <tuv xml:lang="de">
-                <seg>Vorname</seg>
+                <seg>Name</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Nome</seg>
@@ -402,7 +402,7 @@
         </tu>       
         <tu tuid='misc_housenumber'>
             <tuv xml:lang="de">
-                <seg>Hausnummer</seg>
+                <seg>Nr</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Numero</seg>

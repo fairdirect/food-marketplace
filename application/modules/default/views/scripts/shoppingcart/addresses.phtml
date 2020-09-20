@@ -57,13 +57,13 @@
             <a href="/meinepelia/addressesedit/"><?= $this->translate('addresses_new_address') ?></a>
             <table class="table" id="addressTable">
                 <thead>
-                    <tr><th><?= $this->translate('misc_salutation') ?></th><th><?= $this->translate('misc_company') ?></th><th><?= $this->translate('misc_firstname') ?></th><th><?= $this->translate('misc_lastname') ?></th><th><?= $this->translate('misc_street') ?></th><th><?= $this->translate('misc_housenumber') ?></th><th><?= $this->translate('misc_zip') ?></th><th><?= $this->translate('misc_city') ?></th><th><?= $this->translate('addresses_default_delivery') ?></th><th><?= $this->translate('addresses_default_invoice') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
+                    <tr><th><?= $this->translate('misc_salutation') ?></th><th><?= $this->translate('misc_company') ?></th><th><?= $this->translate('misc_firstname') ?></th><th><?= $this->translate('misc_lastname') ?></th><th><?= $this->translate('misc_street') ?></th><th><?= $this->translate('misc_housenumber') ?></th><th><?= $this->translate('misc_zip') ?></th><th><?= $this->translate('misc_city') ?></th><th><?= $this->translate('misc_actions') ?></th></tr>
                 </thead>
                 <tbody>
             <?php
                 foreach($this->addresses as $address):
             ?>
-                    <tr></td><td><?= $this->escape($address->gender) ?></td><td><?= $this->escape($address->company) ?></td><td><?= $this->escape($address->firstname) ?></td><td><?= $this->escape($address->name) ?></td><td><?= $this->escape($address->street) ?></td><td><?= $this->escape($address->house) ?></td><td><?= $this->escape($address->zip) ?></td><td><?= $this->escape($address->city) ?></td><td><?= ($address->id == $this->user->main_delivery_address_id) ? 'ja' : 'nein' ?></td><td><?= ($address->id == $this->user->main_billing_address_id) ? 'ja' : 'nein' ?></td><td><a href="javascript:setAddress('delivery', <?= $this->escape($address->id) ?>)"><?= $this->translate('shoppingcart_choose_delivery') ?></a><br /><a href="javascript:setAddress('billing', <?= $this->escape($address->id) ?>)"><?= $this->translate('shoppingcart_choose_billing') ?></a><br /><a href="/meinepelia/addressesedit/id/<?= $this->escape($address->id) ?>/"><?= $this->translate('misc_edit') ?></a><?php if($address->id != $this->user->main_delivery_address_id): ?><br /><a href="/meinepelia/setdefaultdelivery/addressid/<?= $this->escape($address->id) ?>/"><?= $this->translate('addresses_set_default_delivery') ?></a><?php endif; ?><?php if($address->id != $this->user->main_billing_address_id): ?><br /><a href="/meinepelia/setdefaultbilling/addressid/<?= $this->escape($address->id) ?>/"><?= $this->translate('addresses_set_default_invoice') ?></a><?php endif; ?></td></tr>
+                    <tr></td><td><?= $this->escape($address->gender) ?></td><td><?= $this->escape($address->company) ?></td><td><?= $this->escape($address->firstname) ?></td><td><?= $this->escape($address->name) ?></td><td><?= $this->escape($address->street) ?></td><td><?= $this->escape($address->house) ?></td><td><?= $this->escape($address->zip) ?></td><td><?= $this->escape($address->city) ?></td><td><a href="javascript:setAddress('delivery', <?= $this->escape($address->id) ?>)"><?= $this->translate('shoppingcart_choose_delivery') ?></a><br /><a href="javascript:setAddress('billing', <?= $this->escape($address->id) ?>)"><?= $this->translate('shoppingcart_choose_billing') ?></a><br /><a href="/meinepelia/addressesedit/id/<?= $this->escape($address->id) ?>/"><?= $this->translate('misc_edit') ?></a><?php if($address->id != $this->user->main_delivery_address_id): ?><br /><a href="/meinepelia/setdefaultdelivery/addressid/<?= $this->escape($address->id) ?>/"><?= $this->translate('addresses_set_default_delivery') ?></a><?php endif; ?><?php if($address->id != $this->user->main_billing_address_id): ?><br /><a href="/meinepelia/setdefaultbilling/addressid/<?= $this->escape($address->id) ?>/"><?= $this->translate('addresses_set_default_invoice') ?></a><?php endif; ?></td></tr>
             <?php
                 endforeach;
             ?>
@@ -95,10 +95,7 @@
             
         });
         $('#addressTable').dataTable({
-            "scrollX": true,
             "aoColumns": [
-                null,
-                null,
                 null,
                 null,
                 null,

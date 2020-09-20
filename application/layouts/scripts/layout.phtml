@@ -17,7 +17,16 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
       <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+      <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
+      <style>
+          body {font: 0.9rem var(--font-family-sans-serif);}
+          h1 {font: 1.6rem var(--font-family-sans-serif); margin-top:5px}
+          h2 {font: 1.5rem var(--font-family-sans-serif); margin-top:5px}
+          h3 {font: 1.3rem var(--font-family-sans-serif); margin-top:5px}
+          h4 {font: 1.2rem var(--font-family-sans-serif); margin-top:5px}
+          a { color: #6cb031; }
+      </style>
 
     <?php echo $this->headTitle(); ?>
   <?php
@@ -35,14 +44,14 @@
   </head>
   <body style="background: url('/img/layout/background.jpg') center center  no-repeat fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
     <div id="modal_box"></div>
-    <div class="container" style="background-color:rgba(255,255,255,0.92); min-height:100%; height:100%">
+    <div class="container" style="background-color:rgba(255,255,255,0.80); min-height:100%; height:100%">
         <nav class="navbar navbar-expand-sm">
             <a class="navbar-brand mr-auto" href="/">
               <img src="/img/layout/ofb-logo.png" style="height:50px" alt="">
             </a>
             <ul class="navbar-nav justify-content-end">
                 <?php if($this->region): ?>
-                <li class="nav-item border dropdown">
+                <li class="nav-item border dropdown bg-light">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Region <?= $this->region->name ?>
                     </a>
@@ -51,7 +60,7 @@
                     </div>
                 </li>
                 <?php else: ?>
-                <li class="nav-item border">
+                <li class="nav-item border bg-light">
                     <a class="nav-link" href="/regions/">Region wählen</a>
                 </li>
                 <?php endif; ?>
@@ -64,15 +73,15 @@
                 }
                 ?>
                 <?php if($productCount > 0): ?>
-                <li class="nav-item border">
+                <li class="nav-item border bg-light">
                     <a id="shoppingcart-nav" class="nav-link" href="/shoppingcart/" title="<?= $this->translate('misc_shoppingcart') ?>" rel="nofollow">
                         <?= $this->translate('misc_shoppingcart') ?> <strong><span id="num_products_header"><?= ($this->shoppingCart) ? $productCount : '0' ?></span></strong></a>
                 </li>
-                <li class="nav-item border">
+                <li class="nav-item border bg-light">
                     <a class="nav-link" href="/shoppingcart/addresses/" title="><?= $this->translate('misc_cashier') ?>" rel="nofollow"><?= $this->translate('misc_cashier') ?></a>
                 </li>
                 <?php endif; ?>
-                <li class="nav-item border">
+                <li class="nav-item border bg-light">
                 <?php if(!is_null($this->user)): ?>
                     <a class="nav-link" href="/login/logout/" rel="nofollow" title="<?= $this->translate('misc_logout') ?>"><?= $this->translate('misc_logout') ?></a>
                 <?php else: ?>

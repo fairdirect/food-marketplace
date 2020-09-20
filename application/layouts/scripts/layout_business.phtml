@@ -22,6 +22,15 @@
     <script src="/js/libs/jquery.iframe-transport.js"></script>
     <script src="/js/libs/jquery.fileupload.js"></script>
 
+    <style>
+        body {font: 0.9rem var(--font-family-sans-serif);}
+        h1 {font: 1.6rem var(--font-family-sans-serif); margin-top:5px}
+        h2 {font: 1.5rem var(--font-family-sans-serif); margin-top:5px}
+        h3 {font: 1.3rem var(--font-family-sans-serif); margin-top:5px}
+        h4 {font: 1.2rem var(--font-family-sans-serif); margin-top:5px}
+        a { color: #6cb031; }
+    </style>
+
     <?php echo $this->headTitle(); ?>
     <?php
     $session = new Zend_Session_Namespace('Default');
@@ -44,9 +53,9 @@
             <img src="/img/layout/ofb-logo.png" style="height:50px" alt="">
         </a>
         <ul class="navbar-nav justify-content-end">
-            <li class="nav-item border">
+            <li class="nav-item border bg-light">
                 <a class="nav-link" href="/"  rel="nofollow" title="Zurück zum öffentlichen Bereich">Zurück zum öffentlichen Bereich</a>
-            <li class="nav-item border">
+            <li class="nav-item border bg-light">
                 <?php if(!is_null($this->user)): ?>
                     <a class="nav-link" href="/login/logout/" rel="nofollow" title="<?= $this->translate('misc_logout') ?>"><?= $this->translate('misc_logout') ?></a>
                 <?php else: ?>

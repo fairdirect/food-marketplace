@@ -27,6 +27,13 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('shops_our_products') ?></h2>
+        <?= $this->partial('partials/productgrid.phtml', array('products' => $this->shop->getProducts())) ?>
+    </div>
+</div>
+
 <a name="about"></a>
 <?php if($this->shop->description): ?>
 <div class="row">
@@ -51,11 +58,9 @@
     <div class="col border bg-light m-3">
         <h3><?= $this->translate('shops_procedure') ?></h3>
         <div class="row">
-            <div class="col-sm-2">
-        <?php if($this->shop->getProcedurePicture()): ?>
-                    <img class="img-thumbnail" src="/img/shops/<?= $this->escape($this->shop->getProcedurePicture()->filename) ?>" alt="<?= $this->escape($this->shop->name) ?>" />
-        <?php endif; ?>
-            </div>
+            <?php if($this->shop->getProcedurePicture()): ?>
+            <div class="col-sm-2"><img class="img-thumbnail" src="/img/shops/<?= $this->escape($this->shop->getProcedurePicture()->filename) ?>" alt="<?= $this->escape($this->shop->name) ?>" /></div>
+            <?php endif; ?>
             <div class="col-sm">
                 <p><?= $this->escape($this->shop->procedure) ?></p>
             </div>
