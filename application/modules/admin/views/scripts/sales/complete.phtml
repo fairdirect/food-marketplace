@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col bg-light border m-3">
+    <div class="col bg-light border m-3" style="width:90%">
         <h1>Übersicht Bestellungen</h1>
         <h3>Abgeschlossene Bestellungen:</h3>
         <table class="table" id="ordersTable">
@@ -42,6 +42,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#ordersTable').dataTable({
+            "scrollX": true,
             "aoColumns": [
                 null,
                 null,

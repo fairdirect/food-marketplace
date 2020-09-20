@@ -46,10 +46,8 @@
 <?php if($this->shop->philosophy): ?>
 <div class="row">
     <div class="col border bg-light m-3">
-        <div class="col-sm">
-            <h3><?= $this->translate('shops_philosophy') ?></h3>
-            <p><?= $this->escape($this->shop->philosophy) ?></p>
-        </div>
+        <h3><?= $this->translate('shops_philosophy') ?></h3>
+        <p><?= $this->escape($this->shop->philosophy) ?></p>
     </div>
 </div>
 <?php endif; ?>

@@ -34,7 +34,7 @@ foreach($group->getCategories($this->onlyBio, $this->onlyDiscount, $this->onlyWh
         $catHref .= '/1/';
     }
 ?>
-    <li class="list-group-item d-flex justify-content-between align-items-center"><a href="<?= $this->escape($catHref) ?>" title="<?= $this->escape($cat->name) ?>"><?= $this->escape($cat->name) ?></a><span class="badge badge-primary badge-pill"><?= $this->escape($cat->getProductCount($this->onlyBio, $this->onlyDiscount, $this->onlyWholesale)) ?></span></li>
+    <li class="list-group-item d-flex justify-content-between align-items-center"><a href="<?= $this->escape($catHref) ?>" title="<?= $this->escape($cat->name) ?>"><?= $this->escape($cat->name) ?></a><span class="badge badge-success badge-pill"><?= $this->escape($cat->getProductCount($this->onlyBio, $this->onlyDiscount, $this->onlyWholesale)) ?></span></li>
 <?php
 endforeach;
 ?>
