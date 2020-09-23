@@ -192,7 +192,7 @@
         </tu>       
         <tu tuid='misc_sell'>
             <tuv xml:lang="de">
-                <seg>Verkaufen</seg>
+                <seg>Anbieten</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Vendere</seg>
@@ -203,7 +203,7 @@
         </tu>       
         <tu tuid='misc_wholesale'>
             <tuv xml:lang="de">
-                <seg>Großhandel</seg>
+                <seg>Anbeote</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Commercio all'ingrosso</seg>
@@ -225,7 +225,7 @@
         </tu>
         <tu tuid='misc_wholesale'>
             <tuv xml:lang="de">
-                <seg>Großhandel</seg>
+                <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Commercio all'ingrosso</seg>
@@ -270,7 +270,7 @@
         </tu>
         <tu tuid='misc_categories'>
             <tuv xml:lang="de">
-                <seg>Kategorien</seg>
+                <seg>Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Categorie</seg>
@@ -281,7 +281,7 @@
         </tu>
         <tu tuid='misc_all_categories'>
             <tuv xml:lang="de">
-                <seg>Alle Kategorien</seg>
+                <seg>Alle Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Tutte le categorie</seg>
@@ -1758,7 +1758,7 @@
         </tu>       
         <tu tuid='wholesale_headline'>
             <tuv xml:lang="de">
-                <seg>Drogerie- und Lebensmittelgroßhandel</seg>
+                <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Commercio all'ingrosso di beni alimentari e prodotti per la casa e per la persona</seg>
@@ -1769,7 +1769,7 @@
         </tu>
         <tu tuid='wholesale_text_1'>
             <tuv xml:lang="de">
-                <seg>Der Epelia-Großhandel ist die ideale und professionelle Möglichkeit für Gastronomie, Wiederverkäufer oder Produzenten größere Mengen Lebensmittel und Drogeriewaren zu ordern.</seg>
+                <seg>Der Angebotsbereich ist die ideale und professionelle Möglichkeit für Gastronomie, Wiederverkäufer oder Produzenten größere Mengen Lebensmittel und Drogeriewaren zu ordern.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Il commercio all'ingrosso Epelia è l'opportunità ideale e professionale per il reparto gastronomico, rivenditori o produttori su ampia scala di ordinare beni alimentari e prodotti per la casa e per la persona.</seg>
@@ -1813,7 +1813,7 @@
         </tu>       
         <tu tuid='wholesale_text_5'>
             <tuv xml:lang="de">
-                <seg>Der Epelia Lebensmittel-Großhandel und Drogerie-Großhandel steht für frisch und direkt bei vielen einkaufen!</seg>
+                <seg>Der Epelia Angebotsbereich steht für frisch und direkt bei vielen einkaufen!</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>La piattaforma di commercio all'ingrosso di beni alimentari e prodotti per la persona e per la casa Epelia offre prodotti freschi e acquistabili direttamente dal produttore!</seg>
@@ -1835,7 +1835,7 @@
         </tu>
         <tu tuid='wholesale_login_2'>
             <tuv xml:lang="de">
-                <seg>um den Großhandelsbereich nutzen zu können oder sich für diesen zu registrieren.</seg>
+                <seg>um den Angebotsbereich nutzen zu können oder sich für diesen zu registrieren.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>per poter utilizzare il settore del commercio all'ingrosso o per registrarsi in tale ambito.</seg>
@@ -1846,7 +1846,7 @@
         </tu>
         <tu tuid='wholesale_show_all'>
             <tuv xml:lang="de">
-                <seg>Alle Großhandels-Produkte anzeigen</seg>
+                <seg>Alle Angebote anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Mostra tutti i prodotti all'ingrosso</seg>
@@ -1857,7 +1857,7 @@
         </tu>
         <tu tuid='wholesale_register_headline'>
             <tuv xml:lang="de">
-                <seg>Anmeldung für den Großhandels-Bereich</seg>
+                <seg>Anmeldung für den Angebotsbereich</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Registrazione per il settore del commercio all'ingrosso</seg>
@@ -1868,7 +1868,7 @@
         </tu>
         <tu tuid='wholesale_register_text'>
             <tuv xml:lang="de">
-                <seg>Für den Einkauf von Großhandels-Artikeln müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
+                <seg>Für den Einkauf von Angeboten müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Per l'acquisto di prodotti all'ingrosso è necessario avere un account. Riempite il seguente modulo e inviateci una licenza di esercizio sia con il modulo che via fax al numero 06426-967338</seg>
@@ -1879,7 +1879,7 @@
         </tu>
         <tu tuid='wholesale_show_all_headline'>
             <tuv xml:lang="de">
-                <seg>Alle Großhandels-Kategorien</seg>
+                <seg>Alle Angebots-Kategorien</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Tutte le categorie del commercio all'ingrosso</seg>
@@ -1890,7 +1890,7 @@
         </tu>       
         <tu tuid='wholesale_success_headline'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihre Anmeldung für den Großhandels-Bereich</seg>
+                <seg>Vielen Dank für Ihre Anmeldung für den Angebotsbereich</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Grazie per la registrazione nel settore del commercio all'ingrosso</seg>
@@ -2177,7 +2177,7 @@
         </tu>
         <tu tuid='cats_all_categories'>
             <tuv xml:lang="de">
-                <seg>Alle Kategorien</seg>
+                <seg>Alle Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Tutte le categorie</seg>
@@ -2386,7 +2386,7 @@
         </tu>
         <tu tuid='footer_sell'>
             <tuv xml:lang="de">
-                <seg>Für Verkäufer – Verkaufen mit Epelia</seg>
+                <seg>Für Verkäufer – Anbieten mit Epelia</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Per i venditori – Vendere su Epelia</seg>
@@ -2397,7 +2397,7 @@
         </tu>
         <tu tuid='footer_wholesale'>
             <tuv xml:lang="de">
-                <seg>Großhandel</seg>
+                <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Commercio all'ingrosso</seg>
@@ -3522,7 +3522,7 @@
         </tu>       
         <tu tuid='business_product_price_wholesale'>
             <tuv xml:lang="de">
-                <seg>Preis Großhandel</seg>
+                <seg>Angebot</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Prezzo all'ingrosso</seg>
