@@ -40,10 +40,9 @@
 
 **Copyright.** Copyright 2012-2020 by the Food Marketplace developers. Alphabetical list of contributors:
 
-* Christian Beck
-* David Goraj
 * Matthias Ansorg
-* Sebastian Hösel. Wrote the complete initial version, back then for epelia.com.
+* Micha Gattinger
+* Sebastian Hösel
 
 This software has been derived from the open source marketplace software "Epelia", which has been released as free software on 2020-03-20 under the AGPL licence. Due to this history, the copyrights for all commits up to and including 2020-02-12 are owned by Micha Gattinger. Parts of the code in these commits has been developed by other develoeprs, but all copyrights has been transferred to Micha Gattinger for these contributions.
 
