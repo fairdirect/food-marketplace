@@ -10,20 +10,17 @@
 
 ## 1. Introduction
 
-**Overview.** The Fairdirect Food Marktplace platform is an open source marketplace software specially made for online food sales and food donations. It comes in two variants, contained in branches: one for normal food sales, and one as a platform to offer food as donations to charitable organizations (such as Germany's "Tafeln"). You can find a more detailed description of the functionality (in German) on [fairdirect.org/erzeugermarkt](https://fairdirect.org/erzeugermarkt).
+**Overview.** The OpenFoodBank Marktplace platform is an open source marketplace software specially made for food donations. 
 
 **Online demos.** We operate several online demo and live versions of this software, where you can see it in action:
 
-* [demo.regiomal.com](http://demo.regiomal.com) shows the software as a regional food marketpalce. Please [contact us by e-mail](mailto:mail@fairdirect.org) to get access.
-
-* [lebensmittelspende.org](http://lebensmittelspende.org) uses this software to provide a live platform for facilitating food donations from food shops to charitable organizations
-
+* [openfoodbank.net](http://openfoodbank.net) shows the software as a regional food marketpalce. Please [contact us by e-mail](mailto:mail@fairdirect.org) to get access.
 
 **Features.**
 
 * **Marketplace.** Users get a single user account and can use it to shop in all of the webshops of the platform. This is similar to eBay, Amazon and other e-commerce platforms.
 
-* **Specialized on food.** Unlike any other open source marketplace software that we know (like [Fairmondo](https://github.com/fairmondo/fairmondo)), Epelia is specialized software for online food sales. As such, it provides features such as searching for allergene-free products (by allergene), designation of products from controlled organic farming etc..
+* **Specialized on food.** The OpenFoodBank Marketplace is specialized software for online food donates. As such, it provides features such as searching for allergene-free products (by allergene), designation of products from controlled organic farming etc..
 
 * **Shopping lists.** For customers who want to view sellers' offers online and then make the actual purchases (for example) at the next farmers market where all the sellers are present, there is a feature to put items on a shopping list rather than into a shopping cart.
 
