@@ -35,6 +35,8 @@ The OpenFoodBank- software has been derived from the open source marketplace sof
 
 The copyrights for [all commits up to and including 2020-02-12 from the "Epelia"- software](https://github.com/Fairdirect/epelia/tree/2af9da356b60f90b79e5900dc883c1184ed32b75) are owned by [Micha Gattinger](mailto:mail@michagattinger.de). 
 
+The copyrights for [all commits up to and including 2020-09-25 from the "OpenFoodBank"- extension](https://github.com/ifolje/openfoodbank/) are owned by [Micha Gattinger](mailto:mail@michagattinger.de). 
+
 **Licence.** This platform, as available on Github under [Ifolje/OpenFoodBank](https://github.com/Ifolje/OpenFoodBank), is free software under the terms of the GNU Affero General Public License v3.0 license, or at your option any later version. For details please consult the licence terms in file [`LICENSE`](https://github.com/fairdirect/food-marketplace/blob/master/LICENSE).
 
 This licence does not cover about 10% additional code that has not yet been published because it contains some third-party non-free code. Before inclusion, it has to be replaced, or thorougly reviewed and partially rewritten. So far, it is contained in the non-public branches with the `+nonfree` suffix. The affected code is some view layer code and the CSS stylesheets.
