@@ -16,12 +16,12 @@
 
 * [demo.regiomal.com](http://demo.regiomal.com) shows the software as a regional food marketpalce. Please [contact us by e-mail](mailto:mail@fairdirect.org) to get access.
 
-* [lebensmittelspende.org](http://lebensmittelspende.org) uses this software to provide a live platform for facilitating food donations from food shops to charitable organizations
-
 
 **Features.**
 
 * **Marketplace.** Users get a single user account and can use it to shop in all of the webshops of the platform. This is similar to eBay, Amazon and other e-commerce platforms.
+
+* **Regions.** Currently 105 countries are divided into regions. For all these regions postal codes are stored in the database. Therefore each address can be contacted to a region automatically. This allows for many autonomous regions in one marketplace, all regions are connected to a shopping cart and a checkout. 
 
 * **Specialized on food.** Unlike any other open source marketplace software that we know (like [Fairmondo](https://github.com/fairmondo/fairmondo)), Epelia is specialized software for online food sales. As such, it provides features such as searching for allergene-free products (by allergene), designation of products from controlled organic farming etc..
 
@@ -33,7 +33,7 @@
 
 * **Online orders with combined shipment.** Another typical use case for "online" farmers markets is that the marketplace operator organizes an efficient and low-cost combined shipment of customer orders from the farmers market to those customers who selected shipment rather than pickup as delivery option. In this case, a customer will receive one single package with all the products they ordered, even though these might come from many different sellers of ther farmers market.
 
-* **Offering, ordering and delivering donations of surplus food.** In this case, the marketplace is not used for selling but for utlizing surplus food. Like any marketplace, there can be several parties offering and several parties ordering what is on offer. The development of these features was initiated during the [#WeVsVirus Hackathon](https://wirvsvirushackathon.org/) in March 2020 as project [Tafeln Reorganisation Akquise](https://devpost.com/software/online-lebensmittel-aquise-fur-die-tafeln-fairdirect). See there for a detailed description of what this feature will eventually contain.
+* **Offering, ordering and delivering donations of surplus food.** In this case, the marketplace is not used for selling but for utlizing surplus food. Like any marketplace, there can be several parties offering and several parties ordering what is on offer. The development of these features was initiated during the [#WeVsVirus Hackathon](https://wirvsvirushackathon.org/) in March 2020 as project [Tafeln Reorganisation Akquise](https://devpost.com/software/online-lebensmittel-aquise-fur-die-tafeln-fairdirect). 
 
 
 **Technology.** This platform written in PHP, using the Zend Framework and the Bootstrap CSS framework. It uses PostgreSQL as its database.
@@ -63,7 +63,6 @@ Roles of the different branches:
 
 * `master` – The open source release of the "standard variant", for application as a marketplace.
 * `master+nonfree` – A non-public branch containing the current `master` plus the non-free view layer code that we want to eventually replace.
-* `lebensmittelspende+nonfree` – Quick and dirty adaptation of the marketplace software as used on [lebensmittelspende.org](http://lebensmittelspende.org/). With the new backend being developed in branch `backend` and an accompanying frontend repository, this branch will become legacy.
 * `backend` – A rework of `master` providing a RESTful JSON backend rather than a PHP+Bootstrap view layer. Will eventually be merged into `master`, and the repository will then be renamed to `food-marketplace-backend`.
 
 
