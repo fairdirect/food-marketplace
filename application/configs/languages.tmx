@@ -4370,21 +4370,21 @@
         </tu>            
         <tu tuid='cooperative_headline'>
             <tuv xml:lang="de">
-                <seg>Epeliagenossenschaft</seg>
+                <seg>OpenFoodBank- Entwicklungsrat</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Consulenza per lo sviluppo di Open Food Bank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia cooperative</seg>
+                <seg>OpenFoodBank Development Council</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub'>
             <tuv xml:lang="de">
-                <seg>Wenn Ihnen die Idee hinter Epelia gefällt, dann werden sie doch ein Teil davon. Wir werden genossenschaftlich und suchen Menschen denen unsere Grundlagen wichtig sind:</seg>
+                <seg>Das komplett kostenlose OpenFoodBank- Netzwerk besteht als rein gemeinnützige Organisation aus engagierten, ehrenamtlichen Mitarbeitern. Wir suchen immer Unterstützer in den Bereichen:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Se vi piace l'idea dietro Epelia, non sono che una parte di esso. Siamo cooperativa e alla ricerca di persone in cui le nostre basi sono importanti:</seg>
+                <seg>Essendo un'organizzazione puramente senza scopo di lucro, la rete OpenFoodBank completamente gratuita è composta da molti volontari. Siamo sempre alla ricerca di sostenitori nelle seguenti aree:</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>If you like the Idea of Epelia, why not become part of it? We will become a cooperative and look for people who value our basic principles:</seg>
@@ -4392,73 +4392,73 @@
         </tu>     
         <tu tuid='cooperative_sub_1'>
             <tuv xml:lang="de">
-                <seg>zentraler Einkauf ohne Zwischenhandel</seg>
+                <seg>Entwickler für die Open Source Software</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>centrale di committenza, senza scambi intermedi</seg>
+                <seg>Sviluppatore per il software open source</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>central purchasing without intermediary traders</seg>
+                <seg>Developer for the open source software</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_2'>
             <tuv xml:lang="de">
-                <seg>Lebensmittel mit Herkunftsnachweis</seg>
+                <seg>Fachleute aus dem Lebensmittelhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Cibo con prova dell'origine</seg>
+                <seg>Professionisti del retail alimentare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>food with proof of origin</seg>
+                <seg>Food retail professionals</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_3'>
             <tuv xml:lang="de">
-                <seg>Förderung regionaler Strukturen</seg>
+                <seg>Vertriebsexperten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Promozione delle strutture regionali</seg>               
+                <seg>Esperti di vendita</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>supporting regional structures</seg>
+                <seg>Sales experts</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_4'>
             <tuv xml:lang="de">
-                <seg>respektvoller Umgang mit Lebensmitteln</seg>
+                <seg>Marketingexperten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>cibo manipolazione rispettabile</seg>               
+                <seg>Esperti di marketing</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>dealing with food repectfully</seg>
+                <seg>Marketing experts</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_5'>
             <tuv xml:lang="de">
-                <seg>Unterstützung kleiner Produzenten</seg>
+                <seg>Logistiker</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Supporto per i piccoli produttori</seg>               
+                <seg>Logista</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>support for small-scale producers</seg>
+                <seg>Logistician</seg>
             </tuv>
         </tu>            
         <tu tuid='cooperative_sub_6'>
             <tuv xml:lang="de">
-                <seg>Mitspracherecht bei der weiteren Entwicklung von Epelia</seg>
+                <seg>Fundraiser</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dire l'ulteriore sviluppo di Epelia</seg>               
+                <seg>Raccolta fondi</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>a voice in the further development of Epelia</seg>
+                <seg>Fundraiser</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_7'>
             <tuv xml:lang="de">
-                <seg>Melden Sie sich unverbindlich für unseren Genossenschafts-Newsletter an und verpassen Sie so nicht die nächsten Schritte.</seg>
+                <seg>Bei Interesse melden Sie sich unverbindlich für unseren Entwickungsrat-Newsletter an.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Iscriviti alla nostra newsletter obbligo cooperativa e vi perdete quindi non i passi successivi.</seg>               
@@ -4491,13 +4491,13 @@
         </tu>            
         <tu tuid='cooperative_suc_2'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihre Registrierung zum Genossenschafts-Newsletter.</seg>
+                <seg>Vielen Dank für Ihre Registrierung zum Entwicklungsrat-Newsletter</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per esserti registrato alla newsletter Epelia.</seg>               
+                <seg>Grazie per esserti registrato alla newsletter del Consiglio per lo sviluppo</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>Thank you for registering for the cooperative newsletter</seg>
+                <seg>Thank you for registering for the Development Council newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='language_de'>
@@ -4557,24 +4557,24 @@
         </tu>            
         <tu tuid='woma_next_offers'>
             <tuv xml:lang="de">
-                <seg>Angebote des nächsten Markttages</seg>
+                <seg>Angebote/ Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Offerte del successivo giorno di mercato</seg>               
+                <seg>Offerte/ Richieste</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>Offers from the upcoming market day</seg>
+                <seg>Offers/ Requests</seg>
             </tuv>
         </tu> 
 	<tu tuid='woma_visit_us'>
   	     <tuv xml:lang="de">
-	         <seg>besuchen Sie unseren Wochenmarkt</seg>
+	         <seg>Annahmezeiten Lebensmittelspenden</seg>
              </tuv>
              <tuv xml:lang="it">
-                 <seg>visita il nostro mercato settimanale</seg>               
+                 <seg>Tempi di accettazione per donazioni di cibo</seg>               
              </tuv>
              <tuv xml:lang="en">
-                 <seg>visit our farmers market</seg>
+                 <seg>Acceptance times for food donations</seg>
              </tuv>
          </tu>            
          <tu tuid='woma_business_hours'>
