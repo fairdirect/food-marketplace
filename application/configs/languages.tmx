@@ -126,35 +126,35 @@
         </tu>
         <tu tuid='misc_telephone_1'>
             <tuv xml:lang="de">
-                <seg>Telefonisch bestellen: 0180 EINKAUF </seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ordinare telefonicamente: 0180 EINKAUF</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Order via telephone: 0180 EINKAUF</seg>
+                <seg></seg>
             </tuv>
         </tu>       
         <tu tuid='misc_telephone_2'>
             <tuv xml:lang="de">
-                <seg>(9 ct/min aus dem Festnetz der Dt. Telekom,</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>(9 cent/min su rete fissa Telecom tedesca</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>(9 ct/min in the landline network of Deutsche Telekom,</seg>
+                <seg></seg>
             </tuv>
         </tu>       
         <tu tuid='misc_telephone_3'>
             <tuv xml:lang="de">
-                <seg>evtl. abweichend aus Mobilnetzen)</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>tariffa eventualmente diversa su rete mobile)</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>potentially different prices in mobile networks)</seg>
+                <seg></seg>
             </tuv>
         </tu>
         <tu tuid='misc_groceries'>
@@ -195,10 +195,10 @@
                 <seg>Anbieten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Vendere</seg>
+                <seg>Offrire</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Sell</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_wholesale'>
@@ -206,10 +206,10 @@
                 <seg>Anbeote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>
         <tu tuid='misc_my_epelia'>
@@ -228,10 +228,10 @@
                 <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>
         <tu tuid='misc_orders'>
@@ -270,24 +270,24 @@
         </tu>
         <tu tuid='misc_categories'>
             <tuv xml:lang="de">
-                <seg>Gesuche</seg>
+                <seg>Spendengesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Categorie</seg>
+                <seg>Richieste di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Categories</seg>
+                <seg>Donation requests</seg>
             </tuv>
         </tu>
         <tu tuid='misc_all_categories'>
             <tuv xml:lang="de">
-                <seg>Alle Gesuche</seg>
+                <seg>Alle Spendengesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutte le categorie</seg>
+                <seg>Tutte le richieste di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>All categories</seg>
+                <seg>All requests for donations</seg>
             </tuv>
         </tu>
         <tu tuid='misc_bio_products'>
@@ -755,13 +755,13 @@
         </tu>
         <tu tuid='product_buy'>
             <tuv xml:lang="de">
-                <seg>kaufen</seg>
+                <seg>Bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Acquista</seg>
+                <seg>Ordinare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Buy</seg>
+                <seg>Order</seg>
             </tuv>
         </tu>
         <tu tuid='product_delivery_costs_of'>
@@ -821,46 +821,46 @@
         </tu>
         <tu tuid='product_epelia_guarantee'>
             <tuv xml:lang="de">
-                <seg>Epelia Garantie</seg>
+                <seg>OpenFoodBank unterstützen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Garanzia Epelia</seg>
+                <seg>Supporta OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia warranty</seg>
+                <seg>Support OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_1'>
             <tuv xml:lang="de">
-                <seg>Bester Preis, da alle Produkte direkt vom Hersteller</seg>
+                <seg>Dieser Marktplatz ist absolut kostenlos und ist daher auf freiwillige Spenden angewiesen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Miglior prezzo, perché tutti i prodotti sono venduti direttamente dal produttore</seg>
+                <seg>Questo marketplace è assolutamente gratuito e quindi si basa su donazioni volontarie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Best price, as all products come directly from the manufacturer</seg>
+                <seg>This marketplace is absolutely free and therefore relies on voluntary donations</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_2'>
             <tuv xml:lang="de">
-                <seg>Kein Zwischenlager, frischer geht's nicht</seg>
+                <seg>Wenn Sie unsere Idee von einem offenen und kostenlosen Lebensmittel- Spendenmarktplatz unterstützen möchten, freuen wir uns über Ihre Spende</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Nessun magazzino intermedio, prodotti più freschi che mai</seg>
+                <seg>Se desideri sostenere la nostra idea di un mercato per la donazione di cibo aperto e gratuito, non vediamo l'ora della tua donazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>No intermediate store, it couldn't be more fresh.</seg>
+                <seg>If you would like to support our idea of an open and free food donation marketplace, we look forward to your donation</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_3'>
             <tuv xml:lang="de">
-                <seg>Kostenloser Service, 0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
+                <seg>Fairdirect e.V., Verwendungszweck OpenFoodBank, IBAN:DE24 5136 1021 0004 6467 83 BIC:GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Servizio gratuito, 0180 EINKAUF (9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>Fairdirect e.V., destinazione d'uso OpenFoodBank, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Free service, 0180 EINKAUF (9 ct/min in the landline network of Deutsche Telekom; different prices can apply in mobile networks)</seg>
+                <seg>Fairdirect e.V., intended use OpenFoodBank, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
             </tuv>
         </tu>
         <tu tuid='search_no_results'>
@@ -975,13 +975,13 @@
         </tu>       
         <tu tuid='checkout_seller'>
             <tuv xml:lang="de">
-                <seg>Verkäufer</seg>
+                <seg>Spender</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Venditore</seg>
+                <seg>Donatore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Seller</seg>
+                <seg>Donor</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_total'>
@@ -1041,24 +1041,24 @@
         </tu>       
         <tu tuid='checkout_taxes_19'>
             <tuv xml:lang="de">
-                <seg>19,0% MwSt.</seg>
+                <seg>16,0% MwSt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>19,0% IVA</seg>
+                <seg>16,0% IVA</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>VAT 19.0%</seg>
+                <seg>VAT 16.0%</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_order'>
             <tuv xml:lang="de">
-                <seg>Kostenpflichtig bestellen</seg>
+                <seg>Verbindlich bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Procedi all'ordine</seg>
+                <seg>Ordine vincolante</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Order (subject to a charge)</seg>
+                <seg>Binding order</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_payment_type'>
@@ -1118,24 +1118,24 @@
         </tu>
         <tu tuid='checkout_continue_shopping'>
             <tuv xml:lang="de">
-                <seg>Einkauf fortsetzen</seg>
+                <seg>Bestellung fortsetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Continua a fare shopping</seg>
+                <seg>continuare l'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Proceed shopping</seg>
+                <seg>continue the order</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_headline'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihren Einkauf</seg>
+                <seg>Vielen Dank für Ihre Bestellung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per aver acquistato con noi</seg>
+                <seg>Grazie per il vostro ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Many thanks for your purchase</seg>
+                <seg>Many thanks for your order</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_success_ordered'>
@@ -1184,13 +1184,13 @@
         </tu>
         <tu tuid='checkout_success_prepay_3'>
             <tuv xml:lang="de">
-                <seg>Konto: 4647483</seg>
+                <seg>IBAN: DE24 5236 1021 0004 6474 83</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Conto: 4647483</seg>
+                <seg>IBAN: DE24 5236 1021 0004 6474 83</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Account No. 4647483</seg>
+                <seg>IBAN: DE24 5236 1021 0004 6474 83</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_4'>
@@ -1206,13 +1206,13 @@
         </tu>
         <tu tuid='checkout_success_prepay_5'>
             <tuv xml:lang="de">
-                <seg>Bankleitzahl: 51361021</seg>
+                <seg>BIC: GNODE51HHE</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Codice di identificazione della banca: 51361021</seg>
+                <seg>BIC: GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Sort code: 51361021</seg>
+                <seg>BIC: GENODE51HHE</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_6'>
