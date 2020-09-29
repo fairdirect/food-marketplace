@@ -93,13 +93,13 @@
         </tu>       
         <tu tuid='misc_about'>
             <tuv xml:lang="de">
-                <seg>Über Epelia</seg>
+                <seg>Über OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About Epelia</seg>
+                <seg>About OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='misc_logout'>
@@ -214,13 +214,13 @@
         </tu>
         <tu tuid='misc_my_epelia'>
             <tuv xml:lang="de">
-                <seg>Mein Epelia</seg>
+                <seg>Meine OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il mio account Epelia</seg>
+                <seg>Il mio account OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>My Epelia</seg>
+                <seg>My OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='misc_wholesale'>
@@ -556,13 +556,13 @@
         </tu>
         <tu tuid='misc_trade_certificate'>
             <tuv xml:lang="de">
-                <seg>Gewerbebescheinigung</seg>
+                <seg>Nachweis der Gemeinnützigkeit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Licenza di commercio</seg>
+                <seg>Prova di stato di beneficenza</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Business registration certificate</seg>
+                <seg>Proof of charitable status</seg>
             </tuv>
         </tu>
         <tu tuid='misc_yes'>
@@ -1173,13 +1173,13 @@
         </tu>
         <tu tuid='checkout_success_prepay_2'>
             <tuv xml:lang="de">
-                <seg>Inhaber: Epelia Warenhandel Gattinger</seg>
+                <seg>Inhaber: Fairdirect e.V.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Intestatario: Epelia Warehandel Gattinger</seg>
+                <seg>Intestatario: Fairdirect e.V.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Owner: Epelia Warenhandel Gattinger</seg>
+                <seg>Owner: Fairdirect e.V.</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_3'>
@@ -1582,13 +1582,13 @@
         </tu>
         <tu tuid='sell_headline'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie Ihren eigenen Epelia Online-Shop</seg>
+                <seg><<Spenden Sie jetzt übrige Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Vendere prodotti alimentari e beni per la casa e per la persona su Epelia</seg>
+                <seg>Dona ora il cibo rimanente</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Set up your own Epelia webshop</seg>
+                <seg>Donate remaining food now</seg>
             </tuv>
         </tu>
         <tu tuid='sell_1'>
@@ -1849,10 +1849,10 @@
                 <seg>Alle Angebote anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Mostra tutti i prodotti all'ingrosso</seg>
+                <seg>mostra tutte le offerte</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Show all wholesale products</seg>
+                <seg>Show all offers</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_register_headline'>
@@ -1860,15 +1860,15 @@
                 <seg>Anmeldung für den Angebotsbereich</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Registrazione per il settore del commercio all'ingrosso</seg>
+                <seg>Registrazione per l'area offerta</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Registration for the wholesale section</seg>
+                <seg>Registration for the offer area</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_register_text'>
             <tuv xml:lang="de">
-                <seg>Für den Einkauf von Angeboten müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
+                <seg>Für den Zugang zu den Spendenangeboten müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns einen Nachweis der Gemeinnützigkeit entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Per l'acquisto di prodotti all'ingrosso è necessario avere un account. Riempite il seguente modulo e inviateci una licenza di esercizio sia con il modulo che via fax al numero 06426-967338</seg>
