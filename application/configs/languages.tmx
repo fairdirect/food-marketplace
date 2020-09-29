@@ -2276,13 +2276,13 @@
         </tu>
         <tu tuid='footer_about'>
             <tuv xml:lang="de">
-                <seg>Über Epelia</seg>
+                <seg>Über OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su di noi</seg>
+                <seg>Tramite OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About Epelia</seg>
+                <seg>About OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='footer_order'>
@@ -2386,13 +2386,13 @@
         </tu>
         <tu tuid='footer_sell'>
             <tuv xml:lang="de">
-                <seg>Für Verkäufer – Anbieten mit Epelia</seg>
+                <seg>Für Spender – Anbieten auf OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per i venditori – Vendere su Epelia</seg>
+                <seg>Per i donatori - offerta su OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>For sellers – sell with Epelia</seg>
+                <seg>For donors - offer on OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='footer_wholesale'>
@@ -2400,10 +2400,10 @@
                 <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>    
         <tu tuid='areasearch'>
@@ -2541,13 +2541,13 @@
         </tu>
         <tu tuid='shops_since'>
             <tuv xml:lang="de">
-                <seg>Bei Epelia seit</seg>
+                <seg>Auf OpenFoodBank seit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su Epelia da</seg>
+                <seg>Su OpenFoodBank da allora</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>On Epelia since</seg>
+                <seg>On OpenFoodBank since</seg>
             </tuv>
         </tu>
         <tu tuid='shops_more_about'>
@@ -2563,13 +2563,13 @@
         </tu>       
         <tu tuid='shops_our_products'>
             <tuv xml:lang="de">
-                <seg>In unserem Shop gibt es</seg>
+                <seg>Unsere Angebote/ Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Nel nostro negozio trovate</seg>
+                <seg>Le nostre offerte / richieste</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>In our shop you will find</seg>
+                <seg>Our offers / requests</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_about_us'>
@@ -2607,13 +2607,13 @@
         </tu>
         <tu tuid='shops_history'>
             <tuv xml:lang="de">
-                <seg>Gründungsgeschichte von</seg>
+                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Storia di</seg>
+                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>History of</seg>
+                <seg>Why do we support the OpenFoodBank network?</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_delivery_costs'>
@@ -2706,13 +2706,13 @@
         </tu>
         <tu tuid='login_register_newsletter'>
             <tuv xml:lang="de">
-                <seg>Epelia Newsletter abonnieren</seg>
+                <seg>OpenFoodBank Newsletter abonnieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Abbonarsi alla newsletter Epelia</seg>
+                <seg>Abbonarsi alla newsletter OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Subscribe to the Epelia newsletter</seg>
+                <seg>Subscribe to the OpenFoodBank newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_register'>
@@ -2750,13 +2750,13 @@
         </tu>
         <tu tuid='login_left_headline'>
             <tuv xml:lang="de">
-                <seg>Ich habe ein Kundenkonto bei Epelia</seg>
+                <seg>Ich habe ein OpenFoodBank- Kundenkonto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ho un account cliente su Epelia</seg>
+                <seg>Ho un account cliente su OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>I have a customer account at Epelia</seg>
+                <seg>I have a customer account at OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_1'>
@@ -2772,13 +2772,13 @@
         </tu>       
         <tu tuid='login_list_2'>
             <tuv xml:lang="de">
-                <seg>Käuferschutz</seg>
+                <seg>Konfliktlösung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutela consumatori</seg>
+                <seg>Risoluzione del conflitto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Buyer protection</seg>
+                <seg>Conflict resolution</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_3'>
@@ -2794,13 +2794,13 @@
         </tu>
         <tu tuid='login_list_4'>
             <tuv xml:lang="de">
-                <seg>0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
+                <seg>+49 6426 8630364</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>0180 EINKAUF (+49 1803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>+49 6426 8630364</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+49 180 EINKAUF (+49 1803 465283; 9 ct/min in the landline network of German Telekom; different rates might apply in mobile networks)</seg>
+                <seg>+49 6426 8630364</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_5'>
@@ -2816,13 +2816,13 @@
         </tu>
         <tu tuid='login_list_6'>
             <tuv xml:lang="de">
-                <seg>Lieferung vom Hersteller</seg>
+                <seg>Lebensmittelretter</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spedizione dal produttore</seg>
+                <seg>Risparmio di cibo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Delivered by the manufacturer</seg>
+                <seg>Food saver</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_7'>
@@ -2882,13 +2882,13 @@
         </tu>       
         <tu tuid='login_register_sell'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie hier ein neues Verkäuferkonto.</seg>
+                <seg>Erstellen Sie hier ein neues Lebensmittelspender- Konto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Creare un nuovo account venditore.</seg>
+                <seg>Crea qui un nuovo account per donatori di cibo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Register here a new seller account.</seg>
+                <seg>Create a new food donor account here</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_success_headline'>
@@ -2937,13 +2937,13 @@
         </tu>       
         <tu tuid='shoppingcart_addresses_error'>
             <tuv xml:lang="de">
-                <seg>Folgende Produkte können leider nicht in das ausgewählte Land geliefert werden:</seg>
+                <seg>Folgende Spenden können leider nicht in das ausgewählte Land geliefert werden:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spiacente, i seguenti prodotti non possono essere spediti nel paese selezionato</seg>
+                <seg>Purtroppo, le seguenti donazioni non possono essere inviate al Paese selezionato:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Unfortunately, the following products cannot be delivered to the chosen destination country:</seg>
+                <seg>Unfortunately, the following donations cannot be delivered to the selected country:</seg>
             </tuv>
         </tu>       
         <tu tuid='shoppingcart_addresses_delivery'>
@@ -3687,13 +3687,13 @@
         </tu>
         <tu tuid='business_shop_ltdkg'>
             <tuv xml:lang="de">
-                <seg>Ltd. und Co. KG.</seg>
+                <seg>UG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ltd. <![CDATA[&]]> Co. S.a.s.</seg>
+                <seg>UG</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Ltd. and Co. KG (Ltd. in limited commercial partnership)</seg>
+                <seg>UG</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_ohg'>
@@ -3709,13 +3709,13 @@
         </tu>
         <tu tuid='business_shop_partg'>
             <tuv xml:lang="de">
-                <seg>PartG.</seg>
+                <seg>Gbr</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Partiti politici</seg>
+                <seg>Gbr</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>partnership company</seg>
+                <seg>Gbr</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_ev'>
@@ -3962,13 +3962,13 @@
         </tu>
         <tu tuid='business_shop_history'>
             <tuv xml:lang="de">
-                <seg>Gründungsgeschichte</seg>
+                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Storia</seg>
+                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>History</seg>
+                <seg>Why do we support the OpenFoodBank network?</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_philosophy'>
@@ -4183,24 +4183,24 @@
         </tu>
         <tu tuid='woma_woma_headline'>
             <tuv xml:lang="de">
-                <seg>Wochenmarkt editieren</seg>
+                <seg>Versandzelle editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Editing mercato del contadino</seg>
+                <seg>Modifica cella di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Edit farmers market</seg>
+                <seg>Edit shipping cell</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_name'>
             <tuv xml:lang="de">
-                <seg>Wochenmarkt-Name</seg>
+                <seg>Versandzellen-Name</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Nome del mercato settimanale</seg>
+                <seg>Nome cella di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Farmers market name</seg>
+                <seg>Shipping cell name</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_images_headline'>
@@ -4216,24 +4216,24 @@
         </tu>     
         <tu tuid='product_not_available'>
             <tuv xml:lang="de">
-                <seg>Produkt ist online nicht verfügbar.</seg>
+                <seg>Spendengesuch</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il prodotto non è disponibile online.</seg>
+                <seg>Richiesta di donazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The product is not available online.</seg>
+                <seg>Donation request</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_1'>
             <tuv xml:lang="de">
-                <seg>Herzlich willkommen auf unserem Wochenmarkt!</seg>
+                <seg>Herzlich willkommen in unserer Versandzelle</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Welcome to our Farmers Market!</seg>
+                <seg>Benvenuto nella nostra cella di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Welcome to our Farmers Market!</seg>
+                <seg>Welcome to our shipping cell</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_2'>
@@ -4260,13 +4260,13 @@
         </tu>     
         <tu tuid='index_about_4'>
             <tuv xml:lang="de">
-                <seg>+ direkte Lieferung frisch zu Ihnen</seg>
+                <seg>+ kombinierte Lieferung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>+ fresco consegna diretta a loro</seg>
+                <seg>+ consegna combinata</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+ direct shipment fresh to you</seg>
+                <seg>+ combined delivery</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_more'>
@@ -4337,13 +4337,13 @@
         </tu>     
         <tu tuid='misc_cooperative'>
             <tuv xml:lang="de">
-                <seg>Genossenschaft</seg>
+                <seg>OpenFoodBank- Entwicklungsrat</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Cooperativa</seg>               
+                <seg>Consulenza per lo sviluppo di Open Food Bank</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>Cooperative</seg>
+                <seg>OpenFoodBank Development Council</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_help'>
@@ -4373,7 +4373,7 @@
                 <seg>Epeliagenossenschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Epelia cooperativa</seg>
+                <seg>Consulenza per lo sviluppo di Open Food Bank</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>Epelia cooperative</seg>
