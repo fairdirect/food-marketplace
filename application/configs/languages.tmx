@@ -1593,18 +1593,18 @@
         </tu>
         <tu tuid='sell_1'>
             <tuv xml:lang="de">
-                <seg>Eigener Webshop</seg>
+                <seg>Spenden statt entsorgen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il tuo negozio</seg>
+                <seg>Dona invece di buttare via</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Own webshop</seg>
+                <seg>Donate instead of throwing away</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_2'>
             <tuv xml:lang="de">
-                <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Produzentenprofil.</seg>
+                <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Anbieterprofil.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore.</seg>
@@ -1637,24 +1637,24 @@
         </tu>
         <tu tuid='sell_5'>
             <tuv xml:lang="de">
-                <seg>Faire und günstige Konditionen</seg>
+                <seg>Kostenlose Spendenvermittlung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Condizioni oneste e vantaggiose</seg>
+                <seg>Mediazione di donazioni gratuita</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Fair and low-priced contract conditions</seg>
+                <seg>Free donation brokerage</seg>
             </tuv>
         </tu>
         <tu tuid='sell_6'>
             <tuv xml:lang="de">
-                <seg>Nur 4% Verkaufsprovision. Keine Fixkosten. Keine Einrichtungsgebühr. Keine Vertragsbindung. Keine versteckten Kosten.</seg>
+                <seg>Die OpenFoodBank ist 100% Kostenlos. Keine Provision. Keine Fixkosten. Keine Einrichtungsgebühr. Keine Vertragsbindung. Keine versteckten Kosten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Solo il 4% di commissioni sulle vendite. Nessun costo fisso. Nessun costo di apertura. Nessun accordo contrattuale. Nessun costo nascosto.</seg>
+                <seg>OpenFoodBank è gratuito al 100%. Nessuna disposizione. Nessun costo fisso. Nessun costo di installazione. Nessun contratto. Nessun costo nascosto.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Only 4% sales commission. No fixed fees. No setup fee. No minimum contract runtime. No hidden costs.</seg>
+                <seg>The OpenFoodBank is 100% free. No fixed fees. No setup fee. No minimum contract runtime. No hidden costs.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
@@ -1681,13 +1681,13 @@
         </tu>
         <tu tuid='sell_9'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie Ihren Epelia Shop</seg>
+                <seg>Erstellen Sie Ihren OpenFoodBank Shop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Allestite il vostro negozio Epelia</seg>
+                <seg>Allestite il vostro negozio OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Create your Epelia shop</seg>
+                <seg>Create your OpenFoodBank shop</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_register'>
@@ -1703,35 +1703,35 @@
         </tu>       
         <tu tuid='sell_phone'>
             <tuv xml:lang="de">
-                <seg>Oder rufen Sie uns an: 0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
+                <seg>Für eine persönliche Beratung können Sie uns unter +49 6426 8630364 erreichen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>O telefonaci al: 0180 EINKAUF (01803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>Per una consulenza personalizzata, puoi contattarci al +49 6426 8630364</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Or call us: 0180 EINKAUF (01803 465283; 9 ct/min in the landline network of German Telekom; different prices can apply in mobile networks)</seg>
-            </tuv>
+                <seg>For personal advice, you can reach us at +49 6426 8630364</seg>
+                </tuv>
         </tu>
         <tu tuid='sell_register_headline'>
             <tuv xml:lang="de">
-                <seg>Informationen über Epelia anfordern</seg>
+                <seg>Informationen über das OpenFoodBank- Netzwerk anfordern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Richiedere informazioni su Epelia</seg>
+                <seg>Richiedi informazioni tramite la rete OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Request information about Epelia</seg>
+                <seg>Request information through the OpenFoodBank network</seg>
             </tuv>
         </tu>
         <tu tuid='sell_register_text'>
             <tuv xml:lang="de">
-                <seg>Sie interessieren sich für eine Teilnahme an unserem einzigartigen Markplatz für Lebensmittel? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
+                <seg>Sie möchten dem offenen Netzwerk für Lebensmittelspenden beitreten? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Sei interessato a diventare parte della nostra piattaforma commerciale? Iscriviti ora!</seg>
+                <seg>Vorresti unirti alla rete aperta per le donazioni di cibo? Quindi compila ora il modulo e ti contatteremo il prima possibile.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>You are interested to participate in our unique food marketplace? Just complete the form and we will contact you promptly.</seg>
+                <seg>Would you like to join the open network for food donations? Then fill out the form now and we will contact you as soon as possible.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_success_headline'>
@@ -1761,32 +1761,32 @@
                 <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso di beni alimentari e prodotti per la casa e per la persona</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale market for food and drugstore articles</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_1'>
             <tuv xml:lang="de">
-                <seg>Der Angebotsbereich ist die ideale und professionelle Möglichkeit für Gastronomie, Wiederverkäufer oder Produzenten größere Mengen Lebensmittel und Drogeriewaren zu ordern.</seg>
+                <seg>Der Angebotsbereich ist ausschließlich für die kostenlose Vermittlung von Lebensmittelspenden zwischen Akteuern entlang der Wertschöpfungskette "Lebensmittel" und gemeinnützigen Organisationen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il commercio all'ingrosso Epelia è l'opportunità ideale e professionale per il reparto gastronomico, rivenditori o produttori su ampia scala di ordinare beni alimentari e prodotti per la casa e per la persona.</seg>
+                <seg>L'area di offerta è esclusivamente per la mediazione gratuita di donazioni alimentari tra attori della filiera "alimentare" e organizzazioni no profit.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The Epelia wholesale marketplace is the ideal and professional possibility for gastrononmy, resellers and producers to order larger quantities of food and drugstore articles.</seg>
+                <seg>The offer area is exclusively for the free mediation of food donations between actors along the "food" value chain and non-profit organizations.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_2'>
             <tuv xml:lang="de">
-                <seg>Nach einer kostenlosen Registrierung können Sie hier direkt, einfach und zum besten Preis bei vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten bestellen.</seg>
+                <seg>Nach einer kostenlosen Registrierung können Sie als gemeinnützige Organisation hier direkt, einfach und kostenlos Lebensmittelspenden von vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten bestellen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dopo la registrazione gratuita potrete ordinare direttamente dai produttori, al miglior prezzo e in tutta facilità.</seg>
+                <seg>Dopo esserti registrato gratuitamente, tu come organizzazione senza scopo di lucro puoi ordinare donazioni di cibo da molti produttori, fabbricanti, rivenditori, importatori diretti o produttori direttamente, facilmente e gratuitamente.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>After a cost-free registration, you can order here directly, comfortably and for best prices from many farmers, manufacturers, traders, direct importers or producers.</seg>
+                <seg>After registering for free, you as a non-profit organization can order food donations from many producers, manufacturers, dealers, direct importers or producers directly, easily and free of charge.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_3'>
