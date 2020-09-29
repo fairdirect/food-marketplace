@@ -1791,7 +1791,7 @@
         </tu>
         <tu tuid='wholesale_text_3'>
             <tuv xml:lang="de">
-                <seg>Das Sortiment reicht von guten Standardprodukten, regionalen Spezialitäten über exotische Köstlichkeiten bis hin zu biologisch erzeugten Produkten. Viele Anbieter stellen sich und ihre Arbeitsweise, ihren Betrieb oder spezielle Herstellungsarten in ihren einenen Shops vor, so wissen Sie ganz genau, woher z.b. Ihr Fleisch kommt.</seg>
+                <seg>Das Sortiment reicht von </seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>L'assortimento varia da ottimi prodotti standard, specialità regionali, delizie esotiche, fino ad arrivare ai prodotti biologici. Moltissimi offerenti presentano il proprio modo di lavorare, la propria azienda o speciali metodi di produzione sulla pagina del proprio negozio, in modo che sappiate precisamente, ad esempio, da dove viene la carne che mangiate. </seg>
@@ -1813,7 +1813,7 @@
         </tu>       
         <tu tuid='wholesale_text_5'>
             <tuv xml:lang="de">
-                <seg>Der Epelia Angebotsbereich steht für frisch und direkt bei vielen einkaufen!</seg>
+                <seg>Als gemeinnützige Organisation haben Sie mit Ihrem Account Zugang zu den Spendenangeboten, können Spendengesuche eigenständig einstellen bzw. verwalten und Ihre Organisation potentiellen Spendern vorstellen und allgemeine Informationen wie z.B. Öffnungszeiten hinterlegen</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>La piattaforma di commercio all'ingrosso di beni alimentari e prodotti per la persona e per la casa Epelia offre prodotti freschi e acquistabili direttamente dal produttore!</seg>
@@ -1968,13 +1968,13 @@
         </tu>
         <tu tuid='allergies_headline'>
             <tuv xml:lang="de">
-                <seg>Epelia unterstützt Sie bei Lebensmittelallergien</seg>
+                <seg>Die OpenFoodBank unterstützt Sie bei Lebensmittelallergien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Epelia vi aiuta nelle allergie alimentari</seg>
+                <seg>OpenFoodBank vi aiuta nelle allergie alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia supports you if you suffer from food allergies.</seg>
+                <seg>OpenFoodBank supports you if you suffer from food allergies.</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_sub_1'>
@@ -2034,13 +2034,13 @@
         </tu>
         <tu tuid='bio_intro'>
             <tuv xml:lang="de">
-                <seg>Auf Epelia finden Sie biologisch erzeugte Lebensmittel, die Sie direkt beim Bio Bauern bestellen können. Alle unsere Bio Produzenten möchten für Sie unbelastete, gesunde und schmackhafte Lebensmittel erzeugen.</seg>
+                <seg>Auf OpenFoodBank finden Sie auch biologisch erzeugte Lebensmittel.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su Epelia trovate prodotti biologici, che potrete ordinare direttamente dagli agricoltori Bio. Tutti i nostri produttori Bio vogliono produrre per voi alimenti sani e gustosi.</seg>
+                <seg>Su OpenFoodBank trovate prodotti biologici.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>On Epelia, you can find certified organic food items which you can order directly from the organic producer. All our organic producers want to create unpolluted, healthy and tasty food for you.</seg>
+                <seg>On OpenFoodBank, you can find certified organic food.</seg>
             </tuv>
         </tu>
         <tu tuid='bio_show_all'>
@@ -2155,10 +2155,10 @@
         </tu>       
         <tu tuid='bio_list_outro'>
             <tuv xml:lang="de">
-                <seg>Die biologische Landwirtschaft und Verarbeiter von biologischen Lebensmitteln schonen die natürlichen Ressourcen und haben in vielen Bereichen positive Auswirkunegn auf die Umwelt. Treten Sie in Kontakt mit unseren Bio-Produzenten und entdecken Sie den Geschmack von Bio Käse, Bio Fleisch und vielen anderen Bio Lebensmitteln.</seg>
+                <seg>Alle Landwirte und Verarbeiter von biologisch erzeugten Lebensmittel auf der OpenFoodBank setzten sich gezielt gegen die Lebensmitelverschwendung ein!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>L'agricoltura biologica e le società di trasformazione di prodotti alimentari biologici hanno cura delle risorse naturali e hanno, in moltissimi campi, effetti positivi sull'ambiente. Entrate in contatto con i nostri produttori BIO e scoprite il gusto di formaggio, carne e moltissimi altri alimenti biologici</seg>
+                <seg>Tutti gli agricoltori e trasformatori di alimenti prodotti biologicamente nella campagna OpenFoodBank contro lo spreco alimentare!</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>Organic agriculture and processors of organic food spare natural resources and have positive effects on the environment in many areas. Get in touch with our organic producers and explore the taste of organic cheese, organic meat and many other organic food items.</seg>
@@ -2199,13 +2199,13 @@
         </tu>
         <tu tuid='discount_intro'>
             <tuv xml:lang="de">
-                <seg>Hier finden Sie Artikel, welche zu discountähnlichen Preisen angeboten werden. Alle Produkte sind mit Herstellerangabe, also keine "produziert für" Artikel und stammen direkt von Herstellern, Produzenten, Erzeuger oder Händler, welche diese vermarkten.</seg>
+                <seg>Hier finden Sie Artikel, welche zu discountähnlichen Preisen angeboten werden.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Qui trovate articoli che vengono messi in vendita a prezzi scontati. Tutti i prodotti sono con indicazioni dei produttori, quindi nessun articolo "prodotto per", e vengono direttamente da costruttori, produttori, ditte produttrici o commercianti, che commercializzano tali prodotti.</seg>
+                <seg>Qui trovate articoli che vengono messi in vendita a prezzi scontati.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Here you can find articles which are offered at rates similar to discount prices. All products carry a manufacturer indication (so, no “produced for” items) and come directly from manufacturers, producers, farmers or traders which market them.</seg>
+                <seg>Here you can find articles which are offered at rates similar to discount prices.</seg>
             </tuv>
         </tu>
         <tu tuid='discount_show_all'>
