@@ -1775,7 +1775,7 @@
                 <seg>L'area di offerta è esclusivamente per la mediazione gratuita di donazioni alimentari tra attori della filiera "alimentare" e organizzazioni no profit.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The offer area is exclusively for the free mediation of food donations between actors along the "food" value chain and non-profit organizations.</seg>
+                <seg>The online space for the free of charge procurement of food donations is exclusively accessible to stakeholders along the value chain “food items” and non-profit organisations.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_2'>
@@ -1786,29 +1786,29 @@
                 <seg>Dopo esserti registrato gratuitamente, tu come organizzazione senza scopo di lucro puoi ordinare donazioni di cibo da molti produttori, fabbricanti, rivenditori, importatori diretti o produttori direttamente, facilmente e gratuitamente.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>After registering for free, you as a non-profit organization can order food donations from many producers, manufacturers, dealers, direct importers or producers directly, easily and free of charge.</seg>
+                <seg>After a free registration you have a direct, simple and clearly arranged access to available food donations. As a non-profit organisation you can order food donations from many producers, manufactures, retailers and direct importers free of charge</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_3'>
             <tuv xml:lang="de">
-                <seg>Das Sortiment reicht von </seg>
+                <seg>Typische Produkte sind Lebensmittel mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>L'assortimento varia da ottimi prodotti standard, specialità regionali, delizie esotiche, fino ad arrivare ai prodotti biologici. Moltissimi offerenti presentano il proprio modo di lavorare, la propria azienda o speciali metodi di produzione sulla pagina del proprio negozio, in modo che sappiate precisamente, ad esempio, da dove viene la carne che mangiate. </seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The product range covers good-quality standard products, regional specialties, exotic delicacies and also organically produced products. Many producers present themselves and their way of work, their company or special modes of manufacturing in their shop. This way, you'll know exactly where for example your meat is from.</seg>
+                <seg>Typical products are food items with damaged or falsely labelled packaging, products with average loss, visual flaws, wrong content quantity/amount, short or expired sell-by date, products with taste variations and left over products resulting from over production</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_4'>
             <tuv xml:lang="de">
-                <seg>Alle hier angebotenen Waren haben, wie überall auf Epelia, einen Herstellernachweis, wir mögen keine „produziert für“ Waren.</seg>
+                <seg>Als offenes Netzwerk retten wir gemeinsam Lebensmittel, stellen diese Bedürftigen auf der ganzen Welt zur Verfügung und helfen aktiv Klima-, Natur- und Umweltschäden zu reduzieren.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutti i prodotti messi in vendita qui, come su tutta la piattaforma Epelia, hanno una documentazione relativa alla produzione. Non amiamo la merce "prodotta per".</seg>
+                <seg>In quanto rete aperta, salviamo il cibo insieme, lo rendiamo disponibile a chi ne ha bisogno in tutto il mondo e aiutiamo attivamente a ridurre il clima, la natura e i danni ambientali.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>All products offered here carry a manufacturer identification, as everywhere on Epelia - we do not like “produced for” goods.</seg>
+                <seg>As an open network we save food together and distribute them to needy people around the world. We actively help to reduce damages caused to our climate, nature and environment</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_5'>
@@ -1816,10 +1816,10 @@
                 <seg>Als gemeinnützige Organisation haben Sie mit Ihrem Account Zugang zu den Spendenangeboten, können Spendengesuche eigenständig einstellen bzw. verwalten und Ihre Organisation potentiellen Spendern vorstellen und allgemeine Informationen wie z.B. Öffnungszeiten hinterlegen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>La piattaforma di commercio all'ingrosso di beni alimentari e prodotti per la persona e per la casa Epelia offre prodotti freschi e acquistabili direttamente dal produttore!</seg>
+                <seg>Dopo la registrazione come organizzazione non profit puoi inserire e gestire richieste di donazioni. Puoi presentare la tua organizzazione a potenziali donatori e offrire informazioni generali come gli orari di apertura e i luoghi in cui ricevere le donazioni. In questo modo puoi offrire ai clienti finali la donazione degli alimenti necessari direttamente sul posto.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The Epelia food wholesale market and drugstore wholesale market signifies purchasing freshly and diretly from many sellers.</seg>
+                <seg>After your registration as a non-profit organisation you can place and manage requests for donations. You can present your organisation to potential donors and offer general information like opening times and your places for receiving donations. Through this you can offer end customers to donate the needed food items directly on location.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_login_1'>
@@ -2161,7 +2161,7 @@
                 <seg>Tutti gli agricoltori e trasformatori di alimenti prodotti biologicamente nella campagna OpenFoodBank contro lo spreco alimentare!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Organic agriculture and processors of organic food spare natural resources and have positive effects on the environment in many areas. Get in touch with our organic producers and explore the taste of organic cheese, organic meat and many other organic food items.</seg>
+                <seg>All farmers and processors of biological produced food items as part of the OpenFoodBank Network specifically invest themselves to work against food wastage!</seg>
             </tuv>
         </tu>
         <tu tuid='bio_all_categories'>
@@ -4387,7 +4387,7 @@
                 <seg>Essendo un'organizzazione puramente senza scopo di lucro, la rete OpenFoodBank completamente gratuita è composta da molti volontari. Siamo sempre alla ricerca di sostenitori nelle seguenti aree:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>If you like the Idea of Epelia, why not become part of it? We will become a cooperative and look for people who value our basic principles:</seg>
+                <seg>The entirely free of charge OpenFoodBank network exists as a completely non-profit organisation, working with dedicated volunteers. We are always looking for supports in the following areas:</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_1'>
