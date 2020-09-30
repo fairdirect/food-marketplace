@@ -82,24 +82,24 @@
         </tu>       
         <tu tuid='misc_help'>
             <tuv xml:lang="de">
-                <seg>Hilfe</seg>
+                <seg>FAQ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Aiuto</seg>
+                <seg>FAQ</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Help</seg>
+                <seg>FAQ</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_about'>
             <tuv xml:lang="de">
-                <seg>Über Epelia</seg>
+                <seg>Über OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About Epelia</seg>
+                <seg>About OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='misc_logout'>
@@ -126,35 +126,35 @@
         </tu>
         <tu tuid='misc_telephone_1'>
             <tuv xml:lang="de">
-                <seg>Telefonisch bestellen: 0180 EINKAUF </seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ordinare telefonicamente: 0180 EINKAUF</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Order via telephone: 0180 EINKAUF</seg>
+                <seg></seg>
             </tuv>
         </tu>       
         <tu tuid='misc_telephone_2'>
             <tuv xml:lang="de">
-                <seg>(9 ct/min aus dem Festnetz der Dt. Telekom,</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>(9 cent/min su rete fissa Telecom tedesca</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>(9 ct/min in the landline network of Deutsche Telekom,</seg>
+                <seg></seg>
             </tuv>
         </tu>       
         <tu tuid='misc_telephone_3'>
             <tuv xml:lang="de">
-                <seg>evtl. abweichend aus Mobilnetzen)</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>tariffa eventualmente diversa su rete mobile)</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>potentially different prices in mobile networks)</seg>
+                <seg></seg>
             </tuv>
         </tu>
         <tu tuid='misc_groceries'>
@@ -195,10 +195,10 @@
                 <seg>Anbieten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Vendere</seg>
+                <seg>Offrire</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Sell</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_wholesale'>
@@ -206,21 +206,21 @@
                 <seg>Anbeote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>
         <tu tuid='misc_my_epelia'>
             <tuv xml:lang="de">
-                <seg>Mein Epelia</seg>
+                <seg>Meine OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il mio account Epelia</seg>
+                <seg>Il mio account OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>My Epelia</seg>
+                <seg>My OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='misc_wholesale'>
@@ -228,10 +228,10 @@
                 <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>
         <tu tuid='misc_orders'>
@@ -270,24 +270,24 @@
         </tu>
         <tu tuid='misc_categories'>
             <tuv xml:lang="de">
-                <seg>Gesuche</seg>
+                <seg>Spendengesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Categorie</seg>
+                <seg>Richieste di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Categories</seg>
+                <seg>Donation requests</seg>
             </tuv>
         </tu>
         <tu tuid='misc_all_categories'>
             <tuv xml:lang="de">
-                <seg>Alle Gesuche</seg>
+                <seg>Alle Spendengesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutte le categorie</seg>
+                <seg>Tutte le richieste di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>All categories</seg>
+                <seg>All requests for donations</seg>
             </tuv>
         </tu>
         <tu tuid='misc_bio_products'>
@@ -556,13 +556,13 @@
         </tu>
         <tu tuid='misc_trade_certificate'>
             <tuv xml:lang="de">
-                <seg>Gewerbebescheinigung</seg>
+                <seg>Nachweis der Gemeinnützigkeit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Licenza di commercio</seg>
+                <seg>Prova di stato di beneficenza</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Business registration certificate</seg>
+                <seg>Proof of charitable status</seg>
             </tuv>
         </tu>
         <tu tuid='misc_yes'>
@@ -755,13 +755,13 @@
         </tu>
         <tu tuid='product_buy'>
             <tuv xml:lang="de">
-                <seg>kaufen</seg>
+                <seg>Bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Acquista</seg>
+                <seg>Ordinare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Buy</seg>
+                <seg>Order</seg>
             </tuv>
         </tu>
         <tu tuid='product_delivery_costs_of'>
@@ -821,46 +821,46 @@
         </tu>
         <tu tuid='product_epelia_guarantee'>
             <tuv xml:lang="de">
-                <seg>Epelia Garantie</seg>
+                <seg>OpenFoodBank unterstützen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Garanzia Epelia</seg>
+                <seg>Supporta OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia warranty</seg>
+                <seg>Support OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_1'>
             <tuv xml:lang="de">
-                <seg>Bester Preis, da alle Produkte direkt vom Hersteller</seg>
+                <seg>Der OpenFoodBank- Marktplatz ist absolut kostenlos und ist daher auf freiwillige Spenden angewiesen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Miglior prezzo, perché tutti i prodotti sono venduti direttamente dal produttore</seg>
+                <seg>Il marketplace di OpenFoodBank è assolutamente gratuito e quindi si basa su donazioni volontarie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Best price, as all products come directly from the manufacturer</seg>
+                <seg>The OpenFoodBank- Marketplace is absolutely free and therefore relies on voluntary donations</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_2'>
             <tuv xml:lang="de">
-                <seg>Kein Zwischenlager, frischer geht's nicht</seg>
+                <seg>Wenn Sie unsere Idee von einem offenen und kostenlosen Lebensmittel- Spendenmarktplatz unterstützen möchten, freuen wir uns über Ihre Spende</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Nessun magazzino intermedio, prodotti più freschi che mai</seg>
+                <seg>Se desideri sostenere la nostra idea di un mercato per la donazione di cibo aperto e gratuito, non vediamo l'ora della tua donazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>No intermediate store, it couldn't be more fresh.</seg>
+                <seg>If you would like to support our idea of an open and free food donation marketplace, we look forward to your donation</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_3'>
             <tuv xml:lang="de">
-                <seg>Kostenloser Service, 0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
+                <seg>Fairdirect e.V., Verwendungszweck OpenFoodBank, IBAN:DE24 5136 1021 0004 6467 83 BIC:GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Servizio gratuito, 0180 EINKAUF (9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>Fairdirect e.V., destinazione d'uso OpenFoodBank, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Free service, 0180 EINKAUF (9 ct/min in the landline network of Deutsche Telekom; different prices can apply in mobile networks)</seg>
+                <seg>Fairdirect e.V., intended use OpenFoodBank, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
             </tuv>
         </tu>
         <tu tuid='search_no_results'>
@@ -975,13 +975,13 @@
         </tu>       
         <tu tuid='checkout_seller'>
             <tuv xml:lang="de">
-                <seg>Verkäufer</seg>
+                <seg>Spender</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Venditore</seg>
+                <seg>Donatore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Seller</seg>
+                <seg>Donor</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_total'>
@@ -1041,24 +1041,24 @@
         </tu>       
         <tu tuid='checkout_taxes_19'>
             <tuv xml:lang="de">
-                <seg>19,0% MwSt.</seg>
+                <seg>16,0% MwSt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>19,0% IVA</seg>
+                <seg>16,0% IVA</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>VAT 19.0%</seg>
+                <seg>VAT 16.0%</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_order'>
             <tuv xml:lang="de">
-                <seg>Kostenpflichtig bestellen</seg>
+                <seg>Verbindlich bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Procedi all'ordine</seg>
+                <seg>Ordine vincolante</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Order (subject to a charge)</seg>
+                <seg>Binding order</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_payment_type'>
@@ -1118,24 +1118,24 @@
         </tu>
         <tu tuid='checkout_continue_shopping'>
             <tuv xml:lang="de">
-                <seg>Einkauf fortsetzen</seg>
+                <seg>Bestellung fortsetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Continua a fare shopping</seg>
+                <seg>continuare l'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Proceed shopping</seg>
+                <seg>continue the order</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_headline'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihren Einkauf</seg>
+                <seg>Vielen Dank für Ihre Bestellung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per aver acquistato con noi</seg>
+                <seg>Grazie per il vostro ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Many thanks for your purchase</seg>
+                <seg>Many thanks for your order</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_success_ordered'>
@@ -1173,24 +1173,24 @@
         </tu>
         <tu tuid='checkout_success_prepay_2'>
             <tuv xml:lang="de">
-                <seg>Inhaber: Epelia Warenhandel Gattinger</seg>
+                <seg>Inhaber: Fairdirect e.V.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Intestatario: Epelia Warehandel Gattinger</seg>
+                <seg>Intestatario: Fairdirect e.V.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Owner: Epelia Warenhandel Gattinger</seg>
+                <seg>Owner: Fairdirect e.V.</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_3'>
             <tuv xml:lang="de">
-                <seg>Konto: 4647483</seg>
+                <seg>IBAN: DE24 5236 1021 0004 6474 83</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Conto: 4647483</seg>
+                <seg>IBAN: DE24 5236 1021 0004 6474 83</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Account No. 4647483</seg>
+                <seg>IBAN: DE24 5236 1021 0004 6474 83</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_4'>
@@ -1206,13 +1206,13 @@
         </tu>
         <tu tuid='checkout_success_prepay_5'>
             <tuv xml:lang="de">
-                <seg>Bankleitzahl: 51361021</seg>
+                <seg>BIC: GNODE51HHE</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Codice di identificazione della banca: 51361021</seg>
+                <seg>BIC: GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Sort code: 51361021</seg>
+                <seg>BIC: GENODE51HHE</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_6'>
@@ -1582,112 +1582,112 @@
         </tu>
         <tu tuid='sell_headline'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie Ihren eigenen Epelia Online-Shop</seg>
+                <seg>>Positionieren Sie Ihr Unternehmen klar im Kampf gegen Lebensmittelverschwendung<</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Vendere prodotti alimentari e beni per la casa e per la persona su Epelia</seg>
+                <seg>Posiziona chiaramente la tua azienda nella lotta allo spreco alimentare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Set up your own Epelia webshop</seg>
+                <seg>Donate remaining food now</seg>
             </tuv>
         </tu>
         <tu tuid='sell_1'>
             <tuv xml:lang="de">
-                <seg>Eigener Webshop</seg>
+                <seg>Zeigen Sie die von Ihrem Unternehmen real übernommene soziale und ökologische Verantwortung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il tuo negozio</seg>
+                <seg>Mostra la reale responsabilità sociale ed ecologica che la tua azienda si è assunta</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Own webshop</seg>
+                <seg>Show the real social and ecological responsibility your company has assumed</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_2'>
             <tuv xml:lang="de">
-                <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Produzentenprofil.</seg>
+                <seg>Als Teil des OpenFoodBank- Netzwerkes kann Ihr Unternehmen neutral und transparent real gespendete und somit gerettete Lebensmittelmengen über einem beliebigen Zeitraum nachweisen. Gerne auch durch offizielle OpenFoodBank- Zertifikate</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore.</seg>
+                <seg>Come parte della rete OpenFoodBank, la tua azienda può fornire prove neutre e trasparenti delle quantità di cibo effettivamente donate e quindi risparmiate in qualsiasi periodo di tempo. Anche con certificati ufficiali OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Use your Epelia seller account like your own online shop: with your food articles, images and producer profile.</seg>
+                <seg>As part of the OpenFoodBank network, your company can provide neutral and transparent proof of donated and thus saved food quantities over any period of time. You are welcome to also use our official OpenFoodBank certificates for this purpose.</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
             <tuv xml:lang="de">
-                <seg>Umsätze und Sichtbarkeit steigern</seg>
+                <seg>Gezielt bedürftige Menschen in der Region oder im In- und Ausland unterstützen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Aumenta il giro d'affari e la visibilità</seg>
+                <seg>Supporto mirato alle persone bisognose nella regione, nel proprio paese e all'estero</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Increase turnover and visibility</seg>
+                <seg>Targeted support to needy people regionally, in own country or worldwide</seg>
             </tuv>
         </tu>
         <tu tuid='sell_4'>
             <tuv xml:lang="de">
-                <seg>Optimierte Prozesse und die starke Marke von Epelia sorgen bei Ihnen für mehr Umsatz und mehr Kunden. Gute Suchmaschinenpositionen und eine aktive Käufer Community bringt Sie mit Ihren Produkten ins Gespräch. Sie erhalten mehr Aufmerksamkeit und mehr Reichweite im Internet.</seg>
+                <seg>Wenn Ihr Unternehmen gezielt Projekte im In- und Ausland durch Lebensmittelspenden unterstützen möchte, können Sie in den OpenFoodBank- Regionen gezielt nach Projekten suchen und Ihre Lebensmittelspende direkt der ausführenden, gemeinnützigen Organisationen zuführen. So kommt Ihre Lebensmittelspende genau dort an, wo Sie möchten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>I processi ottimizzati e il marchio Epelia vi procureranno un aumento delle vendite e un maggior numero di clienti. Un buon sistema di ricerca e una community di acquirenti contribuiscono a mettere in luce la vostra attività. Tutto ciò vi procurerà attenzione e un più ampio campo d'azione su internet.</seg>
+                <seg>Se la tua azienda desidera sostenere progetti specifici in patria e all'estero con donazioni di cibo, puoi cercare progetti specifici nelle regioni di OpenFoodBank e trasferire la tua donazione di cibo direttamente all'organizzazione non profit. Quindi il cibo che hai donato arriva esattamente dove vuoi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Optimized processes and the strong Epelia brand provide you with increased turnover and more customers. Good search engine positions and an active customer community make people talk about your products. You gain more attention and reach on the Internet.</seg>
+                <seg>If your company would like to specifically support projects inland or abroad through food donations, you can search the OpenFoodBank – regions for specific projects and send your food donation directly to the executing non-profit company. That way your food donations arrives exactly where you want.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_5'>
             <tuv xml:lang="de">
-                <seg>Faire und günstige Konditionen</seg>
+                <seg>Spenden über die Openfoodbank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Condizioni oneste e vantaggiose</seg>
+                <seg>Mediazione di donazioni gratuita</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Fair and low-priced contract conditions</seg>
+                <seg>Free donation brokerage</seg>
             </tuv>
         </tu>
         <tu tuid='sell_6'>
             <tuv xml:lang="de">
-                <seg>Nur 4% Verkaufsprovision. Keine Fixkosten. Keine Einrichtungsgebühr. Keine Vertragsbindung. Keine versteckten Kosten.</seg>
+                <seg>Mit der Unterstützung des OpenFoodBank- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Solo il 4% di commissioni sulle vendite. Nessun costo fisso. Nessun costo di apertura. Nessun accordo contrattuale. Nessun costo nascosto.</seg>
+                <seg>Con il supporto della  OpenFoodBank attraverso una semplice donazione digital di cibo in eccesso a organizzazioni senza scopo di lucro controllato. la tua azienda è chiaramente posizionando contro lo spreco alimentare. E il completamente senza costi, periodi contrattuali o adesione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Only 4% sales commission. No fixed fees. No setup fee. No minimum contract runtime. No hidden costs.</seg>
+                <seg>By supporting the OpenFoodBank network with a simple, digital delivery of surplus food to audited non-profit organisations at home and abroad, your company clearly positions itself against food waste. All without costs, minimum contract runtimes or membership obligations.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
             <tuv xml:lang="de">
-                <seg>Sichere Zahlungsabwicklung</seg>
+                <seg>Welche Lebensmittel können gespendet werden?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Pagamento sicuro</seg>
+                <seg>Quale cibo può essere donato?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Secure payment processing</seg>
+                <seg>What food items can be donated?</seg>
             </tuv>
         </tu>
         <tu tuid='sell_8'>
             <tuv xml:lang="de">
-                <seg>Für alle Bestellungen wickelt Epelia die Bezahlung ab und sorgt dafür, dass das Geld bei Ihnen ankommt. Wir bieten den Epelia Kunden mehrere Zahlungsarten an.</seg>
+                <seg>Typische Produkte sind Lebensmittel mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.Auch frische und/oder kühlpflichtige Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per tutti gli ordini Epelia si occupa del pagamento e fa sì che il denaro arrivi a voi. Offriamo ai clienti Epelia diversi metodi di pagamento.</seg>
+                <seg>I prodotti tipici sono alimenti con imballaggi danneggiati o etichettati in modo errato, danni causati da incidenti, difetti visivi, quantità di contenuto non corrette, una data di scadenza breve o breve, deviazioni nel gusto o da sovrapproduzione. Anche cibi freschi e /o refrigerati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia processes the payments of all orders and cares that you get your money. We offer several payment options to the Epelia customers.</seg>
+                <seg>Typical products are food items with damaged or falsely labelled packaging, products with average loss, visual flaws, wrong content quantity/amount, short or expired sell-by date, products with taste variations and left over products resulting from over production. Also fresh and /or refrigerated foods</seg>
             </tuv>
         </tu>
         <tu tuid='sell_9'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie Ihren Epelia Shop</seg>
+                <seg>Erstellen Sie Ihren OpenFoodBank Spendershop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Allestite il vostro negozio Epelia</seg>
+                <seg>Allestite il vostro negozio di donatori OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Create your Epelia shop</seg>
+                <seg>Create your OpenFoodBank donorshop</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_register'>
@@ -1703,35 +1703,35 @@
         </tu>       
         <tu tuid='sell_phone'>
             <tuv xml:lang="de">
-                <seg>Oder rufen Sie uns an: 0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
+                <seg>Für eine persönliche Beratung können Sie uns unter +49 6426 8630364 erreichen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>O telefonaci al: 0180 EINKAUF (01803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>Per una consulenza personalizzata, puoi contattarci al +49 6426 8630364</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Or call us: 0180 EINKAUF (01803 465283; 9 ct/min in the landline network of German Telekom; different prices can apply in mobile networks)</seg>
-            </tuv>
+                <seg>For personal advice, you can reach us at +49 6426 8630364</seg>
+                </tuv>
         </tu>
         <tu tuid='sell_register_headline'>
             <tuv xml:lang="de">
-                <seg>Informationen über Epelia anfordern</seg>
+                <seg>Informationen über das OpenFoodBank- Netzwerk anfordern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Richiedere informazioni su Epelia</seg>
+                <seg>Richiedi informazioni tramite la rete OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Request information about Epelia</seg>
+                <seg>Request information through the OpenFoodBank network</seg>
             </tuv>
         </tu>
         <tu tuid='sell_register_text'>
             <tuv xml:lang="de">
-                <seg>Sie interessieren sich für eine Teilnahme an unserem einzigartigen Markplatz für Lebensmittel? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
+                <seg>Sie möchten dem offenen Netzwerk für Lebensmittelspenden beitreten? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Sei interessato a diventare parte della nostra piattaforma commerciale? Iscriviti ora!</seg>
+                <seg>Vorresti unirti alla rete aperta per le donazioni di cibo? Quindi compila ora il modulo e ti contatteremo il prima possibile.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>You are interested to participate in our unique food marketplace? Just complete the form and we will contact you promptly.</seg>
+                <seg>Would you like to join the open network for food donations? Then fill out the form now and we will contact you as soon as possible.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_success_headline'>
@@ -1761,65 +1761,65 @@
                 <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso di beni alimentari e prodotti per la casa e per la persona</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale market for food and drugstore articles</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_1'>
             <tuv xml:lang="de">
-                <seg>Der Angebotsbereich ist die ideale und professionelle Möglichkeit für Gastronomie, Wiederverkäufer oder Produzenten größere Mengen Lebensmittel und Drogeriewaren zu ordern.</seg>
+                <seg>Der Angebotsbereich ist ausschließlich für die kostenlose Vermittlung von Lebensmittelspenden zwischen Akteuern entlang der Wertschöpfungskette "Lebensmittel" und gemeinnützigen Organisationen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il commercio all'ingrosso Epelia è l'opportunità ideale e professionale per il reparto gastronomico, rivenditori o produttori su ampia scala di ordinare beni alimentari e prodotti per la casa e per la persona.</seg>
+                <seg>L'area di offerta è esclusivamente per la mediazione gratuita di donazioni alimentari tra attori della filiera "alimentare" e organizzazioni no profit.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The Epelia wholesale marketplace is the ideal and professional possibility for gastrononmy, resellers and producers to order larger quantities of food and drugstore articles.</seg>
+                <seg>The online space for the free of charge procurement of food donations is exclusively accessible to stakeholders along the value chain “food items” and non-profit organisations.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_2'>
             <tuv xml:lang="de">
-                <seg>Nach einer kostenlosen Registrierung können Sie hier direkt, einfach und zum besten Preis bei vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten bestellen.</seg>
+                <seg>Nach einer kostenlosen Registrierung können Sie als gemeinnützige Organisation hier direkt, einfach und kostenlos Lebensmittelspenden von vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten bestellen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dopo la registrazione gratuita potrete ordinare direttamente dai produttori, al miglior prezzo e in tutta facilità.</seg>
+                <seg>Dopo esserti registrato gratuitamente, tu come organizzazione senza scopo di lucro puoi ordinare donazioni di cibo da molti produttori, fabbricanti, rivenditori, importatori diretti o produttori direttamente, facilmente e gratuitamente.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>After a cost-free registration, you can order here directly, comfortably and for best prices from many farmers, manufacturers, traders, direct importers or producers.</seg>
+                <seg>After a free registration you have a direct, simple and clearly arranged access to available food donations. As a non-profit organisation you can order food donations from many producers, manufactures, retailers and direct importers free of charge</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_3'>
             <tuv xml:lang="de">
-                <seg>Das Sortiment reicht von guten Standardprodukten, regionalen Spezialitäten über exotische Köstlichkeiten bis hin zu biologisch erzeugten Produkten. Viele Anbieter stellen sich und ihre Arbeitsweise, ihren Betrieb oder spezielle Herstellungsarten in ihren einenen Shops vor, so wissen Sie ganz genau, woher z.b. Ihr Fleisch kommt.</seg>
+                <seg>Typische Produkte sind Lebensmittel mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>L'assortimento varia da ottimi prodotti standard, specialità regionali, delizie esotiche, fino ad arrivare ai prodotti biologici. Moltissimi offerenti presentano il proprio modo di lavorare, la propria azienda o speciali metodi di produzione sulla pagina del proprio negozio, in modo che sappiate precisamente, ad esempio, da dove viene la carne che mangiate. </seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The product range covers good-quality standard products, regional specialties, exotic delicacies and also organically produced products. Many producers present themselves and their way of work, their company or special modes of manufacturing in their shop. This way, you'll know exactly where for example your meat is from.</seg>
+                <seg>Typical products are food items with damaged or falsely labelled packaging, products with average loss, visual flaws, wrong content quantity/amount, short or expired sell-by date, products with taste variations and left over products resulting from over production</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_4'>
             <tuv xml:lang="de">
-                <seg>Alle hier angebotenen Waren haben, wie überall auf Epelia, einen Herstellernachweis, wir mögen keine „produziert für“ Waren.</seg>
+                <seg>Als offenes Netzwerk retten wir gemeinsam Lebensmittel, stellen diese Bedürftigen auf der ganzen Welt zur Verfügung und helfen aktiv Klima-, Natur- und Umweltschäden zu reduzieren.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutti i prodotti messi in vendita qui, come su tutta la piattaforma Epelia, hanno una documentazione relativa alla produzione. Non amiamo la merce "prodotta per".</seg>
+                <seg>In quanto rete aperta, salviamo il cibo insieme, lo rendiamo disponibile a chi ne ha bisogno in tutto il mondo e aiutiamo attivamente a ridurre il clima, la natura e i danni ambientali.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>All products offered here carry a manufacturer identification, as everywhere on Epelia - we do not like “produced for” goods.</seg>
+                <seg>As an open network we save food together and distribute them to needy people around the world. We actively help to reduce damages caused to our climate, nature and environment</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_5'>
             <tuv xml:lang="de">
-                <seg>Der Epelia Angebotsbereich steht für frisch und direkt bei vielen einkaufen!</seg>
+                <seg>Als gemeinnützige Organisation haben Sie mit Ihrem Account Zugang zu den Spendenangeboten, können Spendengesuche eigenständig einstellen bzw. verwalten und Ihre Organisation potentiellen Spendern vorstellen und allgemeine Informationen wie z.B. Öffnungszeiten hinterlegen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>La piattaforma di commercio all'ingrosso di beni alimentari e prodotti per la persona e per la casa Epelia offre prodotti freschi e acquistabili direttamente dal produttore!</seg>
+                <seg>Dopo la registrazione come organizzazione non profit puoi inserire e gestire richieste di donazioni. Puoi presentare la tua organizzazione a potenziali donatori e offrire informazioni generali come gli orari di apertura e i luoghi in cui ricevere le donazioni. In questo modo puoi offrire ai clienti finali la donazione degli alimenti necessari direttamente sul posto.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The Epelia food wholesale market and drugstore wholesale market signifies purchasing freshly and diretly from many sellers.</seg>
+                <seg>After your registration as a non-profit organisation you can place and manage requests for donations. You can present your organisation to potential donors and offer general information like opening times and your places for receiving donations. Through this you can offer end customers to donate the needed food items directly on location.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_login_1'>
@@ -1849,10 +1849,10 @@
                 <seg>Alle Angebote anzeigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Mostra tutti i prodotti all'ingrosso</seg>
+                <seg>mostra tutte le offerte</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Show all wholesale products</seg>
+                <seg>Show all offers</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_register_headline'>
@@ -1860,15 +1860,15 @@
                 <seg>Anmeldung für den Angebotsbereich</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Registrazione per il settore del commercio all'ingrosso</seg>
+                <seg>Registrazione per l'area offerta</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Registration for the wholesale section</seg>
+                <seg>Registration for the offer area</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_register_text'>
             <tuv xml:lang="de">
-                <seg>Für den Einkauf von Angeboten müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns eine Gewerbebescheinigung entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
+                <seg>Für den Zugang zu den Spendenangeboten müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns einen Nachweis der Gemeinnützigkeit entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Per l'acquisto di prodotti all'ingrosso è necessario avere un account. Riempite il seguente modulo e inviateci una licenza di esercizio sia con il modulo che via fax al numero 06426-967338</seg>
@@ -1968,13 +1968,13 @@
         </tu>
         <tu tuid='allergies_headline'>
             <tuv xml:lang="de">
-                <seg>Epelia unterstützt Sie bei Lebensmittelallergien</seg>
+                <seg>Die OpenFoodBank unterstützt Sie bei Lebensmittelallergien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Epelia vi aiuta nelle allergie alimentari</seg>
+                <seg>OpenFoodBank vi aiuta nelle allergie alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia supports you if you suffer from food allergies.</seg>
+                <seg>OpenFoodBank supports you if you suffer from food allergies.</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_sub_1'>
@@ -2034,13 +2034,13 @@
         </tu>
         <tu tuid='bio_intro'>
             <tuv xml:lang="de">
-                <seg>Auf Epelia finden Sie biologisch erzeugte Lebensmittel, die Sie direkt beim Bio Bauern bestellen können. Alle unsere Bio Produzenten möchten für Sie unbelastete, gesunde und schmackhafte Lebensmittel erzeugen.</seg>
+                <seg>Auf OpenFoodBank finden Sie auch biologisch erzeugte Lebensmittel.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su Epelia trovate prodotti biologici, che potrete ordinare direttamente dagli agricoltori Bio. Tutti i nostri produttori Bio vogliono produrre per voi alimenti sani e gustosi.</seg>
+                <seg>Su OpenFoodBank trovate prodotti biologici.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>On Epelia, you can find certified organic food items which you can order directly from the organic producer. All our organic producers want to create unpolluted, healthy and tasty food for you.</seg>
+                <seg>On OpenFoodBank, you can find certified organic food.</seg>
             </tuv>
         </tu>
         <tu tuid='bio_show_all'>
@@ -2155,13 +2155,13 @@
         </tu>       
         <tu tuid='bio_list_outro'>
             <tuv xml:lang="de">
-                <seg>Die biologische Landwirtschaft und Verarbeiter von biologischen Lebensmitteln schonen die natürlichen Ressourcen und haben in vielen Bereichen positive Auswirkunegn auf die Umwelt. Treten Sie in Kontakt mit unseren Bio-Produzenten und entdecken Sie den Geschmack von Bio Käse, Bio Fleisch und vielen anderen Bio Lebensmitteln.</seg>
+                <seg>Alle Landwirte und Verarbeiter von biologisch erzeugten Lebensmittel auf der OpenFoodBank setzten sich gezielt gegen die Lebensmitelverschwendung ein!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>L'agricoltura biologica e le società di trasformazione di prodotti alimentari biologici hanno cura delle risorse naturali e hanno, in moltissimi campi, effetti positivi sull'ambiente. Entrate in contatto con i nostri produttori BIO e scoprite il gusto di formaggio, carne e moltissimi altri alimenti biologici</seg>
+                <seg>Tutti gli agricoltori e trasformatori di alimenti prodotti biologicamente nella campagna OpenFoodBank contro lo spreco alimentare!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Organic agriculture and processors of organic food spare natural resources and have positive effects on the environment in many areas. Get in touch with our organic producers and explore the taste of organic cheese, organic meat and many other organic food items.</seg>
+                <seg>All farmers and processors of biological produced food items as part of the OpenFoodBank Network specifically invest themselves to work against food wastage!</seg>
             </tuv>
         </tu>
         <tu tuid='bio_all_categories'>
@@ -2199,13 +2199,13 @@
         </tu>
         <tu tuid='discount_intro'>
             <tuv xml:lang="de">
-                <seg>Hier finden Sie Artikel, welche zu discountähnlichen Preisen angeboten werden. Alle Produkte sind mit Herstellerangabe, also keine "produziert für" Artikel und stammen direkt von Herstellern, Produzenten, Erzeuger oder Händler, welche diese vermarkten.</seg>
+                <seg>Hier finden Sie Artikel, welche zu discountähnlichen Preisen angeboten werden.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Qui trovate articoli che vengono messi in vendita a prezzi scontati. Tutti i prodotti sono con indicazioni dei produttori, quindi nessun articolo "prodotto per", e vengono direttamente da costruttori, produttori, ditte produttrici o commercianti, che commercializzano tali prodotti.</seg>
+                <seg>Qui trovate articoli che vengono messi in vendita a prezzi scontati.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Here you can find articles which are offered at rates similar to discount prices. All products carry a manufacturer indication (so, no “produced for” items) and come directly from manufacturers, producers, farmers or traders which market them.</seg>
+                <seg>Here you can find articles which are offered at rates similar to discount prices.</seg>
             </tuv>
         </tu>
         <tu tuid='discount_show_all'>
@@ -2276,13 +2276,13 @@
         </tu>
         <tu tuid='footer_about'>
             <tuv xml:lang="de">
-                <seg>Über Epelia</seg>
+                <seg>Über OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su di noi</seg>
+                <seg>Tramite OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About Epelia</seg>
+                <seg>About OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='footer_order'>
@@ -2386,13 +2386,13 @@
         </tu>
         <tu tuid='footer_sell'>
             <tuv xml:lang="de">
-                <seg>Für Verkäufer – Anbieten mit Epelia</seg>
+                <seg>Für Spender – Anbieten auf OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per i venditori – Vendere su Epelia</seg>
+                <seg>Per i donatori - offerta su OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>For sellers – sell with Epelia</seg>
+                <seg>For donors - offer on OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='footer_wholesale'>
@@ -2400,10 +2400,10 @@
                 <seg>Angebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Commercio all'ingrosso</seg>
+                <seg>Accordi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Wholesale</seg>
+                <seg>Offer</seg>
             </tuv>
         </tu>    
         <tu tuid='areasearch'>
@@ -2541,13 +2541,13 @@
         </tu>
         <tu tuid='shops_since'>
             <tuv xml:lang="de">
-                <seg>Bei Epelia seit</seg>
+                <seg>Auf OpenFoodBank seit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su Epelia da</seg>
+                <seg>Su OpenFoodBank da allora</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>On Epelia since</seg>
+                <seg>On OpenFoodBank since</seg>
             </tuv>
         </tu>
         <tu tuid='shops_more_about'>
@@ -2563,13 +2563,13 @@
         </tu>       
         <tu tuid='shops_our_products'>
             <tuv xml:lang="de">
-                <seg>In unserem Shop gibt es</seg>
+                <seg>Unsere Angebote/ Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Nel nostro negozio trovate</seg>
+                <seg>Le nostre offerte / richieste</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>In our shop you will find</seg>
+                <seg>Our offers / requests</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_about_us'>
@@ -2607,13 +2607,13 @@
         </tu>
         <tu tuid='shops_history'>
             <tuv xml:lang="de">
-                <seg>Gründungsgeschichte von</seg>
+                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Storia di</seg>
+                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>History of</seg>
+                <seg>Why do we support the OpenFoodBank network?</seg>
             </tuv>
         </tu>       
         <tu tuid='shops_delivery_costs'>
@@ -2706,13 +2706,13 @@
         </tu>
         <tu tuid='login_register_newsletter'>
             <tuv xml:lang="de">
-                <seg>Epelia Newsletter abonnieren</seg>
+                <seg>OpenFoodBank Newsletter abonnieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Abbonarsi alla newsletter Epelia</seg>
+                <seg>Abbonarsi alla newsletter OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Subscribe to the Epelia newsletter</seg>
+                <seg>Subscribe to the OpenFoodBank newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_register'>
@@ -2750,13 +2750,13 @@
         </tu>
         <tu tuid='login_left_headline'>
             <tuv xml:lang="de">
-                <seg>Ich habe ein Kundenkonto bei Epelia</seg>
+                <seg>Ich habe ein OpenFoodBank- Kundenkonto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ho un account cliente su Epelia</seg>
+                <seg>Ho un account cliente su OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>I have a customer account at Epelia</seg>
+                <seg>I have a customer account at OpenFoodBank</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_1'>
@@ -2772,13 +2772,13 @@
         </tu>       
         <tu tuid='login_list_2'>
             <tuv xml:lang="de">
-                <seg>Käuferschutz</seg>
+                <seg>Konfliktlösung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutela consumatori</seg>
+                <seg>Risoluzione del conflitto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Buyer protection</seg>
+                <seg>Conflict resolution</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_3'>
@@ -2794,13 +2794,13 @@
         </tu>
         <tu tuid='login_list_4'>
             <tuv xml:lang="de">
-                <seg>0180 EINKAUF (01803 465283; 9 ct/min aus dem Deutschen Festnetz; aus Mobilfunknetzen können abweichende Preise gelten)</seg>
+                <seg>+49 6426 8630364</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>0180 EINKAUF (+49 1803 465283; 9 ct/min da rete fissa tedesca; sulla rete mobile potrebbero essere applicate tariffe differenti)</seg>
+                <seg>+49 6426 8630364</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+49 180 EINKAUF (+49 1803 465283; 9 ct/min in the landline network of German Telekom; different rates might apply in mobile networks)</seg>
+                <seg>+49 6426 8630364</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_5'>
@@ -2816,13 +2816,13 @@
         </tu>
         <tu tuid='login_list_6'>
             <tuv xml:lang="de">
-                <seg>Lieferung vom Hersteller</seg>
+                <seg>Lebensmittelretter</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spedizione dal produttore</seg>
+                <seg>Risparmio di cibo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Delivered by the manufacturer</seg>
+                <seg>Food saver</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_7'>
@@ -2882,13 +2882,13 @@
         </tu>       
         <tu tuid='login_register_sell'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie hier ein neues Verkäuferkonto.</seg>
+                <seg>Erstellen Sie hier ein neues Lebensmittelspender- Konto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Creare un nuovo account venditore.</seg>
+                <seg>Crea qui un nuovo account per donatori di cibo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Register here a new seller account.</seg>
+                <seg>Create a new food donor account here</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_success_headline'>
@@ -2937,13 +2937,13 @@
         </tu>       
         <tu tuid='shoppingcart_addresses_error'>
             <tuv xml:lang="de">
-                <seg>Folgende Produkte können leider nicht in das ausgewählte Land geliefert werden:</seg>
+                <seg>Folgende Spenden können leider nicht in das ausgewählte Land geliefert werden:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spiacente, i seguenti prodotti non possono essere spediti nel paese selezionato</seg>
+                <seg>Purtroppo, le seguenti donazioni non possono essere inviate al Paese selezionato:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Unfortunately, the following products cannot be delivered to the chosen destination country:</seg>
+                <seg>Unfortunately, the following donations cannot be delivered to the selected country:</seg>
             </tuv>
         </tu>       
         <tu tuid='shoppingcart_addresses_delivery'>
@@ -3687,13 +3687,13 @@
         </tu>
         <tu tuid='business_shop_ltdkg'>
             <tuv xml:lang="de">
-                <seg>Ltd. und Co. KG.</seg>
+                <seg>UG</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ltd. <![CDATA[&]]> Co. S.a.s.</seg>
+                <seg>UG</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Ltd. and Co. KG (Ltd. in limited commercial partnership)</seg>
+                <seg>UG</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_ohg'>
@@ -3709,13 +3709,13 @@
         </tu>
         <tu tuid='business_shop_partg'>
             <tuv xml:lang="de">
-                <seg>PartG.</seg>
+                <seg>Gbr</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Partiti politici</seg>
+                <seg>Gbr</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>partnership company</seg>
+                <seg>Gbr</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_ev'>
@@ -3962,13 +3962,13 @@
         </tu>
         <tu tuid='business_shop_history'>
             <tuv xml:lang="de">
-                <seg>Gründungsgeschichte</seg>
+                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Storia</seg>
+                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>History</seg>
+                <seg>Why do we support the OpenFoodBank network?</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_philosophy'>
@@ -4183,24 +4183,24 @@
         </tu>
         <tu tuid='woma_woma_headline'>
             <tuv xml:lang="de">
-                <seg>Wochenmarkt editieren</seg>
+                <seg>Versandzelle editieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Editing mercato del contadino</seg>
+                <seg>Modifica cella di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Edit farmers market</seg>
+                <seg>Edit shipping cell</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_name'>
             <tuv xml:lang="de">
-                <seg>Wochenmarkt-Name</seg>
+                <seg>Versandzellen-Name</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Nome del mercato settimanale</seg>
+                <seg>Nome cella di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Farmers market name</seg>
+                <seg>Shipping cell name</seg>
             </tuv>
         </tu>
         <tu tuid='woma_woma_images_headline'>
@@ -4216,24 +4216,24 @@
         </tu>     
         <tu tuid='product_not_available'>
             <tuv xml:lang="de">
-                <seg>Produkt ist online nicht verfügbar.</seg>
+                <seg>Spendengesuch</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il prodotto non è disponibile online.</seg>
+                <seg>Richiesta di donazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The product is not available online.</seg>
+                <seg>Donation request</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_1'>
             <tuv xml:lang="de">
-                <seg>Herzlich willkommen auf unserem Wochenmarkt!</seg>
+                <seg>Herzlich willkommen in unserer Versandzelle</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Welcome to our Farmers Market!</seg>
+                <seg>Benvenuto nella nostra cella di spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Welcome to our Farmers Market!</seg>
+                <seg>Welcome to our shipping cell</seg>
             </tuv>
         </tu>       
         <tu tuid='index_about_2'>
@@ -4260,13 +4260,13 @@
         </tu>     
         <tu tuid='index_about_4'>
             <tuv xml:lang="de">
-                <seg>+ direkte Lieferung frisch zu Ihnen</seg>
+                <seg>+ kombinierte Lieferung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>+ fresco consegna diretta a loro</seg>
+                <seg>+ consegna combinata</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+ direct shipment fresh to you</seg>
+                <seg>+ combined delivery</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_more'>
@@ -4337,13 +4337,13 @@
         </tu>     
         <tu tuid='misc_cooperative'>
             <tuv xml:lang="de">
-                <seg>Genossenschaft</seg>
+                <seg>OpenFoodBank- Entwicklungsrat</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Cooperativa</seg>               
+                <seg>Consulenza per lo sviluppo di Open Food Bank</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>Cooperative</seg>
+                <seg>OpenFoodBank Development Council</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_help'>
@@ -4370,95 +4370,95 @@
         </tu>            
         <tu tuid='cooperative_headline'>
             <tuv xml:lang="de">
-                <seg>Epeliagenossenschaft</seg>
+                <seg>OpenFoodBank- Entwicklungsrat</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Epelia cooperativa</seg>
+                <seg>Consulenza per lo sviluppo di Open Food Bank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia cooperative</seg>
+                <seg>OpenFoodBank Development Council</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub'>
             <tuv xml:lang="de">
-                <seg>Wenn Ihnen die Idee hinter Epelia gefällt, dann werden sie doch ein Teil davon. Wir werden genossenschaftlich und suchen Menschen denen unsere Grundlagen wichtig sind:</seg>
+                <seg>Das komplett kostenlose OpenFoodBank- Netzwerk besteht als rein gemeinnützige Organisation aus engagierten, ehrenamtlichen Mitarbeitern. Wir suchen immer Unterstützer in den Bereichen:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Se vi piace l'idea dietro Epelia, non sono che una parte di esso. Siamo cooperativa e alla ricerca di persone in cui le nostre basi sono importanti:</seg>
+                <seg>Essendo un'organizzazione puramente senza scopo di lucro, la rete OpenFoodBank completamente gratuita è composta da molti volontari. Siamo sempre alla ricerca di sostenitori nelle seguenti aree:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>If you like the Idea of Epelia, why not become part of it? We will become a cooperative and look for people who value our basic principles:</seg>
+                <seg>The entirely free of charge OpenFoodBank network exists as a completely non-profit organisation, working with dedicated volunteers. We are always looking for supports in the following areas:</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_1'>
             <tuv xml:lang="de">
-                <seg>zentraler Einkauf ohne Zwischenhandel</seg>
+                <seg>Entwickler für die Open Source Software</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>centrale di committenza, senza scambi intermedi</seg>
+                <seg>Sviluppatore per il software open source</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>central purchasing without intermediary traders</seg>
+                <seg>Developer for the open source software</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_2'>
             <tuv xml:lang="de">
-                <seg>Lebensmittel mit Herkunftsnachweis</seg>
+                <seg>Fachleute aus dem Lebensmittelhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Cibo con prova dell'origine</seg>
+                <seg>Professionisti del retail alimentare</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>food with proof of origin</seg>
+                <seg>Food retail professionals</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_3'>
             <tuv xml:lang="de">
-                <seg>Förderung regionaler Strukturen</seg>
+                <seg>Vertriebsexperten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Promozione delle strutture regionali</seg>               
+                <seg>Esperti di vendita</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>supporting regional structures</seg>
+                <seg>Sales experts</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_4'>
             <tuv xml:lang="de">
-                <seg>respektvoller Umgang mit Lebensmitteln</seg>
+                <seg>Marketingexperten</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>cibo manipolazione rispettabile</seg>               
+                <seg>Esperti di marketing</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>dealing with food repectfully</seg>
+                <seg>Marketing experts</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_5'>
             <tuv xml:lang="de">
-                <seg>Unterstützung kleiner Produzenten</seg>
+                <seg>Logistiker</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Supporto per i piccoli produttori</seg>               
+                <seg>Logista</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>support for small-scale producers</seg>
+                <seg>Logistician</seg>
             </tuv>
         </tu>            
         <tu tuid='cooperative_sub_6'>
             <tuv xml:lang="de">
-                <seg>Mitspracherecht bei der weiteren Entwicklung von Epelia</seg>
+                <seg>Fundraiser</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dire l'ulteriore sviluppo di Epelia</seg>               
+                <seg>Raccolta fondi</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>a voice in the further development of Epelia</seg>
+                <seg>Fundraiser</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_7'>
             <tuv xml:lang="de">
-                <seg>Melden Sie sich unverbindlich für unseren Genossenschafts-Newsletter an und verpassen Sie so nicht die nächsten Schritte.</seg>
+                <seg>Bei Interesse melden Sie sich unverbindlich für unseren Entwickungsrat-Newsletter an.</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Iscriviti alla nostra newsletter obbligo cooperativa e vi perdete quindi non i passi successivi.</seg>               
@@ -4491,13 +4491,13 @@
         </tu>            
         <tu tuid='cooperative_suc_2'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihre Registrierung zum Genossenschafts-Newsletter.</seg>
+                <seg>Vielen Dank für Ihre Registrierung zum Entwicklungsrat-Newsletter</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per esserti registrato alla newsletter Epelia.</seg>               
+                <seg>Grazie per esserti registrato alla newsletter del Consiglio per lo sviluppo</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>Thank you for registering for the cooperative newsletter</seg>
+                <seg>Thank you for registering for the Development Council newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='language_de'>
@@ -4557,24 +4557,24 @@
         </tu>            
         <tu tuid='woma_next_offers'>
             <tuv xml:lang="de">
-                <seg>Angebote des nächsten Markttages</seg>
+                <seg>Angebote/ Gesuche</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Offerte del successivo giorno di mercato</seg>               
+                <seg>Offerte/ Richieste</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>Offers from the upcoming market day</seg>
+                <seg>Offers/ Requests</seg>
             </tuv>
         </tu> 
 	<tu tuid='woma_visit_us'>
   	     <tuv xml:lang="de">
-	         <seg>besuchen Sie unseren Wochenmarkt</seg>
+	         <seg>Annahmezeiten Lebensmittelspenden</seg>
              </tuv>
              <tuv xml:lang="it">
-                 <seg>visita il nostro mercato settimanale</seg>               
+                 <seg>Tempi di accettazione per donazioni di cibo</seg>               
              </tuv>
              <tuv xml:lang="en">
-                 <seg>visit our farmers market</seg>
+                 <seg>Acceptance times for food donations</seg>
              </tuv>
          </tu>            
          <tu tuid='woma_business_hours'>
