@@ -1610,7 +1610,7 @@
                 <seg>Come parte della rete OpenFoodBank, la tua azienda può fornire prove neutre e trasparenti delle quantità di cibo effettivamente donate e quindi risparmiate in qualsiasi periodo di tempo. Anche con certificati ufficiali OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>As part of the OpenFoodBank network, your company can provide neutral and transparent proof of donated and thus saved food quantities over any period of time. You are welcome to also use our official OpenFoodBank certificates for this purpose.</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
@@ -1632,7 +1632,7 @@
                 <seg>Se la tua azienda desidera sostenere progetti specifici in patria e all'estero con donazioni di cibo, puoi cercare progetti specifici nelle regioni di OpenFoodBank e trasferire la tua donazione di cibo direttamente all'organizzazione non profit. Quindi il cibo che hai donato arriva esattamente dove vuoi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>If your company would like to specifically support projects inland or abroad through food donations, you can search the OpenFoodBank – regions for specific projects and send your food donation directly to the executing non-profit company. That way your food donations arrives exactly where you want.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_5'>
@@ -1654,7 +1654,7 @@
                 <seg>Con il supporto della  OpenFoodBank attraverso una semplice donazione digital di cibo in eccesso a organizzazioni senza scopo di lucro controllato. la tua azienda è chiaramente posizionando contro lo spreco alimentare. E il completamente senza costi, periodi contrattuali o adesione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The OpenFoodBank is 100% free. No fixed fees. No setup fee. No minimum contract runtime. No hidden costs.</seg>
+                <seg>By supporting the OpenFoodBank network with a simple, digital delivery of surplus food to audited non-profit organisations at home and abroad, your company clearly positions itself against food waste. All without costs, minimum contract runtimes or membership obligations.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
@@ -1665,7 +1665,7 @@
                 <seg>Quale cibo può essere donato?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>What food can be donated?</seg>
+                <seg>What food items can be donated?</seg>
             </tuv>
         </tu>
         <tu tuid='sell_8'>
