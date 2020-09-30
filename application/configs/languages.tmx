@@ -82,13 +82,13 @@
         </tu>       
         <tu tuid='misc_help'>
             <tuv xml:lang="de">
-                <seg>Hilfe</seg>
+                <seg>FAQ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Aiuto</seg>
+                <seg>FAQ</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Help</seg>
+                <seg>FAQ</seg>
             </tuv>
         </tu>       
         <tu tuid='misc_about'>
