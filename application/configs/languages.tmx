@@ -2405,7 +2405,18 @@
             <tuv xml:lang="en">
                 <seg>Offer</seg>
             </tuv>
-        </tu>    
+        </tu>
+        <tu tuid='footer_collaborate'>
+            <tuv xml:lang="de">
+                <seg>Entwicklungsrat</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Consiglio di sviluppo</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Development Council</seg>
+            </tuv>
+        </tu>
         <tu tuid='areasearch'>
             <tuv xml:lang="de">
                 <seg>Umkreissuche</seg>
