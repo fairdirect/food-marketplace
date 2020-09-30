@@ -2287,13 +2287,13 @@
         </tu>
         <tu tuid='footer_order'>
             <tuv xml:lang="de">
-                <seg>Bestellen</seg>
+                <seg>FAQ</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ordinare</seg>
+                <seg>FAQ</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Ordering</seg>
+                <seg>FAQ</seg>
             </tuv>
         </tu>
         <tu tuid='footer_payment'>
