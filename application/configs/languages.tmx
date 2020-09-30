@@ -1582,10 +1582,10 @@
         </tu>
         <tu tuid='sell_headline'>
             <tuv xml:lang="de">
-                <seg><<Spenden Sie jetzt übrige Lebensmittel</seg>
+                <seg>>Positionieren Sie Ihr Unternehmen klar im Kampf gegen Lebensmittelverschwendung<</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dona ora il cibo rimanente</seg>
+                <seg>Posiziona chiaramente la tua azienda nella lotta allo spreco alimentare</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>Donate remaining food now</seg>
@@ -1593,51 +1593,51 @@
         </tu>
         <tu tuid='sell_1'>
             <tuv xml:lang="de">
-                <seg>Spenden statt entsorgen</seg>
+                <seg>Zeigen Sie die von Ihrem Unternehmen real übernommene soziale und ökologische Verantwortung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dona invece di buttare via</seg>
+                <seg>Mostra la reale responsabilità sociale ed ecologica che la tua azienda si è assunta</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Donate instead of throwing away</seg>
+                <seg>Show the real social and ecological responsibility your company has assumed</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_2'>
             <tuv xml:lang="de">
-                <seg>Verwenden Sie Ihr Epelia Verkäufer-Konto wie Ihren eigenen Online-Shop: mit Ihren Lebensmitteln, Produktbildern und Ihrem Anbieterprofil.</seg>
+                <seg>Als Teil des OpenFoodBank- Netzwerkes kann Ihr Unternehmen neutral und transparent real gespendete und somit gerettete Lebensmittelmengen über einem beliebigen Zeitraum nachweisen. Gerne auch durch offizielle OpenFoodBank- Zertifikate</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Utilizza il tuo account venditore su Epelia con fosse un vero e proprio Online-Shop, con i tuoi prodotti, immagini dei prodotti e profilo produttore.</seg>
+                <seg>Come parte della rete OpenFoodBank, la tua azienda può fornire prove neutre e trasparenti delle quantità di cibo effettivamente donate e quindi risparmiate in qualsiasi periodo di tempo. Anche con certificati ufficiali OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Use your Epelia seller account like your own online shop: with your food articles, images and producer profile.</seg>
+                <seg></seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
             <tuv xml:lang="de">
-                <seg>Umsätze und Sichtbarkeit steigern</seg>
+                <seg>Gezielt bedürftige Menschen in der Region oder im In- und Ausland unterstützen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Aumenta il giro d'affari e la visibilità</seg>
+                <seg>Supporto mirato alle persone bisognose nella regione, nel proprio paese e all'estero</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Increase turnover and visibility</seg>
+                <seg>Targeted support to needy people regionally, in own country or worldwide</seg>
             </tuv>
         </tu>
         <tu tuid='sell_4'>
             <tuv xml:lang="de">
-                <seg>Optimierte Prozesse und die starke Marke von Epelia sorgen bei Ihnen für mehr Umsatz und mehr Kunden. Gute Suchmaschinenpositionen und eine aktive Käufer Community bringt Sie mit Ihren Produkten ins Gespräch. Sie erhalten mehr Aufmerksamkeit und mehr Reichweite im Internet.</seg>
+                <seg>Wenn Ihr Unternehmen gezielt Projekte im In- und Ausland durch Lebensmittelspenden unterstützen möchte, können Sie in den OpenFoodBank- Regionen gezielt nach Projekten suchen und Ihre Lebensmittelspende direkt der ausführenden, gemeinnützigen Organisationen zuführen. So kommt Ihre Lebensmittelspende genau dort an, wo Sie möchten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>I processi ottimizzati e il marchio Epelia vi procureranno un aumento delle vendite e un maggior numero di clienti. Un buon sistema di ricerca e una community di acquirenti contribuiscono a mettere in luce la vostra attività. Tutto ciò vi procurerà attenzione e un più ampio campo d'azione su internet.</seg>
+                <seg>Se la tua azienda desidera sostenere progetti specifici in patria e all'estero con donazioni di cibo, puoi cercare progetti specifici nelle regioni di OpenFoodBank e trasferire la tua donazione di cibo direttamente all'organizzazione non profit. Quindi il cibo che hai donato arriva esattamente dove vuoi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Optimized processes and the strong Epelia brand provide you with increased turnover and more customers. Good search engine positions and an active customer community make people talk about your products. You gain more attention and reach on the Internet.</seg>
+                <seg></seg>
             </tuv>
         </tu>
         <tu tuid='sell_5'>
             <tuv xml:lang="de">
-                <seg>Kostenlose Spendenvermittlung</seg>
+                <seg>Spenden über die Openfoodbank</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Mediazione di donazioni gratuita</seg>
@@ -1648,10 +1648,10 @@
         </tu>
         <tu tuid='sell_6'>
             <tuv xml:lang="de">
-                <seg>Die OpenFoodBank ist 100% Kostenlos. Keine Provision. Keine Fixkosten. Keine Einrichtungsgebühr. Keine Vertragsbindung. Keine versteckten Kosten.</seg>
+                <seg>Mit der Unterstützung des OpenFoodBank- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>OpenFoodBank è gratuito al 100%. Nessuna disposizione. Nessun costo fisso. Nessun costo di installazione. Nessun contratto. Nessun costo nascosto.</seg>
+                <seg>Con il supporto della  OpenFoodBank attraverso una semplice donazione digital di cibo in eccesso a organizzazioni senza scopo di lucro controllato. la tua azienda è chiaramente posizionando contro lo spreco alimentare. E il completamente senza costi, periodi contrattuali o adesione</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>The OpenFoodBank is 100% free. No fixed fees. No setup fee. No minimum contract runtime. No hidden costs.</seg>
@@ -1659,35 +1659,35 @@
         </tu>
         <tu tuid='sell_7'>
             <tuv xml:lang="de">
-                <seg>Sichere Zahlungsabwicklung</seg>
+                <seg>Welche Lebensmittel können gespendet werden?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Pagamento sicuro</seg>
+                <seg>Quale cibo può essere donato?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Secure payment processing</seg>
+                <seg>What food can be donated?</seg>
             </tuv>
         </tu>
         <tu tuid='sell_8'>
             <tuv xml:lang="de">
-                <seg>Für alle Bestellungen wickelt Epelia die Bezahlung ab und sorgt dafür, dass das Geld bei Ihnen ankommt. Wir bieten den Epelia Kunden mehrere Zahlungsarten an.</seg>
+                <seg>Typische Produkte sind Lebensmittel mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.Auch frische und/oder kühlpflichtige Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per tutti gli ordini Epelia si occupa del pagamento e fa sì che il denaro arrivi a voi. Offriamo ai clienti Epelia diversi metodi di pagamento.</seg>
+                <seg>I prodotti tipici sono alimenti con imballaggi danneggiati o etichettati in modo errato, danni causati da incidenti, difetti visivi, quantità di contenuto non corrette, una data di scadenza breve o breve, deviazioni nel gusto o da sovrapproduzione. Anche cibi freschi e /o refrigerati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Epelia processes the payments of all orders and cares that you get your money. We offer several payment options to the Epelia customers.</seg>
+                <seg>Typical products are food items with damaged or falsely labelled packaging, products with average loss, visual flaws, wrong content quantity/amount, short or expired sell-by date, products with taste variations and left over products resulting from over production. Also fresh and /or refrigerated foods</seg>
             </tuv>
         </tu>
         <tu tuid='sell_9'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie Ihren OpenFoodBank Shop</seg>
+                <seg>Erstellen Sie Ihren OpenFoodBank Spendershop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Allestite il vostro negozio OpenFoodBank</seg>
+                <seg>Allestite il vostro negozio di donatori OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Create your OpenFoodBank shop</seg>
+                <seg>Create your OpenFoodBank donorshop</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_register'>
