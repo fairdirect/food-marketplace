@@ -1,7 +1,15 @@
+####
+# Temporary access protection; see .htpasswd for the credentials.
+####
+AuthUserFile /var/www/clients/client5/web24/web/public/.htpasswd
+AuthType Basic
+AuthName "OpenFoodBank"
+require valid-user
+
 
 RewriteEngine On
 
-# Rewrite everything to use HTTPS. (m.ansorg@epelia.com, 2014-07-16)
+# Rewrite everything to use HTTPS. (matthias@ansorgs.de, 2014-07-16)
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # Redirect processing stops after HTTPS rewrite match (L=Last) because prepending protocol 
