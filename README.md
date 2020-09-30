@@ -6,6 +6,7 @@
 
 **[3. Usage](#4-usage)**
 
+
 ## 1. Introduction
 
 **Overview.** The OpenFoodBank Marktplace platform is an open source marketplace software specially made for food donations. 
@@ -14,18 +15,24 @@
 
 * [openfoodbank.net](http://openfoodbank.net) shows the software as a donations in kind marketplace. Please [contact me by e-mail](mailto:mail@michagattinger.de) to get access.
 
+
 **Changes for the Fairdirect online marketplace- software:**
 
-- A closed area for the procurement of large donations of food items between donors and a registered group (non-profit organizations)
+* A closed area for the procurement of large donations of food items between donors and a registered group (non-profit organizations).
 
-- A function for placing a request for particular food items in the public area
+* **Regions.** Currently 105 countries are divided into regions. For all these regions postal codes are stored in the database. Therefore each address can be contacted to a region automatically. This allows for many autonomous regions in one marketplace, all regions are connected to a shopping cart and a checkout. 
 
-- Complete market place set up without prices
+* **Specialized on food.** Unlike any other open source marketplace software that we know (like [Fairmondo](https://github.com/fairmondo/fairmondo)), Epelia is specialized software for online food sales. As such, it provides features such as searching for allergene-free products (by allergene), designation of products from controlled organic farming etc..
 
-- Click and Collect as a standard distribution option
+* A function for placing a request for particular food items in the public area
 
-- Perpetration for the transportation market place under development
+* Complete market place set up without prices
 
+* Click and Collect as a standard distribution option
+
+* Implementation of the transportation logistics features is under development
+
+* **Offering, ordering and delivering donations of surplus food.** In this case, the marketplace is not used for selling but for utlizing surplus food. Like any marketplace, there can be several parties offering and several parties ordering what is on offer. The development of these features was initiated during the [#WeVsVirus Hackathon](https://wirvsvirushackathon.org/) in March 2020 as project [Tafeln Reorganisation Akquise](https://devpost.com/software/online-lebensmittel-aquise-fur-die-tafeln-fairdirect). 
 
 **Copyright.** Copyright 2020 by the OpenFoodBank- onlinemarketplace developer. Contributor:
 
@@ -46,7 +53,6 @@ The unreleased code is necessary for a functional installation. However, our cur
 **Trademarks.** This code still uses the "Epelia" brand name in some places, though this will be phased out eventually. Epelia is a registered trademark of [Micha Gattinger](mailto:mail@michagattinger.de). You are welcome to create and distribute derivative versions of this software, but you have to give your derivative a different name. This means, replace all occurrences of "Epelia" with a different name, replace all occurrences of the Epelia logo with your own logo, and do not give any impression that your derivative version is the official Epelia software or endorsed by it.
 
 
-
 ## 2. Installation
 
 There is nothing special about it:
@@ -61,7 +67,3 @@ There is nothing special about it:
 
 Before providing a platform based on the Epelia software to the public, please update all dependencies. There might be security vulnerabilities in the current state of the software as the dependencies have not been updated in quite some time.
 
-
-## 4. Usage
-
-TODO

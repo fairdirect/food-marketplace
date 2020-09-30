@@ -26,5 +26,3 @@ RewriteRule ^.*$ - [NC,L]
 # (Also results in 404 messages being generated with the site's layout intact.)
 RewriteRule ^.*$ index.php [NC,L]
 
-
-
