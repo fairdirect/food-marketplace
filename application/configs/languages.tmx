@@ -832,13 +832,13 @@
         </tu>
         <tu tuid='product_epelia_1'>
             <tuv xml:lang="de">
-                <seg>Dieser Marktplatz ist absolut kostenlos und ist daher auf freiwillige Spenden angewiesen</seg>
+                <seg>Der OpenFoodBank- Marktplatz ist absolut kostenlos und ist daher auf freiwillige Spenden angewiesen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Questo marketplace è assolutamente gratuito e quindi si basa su donazioni volontarie</seg>
+                <seg>Il marketplace di OpenFoodBank è assolutamente gratuito e quindi si basa su donazioni volontarie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>This marketplace is absolutely free and therefore relies on voluntary donations</seg>
+                <seg>The OpenFoodBank- Marketplace is absolutely free and therefore relies on voluntary donations</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_2'>
