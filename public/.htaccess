@@ -1,11 +1,10 @@
 ####
 # Temporary access protection; see .htpasswd for the credentials.
 ####
-AuthUserFile /var/www/clients/client5/web24/web/public/.htpasswd
-AuthType Basic
-AuthName "OpenFoodBank"
-require valid-user
-
+# AuthUserFile /var/www/clients/client5/web24/web/public/.htpasswd
+# AuthType Basic
+# AuthName "OpenFoodBank"
+# require valid-user
 
 RewriteEngine On
 
