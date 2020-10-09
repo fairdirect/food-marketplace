@@ -60,13 +60,13 @@
         </tu>
         <tu tuid='misc_business'>
             <tuv xml:lang="de">
-                <seg>Mein Shop</seg>
+                <seg>Mein Spendenshop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Mio Negozio</seg>
+                <seg>Mio Negozio di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>My Shop</seg>
+                <seg>My Donation shop</seg>
             </tuv>
         </tu>
         <tu tuid='misc_admin'>
@@ -203,13 +203,13 @@
         </tu>       
         <tu tuid='misc_wholesale'>
             <tuv xml:lang="de">
-                <seg>Anbeote</seg>
+                <seg>Spendenangebote</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Accordi</seg>
+                <seg>Offerte di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Offer</seg>
+                <seg>Donation offers</seg>
             </tuv>
         </tu>
         <tu tuid='misc_my_epelia'>
@@ -2607,13 +2607,13 @@
         </tu>
         <tu tuid='shops_procedure'>
             <tuv xml:lang="de">
-                <seg>Arbeitsweise</seg>
+                <seg>Öffnungszeiten Annahmestelle</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Modo di lavorare</seg>
+                <seg>Orario di apertura punto di accettazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Way of working</seg>
+                <seg>Opening times acceptance point</seg>
             </tuv>
         </tu>
         <tu tuid='shops_history'>
@@ -2948,13 +2948,13 @@
         </tu>       
         <tu tuid='shoppingcart_addresses_error'>
             <tuv xml:lang="de">
-                <seg>Folgende Spenden können leider nicht in das ausgewählte Land geliefert werden:</seg>
+                <seg>Folgende Spenden stehen leider nicht für das ausgewählte Land zur Verfügung:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Purtroppo, le seguenti donazioni non possono essere inviate al Paese selezionato:</seg>
+                <seg>Le seguenti donazioni purtroppo non sono disponibili per il paese selezionato:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Unfortunately, the following donations cannot be delivered to the selected country:</seg>
+                <seg>The following donations are unfortunately not available for the selected country:</seg>
             </tuv>
         </tu>       
         <tu tuid='shoppingcart_addresses_delivery'>
@@ -3764,13 +3764,13 @@
         </tu>
         <tu tuid='business_shop_address'>
             <tuv xml:lang="de">
-                <seg>Firmenadresse</seg>
+                <seg>Adresse der Organisation</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Indirizzo dell'azienda</seg>
+                <seg>Indirizzo dell'organizzazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>company address</seg>
+                <seg>Organization address</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_taxnumber'>
@@ -3830,13 +3830,13 @@
         </tu>
         <tu tuid='business_shop_office'>
             <tuv xml:lang="de">
-                <seg>Firmensitz</seg>
+                <seg>Sitz der Organisation</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Sede dell'azienda</seg>
+                <seg>Sede dell'organizzazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Registered seat of the company</seg>
+                <seg>Headquarters of the organization</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_representative'>
@@ -3874,7 +3874,7 @@
         </tu>
         <tu tuid='business_shop_company_data'>
             <tuv xml:lang="de">
-                <seg>Firmendaten</seg>
+                <seg>Organisationsdaten</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Dati dell'azienda</seg>
@@ -3995,13 +3995,13 @@
         </tu>       
         <tu tuid='business_shop_procedure'>
             <tuv xml:lang="de">
-                <seg>Arbeitsweise</seg>
+                <seg>Öffnungszeiten der Warenannahme</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Modo di lavorare</seg>
+                <seg>Orari di apertura per la ricezione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Mode of working</seg>
+                <seg>Opening times for receiving</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_additional'>
@@ -4150,13 +4150,13 @@
         </tu>
         <tu tuid='myepelia_orders_waiting'>
             <tuv xml:lang="de">
-                <seg>Warten auf Zahlungseingang</seg>
+                <seg>Warten auf Bestellbestätigung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>In attesa di pagamento</seg>
+                <seg>In attesa di conferma d'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Waiting for payment</seg>
+                <seg>Waiting for order confirmation</seg>
             </tuv>
         </tu>       
         <tu tuid='myepelia_orders_in_process'>
@@ -4172,13 +4172,13 @@
         </tu>
         <tu tuid='myepelia_orders_complete'>
             <tuv xml:lang="de">
-                <seg>Versendet</seg>
+                <seg>Versandbereit/ Abholbereit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spedito</seg>
+                <seg>Pronto per la spedizione/ Pronto per il ritiro</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Shipped</seg>
+                <seg>Ready for dispatch / collection</seg>
             </tuv>
         </tu>
         <tu tuid='misc_woma'>
@@ -4249,13 +4249,13 @@
         </tu>       
         <tu tuid='index_about_2'>
             <tuv xml:lang="de">
-                <seg>+ in verschiedenen Shops einkaufen</seg>
+                <seg>+ in verschiedenen Shops bestellen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>+ acquisti in diversi negozi</seg>
+                <seg>+ Ordina in diversi negozi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+ purchase from different shops</seg>
+                <seg>+ Order in different shops</seg>
             </tuv>
         </tu>     
         <tu tuid='index_about_3'>
@@ -4271,13 +4271,13 @@
         </tu>     
         <tu tuid='index_about_4'>
             <tuv xml:lang="de">
-                <seg>+ kombinierte Lieferung</seg>
+                <seg>+ kombinierter Warenausgang</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>+ consegna combinata</seg>
+                <seg>+ emissione di merci combinate</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>+ combined delivery</seg>
+                <seg>+ combined goods issue</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_more'>
