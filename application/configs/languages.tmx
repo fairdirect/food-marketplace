@@ -1329,13 +1329,13 @@
         </tu>       
         <tu tuid='orders_headline'>
             <tuv xml:lang="de">
-                <seg>Warten auf Bestellbestätigung vom Spender:</seg>
+                <seg>Bestellübersicht</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>In attesa della conferma d'ordine del donatore:</seg>
+                <seg>Orders Overview</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Waiting for order confirmation from donor:</seg>
+                <seg>Orders Overview</seg>
             </tuv>
         </tu>       
         <tu tuid='orders_open'>
@@ -4150,27 +4150,16 @@
         </tu>
         <tu tuid='myepelia_orders_waiting'>
             <tuv xml:lang="de">
-                <seg>Warten auf Bestellbestätigung</seg>
+                <seg>Warten auf Bestellbestätigung vom Spender</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>In attesa di conferma d'ordine</seg>
+                <seg>In attesa della conferma d'ordine del donatore</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Waiting for order confirmation</seg>
+                <seg>Waiting for order confirmation from donor</seg>
             </tuv>
         </tu>       
         <tu tuid='myepelia_orders_in_process'>
-            <tuv xml:lang="de">
-                <seg>In Bearbeitung</seg>
-            </tuv>
-            <tuv xml:lang="it">
-                <seg>In progress</seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg>In progress</seg>
-            </tuv>
-        </tu>
-        <tu tuid='myepelia_orders_complete'>
             <tuv xml:lang="de">
                 <seg>Versandbereit/ Abholbereit</seg>
             </tuv>
@@ -4179,6 +4168,17 @@
             </tuv>
             <tuv xml:lang="en">
                 <seg>Ready for dispatch / collection</seg>
+            </tuv>
+        </tu>
+        <tu tuid='myepelia_orders_complete'>
+            <tuv xml:lang="de">
+                <seg>Abgeschlossene Bestellungen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Ordini completati</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Completed orders</seg>
             </tuv>
         </tu>
         <tu tuid='misc_woma'>
