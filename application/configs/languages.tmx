@@ -96,7 +96,7 @@
                 <seg>Über OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su di noi</seg>
+                <seg>Tramite OpenFoodBank</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>About OpenFoodBank</seg>
@@ -1648,13 +1648,13 @@
         </tu>
         <tu tuid='sell_6'>
             <tuv xml:lang="de">
-                <seg>Mit der Unterstützung des OpenFoodBank- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
+                <seg>Mit der Unterstützung des OpenFoodBank- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland und zertifizierte Secondfood- Produzenten (zur Haltbarmachung von frischen oder schnell verderblichen Lebensmittel) positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Con il supporto della  OpenFoodBank attraverso una semplice donazione digital di cibo in eccesso a organizzazioni senza scopo di lucro controllato. la tua azienda è chiaramente posizionando contro lo spreco alimentare. E il completamente senza costi, periodi contrattuali o adesione</seg>
+                <seg>Con il supporto della rete OpenFoodBank attraverso una semplice consegna digitale di cibo in eccedenza a organizzazioni non profit controllate in Germania e all'estero e produttori di Secondfood certificati (per conservare alimenti freschi o deperibili), la tua azienda si sta chiaramente posizionando contro lo spreco alimentare. E tutto questo senza costi, periodi contrattuali o adesione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>By supporting the OpenFoodBank network with a simple, digital delivery of surplus food to audited non-profit organisations at home and abroad, your company clearly positions itself against food waste. All without costs, minimum contract runtimes or membership obligations.</seg>
+                <seg>By supporting the OpenFoodBank network through a simple, digital delivery of surplus food to exclusively audited, non-profit organizations at home and abroad and certified Secondfood producers (to preserve fresh or quickly perishable food), your company clearly positions itself against food waste. And this completely without costs, contract periods or membership</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
@@ -1769,13 +1769,13 @@
         </tu>
         <tu tuid='wholesale_text_1'>
             <tuv xml:lang="de">
-                <seg>Der Angebotsbereich ist ausschließlich für die kostenlose Vermittlung von Lebensmittelspenden zwischen Akteuern entlang der Wertschöpfungskette "Lebensmittel" und gemeinnützigen Organisationen.</seg>
+                <seg>Der Angebotsbereich ist ausschließlich für die kostenlose Vermittlung von Lebensmittelspenden zwischen Akteuern entlang der Wertschöpfungskette "Lebensmittel" und gemeinnützigen Organisationen. Frische oder nur kurz haltbere Lebensmittel können auch an zertifizierte Secondfood- Produzenten vermittelt werden</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>L'area di offerta è esclusivamente per la mediazione gratuita di donazioni alimentari tra attori della filiera "alimentare" e organizzazioni no profit.</seg>
+                <seg>L'area di offerta è esclusivamente per la mediazione gratuita di donazioni alimentari tra attori della filiera "alimentare" e organizzazioni no profit. Anche alimenti freschi o di breve durata possono essere veicolati a produttori di second food certificati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The online space for the free of charge procurement of food donations is exclusively accessible to stakeholders along the value chain “food items” and non-profit organisations.</seg>
+                <seg>The online space for the free of charge procurement of food donations is exclusively accessible to stakeholders along the value chain “food items” and non-profit organisations. Fresh or only short-lasting food can also be conveyed to certified second food producers</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_2'>
@@ -2243,13 +2243,13 @@
         </tu>       
         <tu tuid='index_2'>
             <tuv xml:lang="de">
-                <seg>Besuchen Sie unseren Shop</seg>
+                <seg>Besuchen Sie unseren Spendenshop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Visitate il nostro negozio</seg>
+                <seg>Visitate il nostro negozio di donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Visit our shop</seg>
+                <seg>Visit our donation shop</seg>
             </tuv>
         </tu>       
         <tu tuid='index_3'>
@@ -2596,13 +2596,13 @@
         </tu>
         <tu tuid='shops_philosophy'>
             <tuv xml:lang="de">
-                <seg>Unsere Philosophie</seg>
+                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>La nostra filosofia</seg>
+		    <seg>Perché supportiamo la rete OpenFoodBank?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Our philosophy</seg>
+                <seg>Why do we support the OpenFoodBank network?</seg>
             </tuv>
         </tu>
         <tu tuid='shops_procedure'>
@@ -2618,13 +2618,13 @@
         </tu>
         <tu tuid='shops_history'>
             <tuv xml:lang="de">
-                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
+                <seg>Philosophie von </seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
+                <seg>Filosofia di </seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Why do we support the OpenFoodBank network?</seg>
+                <seg>Philosophy of </seg>
             </tuv>
         </tu>       
         <tu tuid='shops_delivery_costs'>
@@ -3267,13 +3267,13 @@
         </tu>
         <tu tuid='business_orders_price_delivery'>
             <tuv xml:lang="de">
-                <seg>Versandkosten</seg>
+                <seg>Versandkosten/ Spendenberechtigungen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spese di spedizione</seg>
+                <seg>Spese di spedizione/diritti di donazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Shipment costs</seg>
+                <seg>Shipping costs/ donation entitlements</seg>
             </tuv>
         </tu>
 
@@ -3323,24 +3323,24 @@
         </tu>
         <tu tuid='business_delivery_headline'>
             <tuv xml:lang="de">
-                <seg>Versandkosten ändern</seg>
+                <seg>Versandkosten/ Spendenberechtigungen ändern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Modifica le spese di spedizione</seg>
+                <seg>Modificare i costi di spedizione/diritti dei donatori</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Modify shipment costs</seg>
+                <seg>Change shipping costs/ donation authorizations</seg>
             </tuv>
         </tu>
         <tu tuid='business_delivery_text'>
             <tuv xml:lang="de">
-                <seg>Es ist nur möglich in Länder zu versenden, wenn Versandkosten für dieses Land angegeben sind. Für kostenlosen Versand "0" eintragen. Das Feld "Kostenfrei ab" ist optional.</seg>
+                <seg>Über die Eingabe hier können Sie entscheiden, in welche Länder Sie ihre Lebensmittel spenden möchten. Die Auswahl der Länder erfolgt, wenn Sie in den gewünschten Ländern min. eine "0" eintragen. Optional können Sie einen kostenlosen und kostenpflichtigen Versand anbieten. Geben Sie keinen wert an, kann der Nutzer aus diesem Land keine Bestellung bei Ihnen tätigen!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>È possibile effettuare spedizioni solo nei Paesi di cui sono indicate le spese di spedizione. Per la spedizione gratuita inserire "0". Il campo "Spedizione gratuita a partire da" è opzionale.</seg>
+                <seg>Potete decidere in quali paesi volete donare il vostro cibo. La selezione dei paesi viene effettuata se si inserisce almeno uno "0" nei paesi desiderati. Opzionalmente, è possibile offrire la spedizione gratuita e a pagamento. Se non si inserisce un valore, l'utente di questo paese non può effettuare un ordine con voi!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>It is only possible to ship into a country if shipment costs for this country have been entered. For free shipment, enter "0". The field "Free shipment from" is optional.</seg>
+                <seg>By entering here you can decide to which countries you would like to donate your food. The selection of the countries is done if you enter at least a "0" in the desired countries. Optionally you can offer free shipping and shipping with costs. If you do not enter a value, the user from this country cannot place an order with you!</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_headline'>
