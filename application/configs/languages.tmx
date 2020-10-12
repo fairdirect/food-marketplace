@@ -1329,24 +1329,24 @@
         </tu>       
         <tu tuid='orders_headline'>
             <tuv xml:lang="de">
-                <seg>Übersicht Bestellungen</seg>
+                <seg>Warten auf Bestellbestätigung vom Spender:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Riepilogo ordini</seg>
+                <seg>In attesa della conferma d'ordine del donatore:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Overview of orders</seg>
+                <seg>Waiting for order confirmation from donor:</seg>
             </tuv>
         </tu>       
         <tu tuid='orders_open'>
             <tuv xml:lang="de">
-                <seg>Offene Bestellungen:</seg>
+                <seg>Abholbereite Bestellungen:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ordini attivi</seg>
+                <seg>Ordini pronti per il ritiro:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Open orders</seg>
+                <seg>Ready to pick up orders:</seg>
             </tuv>
         </tu>
         <tu tuid='orders_complete'>
