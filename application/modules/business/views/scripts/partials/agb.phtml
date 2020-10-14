@@ -3,38 +3,36 @@
 2. Abweichende Regelungen gelten nur, soweit sie von uns im Einzelfall ausdrücklich und schriftlich anerkannt wurden.</p>		
 			
 <p><strong>1. Vertragsschluss</strong><br/>
-1. Bei Bestellungen auf OpenFoodBank.Net kommt der Vertrag zustande mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>. <br/>
+1. Bei Bestätigungen von Bestellanfragen auf OpenFoodBank.Net kommt der Vertrag zustande mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>. <br/>
 Der Betreiber von OpenFoodBank.Net, Fairdirect e.V. Konrad-Becker-Str. 11, 35102 Lohra, E-Mail mail@fairdirect.org wird nicht Vertragspartner.<br/>
-2. Die vom Kunden gesendete Bestellanfrage ist ein bindendes Angebot, an das dieser zwei Wochen gebunden ist. Der Vertrag kommt durch einer Bestätigungsmail seitens des Spenders über OpenFoodBank oder spätestens mit Erhalt der gespendeten Ware zustande. Der Erhalt einer Bestellbestätigung stellt noch keine Annahme der Bestellanfrage dar, der Spender muss dieser erst zustimmen.</p>
+2. Die vom potenziellen Spendenempfänger gesendete Bestellanfrage ist ein bindendes Angebot, an das dieser zwei Wochen gebunden ist. Der Vertrag kommt durch einer Bestellbestätigungsmail seitens des Spenders über OpenFoodBank oder spätestens mit Erhalt der gespendeten Ware zustande. Der Erhalt einer Bestellanfrage- Bestätigung stellt noch keine Annahme der Bestellanfrage dar, der Spender muss dieser erst zustimmen.</p>
 			
 <p><strong>2. Preise, Versand und Abholung</strong><br/>
 1. Die Abgabe aller eingestellten Spenden erfolgt kostenlos<br/>
 2. Generell ist der Spendenempfänger alleine für die Abholung der Sachspende bei <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> zuständig. Die Abholung muss mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> abgesprochen werden. Optional kann <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> einen kostenpflichtigen Versand anbieten. Versandkosten können Sie dann der folgenden <a rel="nofollow" title="zur Versandkostenaufstellung" href="<?= $this->shop->getLink() ?>#versand">Versandkostenaufstellung</a> entnehmen.</p>
+3. Die Abholung der Sachspende bei <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> muss spätestens nach 14 Tagen erfolgt sein.<br/>
 
 <p><strong>3. Widerruf</strong><br/>
 <strong>Widerrufsrecht<br/>
 <br/>
 Widerrufsrecht<br/>
-Alle Spendenempfänger auf der OpenFoodBank sind nach §14BGB Unternehmer welche einen entsprechenden Nachweis bei der Registrierung bei OpenFoodBank erbringen mussten. Daher entfällt das Widerrufsrecht. <br/>
+Alle Spendenempfänger (ausschließlich gemeinnützige Organisationen und Secondfood- Produzenten) auf dem OpenFoodBank- Onlinespendenmarktplatz sind nach §14BGB Unternehmer. Diese mussten einen entsprechenden Nachweis im Registrierungsprozesses ihres OpenFoodBank- Nutzerkontos erbringen. Daher entfällt das Widerrufsrecht. <br/>
 
 <p><strong>6. Zahlung, Fälligkeit und Verzug</strong><br/>
-1. Eventuell anfallende Versandkosten werden mit der Annahme der Bestellung fällig.<br/>
-2. Die Zahlung der eventuell anfallenden Versandkosten erfolgt über den Epelia-Treuhandservice, per Vorabüberweisung oder per Sofortüberweisung. Wir behalten uns vor einzelne Zahlungsarten auszuschließen.<br/>
-3. Für jede nicht eingelöste Lastschrift ist der Kunde verpflichtet eine Verwaltungsgebühr in Höhe von EUR 15,00 zu zahlen. Dem Kunden steht der Nachweis frei, dass geringerer Schaden entstanden ist. Der Kunde ermächtigt zudem seine Bank uns seinen Namen und seine aktuelle Anschrift mitzuteilen.</p>
+1. Fallen Versandkosten an, werden diese mit der Annahme der Bestellanfrage durch den Spender fällig.<br/>
+2. Die Zahlung der dann anfallenden Versandkosten erfolgt durch den Spendenempfänger über den OpenFoodBank-Treuhandservice, per Vorabüberweisung oder per Sofortüberweisung. OpenFoodBank behält sich vor einzelne Zahlungsarten auszuschließen.<br/>
 			
 <p><strong>7. Eigentumsvorbehalt</strong><br/>
-Bis zur vollständigen Abholung/ dem vollständigen Versand der Sachspende bleibt diese im Eigentum von <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>. Vor Übergang des Eigentums darf der Kunde die Ware weder weiterveräußern noch sonst über die Ware verfügen.</p>
+1. Bis zur vollständigen Abholung/ dem vollständigen Versand der Sachspende bleibt diese im Eigentum von <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>. Vor Übergang des Eigentums darf der Spendenempfänger nicht über die Ware verfügen.</p>	
 			
-<p><strong>8. Mängelgewährleistung</strong><br/>
-Ansprüche des Kunden wegen Sachmängeln der Ware verjähren entsprechend den gesetzlichen Bestimmungen.</p>
-			
-<p><strong>9. Haftung</strong><br/>
-1. <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, seine gesetzlichen Vertreter und seine Erfüllungsgehilfen haften im Falle von Vorsatz und grober Fahrlässigkeit nur, soweit es sich nicht um die Verletzung einer vertragswesentlichen Pflicht oder die Verletzung des Lebens, des Körpers oder der Gesundheit handelt und ausschließlich in Höhe des vorhersehbaren Schadens.<br/>
+<p><strong>8. Haftung</strong><br/>
+1. Aufgrund der unentgeltlichen Abgabe gilt in der Regel das Schenkungsrecht. Schadenersatz für Sachmängel ist hiernach vom <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, seine gesetzlichen Vertreter und seine Erfüllungsgehilfen bei arglistigem Verschweigen eines Fehlers zu leisten (§516, §524 BGB).<br/>
 2. Unabhängig vom Grad des Verschuldens bleibt eine etwaige Haftung im Falle arglistigen Verschweigen eines Mangels, aus der Übernahme einer Garantie oder nach dem Produkthaftungsgesetz unberührt.<br/></p>
-			
-<p><strong>10. Schlussbestimmungen</strong><br/>
+3. Ansprüche des Kunden wegen Sachmängeln der Ware verjähren entsprechend den gesetzlichen Bestimmungen.</p>
+	
+<p><strong>9. Schlussbestimmungen</strong><br/>
 1. Es findet ausschließlich deutsches Recht unter Ausschluss des UN-Kaufrechts Anwendung.<br/>
 2. Erfüllungsort ist <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>.<br/>
-3. Sofern der Kunde Unternehmer ist, ist <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?> ausschließlicher Gerichtsstand für alle Rechtsstreitigkeiten. Der gleiche Gerichtsstand gilt, wenn der Kunde keinen allgemeinen Gerichtsstand in Deutschland hat, nach Vertragsschluss seinen Wohnsitz oder gewöhnlichen Aufenthalt in das Ausland verlegt oder sein Wohnsitz oder gewöhnlicher Aufenthalt zum Zeitpunkt der Klageerhebung nicht bekannt ist.<br/>
+3. <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?> ist ausschließlicher Gerichtsstand für alle Rechtsstreitigkeiten.<br/>
 4. Änderungen und Ergänzungen dieser AGB bedürfen zu ihrer Wirksamkeit der Schriftform. Dies gilt auch für Aufhebung, Änderung und Ergänzung dieser Schriftformklausel.<br/>
 5. Soweit einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sind, wird hierdurch die Wirksamkeit dieser AGB im Übrigen nicht berührt. Die Parteien verpflichten sich die unwirksame Klausel durch eine Regelung zu ersetzen, welche der gewollten wirtschaftlich am nächsten kommt.</p>
