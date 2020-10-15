@@ -12,12 +12,12 @@ class Admin_SalesController extends Zend_Controller_Action
     }
 
     public function inprocessAction(){
-        $this->view->headTitle('Nicht versendet | Epelia');
+        $this->view->headTitle('Nicht versendet | OpenFoodBank');
         $this->view->orders = Model_Order::findByStatus('in_process');
     }
 
     public function completeAction(){
-        $this->view->headTitle("Abgeschlossen | Epelia");
+        $this->view->headTitle("Abgeschlossen | OpenFoodBank");
         $this->view->orders= Model_Order::findByStatus('complete');
     }
 
@@ -244,16 +244,16 @@ class Admin_SalesController extends Zend_Controller_Action
         $pdf->setY(40);
         $pdf->setX(170);
         $pdf->SetFont('Arial', 'B', 10);
-        $pdf->Cell(20, 5, "Warenhandel Gattinger", 0, 0, 'R');
+        $pdf->Cell(20, 5, "Fairdirect e.V.", 0, 0, 'R');
         $pdf->Ln();
         $pdf->setX(170);
         $pdf->SetFont('Arial', '', 8);
-        $pdf->Cell(20, 5, 'Inh. Micha Gattinger', 0, 0, 'R');
+        $pdf->Cell(20, 5, 'Vorstand: Micha Gattinger, Matthias Ansorg', 0, 0, 'R');
         $pdf->Ln();
         $pdf->Ln();
         $pdf->setX(150);
         $pdf->SetFont('Arial', 'B', 10);
-        $pdf->MultiCell(50, 5, "Konrad- Becker- Str. 11\n35102 Lohra\nDeutschland\n\nTelefon: 06426 6041\nE-Mail: mail@epelia.com");
+        $pdf->MultiCell(50, 5, "Konrad- Becker- Str. 11\n35102 Lohra\nDeutschland\n\nTelefon: +49 6426 8630364\nE-Mail: mail@fairdirect.org");
         $pdf->Ln();
         $pdf->Ln();
         $pdf->SetFont('Arial', '', 10);
@@ -272,7 +272,7 @@ class Admin_SalesController extends Zend_Controller_Action
         $pdf->setY(40);
         $pdf->setX(10);
         $pdf->setFontSize(7);
-        $pdf->Multicell(140, 5, "Warenhandel Gattinger\nKonrad-Becker Str. 11, 35102 Lohra, Deutschland");
+        $pdf->Multicell(140, 5, "Fairdirect e.V.\nKonrad-Becker Str. 11, 35102 Lohra, Deutschland");
         $pdf->Ln();
         $pdf->setFont('Arial', 'B', 10);
         $producer_address = (isset($data['shop_name']) && $data['shop_name']) ? $data['shop_name'] : '';
@@ -299,7 +299,7 @@ class Admin_SalesController extends Zend_Controller_Action
         $pdf->Cell(45, 5, '', 'B');
         $pdf->Ln();
         $pdf->setFont('Arial', '', 10);
-        $pdf->Cell(140, 5, utf8_decode('Provision aus Verkäufen im ' . utf8_decode($data['month']) . ' ' . $data['year']), 'R');
+        $pdf->Cell(140, 5, utf8_decode('Provision aus Spenden/Versandbeträgen im ' . utf8_decode($data['month']) . ' ' . $data['year']), 'R');
         $pdf->Ln();
         $pdf->MultiCell(140, 5, utf8_decode('Bestell-IDs: ' . $data['cart_ids']), 'RB');
         $y = $pdf->getY();
@@ -341,10 +341,10 @@ class Admin_SalesController extends Zend_Controller_Action
     private function getFooter($pdf){
         $pdf->setY(255);
         $pdf->Cell(30, 5, 'Bankverbindung', 'T');
-        $pdf->Cell(150, 5, 'Volksbank Heuchelheim, BLZ 513 610 21, Kto 104 601 548', 'T');
+        $pdf->Cell(150, 5, 'Volksbank Heuchelheim, BLZ 513 610 21, Kto 004 647 483', 'T');
         $pdf->Ln();
-        $pdf->Cell(30, 5, 'USt-IdNr.');
-        $pdf->Cell(120, 5, 'DE-163752546');
+        $pdf->Cell(30, 5, 'Steuernummer');
+        $pdf->Cell(120, 5, '031 250 52117');
         $pdf->Ln();
         $pdf->Cell(30, 5, 'zust. Gericht');
         $pdf->Cell(120, 5, 'Amtsgericht Marburg');
