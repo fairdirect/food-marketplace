@@ -898,13 +898,13 @@
         </tu>       
         <tu tuid='checkout_headline'>
             <tuv xml:lang="de">
-                <seg>Bestellung überprüfen und bestätigen</seg>
+                <seg>Bestellanfrage überprüfen und bestätigen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Controlla e conferma l'ordine</seg>
+                <seg>Controllare e confermare la richiesta d'ordine</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Review and confirm your order</seg>
+                <seg>Check and confirm order request</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_product'>
@@ -1041,13 +1041,13 @@
         </tu>
         <tu tuid='checkout_order'>
             <tuv xml:lang="de">
-                <seg>Verbindliche Bestellung anfragen</seg>
+                <seg>Verbindlich anfragen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Richiedi un ordine vincolante</seg>
+                <seg>Richiesta di rilegatura</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Request a binding order</seg>
+                <seg>Binding request</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_payment_type'>
@@ -1107,35 +1107,35 @@
         </tu>
         <tu tuid='checkout_continue_shopping'>
             <tuv xml:lang="de">
-                <seg>Bestellung fortsetzen</seg>
+                <seg>Verbindliche Bestellanfrage fortsetzen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>continuare l'ordine</seg>
+                <seg>Continuare la richiesta d'ordine vincolante</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>continue the order</seg>
+                <seg>Continue binding order enquiry</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_headline'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihre Bestellanfrage</seg>
+                <seg>Vielen Dank für Ihre verbindliche Bestellanfrage</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per la vostra richiesta d'ordine</seg>
+                <seg>Grazie per la vostra richiesta d'ordine vincolante</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Many thanks for your order request</seg>
+                <seg>Thank you very much for your binding order request</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_success_ordered'>
             <tuv xml:lang="de">
-                <seg>Ihre Bestellung ist eingegangen.</seg>
+                <seg>Ihre Bestellanfrage wird schnellstmöglich bearbeitet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il suo ordine è andato a buon fine</seg>
+                <seg>La vostra richiesta d'ordine verrà elaborata il più presto possibile.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Your order has been received.</seg>
+                <seg>Your order request will be processed as soon as possible.</seg>
             </tuv>
         </tu>       
         <tu tuid='checkout_success_accepted'>
@@ -3036,46 +3036,46 @@
         </tu>
         <tu tuid='payment_prepay'>
             <tuv xml:lang="de">
-                <seg>Vorkasse</seg>
+                <seg>Kostenlose Bestellung/ Vorkasse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Pagamento anticipato</seg>
+                <seg>Ordine gratuito / prepagamento</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>advance payment</seg>
+                <seg>Free order/ prepayment</seg>
             </tuv>
         </tu>       
         <tu tuid='payment_prepay_1'>
             <tuv xml:lang="de">
-                <seg>Bitte überweisen Sie den Gesamtbetrag vorab auf unser Konto</seg>
+                <seg>Bitte überweisen Sie eventuell anfallende Versandkosten vorab auf unser Konto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Procedere anzitutto al versamento del totale sul nostro conto</seg>
+                <seg>Si prega di trasferire le spese di spedizione in anticipo sul nostro conto</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Please transfer the total amount in advance to our bank account</seg>
+                <seg>Please transfer any shipping costs in advance to our account</seg>
             </tuv>
         </tu>       
         <tu tuid='payment_prepay_2'>
             <tuv xml:lang="de">
-                <seg>Nach Zahlungseingang wird Ihre Ware an Sie versendet</seg>
+                <seg>Erst nach Zahlungseingang der eventuell anfallenden Versandkosten wird der Bearbeitungsprozess fortgesetzt</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dopo il processo di pagamento i prodotti saranno inviati direttamente a casa vostra</seg>
+                <seg>Solo dopo il ricevimento del pagamento di eventuali spese di spedizione l'elaborazione continuerà</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>After receipt of payment, your order will be shippd to you</seg>
+                <seg>Only after receipt of payment of any shipping costs will the processing continue</seg>
             </tuv>
         </tu>
         <tu tuid='payment_prepay_3'>
             <tuv xml:lang="de">
-                <seg>Einzelheiten zu unserer Bankverbindung erhalten Sie nach der Bestellung</seg>
+                <seg>Bestellanfragen mit gewählter Selbstabholung der Sachspenden betrifft das nicht.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dopo l'ordine riceverà i dettagli riguardo alle nostre coordinate bancarie</seg>
+                <seg>Ciò non si applica alle richieste di ordine con autocassazioni selezionate delle donazioni in natura.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>You will receive our bank details after placing the order</seg>
+                <seg>This does not apply to order enquiries with selected self-collection of the donations in kind.</seg>
             </tuv>
         </tu>
         <tu tuid='payment_continue'>
