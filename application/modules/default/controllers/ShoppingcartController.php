@@ -281,11 +281,9 @@ class ShoppingcartController extends Zend_Controller_Action
                 $cart->getBillingAddress()->toMailFormatedString(),
                 'Bitte überweisen Sie den Betrag in Höhe von ' . number_format($cart->getPriceTotal(), 2, ',', '.') . ' EUR auf folgendes Konto:
 
-                Empfänger: Epelia Warenhandel Gattinger
-                Kto. Nr.: 4647483
+                Empfänger: Fairdirect e.V.
                 Bank: Volksbank Heuchelheim
-                BLZ: 51361021
-                IBAN: DE24513610210004647483
+                BAN: DE24513610210004647483
                 BIC: GENODE51HHE
 
                 Betreff: Bestellnummer ' . $cart->getCartId()
@@ -294,7 +292,7 @@ class ShoppingcartController extends Zend_Controller_Action
         );
 
         $mail->setBodyText(strip_tags($content));
-        $mail->setFrom('mail@epelia.com', 'Epelia');
+        $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
         $mail->addTo($this->user->email);
         $mail->setSubject(str_replace('#orderNumber#', $cart->getCartId(), $concludeMail->subject));
         $mail->send();
