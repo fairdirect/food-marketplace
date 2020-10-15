@@ -16,12 +16,12 @@ class WholesaleController extends Zend_Controller_Action
             if($registerForm->isValid($request->getPost())){
                 $user = Zend_Auth::getInstance()->getIdentity();
                 $mail = new Zend_Mail('UTF-8');
-                $mail->setFrom('mail@epelia.com', 'Epelia');
+                $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
                 $mail->addTo('hoesel@derhoesel.de', 'Epelia');
-                $mail->addTo('mail@epelia.com', 'Epelia');
-                $mail->setSubject('Großandels-Registrierung');
+                $mail->addTo('mail@epelia.com', 'OpenFoodBank');
+                $mail->setSubject('Spendenangebot-Bereich-Registrierung');
                 $mail->setBodyText(
-                    "Neue Großhandels-Anmeldung:\n\n" . 
+                    "Neue Spendeangebot-Bereich-Anmeldung:\n\n" . 
                     "Benutzer: " . $user->id . " (" . $user->email . ")\n" .
                     "Editieren: http://" . $request->getHttpHost() . "/admin/users/edit/id/" . $user->id . "/\n\n" .
                     "Angegebene Daten:\n" . 
