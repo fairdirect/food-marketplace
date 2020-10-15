@@ -124,7 +124,7 @@ class Admin_NewslettersController extends Zend_Controller_Action
         $subject = str_replace(array('#ANREDE#'), array($anrede), $newsletter->subject);
         if($newsletter->type != 'text') $mail->setBodyHtml($content);
         if($newsletter->type != 'html') $mail->setBodyText(strip_tags($content));
-        $mail->setFrom('mail@epelia.com', 'Epelia');
+        $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
         $mail->addTo($user->email);
         $mail->setSubject($subject);
         try{
