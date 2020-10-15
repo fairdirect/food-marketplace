@@ -42,7 +42,7 @@ class Admin_OrdersController extends Zend_Controller_Action
                 $mail = new Zend_Mail('UTF-8');
                 
                 $mail->setBodyText(strip_tags(str_replace(array('#orderContent#', '#orderNumber#'), array($orderContent, $order->order_number), $orderMail->content)));
-                $mail->setFrom('mail@epelia.com', 'Epelia');
+                $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
                 $mail->addTo($shop->getUser()->email);
                 $mail->setSubject(str_replace('#orderNumber#', $order->order_number, $orderMail->subject));
                 $mail->send();
@@ -67,7 +67,7 @@ class Admin_OrdersController extends Zend_Controller_Action
                     ), 
                     $paymentMail->content
                 ));
-                $mail->setFrom('mail@epelia.com', 'Epelia');
+                $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
                 $mail->addTo($order->getUser()->email);
                 $mail->setSubject(str_replace('#orderNumber#', $order->order_number, $paymentMail->subject));
                 $mail->send();
