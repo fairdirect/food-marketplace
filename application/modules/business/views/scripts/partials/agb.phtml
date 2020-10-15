@@ -5,7 +5,7 @@
 <p><strong>1. Vertragsschluss</strong><br/>
 1. Bei Bestätigungen von Bestellanfragen auf OpenFoodBank.Net kommt der Vertrag zustande mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>. <br/>
 2. Der Betreiber von OpenFoodBank.Net, Fairdirect e.V. Konrad-Becker-Str. 11, 35102 Lohra, E-Mail mail@fairdirect.org wird nicht Vertragspartner.<br/>
-3. Die vom potenziellen Spendenempfänger gesendete Bestellanfrage ist ein bindendes Angebot, an das dieser zwei Wochen gebunden ist. Der Vertrag kommt durch einer Bestellbestätigungsmail seitens des Spenders über OpenFoodBank oder spätestens mit Erhalt der gespendeten Ware zustande. Der Erhalt einer Bestellanfrage- Bestätigung stellt noch keine Annahme der Bestellanfrage dar, der Spender muss dieser erst zustimmen.</p>
+3. Die vom potenziellen Spendenempfänger gesendete Bestellanfrage ist ein bindendes Angebot, an das dieser zwei Wochen gebunden ist. Der Vertrag kommt erst durch eine Bestellbestätigungsmail über OpenFoodBank oder spätestens mit Erhalt der gespendeten Ware zustande. Der Erhalt einer Bestellanfrage- Bestätigung stellt noch keine Annahme der Bestellanfrage dar, OpenFoodBank muss diese erst bestätigen.</p>
 			
 <p><strong>2. Preise, Versand und Abholung</strong><br/>
 1. Die Abgabe aller eingestellten Spenden erfolgt kostenlos<br/>
