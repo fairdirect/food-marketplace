@@ -32,13 +32,10 @@ Wir erheben Daten beim Anbahnen, beim Abschluss, beim Abwickeln und beim Rückab
 <br/>
 Ihr Besuch auf unseren Webseiten wird protokolliert. Erfasst werden im Wesentlichen die aktuell von Ihrem PC verwendete IP-Adresse, Datum und Uhrzeit, der Browsertyp und das Betriebssystem Ihres PC sowie die von Ihnen betrachteten Seiten. Ein Personenbezug ist uns im Regelfall nicht möglich und auch nicht beabsichtigt.<br/>
 <br/>
-Zudem werden auf den Websites zu Marketing- und Optimierungszwecken anonymisierte Daten durch eine Software der Google Inc., namentlich von GoogleAnalytics (http://www.google.de/analytics/de-DE/) gesammelt und gespeichert. Aus diesen Daten werden unter einem Pseudonym Nutzungsprofile erstellt. Hierzu können Cookies eingesetzt werden, die allerdings Daten ausschließlich in pseudonymer Form sammeln und speichern. Die Daten werden nicht dazu benutzt, den Besucher persönlich zu identifizieren und werden nicht mit Daten über den Träger des Pseudonyms zusammengeführt.<br/>
-Der Datensammlung und -speicherung kann jederzeit mit Wirkung für die Zukunft widersprochen werden. Diese Daten werden nur für Zwecke der Datensicherheit und zur Optimierung unseres Webangebots erhoben.<br/>
-<br/>
 <strong>Datenverwendung und -weitergabe</strong><br/>
 Die personenbezogenen Daten, die Sie uns z.B. bei einer Bestellung oder per E-Mail mitteilen (z.B. Ihr Name und Ihre Adresse oder Ihre E-Mail-Adresse), werden nur zur Korrespondenz mit Ihnen und nur für den Zweck verarbeitet, zu dem Sie uns die Daten zur Verfügung gestellt haben.<br/>
 <br/>
-Zur Abwicklung von Zahlungen geben wir Ihre Zahlungsdaten an das mit der Zahlung beauftragte Kreditinstitut weiter.<br/>
+Wir geben Ihre Daten nur an die mit der Lieferung beauftragten Transportdienstleister weiter, sofern Sie die OpenFoodBank- Transportbörse nutzen. Zur Abwicklung bei anfallenden Versandkosten geben wir Ihre Zahlungsdaten an das mit der Zahlung beauftragte Kreditinstitut weiter. In diesen Fällen geben wir Ihre Daten nur unter der Voraussetzung weiter, dass sich diese uns gegenüber durch Vertrag zur Beachtung des Schutzes Ihrer Daten verpflichten.<br/>			
 <br/>
 Um Ihnen wiederholte Eingaben Ihrer Daten zu ersparen, speichern wir in Ihrem Account Daten wie Adressen, E-Mail-Adressen, Name, Passwort, Zahlungsarten, Bestellhistorien.<br/>
 Ebenfalls speichern wir Ihre Daten um den Einkauf für Sie soweit als möglich zu personalisieren und Ihnen kompetente Fachberatung geben zu können, z.B. indem wir Ihnen Produkte vorschlagen anhand Ihrer Käufe und Besuche oder Ihre Einkaufszettel mit den früheren Bestellungen zum erneutem Kauf anbieten. Oder um Sie über neue Produkte und Dienstleistungen zu informieren.<br/>
@@ -64,7 +61,7 @@ Sollten Sie mit der Speicherung Ihrer personenbezogenen Daten nicht mehr einvers
 <br/>
 Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten, bei Auskünften, Berichtigung, Sperrung oder Löschung von Daten wenden Sie sich bitte an:<br/>
 <br/>
-Lipwit Handelskontor , Telefon: +49 06174/201378, E-Mail: info@lipwit.com<br/>
+ <?= ($this->shop->company) ? $this->escape($this->shop->company) : $this->escape($this->shop->name) ?> <br/>
 <br/>
 <strong>Verwendung von Cookies</strong><br/>
 Eine Nutzung des Angebotes von unseres Shops erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.<br/>
