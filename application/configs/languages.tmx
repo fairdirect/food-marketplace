@@ -700,13 +700,13 @@
         </tu>
         <tu tuid='product_show_more'>
             <tuv xml:lang="de">
-                <seg>weitere Produkte ansehen</seg>
+                <seg>weitere Sachspenden ansehen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Vedi altri prodotti</seg>
+                <seg>Vedi altri Donazioni in natura</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Show more products</seg>
+                <seg>Show more Donations in kind</seg>
             </tuv>
         </tu>
         <tu tuid='product_ingredients'>
@@ -799,13 +799,13 @@
         </tu>
         <tu tuid='product_delivery_free_from'>
             <tuv xml:lang="de">
-                <seg>Versandkostenfrei ab:</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Spese di spedizione gratuite a partire da:</seg>
+                <seg></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Free shipment from:</seg>
+                <seg></seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_guarantee'>
@@ -1151,13 +1151,13 @@
         </tu>    
         <tu tuid='checkout_success_prepay_1'>
             <tuv xml:lang="de">
-                <seg>Bitte überweisen Sie den Gesamtbetrag an:</seg>
+                <seg>Fallen vom Spender Versandkosten an, überweisen Sie diese bitte an:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>La preghiamo di versare l'importo su:</seg>
+                <seg>Se il donatore sostiene le spese di spedizione, vi preghiamo di inviarcele:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Please pay the total amount by bank transfer to:</seg>
+                <seg>If shipping costs are incurred by the donor, please remit them to:</seg>
             </tuv>
         </tu>
         <tu tuid='checkout_success_prepay_2'>
