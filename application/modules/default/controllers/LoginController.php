@@ -83,7 +83,7 @@ class LoginController extends Zend_Controller_Action
                                 $mail = new Zend_Mail('UTF-8');
                                 $content = str_replace('#registerLink#', 'http://' . $_SERVER['HTTP_HOST'] . '/login/confirm/id/' . $user->id . '/code/' . hash('sha256', $user->email . '_epelia_' . $user->salt) . '/', $registerMail->content);
                                 $mail->setBodyText(strip_tags($content));
-                                $mail->setFrom('mail@epelia.com', 'Epelia');
+                                $mail->setFrom('mail@Fairdirect.org', 'OpenFoodBank');
                                 $mail->addTo($user->email);
                                 $mail->setSubject($registerMail->subject);
                                 $mail->send();
@@ -196,19 +196,19 @@ class LoginController extends Zend_Controller_Action
     }
 
     public function successAction(){
-        $this->view->headTitle("Registrierung erfolgreich | Epelia");
+        $this->view->headTitle("Registrierung erfolgreich | OpenFoodBank");
     }
 
     public function failureAction(){
-        $this->view->headTitle("Registrierung fehlgeschlagen | Epelia");
+        $this->view->headTitle("Registrierung fehlgeschlagen | OpenFoodBank");
     }
 
     public function confirmsuccessAction(){
-        $this->view->headTitle("Registrierungs-Bestätigung erfolgreich | Epelia");
+        $this->view->headTitle("Registrierungs-Bestätigung erfolgreich | OpenFoodBank");
     }
 
     public function confirmfailureAction(){
-        $this->view->headTitle("Registrierungs-Bestätigung fehlgeschlagen | Epelia");
+        $this->view->headTitle("Registrierungs-Bestätigung fehlgeschlagen | OpenFoodBank");
     }
 
     public function resetpasswordAction(){
@@ -228,7 +228,7 @@ class LoginController extends Zend_Controller_Action
             $mail = new Zend_Mail('UTF-8');
             $content = str_replace('#resetPasswordLink#', 'http://' . $_SERVER['HTTP_HOST'] . '/login/resetpasswordconfirm/id/' . $user->id . '/code/' . $user->password_reset_token . '/', $resetMail->content);
             $mail->setBodyText(strip_tags($content));
-            $mail->setFrom('mail@epelia.com', 'Epelia');
+            $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
             $mail->addTo($user->email);
             $mail->setSubject($resetMail->subject);
             $mail->send();
