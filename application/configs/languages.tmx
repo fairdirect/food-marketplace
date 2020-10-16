@@ -3951,13 +3951,13 @@
         </tu>
         <tu tuid='business_shop_description'>
             <tuv xml:lang="de">
-                <seg>Öffnungszeiten Warenannahme & Versand</seg>
+                <seg>Öffnungszeiten Warenannahme und Versand</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Orari di apertura merce in ricezione e spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Opening times for receiving & shipping</seg>
+                <seg>Opening times for receiving and shipping</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_history'>
