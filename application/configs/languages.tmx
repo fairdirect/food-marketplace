@@ -3962,17 +3962,6 @@
         </tu>
         <tu tuid='business_shop_history'>
             <tuv xml:lang="de">
-                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
-            </tuv>
-            <tuv xml:lang="it">
-                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg>Why do we support the OpenFoodBank network?</seg>
-            </tuv>
-        </tu>       
-        <tu tuid='business_shop_philosophy'>
-            <tuv xml:lang="de">
                 <seg>Philosophie</seg>
             </tuv>
             <tuv xml:lang="it">
@@ -3980,6 +3969,17 @@
             </tuv>
             <tuv xml:lang="en">
                 <seg>Philosophy</seg>
+            </tuv>
+        </tu>       
+        <tu tuid='business_shop_philosophy'>
+            <tuv xml:lang="de">
+                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Why do we support the OpenFoodBank network?</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_procedure'>
