@@ -3323,7 +3323,7 @@
         </tu>
         <tu tuid='business_delivery_text'>
             <tuv xml:lang="de">
-                <seg>Über die Eingabe hier können Sie entscheiden, in welche Länder Sie ihre Lebensmittel spenden möchten. Die Auswahl der Länder erfolgt, wenn Sie in den gewünschten Ländern min. eine "0" eintragen. Optional können Sie einen kostenlosen und kostenpflichtigen Versand anbieten. Geben Sie keinen wert an, kann der Nutzer aus diesem Land keine Bestellung bei Ihnen tätigen!</seg>
+                <seg>Über die Eingabe hier können Sie entscheiden, in welche Länder Sie ihre Lebensmittel spenden möchten. Die Auswahl der Länder erfolgt, wenn Sie in den gewünschten Ländern min. eine "0" eintragen. Optional können Sie einen kostenlosen und kostenpflichtigen Versand anbieten. Geben Sie keinen Wert an, kann der Nutzer aus diesem Land keine Bestellung bei Ihnen tätigen!</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Potete decidere in quali paesi volete donare il vostro cibo. La selezione dei paesi viene effettuata se si inserisce almeno uno "0" nei paesi desiderati. Opzionalmente, è possibile offrire la spedizione gratuita e a pagamento. Se non si inserisce un valore, l'utente di questo paese non può effettuare un ordine con voi!</seg>
@@ -3951,13 +3951,13 @@
         </tu>
         <tu tuid='business_shop_description'>
             <tuv xml:lang="de">
-                <seg>Beschreibung</seg>
+                <seg>Öffnungszeiten Warenannahme & Versand</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Descrizione</seg>
+                <seg>Orari di apertura merce in ricezione e spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Description</seg>
+                <seg>Opening times for receiving & shipping</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_history'>
@@ -3984,13 +3984,13 @@
         </tu>       
         <tu tuid='business_shop_procedure'>
             <tuv xml:lang="de">
-                <seg>Öffnungszeiten der Warenannahme</seg>
+                <seg>Über uns</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Orari di apertura per la ricezione</seg>
+                <seg>Chi siamo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Opening times for receiving</seg>
+                <seg>About us</seg>
             </tuv>
         </tu>
         <tu tuid='business_shop_additional'>
