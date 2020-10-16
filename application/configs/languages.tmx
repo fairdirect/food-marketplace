@@ -2574,13 +2574,13 @@
         </tu>       
         <tu tuid='shops_about_us'>
             <tuv xml:lang="de">
-                <seg>Über uns</seg>
+                <seg>Öffnungszeiten Warenannahme und Versand</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su di noi</seg>
+                <seg>Orari di apertura merce in ricezione e spedizione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About us</seg>
+                <seg>Opening hours goods receiving and shipping</seg>
             </tuv>
         </tu>
         <tu tuid='shops_philosophy'>
@@ -2588,7 +2588,7 @@
                 <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-		    <seg>Perché supportiamo la rete OpenFoodBank?</seg>
+		<seg>Perché supportiamo la rete OpenFoodBank?</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>Why do we support the OpenFoodBank network?</seg>
@@ -2596,13 +2596,13 @@
         </tu>
         <tu tuid='shops_procedure'>
             <tuv xml:lang="de">
-                <seg>Öffnungszeiten Annahmestelle</seg>
+                <seg>Über uns</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Orario di apertura punto di accettazione</seg>
+                <seg>Su di noi</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Opening times acceptance point</seg>
+                <seg>About us</seg>
             </tuv>
         </tu>
         <tu tuid='shops_history'>
