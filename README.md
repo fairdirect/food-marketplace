@@ -13,8 +13,7 @@
 
 **Online demos.** We operate several online demo and live versions of this software, where you can see it in action:
 
-* [openfoodbank.net](http://openfoodbank.net) shows the software as a donations in kind marketplace. Please [contact me by e-mail](mailto:mail@michagattinger.de) to get access.
-
+* [openfoodbank.net](http://openfoodbank.net) shows the software as a donations in kind marketplace. 
 
 **Changes for the Fairdirect online marketplace- software:**
 
