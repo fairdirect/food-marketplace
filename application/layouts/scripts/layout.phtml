@@ -33,6 +33,21 @@
           .page-item > a { color: #6cb031; }
       </style>
 
+      <script type="text/javascript">
+        function changeLanguage(lang) {
+            $.ajax({
+                type: "POST",
+                url: "/ajax/setlanguage/",
+                dataType: "json",
+                data: {
+                    language_id: lang
+                }
+            }).done(function (res) {
+                location.reload();
+            });
+        }
+    </script>
+
     <?php echo $this->headTitle(); ?>
   <?php
   $session = new Zend_Session_Namespace('Default');
@@ -55,6 +70,17 @@
               <img src="/img/layout/ofb-logo.png" style="height:50px" alt="">
             </a>
             <ul class="navbar-nav justify-content-end">
+                <li class="nav-item border dropdown bg-light">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <?= $this->translate('language_' . (($session->language) ? $session->language : 'de')) ?>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="javascript:changeLanguage('de')"><?= $this->translate('language_de') ?></a>
+                        <a class="dropdown-item" href="javascript:changeLanguage('en')"><?= $this->translate('language_en') ?></a>
+                        <a class="dropdown-item" href="javascript:changeLanguage('it')"><?= $this->translate('language_it') ?></a>
+                    </div>
+                </li>
+
                 <?php if($this->region): ?>
                 <li class="nav-item border dropdown bg-light">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
