@@ -1,15 +1,14 @@
 <div class="row">
     <div class="col bg-light border m-3">
         <?php if($this->region): ?>
-            <h2>Deine aktuelle Region: <?= $this->region->name ?></h2>
-            <h3>Region ändern</h3>
-            <p>Wenn Du Deine aktuell ausgewählte Region ändern möchtest suche hier nach einer neuen Region:</p>
-            <p>Solltest Du eine Lieferadresse hinterlegt haben wird beim nächsten Login automatisch wieder die Region deiner primären Adresse verwendet.</p>
+            <h2><?= $this->translate('regions_selected_headline') ?> <?= $this->region->name ?></h2>
+            <h3><?= $this->translate('regions_selected_subheadline') ?></h3>
+            <p><?= $this->translate('regions_selected_text_1') ?></p>
+            <p><?= $this->translate('regions_selected_text_2') ?></p>
         <?php else: ?>
-            <h2>Bitte wähle deine Region aus</h2>
-            <p>Bitte suche hier nach einer Region, in der Du Spendengesuche und -angebote sehen möchtest:</p>
-            <p>Alternativ erstelle bitte <a href="/login/">ein Nutzerkonto</a> und
-                hinterlege eine Adresse, so dass Dir automatisch eine Region zugeordnet werden kann.</p>
+            <h2><?= $this->translate('regions_choose_headline') ?></h2>
+            <p><?= $this->translate('regions_choose_text_1') ?></p>
+            <p><?= $this->translate('regions_choose_text_2') ?></p>
         <?php endif; ?>
 
         <form id="regionForm" class="m-3">
@@ -19,14 +18,14 @@
                 </div>
                 <div class="col">
                     <select class="form-control" id="country">
-                        <option value="">Land auswählen</option>
+                        <option value=""><?= $this->translate('misc_choose_country') ?></option>
                         <?php foreach($this->availableRegions as $region): ?>
                         <option value="<?= $region->id ?>"><?= $region->name ?></option>
                         <?php endforeach; ?>
                     </select>
                 </div>
                 <div class="col">
-                    <button type="submit" class="btn btn-primary">Region suchen</button>
+                    <button type="submit" class="btn btn-primary"><?= $this->translate('misc_search_for_region') ?></button>
                 </div>
             </div>
             <div class="alert alert-success mt-2 collapse" id="found"></div>
@@ -49,7 +48,7 @@
         if(plz && country) {
             choseRegion(plz, country);
         } else{
-            $('#error').html('Bitte PLZ und Land angeben').show();
+            $('#error').html('<?= $this->translate('misc_plz_country_validation') ?>').show();
         }
     });
 
@@ -65,10 +64,10 @@
         }).done(function(ret){
             if(!ret.suc) {
                 if(ret.message == 'No region found') {
-                    $('#warning').html('Leider ist keine Region mit den angegebenen Daten im System hinterlegt.').show();
+                    $('#warning').html('<?= $this->translate('misc_no_region_found') ?>').show();
                 }
             } else {
-                $('#found').html('Region gefunden: ' + ret.data.name + ' <a class="btn btn-success" href="/regions/changeregion/' + ret.data.id + '">Region wählen</a>').show();
+                $('#found').html('Region gefunden: ' + ret.data.name + ' <a class="btn btn-success" href="/regions/changeregion/' + ret.data.id + '"><?= $this->translate('misc_choose_region') ?></a>').show();
             }
         });
     };

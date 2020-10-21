@@ -4610,6 +4610,138 @@
                 <seg>nt.wt.</seg>
             </tuv>
         </tu>
+        <tu tuid='regions_choose_headline'>
+            <tuv xml:lang="de">
+                <seg>Bitte wähle deine Region aus</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='regions_choose_text_1'>
+            <tuv xml:lang="de">
+                <seg>Bitte suche hier nach einer Region, in der Du Spendengesuche und -angebote sehen möchtest:</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='regions_choose_text_2'>
+            <tuv xml:lang="de">
+                <seg>Alternativ erstelle bitte <a href="/login/">ein Nutzerkonto</a> und hinterlege eine Adresse, so dass Dir automatisch eine Region zugeordnet werden kann.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+       <tu tuid='regions_selected_headline'>
+            <tuv xml:lang="de">
+                <seg>Deine aktuelle Region:</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+       <tu tuid='regions_selected_subheadline'>
+            <tuv xml:lang="de">
+                <seg>Region ändern</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+       </tu>
+       <tu tuid='regions_selected_text_1'>
+            <tuv xml:lang="de">
+                <seg>Wenn Du Deine aktuell ausgewählte Region ändern möchtest suche hier nach einer neuen Region:</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='regions_selected_text_2'>
+            <tuv xml:lang="de">
+                <seg>Solltest Du eine Lieferadresse hinterlegt haben wird beim nächsten Login automatisch wieder die Region deiner primären Adresse verwendet.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_choose_country'>
+            <tuv xml:lang="de">
+                <seg>Land auswählen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_search_for_region'>
+            <tuv xml:lang="de">
+                <seg>Region suchen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_plz_country_validation'>
+            <tuv xml:lang="de">
+                <seg>Bitte PLZ und Land angeben</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_no_region_found'>
+            <tuv xml:lang="de">
+                <seg>Leider ist keine Region mit den angegebenen Daten im System hinterlegt.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_choose_region'>
+            <tuv xml:lang="de">
+                <seg>Region wählen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>...</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 
