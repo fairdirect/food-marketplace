@@ -799,13 +799,13 @@
         </tu>
         <tu tuid='product_delivery_free_from'>
             <tuv xml:lang="de">
-                <seg></seg>
+                <seg>.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg></seg>
+                <seg>.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg></seg>
+                <seg>.</seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_guarantee'>
@@ -4615,10 +4615,10 @@
                 <seg>Bitte wähle deine Region aus</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Seleziona la tua regione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Please select your region</seg>
             </tuv>
         </tu>
         <tu tuid='regions_choose_text_1'>
@@ -4626,10 +4626,10 @@
                 <seg>Bitte suche hier nach einer Region, in der Du Spendengesuche und -angebote sehen möchtest:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Cercate qui una regione in cui desiderate vedere le richieste di donazione e le offerte:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Please search here for a region in which you would like to see donation requests and offers:</seg>
             </tuv>
         </tu>
         <tu tuid='regions_choose_text_2'>
@@ -4637,10 +4637,10 @@
                 <seg>Alternativ erstelle bitte <a href="/login/">ein Nutzerkonto</a> und hinterlege eine Adresse, so dass Dir automatisch eine Region zugeordnet werden kann.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>In alternativa, create <a href="/login/">un conto utente e inserite un indirizzo in modo da potervi assegnare automaticamente una regione.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Alternatively please create <a href="/login/">a user account and enter an address so that a region can be assigned to you automatically.</seg>
             </tuv>
         </tu>
        <tu tuid='regions_selected_headline'>
@@ -4648,10 +4648,10 @@
                 <seg>Deine aktuelle Region:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>La vostra regione attuale</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Your current region</seg>
             </tuv>
         </tu>
        <tu tuid='regions_selected_subheadline'>
@@ -4659,10 +4659,10 @@
                 <seg>Region ändern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Cambia regione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Change region</seg>
             </tuv>
        </tu>
        <tu tuid='regions_selected_text_1'>
@@ -4670,10 +4670,10 @@
                 <seg>Wenn Du Deine aktuell ausgewählte Region ändern möchtest suche hier nach einer neuen Region:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Se volete cambiare la regione attualmente selezionata, cercate qui una nuova regione:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>If you want to change your currently selected region, search for a new region here:</seg>
             </tuv>
         </tu>
         <tu tuid='regions_selected_text_2'>
@@ -4681,10 +4681,10 @@
                 <seg>Solltest Du eine Lieferadresse hinterlegt haben wird beim nächsten Login automatisch wieder die Region deiner primären Adresse verwendet.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Se avete inserito un indirizzo di consegna, la regione del vostro indirizzo primario verrà utilizzata automaticamente al prossimo login.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>If you have entered a delivery address, the region of your primary address will automatically be used the next time you login.</seg>
             </tuv>
         </tu>
         <tu tuid='misc_choose_country'>
@@ -4692,10 +4692,10 @@
                 <seg>Land auswählen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Seleziona il paese</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Select country</seg>
             </tuv>
         </tu>
         <tu tuid='misc_search_for_region'>
@@ -4703,10 +4703,10 @@
                 <seg>Region suchen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Ricerca nella regione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Search Region</seg>
             </tuv>
         </tu>
         <tu tuid='misc_plz_country_validation'>
@@ -4714,10 +4714,10 @@
                 <seg>Bitte PLZ und Land angeben</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Inserire il codice postale e il paese</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Please enter zip code and country</seg>
             </tuv>
         </tu>
         <tu tuid='misc_no_region_found'>
@@ -4725,10 +4725,10 @@
                 <seg>Leider ist keine Region mit den angegebenen Daten im System hinterlegt.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Purtroppo nel sistema non viene memorizzata alcuna regione con i dati indicati.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Unfortunately no region with the given data is stored in the system.</seg>
             </tuv>
         </tu>
         <tu tuid='misc_choose_region'>
@@ -4736,10 +4736,10 @@
                 <seg>Region wählen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>...</seg>
+                <seg>Seleziona la regione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>...</seg>
+                <seg>Seleziona la regione</seg>
             </tuv>
         </tu>
     </body>
