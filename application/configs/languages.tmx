@@ -4637,10 +4637,10 @@
                 <seg>Alternativ erstelle bitte <a href="/login/">ein Nutzerkonto</a> und hinterlege eine Adresse, so dass Dir automatisch eine Region zugeordnet werden kann.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>In alternativa, create <a href="/login/">un conto utente e inserite un indirizzo in modo da potervi assegnare automaticamente una regione.</seg>
+		    <seg>In alternativa, create <a href="/login/">un conto utente</a> e inserite un indirizzo in modo da potervi assegnare automaticamente una regione.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Alternatively please create <a href="/login/">a user account and enter an address so that a region can be assigned to you automatically.</seg>
+		<seg>Alternatively please create <a href="/login/">a user account</a> and enter an address so that a region can be assigned to you automatically.</seg>
             </tuv>
         </tu>
        <tu tuid='regions_selected_headline'>
