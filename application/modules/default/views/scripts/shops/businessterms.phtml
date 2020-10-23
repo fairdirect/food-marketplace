@@ -25,92 +25,44 @@
 	<h2>Allgemeine Geschäftsbedingungen</h2>
 <?php if($this->shop->agb): ?>
         <?= nl2br($this->escape($this->shop->agb)) ?>
-<?php else: ?>        
-			<p><strong>0. Präambel</strong><br/>
-1. Die nachfolgenden AGB gelten ausschließlich für die Geschäftsbeziehungen von <?= ($this->shop->company) ? $this->escape($this->shop->company) : $this->escape($this->shop->name) ?>  mit seinen Kunden.<br/>
-2. Abweichende Regelungen gelten nur, soweit sie von uns im Einzelfall ausdrücklich und schriftlich anerkannt wurden.</p>		
-			
-			<p><strong>1. Vertragsschluss</strong><br/>
-1. Bei Bestellungen auf unserem Marktplatz kommt der Vertrag zustande mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>. <br/>
-Das Unternehmen Epelia (Warenhandel Gattinger, Geschäftsführer Micha Gattinger, Konrad-Becker-Str. 11, 35102 Lohra, E-Mail mail@epelia.com, Umsatzsteuer-Ident-Nr. DE-163752546) wird nicht Vertragspartner.<br/>
-2. Die vom Kunden gesendete Bestellung ist ein bindendes Angebot, an das dieser zwei Wochen gebunden ist. Der Vertrag kommt durch eine Bestätigungsemail oder spätestens mit Erhalt der bestellten Ware zustande. Der Erhalt einer Bestellbestätigung stellt noch keine Annahme des Angebots dar.</p>
-			
-			<p><strong>2. Preise, Versandkosten</strong><br/>
-1. Die ausgezeichneten Preise sind Endpreise inklusive Umsatzsteuer. Es gilt kein Mindestbestellwert.<br/>
-2. Zusätzlich können Versandkosten entstehen. Versandkosten und/oder Versandkostenfreiheit entnehmen Sie der folgenden <a rel="nofollow" title="zur Versandkostenaufstellung" href="<?= $this->shop->getLink() ?>#versand">Versandkostenaufstellung</a>.</p>
+<?php else: ?>
+    <p><strong>0. Präambel</strong><br/>
+        1. Die nachfolgenden AGB gelten ausschließlich für die Geschäftsbeziehungen von <?= ($this->shop->company) ? $this->escape($this->shop->company) : $this->escape($this->shop->name) ?>  mit seinen Spendenempfängern.<br/>
+        2. Abweichende Regelungen gelten nur, soweit sie von uns im Einzelfall ausdrücklich und schriftlich anerkannt wurden.</p>
 
-                        <p><strong>3. Widerruf</strong><br/>
-<strong>Widerrufsbelehrung<br/>
-<br/>
-Widerrufsrecht<br/>
-Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.<br/>
+    <p><strong>1. Vertragsschluss</strong><br/>
+        1. Bei Bestätigungen von Bestellanfragen auf OpenFoodBank.Net kommt der Vertrag zustande mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>. <br/>
+        2. Der Betreiber von OpenFoodBank.Net, Fairdirect e.V. Konrad-Becker-Str. 11, 35102 Lohra, E-Mail mail@fairdirect.org wird nicht Vertragspartner.<br/>
+        3. Die vom potenziellen Spendenempfänger gesendete Bestellanfrage ist ein bindendes Angebot, an das dieser zwei Wochen gebunden ist. Der Vertrag kommt erst durch eine Bestellbestätigungsmail über OpenFoodBank oder spätestens mit Erhalt der gespendeten Ware zustande. Der Erhalt einer Bestellanfrage- Bestätigung stellt noch keine Annahme der Bestellanfrage dar, OpenFoodBank muss diese erst bestätigen.</p>
 
-Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die Ware in Besitz genommen haben bzw. hat.<br/>
+    <p><strong>2. Preise, Versand, Nachweispflichten und Abholung</strong><br/>
+        1. Die Abgabe aller eingestellten Spenden erfolgt kostenlos<br/>
+        2. Alle gesetzlich geforderten Pflichten zur ordnungsgemäßen Behandlung (z.B. Einhaltung/ Nachweis der lückenlosen Kühlkette etc.) der Spenden gehen zum Zeitpunkt der Abholung/ des Versandes der Spende bei dem Spender vom Spender an den Kunden über.<br/>
+        3. Kann der Kunde die Spende nicht selbst beim Spender abholen, ist er verpflichtet sich selbst um den Versand zu kümmern. Die OpenFoodBank stellt hierfür, als eine kostengünstige Option, eine Transportbörse bereit.
+        4. Generell ist der Spendenempfänger alleine für die Abholung der Sachspende bei <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> zuständig. Die Abholung muss mit <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> abgesprochen werden. Optional kann <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> einen kostenpflichtigen Versand anbieten. Versandkosten können Sie dann der folgenden <a rel="nofollow" title="zur Versandkostenaufstellung" href="<?= $this->shop->getLink() ?>#versand">Versandkostenaufstellung</a> entnehmen.</p>
+    5. Die Abholung der Sachspende bei <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?> muss spätestens nach 14 Tagen erfolgt sein.<br/>
 
-Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (<?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?> oder E-Mail: <?= $this->shop->getUser()->email ?>) mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Sie können dafür das unten dargestellte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist.<br/>
+    <p><strong>3. Widerrufrecht</strong><br/>
+        1. Alle Spendenempfänger (ausschließlich gemeinnützige Organisationen und Secondfood- Produzenten) auf dem OpenFoodBank- Onlinespendenmarktplatz sind nach §14BGB Unternehmer. Diese mussten einen entsprechenden Nachweis im Registrierungsprozesses ihres OpenFoodBank- Nutzerkontos erbringen. Daher entfällt das Widerrufsrecht. <br/>
 
-Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.<br/>
-<br/>
+    <p><strong>4. Zahlung, Fälligkeit und Verzug</strong><br/>
+        1. Fallen Versandkosten an, werden diese mit der Annahme der Bestellanfrage durch den Spender fällig.<br/>
+        2. Die Zahlung der dann anfallenden Versandkosten erfolgt durch den Spendenempfänger über den OpenFoodBank-Treuhandservice, per Vorabüberweisung oder per Sofortüberweisung. OpenFoodBank behält sich vor einzelne Zahlungsarten auszuschließen.<br/>
 
-Folgen des Widerrufs<br/>
-Wenn Sie diesen Vertrag widerrufen, haben wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Lieferkosten (mit Ausnahme der zusätzlichen Kosten, die sich daraus ergeben, dass Sie eine andere Art der Lieferung als die von uns angebotene, günstigste Standardlieferung gewählt haben), unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die Mitteilung über Ihren Widerruf dieses Vertrags bei uns eingegangen ist. Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart; in keinem Fall werden Ihnen wegen dieser Rückzahlung Entgelte berechnet. Wir können die Rückzahlung verweigern, bis wir die Waren wieder zurückerhalten haben oder bis Sie den Nachweis erbracht haben, dass Sie die Waren zurückgesandt haben, je nachdem, welches der frühere Zeitpunkt ist.<br/>
+    <p><strong>5. Eigentumsvorbehalt</strong><br/>
+        1. Bis zur vollständigen Abholung/ dem vollständigen Versand der Sachspende bleibt diese im Eigentum von <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>. Vor Übergang des Eigentums darf der Spendenempfänger nicht über die Ware verfügen.</p>
 
-Sie haben die Waren unverzüglich und in jedem Fall spätestens binnen vierzehn Tagen ab dem Tag, an dem Sie uns über den Widerruf dieses Vertrags unterrichten, an <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?> zurückzusenden oder zu übergeben. Die Frist ist gewahrt, wenn Sie die Waren vor Ablauf der Frist von vierzehn Tagen absenden.<br/>
+    <p><strong>6. Haftung</strong><br/>
+        1. Aufgrund der unentgeltlichen Abgabe gilt in der Regel das Schenkungsrecht. Schadenersatz für Sachmängel ist hiernach vom <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, seine gesetzlichen Vertreter und seine Erfüllungsgehilfen bei arglistigem Verschweigen eines Fehlers zu leisten (§516, §524 BGB).<br/>
+        2. Unabhängig vom Grad des Verschuldens bleibt eine etwaige Haftung im Falle arglistigen Verschweigen eines Mangels, aus der Übernahme einer Garantie oder nach dem Produkthaftungsgesetz unberührt.<br/></p>
+    3. Ansprüche des Kunden wegen Sachmängeln der Ware verjähren entsprechend den gesetzlichen Bestimmungen.</p>
 
-Sie tragen die unmittelbaren Kosten der Rücksendung der Waren. Sie müssen für einen etwaigen Wertverlust der Waren nur aufkommen, wenn dieser Wertverlust auf einen zur Prüfung der Beschaffenheit, Eigenschaften und Funktionsweise der Waren nicht notwendigen Umgang mit ihnen zurückzuführen ist.<br/>
-<br/>
-Ende der Widerrufsbelehrung</strong></p>
-
-                        <p><strong>4. Muster-Widerrufsformular</strong><br/>
-(Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück.)<br/>
-– An <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, <?= $this->escape(trim($this->shop->street)) ?>, <?= $this->escape(trim($this->shop->zip)) ?> <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>:<br/>
-– Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*)/ die Erbringung der folgenden Dienstleistung (*)<br/>
-– Bestellt am (*)/erhalten am (*)<br/>
-– Name des/der Verbraucher(s)<br/>
-– Anschrift des/der Verbraucher(s)<br/>
-– Unterschrift des/der Verbraucher(s) (nur bei Mitteilung auf Papier)<br/>
-– Datum<br/>
-(*) Unzutreffendes streichen.</p>
-
-                        <p><strong>5. Ausschluss des Widerrufsrechts</strong><br/>
-1. Das Widerrufsrecht besteht nicht bei Verträgen über solche Waren, die schnell verderben können oder deren Verfallsdatum schnell überschritten würde oder die nicht vorgefertigt sind und für deren Herstellung eine individuelle Auswahl oder Bestimmung durch den Verbraucher maßgeblich ist oder die eindeutig auf die persönlichen Bedürfnisse des Verbrauchers zugeschnitten sind. Ferner besteht das Widerrufsrecht nicht bei Verträgen zur Lieferung von Zeitungen, Zeitschriften oder Illustrierten, mit Ausnahme von Abonnement-Verträgen.<br/>
-
-2. Werden Bestellungen vorgenommen, die der gewerblichen oder selbstständigen beruflichen Tätigkeit des Kunden zuzuordnen sind, steht dem Kunden kein Widerrufsrecht nach §§ 312d, 355 BGB zu. Die §§ 10 und 12 dieser AGB finden keine Anwendung.</p>
-
-			<p><strong>6. Zahlung, Fälligkeit und Verzug</strong><br/>
-1. Der Kaufpreis wird mit der Annahme der Bestellung fällig.<br/>
-2. Die Zahlung erfolgt über den Epelia-Treuhandservice, per Vorabüberweisung oder per Sofortüberweisung. Wir behalten uns vor einzelne Zahlungsarten auszuschließen.<br/>
-3. Ist der Kunde Verbraucher, ruht unsere Lieferpflicht solange der Kunde mit einer Verbindlichkeit aus dieser Bestellung im Rückstand ist. Ist der Kunde Unternehmer, ruht unsere Lieferpflicht solange der Kunde mit einer Verbindlichkeit aus der Geschäftsbeziehung im Rückstand ist.<br/>
-4. Für jede nicht eingelöste Lastschrift ist der Kunde verpflichtet eine Verwaltungsgebühr in Höhe von EUR 15,00 zu zahlen. Dem Kunden steht der Nachweis frei, dass geringerer Schaden entstanden ist. Der Kunde ermächtigt zudem seine Bank uns seinen Namen und seine aktuelle Anschrift mitzuteilen.</p>
-			
-			<p><strong>7. Eigentumsvorbehalt</strong><br/>
-Bis zur vollständigen Bezahlung der Ware bleibt diese in unserem Eigentum. Vor Übergang des Eigentums darf der Kunde die Ware weder weiterveräußern noch sonst über die Ware verfügen.</p>
-			
-			<p><strong>8. Lieferung</strong><br/>
-1. Die Lieferung erfolgt an die vom Kunden angegebene Lieferadresse innerhalb des Liefergebiets.<br/>
-2. Kühlungspflichtige Frischeprodukte liefern wir nur innerhalb Deutschlands und nur für den Fall, dass der erste Zustellversuch der bestellten Frischeprodukte erfolgreich ist.<br/>
-3. Wir sind in zumutbarem Umfang zu Teillieferungen berechtigt. Der Kunde hat in diesem Fall nur die Versandkosten zu tragen, die im Falle der Gesamtlieferung der Ware angefallen wäre.</p>
-			
-			<p><strong>9. Mängelgewährleistung</strong><br/>
-Ansprüche des Kunden wegen Sachmängeln der Ware verjähren entsprechend den gesetzlichen Bestimmungen.</p>
-			
-			<p><strong>10. Haftung</strong><br/>
-1. <?= (trim($this->shop->company)) ? $this->escape(trim($this->shop->company)) : $this->escape(trim($this->shop->name)) ?>, seine gesetzlichen Vertreter und seine Erfüllungsgehilfen haften im Falle von Vorsatz und grober Fahrlässigkeit nur, soweit es sich nicht um die Verletzung einer vertragswesentlichen Pflicht oder die Verletzung des Lebens, des Körpers oder der Gesundheit handelt und ausschließlich in Höhe des vorhersehbaren Schadens.<br/>
-2. Unabhängig vom Grad des Verschuldens bleibt eine etwaige Haftung im Falle arglistigen Verschweigen eines Mangels, aus der Übernahme einer Garantie oder nach dem Produkthaftungsgesetz unberührt.<br/>
-</p>
-			
-			<p><strong>11. Alternachweis</strong><br/>
-1. Soweit wir verpflichtet sind, bestimmte Produkte nur unter Einhaltung einer gesetzlichen Altersbeschränkung auszuliefern, verlangen wir bei der Erstbestellung als Alternachweis eine unterzeichnet Kopie des Personalausweises oder Passes des Kunden.<br/>
-- Zusendung per Fax unter Angabe von Anschrift und Telefonnummer<br/>
-- Zusendung per Email unter Angabe von Anschrift und Telefonnummer<br/>
-2. Die Auslieferung von Artikeln, für die der Altersnachweis erforderlich ist, erfolgt über ein Post-Ident-Verfahren.</p>
-			
-			<p><strong>12. Schlussbestimmungen</strong><br/>
-1. Es findet ausschließlich deutsches Recht unter Ausschluss des UN-Kaufrechts Anwendung.<br/>
-2. Erfüllungsort ist <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>.<br/>
-3. Sofern der Kunde Unternehmer ist, ist <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?> ausschließlicher Gerichtsstand für alle Rechtsstreitigkeiten. Der gleiche Gerichtsstand gilt, wenn der Kunde keinen allgemeinen Gerichtsstand in Deutschland hat, nach Vertragsschluss seinen Wohnsitz oder gewöhnlichen Aufenthalt in das Ausland verlegt oder sein Wohnsitz oder gewöhnlicher Aufenthalt zum Zeitpunkt der Klageerhebung nicht bekannt ist.<br/>
-4. Änderungen und Ergänzungen dieser AGB bedürfen zu ihrer Wirksamkeit der Schriftform. Dies gilt auch für Aufhebung, Änderung und Ergänzung dieser Schriftformklausel.<br/>
-5. Soweit einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sind, wird hierdurch die Wirksamkeit dieser AGB im Übrigen nicht berührt. Die Parteien verpflichten sich die unwirksame Klausel durch eine Regelung zu ersetzen, welche der gewollten wirtschaftlich am nächsten kommt.</p>
+    <p><strong>7. Schlussbestimmungen</strong><br/>
+    1. Es findet ausschließlich deutsches Recht unter Ausschluss des UN-Kaufrechts Anwendung.<br/>
+    2. Erfüllungsort ist <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?>.<br/>
+    3. <?= $this->escape(trim($this->shop->city)) ?>, <?= $this->escape($this->shop->getCountry()->name) ?> ist ausschließlicher Gerichtsstand für alle Rechtsstreitigkeiten.<br/>
+    4. Änderungen und Ergänzungen dieser AGB bedürfen zu ihrer Wirksamkeit der Schriftform. Dies gilt auch für Aufhebung, Änderung und Ergänzung dieser Schriftformklausel.<br/>
+    5. Soweit einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sind, wird hierdurch die Wirksamkeit dieser AGB im Übrigen nicht berührt. Die Parteien verpflichten sich die unwirksame Klausel durch eine Regelung zu ersetzen, welche der gewollten wirtschaftlich am nächsten kommt.</p>
 <?php endif; ?>
     </div>
 </div>
