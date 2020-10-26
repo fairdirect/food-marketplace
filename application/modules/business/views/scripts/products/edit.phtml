@@ -23,8 +23,38 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
+
+        switch($('#producttype').val()) {
+            case 'offer':
+                $('#wholesale_1-element').show();
+                $('#price_normal_1-element').hide();
+                break;
+            case 'request':
+                $('#wholesale_1-element').hide();
+                $('#price_normal_1-element').show();
+                break;
+            default:
+                $('#price_normal_1-element').hide();
+                $('#wholesale_1-element').hide();
+        }
+
         if($('#unlimited_stock').attr('checked')){
             $('#stock').attr('disabled', 'disabled');
+        }
+    });
+    $('#producttype').change(function(){
+        switch($('#producttype').val()) {
+            case 'offer':
+                $('#wholesale_1-element').show();
+                $('#price_normal_1-element').hide();
+                break;
+            case 'request':
+                $('#wholesale_1-element').hide();
+                $('#price_normal_1-element').show();
+                break;
+            default:
+                $('#price_normal_1-element').hide();
+                $('#wholesale_1-element').hide();
         }
     });
     $('#type').change(function(){ 

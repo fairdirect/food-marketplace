@@ -4742,6 +4742,39 @@
                 <seg>Seleziona la regione</seg>
             </tuv>
         </tu>
+        <tu tuid='misc_request'>
+            <tuv xml:lang="de">
+                <seg>Spendengesuch</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Richiesta di donazione</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Donation request</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_offer'>
+            <tuv xml:lang="de">
+                <seg>Angebot</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Offerte</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Offer</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_producttype'>
+            <tuv xml:lang="de">
+                <seg>Angebote / Gesuche</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Offerte / Richieste</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Offers / Requests</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 
