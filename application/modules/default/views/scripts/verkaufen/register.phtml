@@ -1,6 +1,8 @@
-<div id="register-content" class="request">
-    <h1 style="margin-bottom:0px;"><?= $this->translate('sell_register_headline') ?></h1>
-    <p class="intro-block"><?= $this->translate('sell_register_text') ?></p>
-    <p class="error"><?= $this->registerError ?></p>
-    <?= $this->form; ?>    
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('sell_register_headline') ?></h2>
+        <p class="intro-block"><?= $this->translate('sell_register_text') ?></p>
+        <p class="error"><?= $this->registerError ?></p>
+        <?= $this->form; ?>
+    </div>
 </div>
