@@ -41,6 +41,11 @@
         if($('#unlimited_stock').attr('checked')){
             $('#stock').attr('disabled', 'disabled');
         }
+
+        $('#best_before').datepicker({
+            dateFormat: "yy-mm-dd"
+        });
+
     });
     $('#producttype').change(function(){
         switch($('#producttype').val()) {

@@ -19,6 +19,7 @@ class Model_Product extends Model_ModelAbstract
     public $ingredients;
     public $main_picture_id;
     public $producttype;
+    public $best_before;
 
     private $_shop = null;
     private $_attributes = null;

@@ -1,0 +1,1 @@
+ALTER TABLE epelia_products ADD best_before DATE DEFAULT NULL;

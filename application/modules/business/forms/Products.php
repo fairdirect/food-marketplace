@@ -116,6 +116,10 @@ class Business_Form_Products extends Zend_Form
         $stock->addFilters(array('StripTags'))
             ->setLabel($this->getTranslator()->translate('business_products_amount'));
 
+        $best_before = new Zend_Form_Element_Text('best_before');
+        $best_before->addFilters(array('StripTags'))
+            ->setLabel($this->getTranslator()->translate('misc_best_before'));
+
         $wholesale_amount_1 = new Zend_Form_Element_Text('wholesale_amount_1');
         $wholesale_amount_1->addFilters(array('StripTags', 'StripNewlines'))->setLabel($this->getTranslator()->translate('business_products_price_amount'));
         $wholesale_unit_1 = new Zend_Form_Element_Select('wholesale_unit_1');
@@ -125,7 +129,7 @@ class Business_Form_Products extends Zend_Form
         $wholesale_content_type_1 = new Zend_Form_Element_Select('wholesale_content_type_1');
         $wholesale_content_type_1->addMultiOptions($contentOptions)->setLabel($this->getTranslator()->translate('business_product_price_content_type'));
 
-        $this->addDisplayGroup(array($wholesale_amount_1, $wholesale_unit_1, $wholesale_content_1, $wholesale_content_type_1, $unlimitedStock, $stock), 'wholesale_1', array('legend' => $this->getTranslator()->translate('business_product_price_wholesale')));
+        $this->addDisplayGroup(array($wholesale_amount_1, $wholesale_unit_1, $wholesale_content_1, $wholesale_content_type_1, $unlimitedStock, $stock, $best_before), 'wholesale_1', array('legend' => $this->getTranslator()->translate('business_product_price_wholesale')));
 
         $submit = new Zend_Form_Element_Submit($this->getTranslator()->translate('misc_save'));
 

@@ -4775,6 +4775,17 @@
                 <seg>Offers / Requests</seg>
             </tuv>
         </tu>
+        <tu tuid='misc_best_before'>
+            <tuv xml:lang="de">
+                <seg>Mindesthaltbarkeitsdatum</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Data di scadenza</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Best before date</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 
