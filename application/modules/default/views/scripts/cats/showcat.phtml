@@ -2,8 +2,20 @@
     <div class="col-2 bg-light border m-3">
         <h4><?= $this->escape($this->cat->name) ?> (<?= $this->escape($this->productCount) ?>)</h4>
         <ul class="categoryList">
-<?php foreach($this->cat->getProductGroup()->getCategories() as $cat): ?>
-            <li><a <?php if($this->cat->id == $cat->id): ?>class="current_item" <?php endif; ?>href="/categories/<?= $this->escape($cat->id) ?>/" title="<?= $this->escape($cat->name) ?>"><?= $this->escape($cat->name) ?></a></li>
+<?php foreach($this->cat->getProductGroup()->getCategories($this->onlyBio, $this->onlyDiscount, $this->onlyWholesale, true, true, $this->productType) as $cat):
+    $catHref = '/categories/' . $cat->id . '/';
+    if($this->onlyBio || $this->onlyDiscount || $this->onlyWholesale || $this->productType){
+        $catHref .= ($this->onlyBio) ? 'bio' : 'all';
+        $catHref .= '/';
+        $catHref .= ($this->onlyDiscount) ? 'discount' : 'all';
+        $catHref .= '/';
+        $catHref .= ($this->onlyWholesale) ? 'wholesale' : 'all';
+        $catHref .= '/';
+        $catHref .= ($this->productType) ? $this->productType : 'request';
+        $catHref .= '/1/';
+    }
+?>
+            <li><a <?php if($this->cat->id == $cat->id): ?>class="current_item" <?php endif; ?>href="<?= $catHref ?>" title="<?= $this->escape($cat->name) ?>"><?= $this->escape($cat->name) ?></a></li>
 <?php endforeach;
 $this->cat->clearProducts(); // getting count sets _products, need to clear before calling getProducts()
 ?>
@@ -20,11 +32,11 @@ $this->cat->clearProducts(); // getting count sets _products, need to clear befo
         </ul>
     </div>
     <div class="col bg-light border m-3">
-        <h2><?= $this->escape($this->cat->getProductGroup()->name) ?> - <?= $this->escape($this->cat->name) ?></h2>
-<?= $this->partial('partials/productgrid.phtml', array('products' => $this->cat->getProducts(9, ($this->page > 1) ? (9 * $this->page - 9) : null, $this->onlyBio, $this->onlyDiscount, $this->onlyWholesale))) ?>
+        <h2><?= $this->escape($this->cat->getProductGroup()->name) ?> - <?= $this->escape($this->cat->name) ?> <?= ($this->productType == 'request') ? $this->translate('misc_requests') : $this->translate('misc_offers') ?> <?= $this->translate('misc_in_region') ?> <?= $this->region->name ?></h2>
+<?= $this->partial('partials/productgrid.phtml', array('products' => $this->cat->getProducts(9, ($this->page > 1) ? (9 * $this->page - 9) : null, $this->onlyBio, $this->onlyDiscount, $this->onlyWholesale, true, false, $this->productType))) ?>
 <?php if($this->productCount): ?>
     <br />
-    <?= $this->partial('partials/pagination.phtml', array('type' => 'categories', 'id' => $this->cat->id, 'page' => $this->page, 'productCount' => $this->productCount, 'onlyBio' => $this->onlyBio, 'onlyDiscount' => $this->onlyDiscount, 'onlyWholesale' => $this->onlyWholesale)); ?>
+    <?= $this->partial('partials/pagination.phtml', array('type' => 'categories', 'id' => $this->cat->id, 'page' => $this->page, 'productCount' => $this->productCount, 'onlyBio' => $this->onlyBio, 'onlyDiscount' => $this->onlyDiscount, 'onlyWholesale' => $this->onlyWholesale, 'productType' => $this->productType)); ?>
 <?php endif; ?>
     </div>
 </div>

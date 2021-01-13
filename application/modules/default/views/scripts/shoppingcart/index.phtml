@@ -48,7 +48,12 @@
         <?php endif; ?>
                                     </td>
                                     <td>
-                                        <p><strong><a href="/products/<?= $this->escape($product->id) ?>/" class='hiddenlink'><?= $this->escape($product->name) ?></a></strong></p>
+                                        <p>
+                                            <strong><a href="/products/<?= $this->escape($product->id) ?>/" class='hiddenlink'><?= $this->escape($product->name) ?></a></strong>
+                                            <?php if(!is_null($product->stock)): ?>
+                                            <br /><?= ($product->stock > 100) ? '>100' : $product->stock  ?> <?= $this->translate('misc_in_stock') ?>
+                                            <?php endif; ?>
+                                        </p>
                                         <p><?= $this->escape($price->quantity) ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?></p>
                                         <p><a class='link link-delete' onclick="deleteFromCart(<?= $this->escape($price->id) ?>)" title='<?= $this->escape($product->name) ?> <?= $this->translate('checkout_remove_product_2') ?>'><?= $this->translate('checkout_remove_product_1') ?></a></p>
                                             </td>
@@ -59,7 +64,10 @@
                                 <td width='100' class="td_elem">
                                     <div class='p_num'>
                                         <select class="cart_product_num" style="width:50px;" onchange="changeQuantity(<?= $this->escape($price->id) ?>, $(this).val())">
-        <?php for($i = 1; $i <= 100; $i++): ?>
+        <?php
+            $maxAvailable = is_null($product->stock) ? 100 : $product->stock;
+            for($i = 1; $i <= $maxAvailable; $i++):
+        ?>
                                             <option value="<?= $i ?>"<?php if($i == $quantity): ?> selected="selected"<?php endif; ?>><?= $i ?></option>
         <?php endfor; ?>
                                         </select>

@@ -1,7 +1,36 @@
+<?php
+
+$cat = $this->product->getCategory();
+$catHref = '/categories/' . $cat->id . '/';
+$catHref .= 'all';
+$catHref .= '/';
+$catHref .= 'all';
+$catHref .= '/';
+$catHref .= ($this->product->productType == 'offer') ? 'wholesale' : 'all';
+$catHref .= '/';
+$catHref .= $this->product->producttype;
+$catHref .= '/1/';
+$catTitle =( ($this->product->producttype == 'request') ? $this->translate('misc_requests') : $this->translate('misc_offers') ) . ' ' . $cat->name;
+
+$group = $this->product->getCategory()->getProductGroup();
+$groupHref = '/groups/' . $group->id . '/';
+$groupHref .= 'all';
+$groupHref .= '/';
+$groupHref .= 'all';
+$groupHref .= '/';
+$groupHref .= ($this->product->productType == 'offer') ? 'wholesale' : 'all';
+$groupHref .= '/';
+$groupHref .= $this->product->producttype;
+$groupHref .= '/1/';
+$groupTitle =( ($this->product->producttype == 'request') ? $this->translate('misc_requests') : $this->translate('misc_offers') ) . ' ' . $group->name;
+
+?>
+
 <div class="row">
     <div class="col bg-light border m-3">
-        <div class="breadcrumb" style="margin-top:5px;">
-            <a href="/groups/<?= $this->escape($this->product->getCategory()->getProductGroup()->id) ?>" title="<?= $this->escape($this->product->getCategory()->getProductGroup()->name) ?>"><?= $this->escape($this->product->getCategory()->getProductGroup()->name) ?></a> &gt;
+        <div class="breadcrumb mt-3">
+            <a href="<?= $groupHref ?>" title="<?= $groupTitle ?>"><?= $groupTitle ?></a>&nbsp;&gt;&nbsp;
+            <a href="<?= $catHref ?>" title="<?= $catTitle ?>"><?= $catTitle ?></a>&nbsp;&gt;&nbsp;
             <a href="<?= $this->escape($this->product->getShop()->getLink()) ?>" title="<?= $this->escape($this->product->getShop()->name) ?>"><?= $this->escape($this->product->getShop()->name) ?></a>
         </div>
     </div>
@@ -37,9 +66,14 @@
 
 <?php if ($this->product->producttype == 'offer' && !is_null($this->user) && $this->user->is_wholesale && $this->product->getFirstWholesalePrice()): ?>
             <div class="alert alert-warning">
-                <table class="table">
+                <table class="table mb-0" >
                     <tr>
-                        <td><?= $this->escape($this->product->getFirstWholesalePrice()->quantity) ?> <?= ($this->product->getFirstWholesalePrice()->quantity == 1) ? $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->singular) : $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->plural) ?><br />&agrave; <?= $this->escape($this->product->getFirstWholesalePrice()->contents) ?> <?= $this->escape($this->product->getFirstWholesalePrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></td>
+                        <td>
+                            <?= $this->escape($this->product->getFirstWholesalePrice()->quantity) ?> <?= ($this->product->getFirstWholesalePrice()->quantity == 1) ? $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->singular) : $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->plural) ?><br />&agrave; <?= $this->escape($this->product->getFirstWholesalePrice()->contents) ?> <?= $this->escape($this->product->getFirstWholesalePrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?>
+                            <?php if(!is_null($this->product->stock)): ?>
+                                <br /><?= ($this->product->stock > 100) ? '>100' : $this->product->stock  ?> <?= $this->translate('misc_in_stock') ?>
+                            <?php endif; ?>
+                        </td>
                         <td>
                         <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
                             <a class="btn btn-success" title="in den Warenkorb" href="javascript:addToCart(1, <?= $this->escape($this->product->getFirstWholesalePrice()->id) ?>)"> in den Warenkorb </a>

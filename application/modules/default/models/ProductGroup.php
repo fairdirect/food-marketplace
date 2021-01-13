@@ -8,9 +8,9 @@ class Model_ProductGroup extends Model_ModelAbstract
 
     private $_categories = null;
 
-    public function getCategories($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false){
+    public function getCategories($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyWithNonDeleted = true, $productType = null){
         if(is_null($this->_categories)){
-            $this->_categories = Model_ProductCategory::findByGroup($this->id, $onlyBio, $onlyDiscount, $onlyWholesale);
+            $this->_categories = Model_ProductCategory::findByGroup($this->id, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $onlyWithNonDeleted, $productType);
         }
         return $this->_categories;
     }
@@ -43,14 +43,14 @@ class Model_ProductGroup extends Model_ModelAbstract
     }
 
 
-    public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
-        return Model_Product::findByGroup($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated);
+    public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $productType = null){
+        return Model_Product::findByGroup($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $productType);
     }
 
-    public function getProductCount($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false){
+    public function getProductCount($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $productType = null){
         $count = 0;
-        foreach($this->getCategories() as $cat){
-            $count += $cat->getProductCount($onlyBio, $onlyDiscount, $onlyWholesale);
+        foreach($this->getCategories($onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $productType) as $cat){
+            $count += $cat->getProductCount($onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $productType);
         }
         return $count;
     }
@@ -65,7 +65,7 @@ class Model_ProductGroup extends Model_ModelAbstract
         return new Model_DbTable_ProductGroup();
     }
 
-    public static function getByType($mainCategory, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyFromRegion = false){
+    public static function getByType($mainCategory, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyFromRegion = false, $productType = null){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
@@ -106,6 +106,9 @@ class Model_ProductGroup extends Model_ModelAbstract
                 }
                 $select->where('epelia_shops.country = ?', $region->country);
                 $select->where('epelia_regions.name = ?', $region->name);
+            }
+            if(!is_null($productType)){
+                $select->where('epelia_products.producttype = ?', $productType);
             }
 
             $select->where('epelia_products.deleted = ?', '0');

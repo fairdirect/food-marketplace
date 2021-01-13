@@ -309,7 +309,7 @@ class Model_Product extends Model_ModelAbstract
         return $ret;
     }
 
-    public static function findByCategory($categoryID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+    public static function findByCategory($categoryID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $productType = null){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
@@ -336,6 +336,10 @@ class Model_Product extends Model_ModelAbstract
             $select->where($table->getTableName() . '.deleted != ?', true);
         }
 
+        if(!is_null($productType)){
+            $select->where($table->getTableName() . '.producttype = ?', $productType);
+        }
+
         $select->order($table->getTableName() . '.name ASC');
         $select->limit($limit, $offset);
 
@@ -349,7 +353,7 @@ class Model_Product extends Model_ModelAbstract
         return $ret;
     }
 
-    public static function findByGroup($groupID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+    public static function findByGroup($groupID, $limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $productType = null){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $select->join('epelia_product_categories', $table->getTableName() . '.category_id = epelia_product_categories.id', array());
@@ -376,6 +380,10 @@ class Model_Product extends Model_ModelAbstract
 
         if(!$all){
             $select->where($table->getTableName() . '.deleted != ?', true);
+        }
+
+        if(!is_null($productType)){
+            $select->where($table->getTableName() . '.producttype = ?', $productType);
         }
 
         $select->order($table->getTableName() . '.name ASC');

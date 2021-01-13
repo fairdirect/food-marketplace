@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col bg-light border m-3">
-        <h2><?= $this->translate('wholesale_show_all_headline') ?> in der Region <?= $this->region->name ?></h2>
+        <h2><?= $this->translate('wholesale_show_all_headline') ?> <?= $this->translate('misc_in_region') ?> <?= $this->region->name ?></h2>
         <div class="content_buy_categories">
     <?php foreach($this->mainCategories as $cat):
-        if(!$cat->getGroups(false, false, true, true, true)):
+        if(!$cat->getGroups(false, false, true, true, true, 'offer')):
             continue;
         endif; ?>
-            <?= $this->partial('partials/groupgrid.phtml', array('groupTitle' => $this->translate($cat->name), 'groups' => $cat->getGroups(false, false, true), 'onlyBio' => false, 'onlyDiscount' => false, 'onlyWholesale' => true)) ?>
+            <?= $this->partial('partials/groupgrid.phtml', array('groupTitle' => $this->translate($cat->name), 'productType' => 'offer', 'groups' => $cat->getGroups(false, false, true), 'onlyBio' => false, 'onlyDiscount' => false, 'onlyWholesale' => true, false, true, 'offer')) ?>
     <?php endforeach; ?>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <ul class="pagination">
     <?php if($this->page > 1): ?>
         <li class="page-item" id="prev-page">
-            <a class="page-link" title="<?= $this->translate('pagination_prev') ?>" href="<?php if($this->customLink): ?><?= $this->customLink ?><?php else: ?>/<?= $this->escape($this->type) ?>/<?= $this->escape($this->id) ?>/<?php endif; ?><?= ($this->onlyBio) ? 'bio' : 'all' ?>/<?= ($this->onlyDiscount) ? 'discount' : 'all' ?>/<?= ($this->onlyWholesale) ? 'wholesale' : 'all' ?>/<?= $this->escape($this->page) - 1 ?>/">&laquo;</a>
+            <a class="page-link" title="<?= $this->translate('pagination_prev') ?>" href="<?php if($this->customLink): ?><?= $this->customLink ?><?php else: ?>/<?= $this->escape($this->type) ?>/<?= $this->escape($this->id) ?>/<?php endif; ?><?= ($this->onlyBio) ? 'bio' : 'all' ?>/<?= ($this->onlyDiscount) ? 'discount' : 'all' ?>/<?= ($this->onlyWholesale) ? 'wholesale' : 'all' ?>/<?= ($this->productType) ?>/<?= $this->escape($this->page) - 1 ?>/">&laquo;</a>
         </li>
     <?php endif; ?>
     <?php for($i = 1; $i <= (ceil($this->productCount / 9)) ; $i++):
@@ -12,13 +12,13 @@
         </li>
     <?php else: ?>
         <li class="page-item">
-            <a class="page-link" title="<?= $this->translate('pagination_page') ?> <?= $i ?>" href="<?php if($this->customLink): ?><?= $this->customLink ?><?php else: ?>/<?= $this->escape($this->type) ?>/<?= $this->escape($this->id) ?>/<?php endif; ?><?= ($this->onlyBio) ? 'bio' : 'all' ?>/<?= ($this->onlyDiscount) ? 'discount' : 'all' ?>/<?= ($this->onlyWholesale) ? 'wholesale' : 'all' ?>/<?= $i ?>/"><?= $i ?></a>
+            <a class="page-link" title="<?= $this->translate('pagination_page') ?> <?= $i ?>" href="<?php if($this->customLink): ?><?= $this->customLink ?><?php else: ?>/<?= $this->escape($this->type) ?>/<?= $this->escape($this->id) ?>/<?php endif; ?><?= ($this->onlyBio) ? 'bio' : 'all' ?>/<?= ($this->onlyDiscount) ? 'discount' : 'all' ?>/<?= ($this->onlyWholesale) ? 'wholesale' : 'all' ?>/<?= ($this->productType) ?>/<?= $i ?>/"><?= $i ?></a>
         </li>
     <?php endif;
     endfor; ?>
     <?php if($this->page < (ceil($this->productCount) / 9)): ?>
         <li class="page-item" id="next-page">
-            <a class="page-link" title="<?= $this->translate('pagination_next') ?>" href="<?php if($this->customLink): ?><?= $this->customLink ?><?php else: ?>/<?= $this->escape($this->type) ?>/<?= $this->escape($this->id) ?>/<?php endif; ?><?= ($this->onlyBio) ? 'bio' : 'all' ?>/<?= ($this->onlyDiscount) ? 'discount' : 'all' ?>/<?= ($this->onlyWholesale) ? 'wholesale' : 'all' ?>/<?= $this->escape($this->page) + 1 ?>/">&raquo;</a>
+            <a class="page-link" title="<?= $this->translate('pagination_next') ?>" href="<?php if($this->customLink): ?><?= $this->customLink ?><?php else: ?>/<?= $this->escape($this->type) ?>/<?= $this->escape($this->id) ?>/<?php endif; ?><?= ($this->onlyBio) ? 'bio' : 'all' ?>/<?= ($this->onlyDiscount) ? 'discount' : 'all' ?>/<?= ($this->onlyWholesale) ? 'wholesale' : 'all' ?>/<?= ($this->productType) ?>/<?= $this->escape($this->page) + 1 ?>/">&raquo;</a>
         </li>
     <?php endif; ?>
     </ul>

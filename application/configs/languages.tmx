@@ -4753,6 +4753,17 @@
                 <seg>Donation request</seg>
             </tuv>
         </tu>
+        <tu tuid='misc_requests'>
+            <tuv xml:lang="de">
+                <seg>Spendengesuche</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Richieste di donazione</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Donation requests</seg>
+            </tuv>
+        </tu>
         <tu tuid='misc_offer'>
             <tuv xml:lang="de">
                 <seg>Angebot</seg>
@@ -4762,6 +4773,17 @@
             </tuv>
             <tuv xml:lang="en">
                 <seg>Offer</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_offers'>
+            <tuv xml:lang="de">
+                <seg>Angebote</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Offerte</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Offers</seg>
             </tuv>
         </tu>
         <tu tuid='misc_producttype'>
@@ -4784,6 +4806,28 @@
             </tuv>
             <tuv xml:lang="en">
                 <seg>Best before date</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_in_stock'>
+            <tuv xml:lang="de">
+                <seg>verfügbar</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>a disposizione</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>available</seg>
+            </tuv>
+        </tu>
+        <tu tuid='misc_in_region'>
+            <tuv xml:lang="de">
+                <seg>in der Region</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>nella regione</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>in the region</seg>
             </tuv>
         </tu>
     </body>

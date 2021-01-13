@@ -45,18 +45,18 @@ class Model_ProductCategory extends Model_ModelAbstract
         $this->_products = null;
     }
 
-    public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
+    public function getProducts($limit = null, $offset = null, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $productType = null){
         if(is_null($this->_products)){
-            $this->_products = Model_Product::findByCategory($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all);
+            $this->_products = Model_Product::findByCategory($this->id, $limit, $offset, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $productType);
         }
         return $this->_products;
     }
 
-    public function getProductCount($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false){
-        return count($this->getProducts(null, null, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all));
+    public function getProductCount($onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $all = false, $productType = null){
+        return count($this->getProducts(null, null, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all, $productType));
     }
 
-    public static function findByGroup($groupID, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyWithNonDeleted = true){
+    public static function findByGroup($groupID, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyWithNonDeleted = true, $productType = null){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
@@ -85,6 +85,10 @@ class Model_ProductCategory extends Model_ModelAbstract
 
         if($onlyWithNonDeleted) {
             $select->where('epelia_products.deleted = ?', 'false');
+        }
+
+        if(!is_null($productType)) {
+            $select->where('epelia_products.producttype = ?', $productType);
         }
 
         $select->group($table->getTableName() . '.id');
