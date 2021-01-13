@@ -4841,6 +4841,39 @@
                 <seg>maximum</seg>
             </tuv>
         </tu>
+        <tu tuid='cookiebanner_text'>
+            <tuv xml:lang="de">
+                <seg>Eine Nutzung des Angebotes von OpenFoodBank erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Eine Nutzung des Angebotes von OpenFoodBank erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Eine Nutzung des Angebotes von OpenFoodBank erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
+            </tuv>
+        </tu>
+        <tu tuid='cookiebanner_more'>
+            <tuv xml:lang="de">
+                <seg>Mehr Informationen</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Mehr Informationen</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Mehr Informationen</seg>
+            </tuv>
+        </tu>
+        <tu tuid='cookiebanner_accept'>
+            <tuv xml:lang="de">
+                <seg>Verstanden</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>Verstanden</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Verstanden</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 
