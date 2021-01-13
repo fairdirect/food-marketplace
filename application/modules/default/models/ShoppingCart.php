@@ -261,6 +261,27 @@ class Model_ShoppingCart extends Model_ModelAbstract
         $table->delete($where); // by ON CASCADE datasets in epelia_products_shopping_carts are removed 
     }
 
+    public function productCanBeAddedByStock($productID, $priceID, $quantity) {
+        $product = Model_Product::find($productID);
+        if(is_null($product->stock)) {
+            return true;
+        }
+        foreach($this->_items as &$item){
+            if($item['product_id'] == $productID && $item['product_price_id'] == $priceID) {
+                if ($item['quantity'] + $quantity <= $product->stock) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+        // no return at this point => product not yet in cart
+        if($product->stock >= $quantity) {
+            return true;
+        }
+        return false;
+    }
+
     public function addProduct($productID, $priceID, $quantity){
         $session = new Zend_Session_Namespace('Default');
         $this->_items[] = array(
@@ -368,11 +389,11 @@ class Model_ShoppingCart extends Model_ModelAbstract
             try{
                 $product = Model_Product::find($item['product_id']);
                 $price = Model_ProductPrice::find($item['product_price_id']);
-                $unit_type = ($quantity) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
+                $unit_type = ($item['quantity'] > 1) ? $price->getUnitType()->plural : $price->getUnitType()->singular;
                 $content_type = $price->getContentType()->name;
 
-                $query = self::getDbTable()->getAdapter()->query('UPDATE epelia_products SET stock = (stock - 1) WHERE id = ? AND stock IS NOT NULL', array($item['product_id'])); // do not decrease if stock is null => unlimited stock
-                $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_shopping_carts(product_id, product_name, shopping_cart_id, quantity, tax, value, unit_type, content_type, contents, price_quantity) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', array($product->id, $product->name, $this->id, $item['quantity'], $product->tax, $price->value, $unit_type, $content_type, $price->contents, $price->quantity));
+                $query = self::getDbTable()->getAdapter()->query('UPDATE epelia_products SET stock = (stock - ?) WHERE id = ? AND stock IS NOT NULL', array($item['quantity'], $item['product_id'])); // do not decrease if stock is null => unlimited stock
+                $query = self::getDbTable()->getAdapter()->query('INSERT INTO epelia_products_shopping_carts(product_id, product_name, shopping_cart_id, quantity, tax, value, unit_type, content_type, contents, price_quantity) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', array($product->id, $product->name, $this->id, $item['quantity'], 0, $price->value, $unit_type, $content_type, $price->contents, $price->quantity));
            } catch(Exception $e){
             exit($e->getMessage());
                $failedItems[] = $item;

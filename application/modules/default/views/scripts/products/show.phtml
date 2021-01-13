@@ -56,7 +56,7 @@ $groupTitle =( ($this->product->producttype == 'request') ? $this->translate('mi
                 </div>
             </div>
             <div class="col bg-light border m-3">
-                <h4 class="h2_pea"><?= $this->escape($this->product->name) ?><?php if($this->product->is_bio): ?> <span class="bio-signed">BIO</span><?php endif; ?></h4>
+                <h4><?= $this->escape($this->product->name) ?><?php if($this->product->is_bio): ?> <span class="bio-signed">BIO</span><?php endif; ?></h4>
 <?php if($this->product->producttype == 'request'): ?>
                 <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
     <?php if($this->product->getFirstNormalPrice()): ?>
@@ -65,6 +65,7 @@ $groupTitle =( ($this->product->producttype == 'request') ? $this->translate('mi
 <?php endif; ?>
 
 <?php if ($this->product->producttype == 'offer' && !is_null($this->user) && $this->user->is_wholesale && $this->product->getFirstWholesalePrice()): ?>
+            <div class="alert alert-danger collapse" id="addToCartError"></div>
             <div class="alert alert-warning">
                 <table class="table mb-0" >
                     <tr>
@@ -134,8 +135,6 @@ foreach($this->product->getNormalPrices() as $price):
 ?>
             <tr>
                 <td width="200"><?= $this->escape($price->quantity) ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></td>
-                <td width="150" style="text-align:right"><?= $this->escape($price->value) ?> EUR</td>
-                <td width="150" style="text-align:right"><?php if($price->getBasePriceString()): ?>(<?= $this->escape($price->getBasePriceString()) ?>)<?php endif; ?></td>
                 <td style="padding-left:35px; font-size:11px;">
 <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
                     <a href="javascript:addToCart(1, <?= $this->escape($price->id) ?>)" title="<?= $this->translate('product_buy') ?>"><?= $this->translate('product_buy') ?></a>
@@ -204,7 +203,14 @@ foreach($this->product->getNormalPrices() as $price):
                 price_id: price_id,
                 quantity: quantity
             },
-        }).done(function(){
+        }).done(function(ret){
+            if(!ret.suc) {
+                if(ret.message == 'Not enough stock') {
+                    $('#addToCartError').html('<?= $this->translate('misc_max') ?> ' + <?= $this->product->stock ?> + ' <?= $this->translate('misc_in_stock') ?>').show();
+                }
+                return;
+            }
+
             $.ajax({
                 type: "POST",
                 url: "/ajax/getshoppingcart/",

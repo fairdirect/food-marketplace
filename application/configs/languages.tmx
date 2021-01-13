@@ -4830,6 +4830,17 @@
                 <seg>in the region</seg>
             </tuv>
         </tu>
+        <tu tuid='misc_max'>
+            <tuv xml:lang="de">
+                <seg>maximal</seg>
+            </tuv>
+            <tuv xml:lang="it">
+                <seg>massimo</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>maximum</seg>
+            </tuv>
+        </tu>
     </body>
 </tmx>
 

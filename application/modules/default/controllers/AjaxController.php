@@ -15,7 +15,13 @@ class AjaxController extends Zend_Controller_Action
     public function addtoshoppingcartAction(){
         $request = $this->getRequest();
         if($request->getPost('price_id') && $request->getPost('quantity')){
+
             $price = Model_ProductPrice::find($request->getPost('price_id'));
+
+            if(!Model_ShoppingCart::getRunningShoppingCart()->productCanBeAddedByStock($price->product_id, $request->getPost('price_id'), $request->getPost('quantity'))) {
+                exit(json_encode(array('suc' => false, 'message' => 'Not enough stock')));
+            }
+
             $existingChanged = Model_ShoppingCart::getRunningShoppingCart()->changeQuantity($price->product_id, $request->getPost('price_id'), $request->getPost('quantity'));
             if(!$existingChanged){
                 Model_ShoppingCart::getRunningShoppingCart()->addProduct($price->product_id, $request->getPost('price_id'), $request->getPost('quantity'));
