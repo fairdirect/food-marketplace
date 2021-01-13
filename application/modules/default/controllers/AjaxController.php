@@ -72,7 +72,7 @@ class AjaxController extends Zend_Controller_Action
         $groupID = $this->getRequest()->getParam('group');
         $ret = '<option value=""></option>';
 
-        $categories = Model_ProductCategory::findByGroup($groupID, false, false, false, false);
+        $categories = Model_ProductCategory::findByGroup($groupID, false, false, false, false, false);
         var_dump($categories);
         foreach($categories as $cat){
             $ret .= '<option value="' . $cat->id . '">' . $cat->name . '</option>';

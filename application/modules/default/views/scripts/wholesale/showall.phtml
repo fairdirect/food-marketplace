@@ -1,12 +1,13 @@
-<div id="content_buy">
-    <h1 style="margin-bottom:0px;"><?= $this->translate('wholesale_show_all_headline') ?></h1>
-    <div class="content_buy_categories">
-<?php foreach($this->mainCategories as $cat): 
-    if(!$cat->getGroups(false, false, true)):
-        continue;
-    endif; ?>
-        <?= $this->partial('partials/groupgrid.phtml', array('groupTitle' => $this->translate($cat->name), 'groups' => $cat->getGroups(false, false, true), 'onlyBio' => false, 'onlyDiscount' => false, 'onlyWholesale' => true)) ?>
-<?php endforeach; ?>        
+<div class="row">
+    <div class="col bg-light border m-3">
+        <h2><?= $this->translate('wholesale_show_all_headline') ?> in der Region <?= $this->region->name ?></h2>
+        <div class="content_buy_categories">
+    <?php foreach($this->mainCategories as $cat):
+        if(!$cat->getGroups(false, false, true, true, true)):
+            continue;
+        endif; ?>
+            <?= $this->partial('partials/groupgrid.phtml', array('groupTitle' => $this->translate($cat->name), 'groups' => $cat->getGroups(false, false, true), 'onlyBio' => false, 'onlyDiscount' => false, 'onlyWholesale' => true)) ?>
+    <?php endforeach; ?>
+        </div>
     </div>
-    <p class="clear"></p>
 </div>

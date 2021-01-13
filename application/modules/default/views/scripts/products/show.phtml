@@ -28,41 +28,26 @@
             </div>
             <div class="col bg-light border m-3">
                 <h4 class="h2_pea"><?= $this->escape($this->product->name) ?><?php if($this->product->is_bio): ?> <span class="bio-signed">BIO</span><?php endif; ?></h4>
-<?php if($this->product->getFirstNormalPrice()): ?>
-                <p><?= $this->escape($this->product->getFirstNormalPrice()->value) ?></span> <span class="cur">EUR <?php if($this->product->getFirstNormalPrice()->getBasePriceString()): ?>(<?= $this->escape($this->product->getFirstNormalPrice()->getBasePriceString()) ?>)<?php endif; ?></p>
-                <p>inkl. MwSt. <a href="#shipping" title="<?= $this->translate('product_delivery_costs') ?>"><?= $this->translate('product_delivery_costs') ?></a></p>
-    <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>                    
-                    <p class="btn-cart">
-                        <select name="cart_btn1" id="cart_btn1" style="width:40px;  margin-top:7px;">
-        <?php for($i = 1; $i <= 100; $i++): ?>
-                            <option value="<?= $i ?>"><?= $i ?></option>
-        <?php endfor; ?>
-                        </select>
-                        <a class="btn btn-success" href="javascript:addToCart($('#cart_btn1').val(), <?= $this->escape($this->product->getFirstNormalPrice()->id) ?>)" title="<?= $this->translate('product_add_to_cart') ?>"><?= $this->translate('product_add_to_cart') ?></a>
-                    </p>
-    <?php else: ?>
-                    <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
-    <?php endif; ?>                    
-<?php else: ?>
-                    <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
-<?php endif; ?>                    
-<?php if($this->product->getFirstNormalPrice()): ?>
-                    <p class="title"><?= $this->translate('product_size') ?> <span class="sales_unit"><?= $this->escape($this->product->getFirstNormalPrice()->quantity) ?> <?= ($this->product->getFirstNormalPrice()->quantity == 1) ? $this->escape($this->product->getFirstNormalPrice()->getUnitType()->singular) : $this->escape($this->product->getFirstNormalPrice()->getUnitType()->plural) ?> &agrave; <?= $this->escape($this->product->getFirstNormalPrice()->contents) ?> <?= $this->escape($this->product->getFirstNormalPrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?><span></p>
+<?php if($this->product->producttype == 'request'): ?>
+                <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
+    <?php if($this->product->getFirstNormalPrice()): ?>
+                <p class="title"><?= $this->translate('product_size') ?> <span class="sales_unit"><?= $this->escape($this->product->getFirstNormalPrice()->quantity) ?> <?= ($this->product->getFirstNormalPrice()->quantity == 1) ? $this->escape($this->product->getFirstNormalPrice()->getUnitType()->singular) : $this->escape($this->product->getFirstNormalPrice()->getUnitType()->plural) ?> &agrave; <?= $this->escape($this->product->getFirstNormalPrice()->contents) ?> <?= $this->escape($this->product->getFirstNormalPrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?><span></p>
+    <?php endif; ?>
 <?php endif; ?>
-<?php if(!is_null($this->user) && $this->user->is_wholesale && $this->product->getFirstWholesalePrice()): ?>
-                    <div class="alert alert-warning">
-                        <h4>Großhandelspreise</h4>
-                        <table class="table">
-                            <tr>
-                                <td><?= $this->escape($this->product->getFirstWholesalePrice()->quantity) ?> <?= ($this->product->getFirstWholesalePrice()->quantity == 1) ? $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->singular) : $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->plural) ?><br />&agrave; <?= $this->escape($this->product->getFirstWholesalePrice()->contents) ?> <?= $this->escape($this->product->getFirstWholesalePrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?> <?= $this->escape($this->product->getFirstWholesalePrice()->value) ?> EUR</td>
-                                <td>
-                                <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
-                                    <a class="btn btn-success" title="in den Warenkorb" href="javascript:addToCart(1, <?= $this->escape($this->product->getFirstWholesalePrice()->id) ?>)"> in den Warenkorb </a>
-                                <?php endif; ?>
-                                </td>
-                            </tr>
-                        </table>
-                      </div>
+
+<?php if ($this->product->producttype == 'offer' && !is_null($this->user) && $this->user->is_wholesale && $this->product->getFirstWholesalePrice()): ?>
+            <div class="alert alert-warning">
+                <table class="table">
+                    <tr>
+                        <td><?= $this->escape($this->product->getFirstWholesalePrice()->quantity) ?> <?= ($this->product->getFirstWholesalePrice()->quantity == 1) ? $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->singular) : $this->escape($this->product->getFirstWholesalePrice()->getUnitType()->plural) ?><br />&agrave; <?= $this->escape($this->product->getFirstWholesalePrice()->contents) ?> <?= $this->escape($this->product->getFirstWholesalePrice()->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></td>
+                        <td>
+                        <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
+                            <a class="btn btn-success" title="in den Warenkorb" href="javascript:addToCart(1, <?= $this->escape($this->product->getFirstWholesalePrice()->id) ?>)"> in den Warenkorb </a>
+                        <?php endif; ?>
+                        </td>
+                    </tr>
+                </table>
+              </div>
 <?php endif; ?>                    
                     <a href="<?= $this->product->getShop()->getLink() ?>"><?= $this->translate('product_to_shop') ?></a>
 <?php if($this->product->getShop()->getWoma()): ?>
@@ -103,8 +88,6 @@ foreach($this->product->getNormalPrices() as $price):
 ?>
             <tr>
                 <td width="200"><?= $this->escape($price->quantity) ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?> <?= $this->translate('misc_netto') ?></td>
-                <td width="150" style="text-align:right"><?= $this->escape($price->value) ?> EUR</td>
-                <td width="150" style="text-align:right"><?php if($price->getBasePriceString()): ?>(<?= $this->escape($price->getBasePriceString()) ?>)<?php endif; ?></td>
                 <td style="padding-left:35px; font-size:11px;">
     <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
                     <a href="javascript:addToCart(1, <?= $this->escape($price->id) ?>)" title="<?= $this->translate('product_buy') ?>"><?= $this->translate('product_buy') ?></a>

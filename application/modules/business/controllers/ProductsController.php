@@ -46,6 +46,9 @@ class Business_ProductsController extends Zend_Controller_Action
                         $product->stock = 0;
                     }
                 }
+                if(!$request->getPost('best_before')){
+                    $product->best_before = NULL;
+                }
                 try{
                      $product->save();
                 } catch(Exception $e){
@@ -115,7 +118,7 @@ class Business_ProductsController extends Zend_Controller_Action
                         $groupElements[$gr->id] = $gr->name;
                     }
                     $form->getElement('group_id')->addMultiOptions($groupElements);
-                    $groupCategories = Model_ProductCategory::findByGroup($group->id, false, false, false, false);
+                    $groupCategories = Model_ProductCategory::findByGroup($group->id, false, false, false, false, false);
                     $categoryElements = array();
                     foreach($groupCategories as $cat){
                         $categoryElements[$cat->id] = $cat->name;

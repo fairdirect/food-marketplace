@@ -56,7 +56,7 @@ class Model_ProductCategory extends Model_ModelAbstract
         return count($this->getProducts(null, null, $onlyBio, $onlyDiscount, $onlyWholesale, $onlyActivated, $all));
     }
 
-    public static function findByGroup($groupID, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true){
+    public static function findByGroup($groupID, $onlyBio = false, $onlyDiscount = false, $onlyWholesale = false, $onlyActivated = true, $onlyWithNonDeleted = true){
         $table = self::getDbTable();
         $select = $table->getAdapter()->select()->from($table->getTableName(), '*'); // need to use adapter select here to be able to join
         $ret = array();
@@ -81,6 +81,10 @@ class Model_ProductCategory extends Model_ModelAbstract
 
         if($onlyActivated){
             $select->where('epelia_products.active = ?', true);
+        }
+
+        if($onlyWithNonDeleted) {
+            $select->where('epelia_products.deleted = ?', 'false');
         }
 
         $select->group($table->getTableName() . '.id');
