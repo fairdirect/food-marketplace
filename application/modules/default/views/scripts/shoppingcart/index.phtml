@@ -55,7 +55,7 @@
                                             <?php endif; ?>
                                         </p>
                                         <p><?= $this->escape($price->quantity) ?> <?= ($price->quantity == 1) ? $this->escape($price->getUnitType()->singular) : $this->escape($price->getUnitType()->plural) ?> &agrave; <?= $this->escape($price->contents) ?> <?= $this->escape($price->getContentType()->name) ?></p>
-                                        <p><a class='link link-delete' onclick="deleteFromCart(<?= $this->escape($price->id) ?>)" title='<?= $this->escape($product->name) ?> <?= $this->translate('checkout_remove_product_2') ?>'><?= $this->translate('checkout_remove_product_1') ?></a></p>
+                                        <p><a class='link link-delete' onclick="deleteFromCart(<?= $this->escape($price->id) ?>)" href="#" title='<?= $this->escape($product->name) ?> <?= $this->translate('checkout_remove_product_2') ?>'><?= $this->translate('checkout_remove_product_1') ?></a></p>
                                             </td>
                                         </tr>
                                     </table>
@@ -140,12 +140,6 @@
                             <td><?= number_format($this->total, 2, ',', '') ?> &euro;</td>
                         </tr>
     <?php endif; ?>
-                        <tr class="text-right">
-                            <td></td><td></td><td></td>
-                            <td colspan="2" class="text-right">
-                                <a style="margin-left:14px;" class="btn btn-info" href="/shoppingcart/print/"><span>Einkaufszettel drucken</span></a>
-                            </td>
-                        </tr>
             </tbody>
         </table>
 
