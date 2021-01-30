@@ -57,6 +57,9 @@ $groupTitle =( ($this->product->producttype == 'request') ? $this->translate('mi
             </div>
             <div class="col bg-light border m-3">
                 <h4><?= $this->escape($this->product->name) ?><?php if($this->product->is_bio): ?> <span class="bio-signed">BIO</span><?php endif; ?></h4>
+<?php if($this->product->best_before): ?>
+                <p><?= $this->translate('misc_best_before') ?>: <?= date('d.m.Y', strtotime($this->product->best_before)) ?></p>
+<?php endif; ?>
 <?php if($this->product->producttype == 'request'): ?>
                 <p class="alert alert-danger"><?= $this->translate('product_not_available') ?></p>
     <?php if($this->product->getFirstNormalPrice()): ?>
@@ -75,9 +78,22 @@ $groupTitle =( ($this->product->producttype == 'request') ? $this->translate('mi
                                 <br /><?= ($this->product->stock > 100) ? '>100' : $this->product->stock  ?> <?= $this->translate('misc_in_stock') ?>
                             <?php endif; ?>
                         </td>
-                        <td>
+
                         <?php if(is_null($this->product->stock) || $this->product->stock > 0): ?>
-                            <a class="btn btn-success" title="in den Warenkorb" href="javascript:addToCart(1, <?= $this->escape($this->product->getFirstWholesalePrice()->id) ?>)"> in den Warenkorb </a>
+                        <td class="align-middle">
+                            <select id="add_to_cart_amount">
+<?php
+    $maxStock = (is_null($this->product->stock) || $this->product->stock > 10) ? 10 : ($this->product->stock);
+    for($i = 1; $i <= $maxStock; $i++):
+?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+<?php
+    endfor;
+?>
+                            </select>
+                        </td>
+                        <td class="align-middle">
+                            <a class="btn btn-success" title="<?= $this->translate('product_add_to_cart') ?>" href="javascript:addToCart($('#add_to_cart_amount').val(), <?= $this->escape($this->product->getFirstWholesalePrice()->id) ?>)"> <?= $this->translate('product_add_to_cart') ?></a>
                         <?php endif; ?>
                         </td>
                     </tr>
