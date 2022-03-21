@@ -4403,13 +4403,13 @@
         </tu>     
         <tu tuid='cooperative_sub_2'>
             <tuv xml:lang="de">
-                <seg>Fachleute aus dem Lebensmittelhandel</seg>
+                <seg>Fachleute aus dem Groß- und Einzelhandel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Professionisti del retail alimentare</seg>
+                <seg>Professionisti del commercio all'ingrosso e al dettaglio</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Food retail professionals</seg>
+                <seg>Wholesale and retail professionals</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_3'>
