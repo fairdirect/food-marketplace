@@ -4568,13 +4568,13 @@
         </tu> 
 	<tu tuid='woma_visit_us'>
   	     <tuv xml:lang="de">
-	         <seg>Annahmezeiten Lebensmittelspenden</seg>
+	         <seg>Annahmezeiten Sachspenden</seg>
              </tuv>
              <tuv xml:lang="it">
-                 <seg>Tempi di accettazione per donazioni di cibo</seg>               
+                 <seg>Tempi di accettazione delle donazioni in natura</seg>               
              </tuv>
              <tuv xml:lang="en">
-                 <seg>Acceptance times for food donations</seg>
+                 <seg>Acceptance times donations in kind</seg>
              </tuv>
          </tu>            
          <tu tuid='woma_business_hours'>
