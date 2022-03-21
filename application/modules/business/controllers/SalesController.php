@@ -63,7 +63,7 @@ class Business_SalesController extends Zend_Controller_Action
             ), 
             $sentMail->content
         ));
-        $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
+        $mail->setFrom('mail@fairdirect.org', 'Sachspendenbörse');
         $mail->addTo($order->getUser()->email);
         $mail->setSubject(str_replace(array('#orderNumber#', '#shopname#'), array($order->order_number, $order->getShop()->name), $sentMail->subject));
         $mail->send();
@@ -124,7 +124,7 @@ class Business_SalesController extends Zend_Controller_Action
         $pdf->Ln();
         $pdf->Ln();
         $pdf->setX(10);
-        $pdf->MultiCell(180, 5, utf8_decode('OpenFoodBank und ' . $order->getShop()->name . ' begrüßen Sie als Nutzer auf unserem OpenFoodBank- Netzwerk. Wir bedanken uns herzlich für Ihre Bestellanfrage.'));
+        $pdf->MultiCell(180, 5, utf8_decode('Sachspendenbörse und ' . $order->getShop()->name . ' begrüßen Sie als Nutzer auf unserem Sachspendenbörse- Netzwerk. Wir bedanken uns herzlich für Ihre Bestellanfrage.'));
         $pdf->Ln();
         $pdf->setFont('Arial', 'B', 10);
         $pdf->Cell(20, 5, 'Lieferschein / Rechnung');
@@ -191,7 +191,7 @@ class Business_SalesController extends Zend_Controller_Action
         $pdf->Ln();
         $pdf->Ln();
         $pdf->Ln();
-        $pdf->Cell(180, 5, utf8_decode('Zahlungsweise: Die Abwicklung der Zahlung erfolgte über den OpenFoodBank Treuhandservice.'));
+        $pdf->Cell(180, 5, utf8_decode('Zahlungsweise: Die Abwicklung der Zahlung erfolgte über den Sachspendenbörse Treuhandservice.'));
         if($order->getShop()->small_business){
             $pdf->Ln();
             $pdf->Cell(180, 5, utf8_decode('Diese Rechnung ist gemäß §19 UStG. von der Umsatzsteuer befreit.'));

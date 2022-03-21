@@ -14,9 +14,9 @@ class GenossenschaftController extends Zend_Controller_Action
         }	
         $mail = new Zend_Mail('UTF-8');
         $mail->setBodyText(strip_tags($content));
-        $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
-        $mail->addTo('hoesel@derhoesel.de', 'OpenFoodBank');
-        $mail->addTo('mail@epelia.com', 'OpenFoodBank');
+        $mail->setFrom('mail@fairdirect.org', 'Sachspendenbörse');
+        $mail->addTo('hoesel@derhoesel.de', 'Sachspendenbörse');
+        $mail->addTo('mail@epelia.com', 'Sachspendenbörse');
         $mail->setSubject('Entwicklungsrat Anmeldung');
         $mail->send();
 

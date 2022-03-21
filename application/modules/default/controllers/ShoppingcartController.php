@@ -292,7 +292,7 @@ class ShoppingcartController extends Zend_Controller_Action
         );
 
         $mail->setBodyText(strip_tags($content));
-        $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
+        $mail->setFrom('mail@fairdirect.org', 'Sachspendenbörse');
         $mail->addTo($this->user->email);
         $mail->setSubject(str_replace('#orderNumber#', $cart->getCartId(), $concludeMail->subject));
         $mail->send();

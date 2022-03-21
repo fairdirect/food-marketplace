@@ -60,7 +60,7 @@ class VerkaufenController extends Zend_Controller_Action
                             $mail = new Zend_Mail('UTF-8');
                             $content = str_replace(array('#salutation#', '#lastname#', '#registerLink#'), array($request->getPost('gender'), $request->getPost('name'), 'http://' . $request->getHttpHost() . '/login/confirm/id/' . $user->id . '/code/' . hash('sha256', $user->email . '_epelia_' . $user->salt) . '/'), $registerMail->content);
                             $mail->setBodyText(strip_tags($content));
-                            $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
+                            $mail->setFrom('mail@fairdirect.org', 'Sachspendenbörse');
                             $mail->addTo($user->email);
                             $mail->setSubject($registerMail->subject);
                             $at = $mail->createAttachment(file_get_contents(APPLICATION_PATH . '/files/agb.pdf'));
@@ -71,7 +71,7 @@ class VerkaufenController extends Zend_Controller_Action
                         }
 
                         $mail = new Zend_Mail('UTF-8');
-                        $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
+                        $mail->setFrom('mail@fairdirect.org', 'Sachspendenbörse');
                         $mail->addTo('hoesel@derhoesel.de', 'Epelia');
 //                        $mail->addTo('mail@epelia.com', 'Epelia');
                         $mail->setSubject('Spendenshop Registrierung');
@@ -97,11 +97,11 @@ class VerkaufenController extends Zend_Controller_Action
     }
 
     public function successAction(){
-        $this->view->headTitle('Vielen Dank für Ihre Registrierung | OpenFoodBank');
+        $this->view->headTitle('Vielen Dank für Ihre Registrierung | Sachspendenbörse');
     }
 
     public function failureAction(){
-        $this->view->headTitle('Es ist ein Fehler aufgetreten | OpenFoodBank');
+        $this->view->headTitle('Es ist ein Fehler aufgetreten | Sachspendenbörse');
     }
 
 }

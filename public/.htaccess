@@ -3,7 +3,7 @@
 ####
 # AuthUserFile /var/www/clients/client5/web24/web/public/.htpasswd
 # AuthType Basic
-# AuthName "OpenFoodBank"
+# AuthName "Sachspendenbörse"
 # require valid-user
 
 RewriteEngine On

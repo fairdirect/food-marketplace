@@ -12,12 +12,12 @@ class Admin_SalesController extends Zend_Controller_Action
     }
 
     public function inprocessAction(){
-        $this->view->headTitle('Nicht versendet | OpenFoodBank');
+        $this->view->headTitle('Nicht versendet | Sachspendenbörse');
         $this->view->orders = Model_Order::findByStatus('in_process');
     }
 
     public function completeAction(){
-        $this->view->headTitle("Abgeschlossen | OpenFoodBank");
+        $this->view->headTitle("Abgeschlossen | Sachspendenbörse");
         $this->view->orders= Model_Order::findByStatus('complete');
     }
 

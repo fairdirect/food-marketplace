@@ -93,13 +93,13 @@
         </tu>       
         <tu tuid='misc_about'>
             <tuv xml:lang="de">
-                <seg>Über OpenFoodBank</seg>
+                <seg>Über Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tramite OpenFoodBank</seg>
+                <seg>Tramite Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About OpenFoodBank</seg>
+                <seg>About Sachspendenbörse</seg>
             </tuv>
         </tu>
         <tu tuid='misc_logout'>
@@ -214,13 +214,13 @@
         </tu>
         <tu tuid='misc_my_epelia'>
             <tuv xml:lang="de">
-                <seg>Meine OpenFoodBank</seg>
+                <seg>Meine Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il mio account OpenFoodBank</seg>
+                <seg>Il mio account Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>My OpenFoodBank</seg>
+                <seg>My Sachspendenbörse</seg>
             </tuv>
         </tu>
         <tu tuid='misc_orders'>
@@ -810,24 +810,24 @@
         </tu>
         <tu tuid='product_epelia_guarantee'>
             <tuv xml:lang="de">
-                <seg>OpenFoodBank unterstützen</seg>
+                <seg>Sachspendenbörse unterstützen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Supporta OpenFoodBank</seg>
+                <seg>Supporta Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Support OpenFoodBank</seg>
+                <seg>Support Sachspendenbörse</seg>
             </tuv>
         </tu>
         <tu tuid='product_epelia_1'>
             <tuv xml:lang="de">
-                <seg>Der OpenFoodBank- Marktplatz ist absolut kostenlos und ist daher auf freiwillige Spenden angewiesen</seg>
+                <seg>Der Sachspendenbörse- Marktplatz ist absolut kostenlos und ist daher auf freiwillige Spenden angewiesen</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Il marketplace di OpenFoodBank è assolutamente gratuito e quindi si basa su donazioni volontarie</seg>
+                <seg>Il marketplace di Sachspendenbörse è assolutamente gratuito e quindi si basa su donazioni volontarie</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The OpenFoodBank- Marketplace is absolutely free and therefore relies on voluntary donations</seg>
+                <seg>The Sachspendenbörse- Marketplace is absolutely free and therefore relies on voluntary donations</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_2'>
@@ -843,13 +843,13 @@
         </tu>       
         <tu tuid='product_epelia_3'>
             <tuv xml:lang="de">
-                <seg>Fairdirect e.V., Verwendungszweck OpenFoodBank, IBAN:DE24 5136 1021 0004 6467 83 BIC:GENODE51HHE</seg>
+                <seg>Fairdirect e.V., Verwendungszweck Sachspendenbörse, IBAN:DE24 5136 1021 0004 6467 83 BIC:GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Fairdirect e.V., destinazione d'uso OpenFoodBank, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
+                <seg>Fairdirect e.V., destinazione d'uso Sachspendenbörse, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Fairdirect e.V., intended use OpenFoodBank, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
+                <seg>Fairdirect e.V., intended use Sachspendenbörse, IBAN: DE24 5136 1021 0004 6467 83 BIC: GENODE51HHE</seg>
             </tuv>
         </tu>
         <tu tuid='search_no_results'>
@@ -1593,13 +1593,13 @@
         </tu>       
         <tu tuid='sell_2'>
             <tuv xml:lang="de">
-                <seg>Als Teil des OpenFoodBank- Netzwerkes kann Ihr Unternehmen neutral und transparent real gespendete und somit gerettete Lebensmittelmengen über einem beliebigen Zeitraum nachweisen. Gerne auch durch offizielle OpenFoodBank- Zertifikate</seg>
+                <seg>Als Teil des Sachspendenbörse- Netzwerkes kann Ihr Unternehmen neutral und transparent real gespendete und somit gerettete Lebensmittelmengen über einem beliebigen Zeitraum nachweisen. Gerne auch durch offizielle Sachspendenbörse- Zertifikate</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Come parte della rete OpenFoodBank, la tua azienda può fornire prove neutre e trasparenti delle quantità di cibo effettivamente donate e quindi risparmiate in qualsiasi periodo di tempo. Anche con certificati ufficiali OpenFoodBank</seg>
+                <seg>Come parte della rete Sachspendenbörse, la tua azienda può fornire prove neutre e trasparenti delle quantità di cibo effettivamente donate e quindi risparmiate in qualsiasi periodo di tempo. Anche con certificati ufficiali Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>As part of the OpenFoodBank network, your company can provide neutral and transparent proof of donated and thus saved food quantities over any period of time. You are welcome to also use our official OpenFoodBank certificates for this purpose.</seg>
+                <seg>As part of the Sachspendenbörse network, your company can provide neutral and transparent proof of donated and thus saved food quantities over any period of time. You are welcome to also use our official Sachspendenbörse certificates for this purpose.</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
@@ -1615,18 +1615,18 @@
         </tu>
         <tu tuid='sell_4'>
             <tuv xml:lang="de">
-                <seg>Wenn Ihr Unternehmen gezielt Projekte im In- und Ausland durch Lebensmittelspenden unterstützen möchte, können Sie in den OpenFoodBank- Regionen gezielt nach Projekten suchen und Ihre Lebensmittelspende direkt der ausführenden, gemeinnützigen Organisationen zuführen. So kommt Ihre Lebensmittelspende genau dort an, wo Sie möchten.</seg>
+                <seg>Wenn Ihr Unternehmen gezielt Projekte im In- und Ausland durch Lebensmittelspenden unterstützen möchte, können Sie in den Sachspendenbörse- Regionen gezielt nach Projekten suchen und Ihre Lebensmittelspende direkt der ausführenden, gemeinnützigen Organisationen zuführen. So kommt Ihre Lebensmittelspende genau dort an, wo Sie möchten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Se la tua azienda desidera sostenere progetti specifici in patria e all'estero con donazioni di cibo, puoi cercare progetti specifici nelle regioni di OpenFoodBank e trasferire la tua donazione di cibo direttamente all'organizzazione non profit. Quindi il cibo che hai donato arriva esattamente dove vuoi.</seg>
+                <seg>Se la tua azienda desidera sostenere progetti specifici in patria e all'estero con donazioni di cibo, puoi cercare progetti specifici nelle regioni di Sachspendenbörse e trasferire la tua donazione di cibo direttamente all'organizzazione non profit. Quindi il cibo che hai donato arriva esattamente dove vuoi.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>If your company would like to specifically support projects inland or abroad through food donations, you can search the OpenFoodBank – regions for specific projects and send your food donation directly to the executing non-profit company. That way your food donations arrives exactly where you want.</seg>
+                <seg>If your company would like to specifically support projects inland or abroad through food donations, you can search the Sachspendenbörse – regions for specific projects and send your food donation directly to the executing non-profit company. That way your food donations arrives exactly where you want.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_5'>
             <tuv xml:lang="de">
-                <seg>Spenden über die Openfoodbank</seg>
+                <seg>Spenden über die Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Mediazione di donazioni gratuita</seg>
@@ -1637,13 +1637,13 @@
         </tu>
         <tu tuid='sell_6'>
             <tuv xml:lang="de">
-                <seg>Mit der Unterstützung des OpenFoodBank- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland und zertifizierte Secondfood- Produzenten (zur Haltbarmachung von frischen oder schnell verderblichen Lebensmittel) positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
+                <seg>Mit der Unterstützung des Sachspendenbörse- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland und zertifizierte Secondfood- Produzenten (zur Haltbarmachung von frischen oder schnell verderblichen Lebensmittel) positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Con il supporto della rete OpenFoodBank attraverso una semplice consegna digitale di cibo in eccedenza a organizzazioni non profit controllate in Germania e all'estero e produttori di Secondfood certificati (per conservare alimenti freschi o deperibili), la tua azienda si sta chiaramente posizionando contro lo spreco alimentare. E tutto questo senza costi, periodi contrattuali o adesione</seg>
+                <seg>Con il supporto della rete Sachspendenbörse attraverso una semplice consegna digitale di cibo in eccedenza a organizzazioni non profit controllate in Germania e all'estero e produttori di Secondfood certificati (per conservare alimenti freschi o deperibili), la tua azienda si sta chiaramente posizionando contro lo spreco alimentare. E tutto questo senza costi, periodi contrattuali o adesione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>By supporting the OpenFoodBank network through a simple, digital delivery of surplus food to exclusively audited, non-profit organizations at home and abroad and certified Secondfood producers (to preserve fresh or quickly perishable food), your company clearly positions itself against food waste. And this completely without costs, contract periods or membership</seg>
+                <seg>By supporting the Sachspendenbörse network through a simple, digital delivery of surplus food to exclusively audited, non-profit organizations at home and abroad and certified Secondfood producers (to preserve fresh or quickly perishable food), your company clearly positions itself against food waste. And this completely without costs, contract periods or membership</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
@@ -1670,13 +1670,13 @@
         </tu>
         <tu tuid='sell_9'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie Ihren OpenFoodBank Spendershop</seg>
+                <seg>Erstellen Sie Ihren Sachspendenbörse Spendershop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Allestite il vostro negozio di donatori OpenFoodBank</seg>
+                <seg>Allestite il vostro negozio di donatori Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Create your OpenFoodBank donorshop</seg>
+                <seg>Create your Sachspendenbörse donorshop</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_register'>
@@ -1703,13 +1703,13 @@
         </tu>
         <tu tuid='sell_register_headline'>
             <tuv xml:lang="de">
-                <seg>Informationen über das OpenFoodBank- Netzwerk anfordern</seg>
+                <seg>Informationen über das Sachspendenbörse- Netzwerk anfordern</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Richiedi informazioni tramite la rete OpenFoodBank</seg>
+                <seg>Richiedi informazioni tramite la rete Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Request information through the OpenFoodBank network</seg>
+                <seg>Request information through the Sachspendenbörse network</seg>
             </tuv>
         </tu>
         <tu tuid='sell_register_text'>
@@ -1957,13 +1957,13 @@
         </tu>
         <tu tuid='allergies_headline'>
             <tuv xml:lang="de">
-                <seg>Die OpenFoodBank unterstützt Sie bei Lebensmittelallergien</seg>
+                <seg>Die Sachspendenbörse unterstützt Sie bei Lebensmittelallergien</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>OpenFoodBank vi aiuta nelle allergie alimentari</seg>
+                <seg>Sachspendenbörse vi aiuta nelle allergie alimentari</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>OpenFoodBank supports you if you suffer from food allergies.</seg>
+                <seg>Sachspendenbörse supports you if you suffer from food allergies.</seg>
             </tuv>
         </tu>
         <tu tuid='allergies_sub_1'>
@@ -2023,13 +2023,13 @@
         </tu>
         <tu tuid='bio_intro'>
             <tuv xml:lang="de">
-                <seg>Auf OpenFoodBank finden Sie auch biologisch erzeugte Lebensmittel.</seg>
+                <seg>Auf Sachspendenbörse finden Sie auch biologisch erzeugte Lebensmittel.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su OpenFoodBank trovate prodotti biologici.</seg>
+                <seg>Su Sachspendenbörse trovate prodotti biologici.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>On OpenFoodBank, you can find certified organic food.</seg>
+                <seg>On Sachspendenbörse, you can find certified organic food.</seg>
             </tuv>
         </tu>
         <tu tuid='bio_show_all'>
@@ -2144,13 +2144,13 @@
         </tu>       
         <tu tuid='bio_list_outro'>
             <tuv xml:lang="de">
-                <seg>Alle Landwirte und Verarbeiter von biologisch erzeugten Lebensmittel auf der OpenFoodBank setzten sich gezielt gegen die Lebensmitelverschwendung ein!</seg>
+                <seg>Alle Landwirte und Verarbeiter von biologisch erzeugten Lebensmittel auf der Sachspendenbörse setzten sich gezielt gegen die Lebensmitelverschwendung ein!</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tutti gli agricoltori e trasformatori di alimenti prodotti biologicamente nella campagna OpenFoodBank contro lo spreco alimentare!</seg>
+                <seg>Tutti gli agricoltori e trasformatori di alimenti prodotti biologicamente nella campagna Sachspendenbörse contro lo spreco alimentare!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>All farmers and processors of biological produced food items as part of the OpenFoodBank Network specifically invest themselves to work against food wastage!</seg>
+                <seg>All farmers and processors of biological produced food items as part of the Sachspendenbörse Network specifically invest themselves to work against food wastage!</seg>
             </tuv>
         </tu>
         <tu tuid='bio_all_categories'>
@@ -2265,13 +2265,13 @@
         </tu>
         <tu tuid='footer_about'>
             <tuv xml:lang="de">
-                <seg>Über OpenFoodBank</seg>
+                <seg>Über Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Tramite OpenFoodBank</seg>
+                <seg>Tramite Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>About OpenFoodBank</seg>
+                <seg>About Sachspendenbörse</seg>
             </tuv>
         </tu>
         <tu tuid='footer_order'>
@@ -2375,13 +2375,13 @@
         </tu>
         <tu tuid='footer_sell'>
             <tuv xml:lang="de">
-                <seg>Für Spender – Anbieten auf OpenFoodBank</seg>
+                <seg>Für Spender – Anbieten auf Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per i donatori - offerta su OpenFoodBank</seg>
+                <seg>Per i donatori - offerta su Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>For donors - offer on OpenFoodBank</seg>
+                <seg>For donors - offer on Sachspendenbörse</seg>
             </tuv>
         </tu>
         <tu tuid='footer_wholesale'>
@@ -2541,13 +2541,13 @@
         </tu>
         <tu tuid='shops_since'>
             <tuv xml:lang="de">
-                <seg>Auf OpenFoodBank seit</seg>
+                <seg>Auf Sachspendenbörse seit</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Su OpenFoodBank da allora</seg>
+                <seg>Su Sachspendenbörse da allora</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>On OpenFoodBank since</seg>
+                <seg>On Sachspendenbörse since</seg>
             </tuv>
         </tu>
         <tu tuid='shops_more_about'>
@@ -2585,13 +2585,13 @@
         </tu>
         <tu tuid='shops_philosophy'>
             <tuv xml:lang="de">
-                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
+                <seg>Warum unterstützen wir das Sachspendenbörse- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-		<seg>Perché supportiamo la rete OpenFoodBank?</seg>
+		<seg>Perché supportiamo la rete Sachspendenbörse?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Why do we support the OpenFoodBank network?</seg>
+                <seg>Why do we support the Sachspendenbörse network?</seg>
             </tuv>
         </tu>
         <tu tuid='shops_procedure'>
@@ -2706,13 +2706,13 @@
         </tu>
         <tu tuid='login_register_newsletter'>
             <tuv xml:lang="de">
-                <seg>OpenFoodBank Newsletter abonnieren</seg>
+                <seg>Sachspendenbörse Newsletter abonnieren</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Abbonarsi alla newsletter OpenFoodBank</seg>
+                <seg>Abbonarsi alla newsletter Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Subscribe to the OpenFoodBank newsletter</seg>
+                <seg>Subscribe to the Sachspendenbörse newsletter</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_register'>
@@ -2750,13 +2750,13 @@
         </tu>
         <tu tuid='login_left_headline'>
             <tuv xml:lang="de">
-                <seg>Ich habe ein OpenFoodBank- Kundenkonto</seg>
+                <seg>Ich habe ein Sachspendenbörse- Kundenkonto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Ho un account cliente su OpenFoodBank</seg>
+                <seg>Ho un account cliente su Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>I have a customer account at OpenFoodBank</seg>
+                <seg>I have a customer account at Sachspendenbörse</seg>
             </tuv>
         </tu>
         <tu tuid='login_list_1'>
@@ -3973,13 +3973,13 @@
         </tu>       
         <tu tuid='business_shop_philosophy'>
             <tuv xml:lang="de">
-                <seg>Warum unterstützen wir das OpenFoodBank- Netzwerk?</seg>
+                <seg>Warum unterstützen wir das Sachspendenbörse- Netzwerk?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Perché supportiamo la rete OpenFoodBank?</seg>
+                <seg>Perché supportiamo la rete Sachspendenbörse?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Why do we support the OpenFoodBank network?</seg>
+                <seg>Why do we support the Sachspendenbörse network?</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_procedure'>
@@ -4337,13 +4337,13 @@
         </tu>     
         <tu tuid='misc_cooperative'>
             <tuv xml:lang="de">
-                <seg>OpenFoodBank- Entwicklungsrat</seg>
+                <seg>Sachspendenbörse- Entwicklungsrat</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Consulenza per lo sviluppo di Open Food Bank</seg>               
             </tuv>
             <tuv xml:lang="en">
-                <seg>OpenFoodBank Development Council</seg>
+                <seg>Sachspendenbörse Development Council</seg>
             </tuv>
         </tu>     
         <tu tuid='misc_help'>
@@ -4370,24 +4370,24 @@
         </tu>            
         <tu tuid='cooperative_headline'>
             <tuv xml:lang="de">
-                <seg>OpenFoodBank- Entwicklungsrat</seg>
+                <seg>Sachspendenbörse- Entwicklungsrat</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Consulenza per lo sviluppo di Open Food Bank</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>OpenFoodBank Development Council</seg>
+                <seg>Sachspendenbörse Development Council</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub'>
             <tuv xml:lang="de">
-                <seg>Das komplett kostenlose OpenFoodBank- Netzwerk besteht als rein gemeinnützige Organisation aus engagierten, ehrenamtlichen Mitarbeitern. Wir suchen immer Unterstützer in den Bereichen:</seg>
+                <seg>Das komplett kostenlose Sachspendenbörse- Netzwerk besteht als rein gemeinnützige Organisation aus engagierten, ehrenamtlichen Mitarbeitern. Wir suchen immer Unterstützer in den Bereichen:</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Essendo un'organizzazione puramente senza scopo di lucro, la rete OpenFoodBank completamente gratuita è composta da molti volontari. Siamo sempre alla ricerca di sostenitori nelle seguenti aree:</seg>
+                <seg>Essendo un'organizzazione puramente senza scopo di lucro, la rete Sachspendenbörse completamente gratuita è composta da molti volontari. Siamo sempre alla ricerca di sostenitori nelle seguenti aree:</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The entirely free of charge OpenFoodBank network exists as a completely non-profit organisation, working with dedicated volunteers. We are always looking for supports in the following areas:</seg>
+                <seg>The entirely free of charge Sachspendenbörse network exists as a completely non-profit organisation, working with dedicated volunteers. We are always looking for supports in the following areas:</seg>
             </tuv>
         </tu>     
         <tu tuid='cooperative_sub_1'>
@@ -4843,13 +4843,13 @@
         </tu>
         <tu tuid='cookiebanner_text'>
             <tuv xml:lang="de">
-                <seg>Eine Nutzung des Angebotes von OpenFoodBank erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
+                <seg>Eine Nutzung des Angebotes von Sachspendenbörse erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Eine Nutzung des Angebotes von OpenFoodBank erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
+                <seg>Eine Nutzung des Angebotes von Sachspendenbörse erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Eine Nutzung des Angebotes von OpenFoodBank erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
+                <seg>Eine Nutzung des Angebotes von Sachspendenbörse erfolgt mit dem Einsatz eines Cookies. Voraussetzung hierfür ist, dass Sie die Cookies in Ihren Browsereinstellungen aktiviert haben.</seg>
             </tuv>
         </tu>
         <tu tuid='cookiebanner_more'>

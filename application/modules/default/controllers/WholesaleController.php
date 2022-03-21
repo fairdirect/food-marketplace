@@ -16,9 +16,9 @@ class WholesaleController extends Zend_Controller_Action
             if($registerForm->isValid($request->getPost())){
                 $user = Zend_Auth::getInstance()->getIdentity();
                 $mail = new Zend_Mail('UTF-8');
-                $mail->setFrom('mail@fairdirect.org', 'OpenFoodBank');
+                $mail->setFrom('mail@fairdirect.org', 'Sachspendenbörse');
                 $mail->addTo('hoesel@derhoesel.de', 'Epelia');
-                $mail->addTo('mail@epelia.com', 'OpenFoodBank');
+                $mail->addTo('mail@epelia.com', 'Sachspendenbörse');
                 $mail->setSubject('Spendenangebot-Bereich-Registrierung');
                 $mail->setBodyText(
                     "Neue Spendeangebot-Bereich-Anmeldung:\n\n" . 
