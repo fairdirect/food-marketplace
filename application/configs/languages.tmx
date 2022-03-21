@@ -1593,13 +1593,13 @@
         </tu>       
         <tu tuid='sell_2'>
             <tuv xml:lang="de">
-                <seg>Als Teil des Sachspendenbörse- Netzwerkes kann Ihr Unternehmen neutral und transparent real gespendete und somit gerettete Lebensmittelmengen über einem beliebigen Zeitraum nachweisen. Gerne auch durch offizielle Sachspendenbörse- Zertifikate</seg>
+                <seg>Als Teil des Sachspendenbörse- Netzwerkes kann Ihr Unternehmen neutral und transparent real gespendete Sachspenden über einem beliebigen Zeitraum nachweisen. Gerne auch durch offizielle Sachspendenbörse- Zertifikate</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Come parte della rete Sachspendenbörse, la tua azienda può fornire prove neutre e trasparenti delle quantità di cibo effettivamente donate e quindi risparmiate in qualsiasi periodo di tempo. Anche con certificati ufficiali Sachspendenbörse</seg>
+                <seg>Come parte della rete Sachspendenbörse, la vostra azienda può fornire prove neutrali e trasparenti di donazioni reali in natura in qualsiasi periodo di tempo. Anche con certificati ufficiali Sachspendenbörse</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>As part of the Sachspendenbörse network, your company can provide neutral and transparent proof of donated and thus saved food quantities over any period of time. You are welcome to also use our official Sachspendenbörse certificates for this purpose.</seg>
+                <seg>As part of the Sachspendenbörse network, your company can provide neutral and transparent evidence of real donations in kind over any period of time. You are welcome to also use our official Sachspendenbörse certificates for this purpose.</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_3'>
@@ -1637,35 +1637,35 @@
         </tu>
         <tu tuid='sell_6'>
             <tuv xml:lang="de">
-                <seg>Mit der Unterstützung des Sachspendenbörse- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland und zertifizierte Secondfood- Produzenten (zur Haltbarmachung von frischen oder schnell verderblichen Lebensmittel) positioniert sich Ihr Unternehmen klar gegen Lebensmittelverschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
+                <seg>Mit der Unterstützung des Sachspendenbörse- Netzwerkes durch eine einfache, digitale Abgabe von überschüssigen Lebensmittel und Waren an ausschließlich geprüfte, gemeinnützige Organisationen im In- und Ausland und zertifizierte Secondfood- Produzenten (zur Haltbarmachung von frischen oder schnell verderblichen Lebensmittel) positioniert sich Ihr Unternehmen klar gegen Armut und Verschwendung. Und das komplett ohne Kosten, Vertragslaufzeiten oder einer Mitgliedschaft</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Con il supporto della rete Sachspendenbörse attraverso una semplice consegna digitale di cibo in eccedenza a organizzazioni non profit controllate in Germania e all'estero e produttori di Secondfood certificati (per conservare alimenti freschi o deperibili), la tua azienda si sta chiaramente posizionando contro lo spreco alimentare. E tutto questo senza costi, periodi contrattuali o adesione</seg>
+                <seg>Sostenendo la rete Sachspendenbörse attraverso una semplice donazione digitale di cibo e beni in eccedenza a organizzazioni non-profit esclusivamente certificate in atria e all'estero e a produttori certificati di secondfood (per conservare il cibo fresco o deperibile), la tua azienda si posiziona chiaramente contro la povertà e lo spreco. E tutto questo senza costi, periodi contrattuali o adesione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>By supporting the Sachspendenbörse network through a simple, digital delivery of surplus food to exclusively audited, non-profit organizations at home and abroad and certified Secondfood producers (to preserve fresh or quickly perishable food), your company clearly positions itself against food waste. And this completely without costs, contract periods or membership</seg>
+                <seg>By supporting the Sachspendenbörse network through a simple, digital donation of surplus food and goods to exclusively audited, non-profit organizations in Germany and abroad and certified secondfood producers (for the preservation of fresh or quickly perishable food), your company is clearly positioning itself against poverty and waste. And this completely without costs, contract periods or membership</seg>
             </tuv>
         </tu>
         <tu tuid='sell_7'>
             <tuv xml:lang="de">
-                <seg>Welche Lebensmittel können gespendet werden?</seg>
+                <seg>Welche Lebensmittel und Waren können gespendet werden?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Quale cibo può essere donato?</seg>
+                <seg>Quali alimenti e beni possono essere donati?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>What food items can be donated?</seg>
+                <seg>What food and goods can be donated?</seg>
             </tuv>
         </tu>
         <tu tuid='sell_8'>
             <tuv xml:lang="de">
-                <seg>Typische Produkte sind Lebensmittel mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.Auch frische und/oder kühlpflichtige Lebensmittel</seg>
+                <seg>Typische Produkte sind Waren mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, Überproduktion, Lebensmittel mit kurzem oder kurz abgelaufenem MHD oder Geschmacksabweichungen. Auch frische und/oder kühlpflichtige Lebensmittel</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>I prodotti tipici sono alimenti con imballaggi danneggiati o etichettati in modo errato, danni causati da incidenti, difetti visivi, quantità di contenuto non corrette, una data di scadenza breve o breve, deviazioni nel gusto o da sovrapproduzione. Anche cibi freschi e /o refrigerati</seg>
+                <seg>I prodotti tipici sono merci con imballaggi danneggiati o etichettati in modo errato, danni alla salute, difetti ottici, quantità di contenuto errato, sovrapproduzione, cibo con una data di scadenza breve o recente o deviazioni nel gusto. Anche alimenti freschi e/o refrigerati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Typical products are food items with damaged or falsely labelled packaging, products with average loss, visual flaws, wrong content quantity/amount, short or expired sell-by date, products with taste variations and left over products resulting from over production. Also fresh and /or refrigerated foods</seg>
+                <seg>Typical products are goods with damaged or incorrectly labeled packaging, haveries damage, optical defects, incorrect content quantities, overproduction, food with a short or recently expired MHD or flavor deviations. Also fresh and/or refrigerated food</seg>
             </tuv>
         </tu>
         <tu tuid='sell_9'>
@@ -1758,46 +1758,46 @@
         </tu>
         <tu tuid='wholesale_text_1'>
             <tuv xml:lang="de">
-                <seg>Der Angebotsbereich ist ausschließlich für die kostenlose Vermittlung von Lebensmittelspenden zwischen Akteuern entlang der Wertschöpfungskette "Lebensmittel" und gemeinnützigen Organisationen. Frische oder nur kurz haltbere Lebensmittel können auch an zertifizierte Secondfood- Produzenten vermittelt werden</seg>
+                <seg>Der Sachspenden- Großhandelsbereich ist ausschließlich für die kostenlose Vermittlung von Sachspenden zwischen Akteuern entlang der Wertschöpfungskette "Produktion, Transport und Handel" und gemeinnützigen Organisationen. Frische oder nur kurz haltbere Lebensmittel können auch an zertifizierte Secondfood- Produzenten vermittelt werden</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>L'area di offerta è esclusivamente per la mediazione gratuita di donazioni alimentari tra attori della filiera "alimentare" e organizzazioni no profit. Anche alimenti freschi o di breve durata possono essere veicolati a produttori di second food certificati</seg>
+                <seg>L'area all'ingrosso per le donazioni in natura è esclusivamente per la mediazione gratuita delle donazioni in natura tra gli attori della catena del valore "produzione, trasporto e commercio" e le organizzazioni senza scopo di lucro. Anche alimenti freschi o di breve durata possono essere veicolati a produttori di Secondfood certificati</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>The online space for the free of charge procurement of food donations is exclusively accessible to stakeholders along the value chain “food items” and non-profit organisations. Fresh or only short-lasting food can also be conveyed to certified second food producers</seg>
+                <seg>The wholesale area for donations in kind is exclusively for the free mediation of donations in kind between actors along the value chain "production, transport and trade" and non-profit organizations. Fresh food or food with a short shelf life can also be brokered to certified Secondfood producers.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_2'>
             <tuv xml:lang="de">
-                <seg>Nach einer kostenlosen Registrierung können Sie als gemeinnützige Organisation hier direkt, einfach und kostenlos Lebensmittelspenden von vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten bestellen.</seg>
+                <seg>Nach einer kostenlosen Registrierung können Sie als gemeinnützige Organisation hier direkt, einfach und kostenlos Sachspenden von vielen Erzeugern, Herstellern, Händlern, Direktimporteuren oder Produzenten beziehen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Dopo esserti registrato gratuitamente, tu come organizzazione senza scopo di lucro puoi ordinare donazioni di cibo da molti produttori, fabbricanti, rivenditori, importatori diretti o produttori direttamente, facilmente e gratuitamente.</seg>
+                <seg>Dopo la registrazione gratuita, voi come organizzazione senza scopo di lucro potete ottenere qui donazioni in natura direttamente, facilmente e gratuitamente da molti produttori, fabbricanti, commercianti, importatori diretti o produttori.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>After a free registration you have a direct, simple and clearly arranged access to available food donations. As a non-profit organisation you can order food donations from many producers, manufactures, retailers and direct importers free of charge</seg>
+                <seg>After registering free of charge, you as a non-profit organization can obtain donations in kind here directly, easily and free of charge from many producers, manufacturers, traders, direct importers or producers.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_text_3'>
             <tuv xml:lang="de">
-                <seg>Typische Produkte sind Lebensmittel mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.</seg>
+                <seg>Typische Produkte sind Waren mit beschädigter oder falsch beschrifteter Verpackung, Haverieschäden, optischen Mängeln, falschen Inhaltsmengen, Lebensmittel mit kurzem oder kurz abgelaufenem MHD, Geschmacksabweichungen oder aus Überproduktionen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>L'assortimento varia da ottimi prodotti standard, specialità regionali, delizie esotiche, fino ad arrivare ai prodotti biologici. Moltissimi offerenti presentano il proprio modo di lavorare, la propria azienda o speciali metodi di produzione sulla pagina del proprio negozio, in modo che sappiate precisamente, ad esempio, da dove viene la carne che mangiate. </seg>
+                <seg>I prodotti tipici sono merci con imballaggi danneggiati o etichettati in modo errato, danni alla salute, difetti ottici, quantità di contenuto errato, cibo con una data di scadenza breve o recente, deviazioni nel gusto o dalla sovrapproduzione.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Typical products are food items with damaged or falsely labelled packaging, products with average loss, visual flaws, wrong content quantity/amount, short or expired sell-by date, products with taste variations and left over products resulting from over production</seg>
+                <seg>Typical products are goods with damaged or incorrectly labeled packaging, haveries damage, optical defects, incorrect content quantities, food with a short or recently expired MHD, flavor deviations or from overproduction.</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_4'>
             <tuv xml:lang="de">
-                <seg>Als offenes Netzwerk retten wir gemeinsam Lebensmittel, stellen diese Bedürftigen auf der ganzen Welt zur Verfügung und helfen aktiv Klima-, Natur- und Umweltschäden zu reduzieren.</seg>
+                <seg>Als offenes Netzwerk retten wir gemeinsam Waren und Lebensmittel, stellen diese Bedürftigen auf der ganzen Welt zur Verfügung und helfen aktiv Klima-, Natur- und Umweltschäden zu reduzieren.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>In quanto rete aperta, salviamo il cibo insieme, lo rendiamo disponibile a chi ne ha bisogno in tutto il mondo e aiutiamo attivamente a ridurre il clima, la natura e i danni ambientali.</seg>
+                <seg>Come rete aperta, recuperiamo insieme beni e alimenti, li mettiamo a disposizione dei bisognosi in tutto il mondo e contribuiamo attivamente a ridurre i danni climatici, naturali e ambientali.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>As an open network we save food together and distribute them to needy people around the world. We actively help to reduce damages caused to our climate, nature and environment</seg>
+                <seg>As an open network, we jointly rescue goods and food, make them available to those in need around the world and actively help reduce climate, nature and environmental damage.</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_text_5'>
@@ -1857,13 +1857,13 @@
         </tu>
         <tu tuid='wholesale_register_text'>
             <tuv xml:lang="de">
-                <seg>Für den Zugang zu den Spendenangeboten müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns einen Nachweis der Gemeinnützigkeit entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
+                <seg>Für den Zugang zu dem Sachspenden- Großhandelsbereich müssen Sie freigeschaltet werden. Bitte füllen Sie folgendes Formular aus und senden Sie uns einen Nachweis der Gemeinnützigkeit entweder über das Formular oder per Fax an die Nummer 06426-967338 zu.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Per l'acquisto di prodotti all'ingrosso è necessario avere un account. Riempite il seguente modulo e inviateci una licenza di esercizio sia con il modulo che via fax al numero 06426-967338</seg>
+                <seg>Devi essere attivato per accedere all'area di vendita all'ingrosso per le donazioni in natura. Si prega di compilare il seguente modulo e di inviarci la prova dello status di non-profit tramite il modulo o via fax al numero 0049-6426-967338.</seg>
             </tuv>
-            <tuv xml:lang="en">
-                <seg>You have to be admitted by Epelia in order to buy wholesale articles. Please fill in the following form and send us your business registration confirmation, either within this form or via fax to +49 6426 967338.</seg>
+	    <tuv xml:lang="en">
+		 <seg>You must be activated to access the wholesale area for in-kind donations. Please fill out the following form and send us proof of non-profit status either through the form or by fax to 0049-6426-967338.</seg>
             </tuv>
         </tu>
         <tu tuid='wholesale_show_all_headline'>
@@ -1879,13 +1879,13 @@
         </tu>       
         <tu tuid='wholesale_success_headline'>
             <tuv xml:lang="de">
-                <seg>Vielen Dank für Ihre Anmeldung für den Angebotsbereich</seg>
+                <seg>Vielen Dank für Ihre Anmeldung für den Sachspenden- Großhandelsbereich</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Grazie per la registrazione nel settore del commercio all'ingrosso</seg>
+                <seg>Grazie per esserti registrato alla sezione Donazioni in natura all'ingrosso.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Thank you for your registration for the wholesale area</seg>
+                <seg>Thank you for registering for the in-kind donation- wholesale area</seg>
             </tuv>
         </tu>       
         <tu tuid='wholesale_success_text'>
@@ -2232,10 +2232,10 @@
         </tu>       
         <tu tuid='index_2'>
             <tuv xml:lang="de">
-                <seg>Besuchen Sie unseren Spendenshop</seg>
+                <seg>Besuchen Sie unseren Sachspendenshop</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Visitate il nostro negozio di donazioni</seg>
+                <seg>Visita il nostro negozio per le donazioni</seg>
             </tuv>
             <tuv xml:lang="en">
                 <seg>Visit our donation shop</seg>
@@ -2882,13 +2882,13 @@
         </tu>       
         <tu tuid='login_register_sell'>
             <tuv xml:lang="de">
-                <seg>Erstellen Sie hier ein neues Lebensmittelspender- Konto</seg>
+                <seg>Erstellen Sie hier ein neues Sachspender- Konto</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Crea qui un nuovo account per donatori di cibo</seg>
+                <seg>Crea un nuovo account di donatore in natura qui</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Create a new food donor account here</seg>
+                <seg>Create a new in-kind donor account here</seg>
             </tuv>
         </tu>       
         <tu tuid='login_register_success_headline'>
@@ -2937,7 +2937,7 @@
         </tu>       
         <tu tuid='shoppingcart_addresses_error'>
             <tuv xml:lang="de">
-                <seg>Folgende Spenden stehen leider nicht für das ausgewählte Land zur Verfügung:</seg>
+                <seg>Folgende Sachpenden stehen leider nicht für das ausgewählte Land zur Verfügung:</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Le seguenti donazioni purtroppo non sono disponibili per il paese selezionato:</seg>
@@ -3323,13 +3323,13 @@
         </tu>
         <tu tuid='business_delivery_text'>
             <tuv xml:lang="de">
-                <seg>Über die Eingabe hier können Sie entscheiden, in welche Länder Sie ihre Lebensmittel spenden möchten. Die Auswahl der Länder erfolgt, wenn Sie in den gewünschten Ländern min. eine "0" eintragen. Optional können Sie einen kostenlosen und kostenpflichtigen Versand anbieten. Geben Sie keinen Wert an, kann der Nutzer aus diesem Land keine Bestellung bei Ihnen tätigen!</seg>
+                <seg>Über die Eingabe hier können Sie entscheiden, in welche Länder Sie spenden möchten. Die Auswahl der Länder erfolgt, wenn Sie in den gewünschten Ländern min. eine "0" eintragen. Optional können Sie einen kostenlosen und kostenpflichtigen Versand anbieten. Geben Sie keinen Wert an, kann der Nutzer aus diesem Land keine Bestellung bei Ihnen tätigen!</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Potete decidere in quali paesi volete donare il vostro cibo. La selezione dei paesi viene effettuata se si inserisce almeno uno "0" nei paesi desiderati. Opzionalmente, è possibile offrire la spedizione gratuita e a pagamento. Se non si inserisce un valore, l'utente di questo paese non può effettuare un ordine con voi!</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>By entering here you can decide to which countries you would like to donate your food. The selection of the countries is done if you enter at least a "0" in the desired countries. Optionally you can offer free shipping and shipping with costs. If you do not enter a value, the user from this country cannot place an order with you!</seg>
+                <seg>By entering here you can decide to which countries you would like to donate. The selection of the countries is done if you enter at least a "0" in the desired countries. Optionally you can offer free shipping and shipping with costs. If you do not enter a value, the user from this country cannot place an order with you!</seg>
             </tuv>
         </tu>       
         <tu tuid='business_shop_headline'>
