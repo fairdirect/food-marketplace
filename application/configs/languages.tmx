@@ -832,13 +832,13 @@
         </tu>       
         <tu tuid='product_epelia_2'>
             <tuv xml:lang="de">
-                <seg>Wenn Sie unsere Idee von einem offenen und kostenlosen Lebensmittel- Spendenmarktplatz unterstützen möchten, freuen wir uns über Ihre Spende</seg>
+                <seg>Wenn Sie unsere Idee von einem offenen und kostenlosen Sachspendenmarktplatz unterstützen möchten, freuen wir uns über Ihre Spende</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Se desideri sostenere la nostra idea di un mercato per la donazione di cibo aperto e gratuito, non vediamo l'ora della tua donazione</seg>
+                <seg>Se volete sostenere la nostra idea di un mercato aperto e libero per le donazioni in natura, saremmo felici di ricevere la vostra donazione</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>If you would like to support our idea of an open and free food donation marketplace, we look forward to your donation</seg>
+                <seg>If you would like to support our idea of an open and free marketplace for donations in kind, we would appreciate your donation</seg>
             </tuv>
         </tu>       
         <tu tuid='product_epelia_3'>
@@ -1571,7 +1571,7 @@
         </tu>
         <tu tuid='sell_headline'>
             <tuv xml:lang="de">
-                <seg>Positionieren Sie Ihr Unternehmen klar im Kampf gegen Lebensmittelverschwendung</seg>
+                <seg>Positionieren Sie Ihr Unternehmen klar im Kampf gegen Armut und Verschwendung</seg>
             </tuv>
             <tuv xml:lang="it">
                 <seg>Posiziona chiaramente la tua azienda nella lotta allo spreco alimentare</seg>
@@ -1585,10 +1585,10 @@
                 <seg>Zeigen Sie die von Ihrem Unternehmen real übernommene soziale und ökologische Verantwortung</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Mostra la reale responsabilità sociale ed ecologica che la tua azienda si è assunta</seg>
+                <seg>Posizionare chiaramente la vostra azienda nella lotta contro la povertà e lo spreco</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Show the real social and ecological responsibility your company has assumed</seg>
+                <seg>Position your company clearly in the fight against poverty and waste</seg>
             </tuv>
         </tu>       
         <tu tuid='sell_2'>
@@ -1615,13 +1615,13 @@
         </tu>
         <tu tuid='sell_4'>
             <tuv xml:lang="de">
-                <seg>Wenn Ihr Unternehmen gezielt Projekte im In- und Ausland durch Lebensmittelspenden unterstützen möchte, können Sie in den Sachspendenbörse- Regionen gezielt nach Projekten suchen und Ihre Lebensmittelspende direkt der ausführenden, gemeinnützigen Organisationen zuführen. So kommt Ihre Lebensmittelspende genau dort an, wo Sie möchten.</seg>
+                <seg>Wenn Ihr Unternehmen gezielt Projekte im In- und Ausland durch Sachspenden unterstützen möchte, können Sie in den Sachspendenbörse- Regionen gezielt nach Projekten suchen und Ihre Sachspende direkt der ausführenden, gemeinnützigen Organisationen zuführen. So kommt Ihre Sachspende genau dort an, wo Sie möchten.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Se la tua azienda desidera sostenere progetti specifici in patria e all'estero con donazioni di cibo, puoi cercare progetti specifici nelle regioni di Sachspendenbörse e trasferire la tua donazione di cibo direttamente all'organizzazione non profit. Quindi il cibo che hai donato arriva esattamente dove vuoi.</seg>
+                <seg>Se la vostra azienda desidera sostenere progetti specifici in patria e all'estero attraverso donazioni in natura, potete cercare progetti specifici nelle regioni di scambio di donazioni in natura e inviare la vostra donazione in natura direttamente alle organizzazioni di beneficenza che realizzano il progetto. In questo modo, la tua donazione in natura arriverà esattamente dove vuoi tu.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>If your company would like to specifically support projects inland or abroad through food donations, you can search the Sachspendenbörse – regions for specific projects and send your food donation directly to the executing non-profit company. That way your food donations arrives exactly where you want.</seg>
+                <seg>If your company would like to support specific projects at home and abroad with donations in kind, you can search for specific projects in the donation-in-kind exchange regions and send your donation in kind directly to the charitable organizations carrying out the project. This way, your donation in kind arrives exactly where you want it to.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_5'>
