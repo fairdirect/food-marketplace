@@ -1714,13 +1714,13 @@
         </tu>
         <tu tuid='sell_register_text'>
             <tuv xml:lang="de">
-                <seg>Sie möchten dem offenen Netzwerk für Lebensmittelspenden beitreten? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
+                <seg>Sie möchten dem offenen Netzwerk für Sachspenden beitreten? Dann füllen Sie das Formular jetzt aus und wir melden uns umgehend bei Ihnen.</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Vorresti unirti alla rete aperta per le donazioni di cibo? Quindi compila ora il modulo e ti contatteremo il prima possibile.</seg>
+                <seg>Volete unirvi alla rete aperta per le donazioni in natura? Quindi compila ora il modulo e ti contatteremo il prima possibile.</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Would you like to join the open network for food donations? Then fill out the form now and we will contact you as soon as possible.</seg>
+                <seg>Would you like to join the open network for donations in kind? Then fill out the form now and we will contact you as soon as possible.</seg>
             </tuv>
         </tu>
         <tu tuid='sell_success_headline'>
