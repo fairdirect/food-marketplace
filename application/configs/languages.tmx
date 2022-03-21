@@ -2816,13 +2816,13 @@
         </tu>
         <tu tuid='login_list_6'>
             <tuv xml:lang="de">
-                <seg>Lebensmittelretter</seg>
+                <seg>Waren- und Lebensmittelretter</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Risparmio di cibo</seg>
+                <seg>Soccorritori di merci e cibo</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Food saver</seg>
+                <seg>Goods and food rescuer</seg>
             </tuv>
         </tu>       
         <tu tuid='login_list_7'>
