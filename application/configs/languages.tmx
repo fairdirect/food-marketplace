@@ -2849,13 +2849,13 @@
         </tu>
         <tu tuid='login_register_sub_1'>
             <tuv xml:lang="de">
-                <seg>Haben Sie Fragen zu Ihrer Bestellung?</seg>
+                <seg>Haben Sie Fragen?</seg>
             </tuv>
             <tuv xml:lang="it">
-                <seg>Domande in merito all'ordine?</seg>
+                <seg>Hai qualche domanda?</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Do you have questions about your order?</seg>
+                <seg>Do you have questions?</seg>
             </tuv>
         </tu>
         <tu tuid='login_register_sub_2'>
