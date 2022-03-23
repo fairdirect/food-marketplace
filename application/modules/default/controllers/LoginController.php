@@ -83,7 +83,7 @@ class LoginController extends Zend_Controller_Action
                                 $mail = new Zend_Mail('UTF-8');
                                 $content = str_replace('#registerLink#', 'http://' . $_SERVER['HTTP_HOST'] . '/login/confirm/id/' . $user->id . '/code/' . hash('sha256', $user->email . '_epelia_' . $user->salt) . '/', $registerMail->content);
                                 $mail->setBodyText(strip_tags($content));
-                                $mail->setFrom('mail@Fairdirect.org', 'Sachspendenbörse');
+                                $mail->setFrom('mail@sachspendenboerse.org', 'Sachspendenbörse');
                                 $mail->addTo($user->email);
                                 $mail->setSubject($registerMail->subject);
                                 $mail->send();
